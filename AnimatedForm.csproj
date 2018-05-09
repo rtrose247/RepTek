@@ -1,0 +1,263 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57E1436A-3560-4F00-9795-B2842524577D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnimatedForm</RootNamespace>
+    <AssemblyName>AnimatedForm</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sanford.Multimedia">
+      <HintPath>Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Midi">
+      <HintPath>Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bmpToRegion.cs" />
+    <Compile Include="animatedFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="animatedFrm.Designer.cs">
+      <DependentUpon>animatedFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Show1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show1.Designer.cs">
+      <DependentUpon>Show1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show2.Designer.cs">
+      <DependentUpon>Show2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show3.Designer.cs">
+      <DependentUpon>Show3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show4.Designer.cs">
+      <DependentUpon>Show4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shown.Designer.cs">
+      <DependentUpon>Shown.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="animatedFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>animatedFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Show1.resx">
+      <DependentUpon>Show1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show2.resx">
+      <DependentUpon>Show2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show3.resx">
+      <DependentUpon>Show3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show4.resx">
+      <DependentUpon>Show4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shown.resx">
+      <DependentUpon>Shown.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blockanimation.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="u-unnamed.jpg" />
+    <None Include="steamuserimages-a.akamaihd.net3.jpg" />
+    <None Include="spinner.jpg" />
+    <None Include="taffeys.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="taffeys+snakepit.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LAX_LA-1024px.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="beach-view-space-map.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="A01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="3-Screen109.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="52a379e8d6c8b54917c0a6d600739ff2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="2-Screen008.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="6-screen.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="3-Screen172.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="28059db00e7083851c1f9dc6f9182f14-1200-80.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="30-Screen060-bradbury.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="narrator.jpg" />
+    <None Include="1_hawaii_14.jpg" />
+    <None Include="image_704+.jpeg" />
+    <None Include="image_704+.png" />
+    <None Include="demo3.png" />
+    <None Include="demo2.png" />
+    <None Include="demo1.png" />
+    <None Include="demo.png" />
+    <None Include="dawn_by_derbz-da4swfh.jpg" />
+    <None Include="new_day_in_la__blade_runner_by_derbz-dbqy57z.jpg" />
+    <None Include="blade_runner28__cropped__medium.jpg" />
+    <None Include="ba287c6b71b8c9d9ab259ae5eba74035.jpg" />
+    <None Include="Bladerunner-animation-unicorn-gaff-deckard.gif" />
+    <None Include="bitsavers_borlandturOwnersHandbook1987_8438592.jpg" />
+    <None Include="license.png" />
+    <None Include="observer_policecar.jpg" />
+    <None Include="4k-blade-runner-2049-art-sci-fi-movie-178.jpg" />
+    <None Include="4k-blade-runner-2049-art-spinner-police-sci-fi-car-1711.jpg" />
+    <None Include="aces.jpg" />
+    <None Include="21.png" />
+    <None Include="map-reptek.png" />
+    <None Include="3edcf8638656a453636f02257ca767.jpg" />
+    <None Include="Heroes-Tactics-screenshot.jpg" />
+    <None Include="Poker-Dice.jpg" />
+    <None Include="200w.gif" />
+    <None Include="nico.png" />
+    <None Include="360_ldiamond_0207.jpg" />
+    <Content Include="Resources\br-honeybee.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BR-Intro.mid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BR-Intro2.mid">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ff6womg38tlmfdkdythf.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\sample-splash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\te9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
