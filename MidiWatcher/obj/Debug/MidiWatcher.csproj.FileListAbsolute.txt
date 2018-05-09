@@ -1,0 +1,15 @@
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\MidiWatcher.exe.config
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\MidiWatcher.exe
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\MidiWatcher.pdb
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\Sanford.Collections.dll
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\Sanford.Multimedia.dll
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\Sanford.Multimedia.Midi.dll
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\Sanford.Threading.dll
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\Sanford.Multimedia.Timers.dll
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\bin\Debug\Sanford.Multimedia.Midi.pdb
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\obj\Debug\MidiWatcher.csprojResolveAssemblyReference.cache
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\obj\Debug\MidiWatcher.Form1.resources
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\obj\Debug\MidiWatcher.Properties.Resources.resources
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\obj\Debug\MidiWatcher.csproj.GenerateResource.Cache
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\obj\Debug\MidiWatcher.exe
+C:\Users\rtrose\Downloads\csharpmiditoolkitv5_demo\CSharpMidiToolkitV5_demo\MidiWatcher\obj\Debug\MidiWatcher.pdb
