@@ -1,0 +1,9 @@
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\bin\Debug\QuickFont.ES20.xml
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\bin\Debug\QuickFont.ES20.dll
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\bin\Debug\QuickFont.ES20.pdb
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\bin\Debug\OpenTK.dll
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\bin\Debug\SharpFont.dll
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\bin\Debug\OpenTK.dll.config
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\obj\Debug\QuickFont.ES20.csprojResolveAssemblyReference.cache
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\obj\Debug\QuickFont.ES20.dll
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\QuickFont.ES20\obj\Debug\QuickFont.ES20.pdb
