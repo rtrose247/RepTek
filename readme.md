@@ -1,6 +1,6 @@
- BLADE RUNNER: 'REP' 'TEC' -- a multi-strategy, multi-level role playing game 
+BLADE RUNNER: 'REP' 'TEC' -- a multi-strategy, multi-level role playing game 
 
- (\C\) 2018
+(\C\) 2018
 Notice/Disclaimer:
 No copyright nor trademark infringement is intended(*). 
 The individual copyright holders retain their respective copyrights/trademark, with 
