@@ -74,13 +74,14 @@ namespace Komorebi
             sun.scale = new Vector3(2f);
 			sun.update();
 
-            monkey.loadModelFromFile("monkey.3ds");
+            monkey.loadModelFromFile("PaperUnicorn.obj");//monkey.3ds");
             monkey.position = new Vector3(30f, 4f, 2f);
-			monkey.update();
+            monkey.scale = new Vector3(0.02f); //1f);// 3f);
+            monkey.update();
             monkey.diffuse = new Vector3(0.1f, 0.1f, 0.8f);
             monkey.ambient = new Vector3(0.05f, 0.05f, 0.4f);
 
-            rmonkey.loadModelFromFile("monkey.3ds");
+            rmonkey.loadModelFromFile("brgun.obj");//monkey.3ds");
             rmonkey.position = new Vector3(18.5f, 2f, -27.5f);
             rmonkey.update();
             rmonkey.diffuse = new Vector3(0.1f, 0.1f, 0.8f);
@@ -90,9 +91,9 @@ namespace Komorebi
             rmonkey.specular = new Vector3(0f);
             rmonkey.shininess = 1f;
 
-            house.loadModelFromFile("house.3ds");
+            house.loadModelFromFile("house.3ds");//final2.ms3d");//tempo.obj");//house.3ds");
             house.position = new Vector3(15f, 3.01f, -34f);
-            house.scale = new Vector3(2); //1f);// 3f);
+            house.scale = new Vector3(1.0f); //1f);// 3f);
             house.update();
             house.diffuse = new Vector3(0.1f, 0.1f, 0.1f);
             house.ambient = new Vector3(0.05f, 0.05f, 0.05f);
@@ -172,6 +173,8 @@ namespace Komorebi
                 GL.Enable(EnableCap.DepthTest);
 
                 // Use SadowMap Shader
+                // RTR 5.19.18
+                //tmp
                 shadowMapShader.activate();
 
                 // Render floor

@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>TIMELINE:
+============
+1982 Blade Runner Partnership formed
+2000 Programmable Mannequins appear
+2010 Tyrell Corp. begins Nexus series
+2019 Off-world REPs Nexus 6 break into Tyrell
+2020 Off-world REPs attack Tyrell Corp.
+2022 Electromagnetic Pulse (EMP) attack LA
+2030 Tyrell+Wallace Corp. Merger+Venture
+2049 Investigation into Rachel/Deckard case
+2050 State of Emergency @ Honolulu</value>
+  </data>
 </root>

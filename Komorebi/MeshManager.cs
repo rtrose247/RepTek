@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Komorebi
 {
@@ -12,14 +13,15 @@ namespace Komorebi
 
         public static Mesh getMesh(String filename)
         {
-            if(meshes.ContainsKey(filename))
+            var myFileName = Path.GetFileName(filename);
+            if (meshes.ContainsKey(myFileName))
             {
-                return meshes[filename];
+                return meshes[myFileName];
             }
             else
             {
-                Mesh newMesh = new Mesh(filename);
-                meshes.Add(filename, newMesh);
+                Mesh newMesh = new Mesh(myFileName);
+                meshes.Add(myFileName, newMesh);
                 return newMesh;
             }
         }

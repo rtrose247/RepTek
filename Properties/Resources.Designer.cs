@@ -73,6 +73,16 @@ namespace AnimatedForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1949198_1 {
+            get {
+                object obj = ResourceManager.GetObject("1949198_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2_Screen008 {
             get {
                 object obj = ResourceManager.GetObject("2-Screen008", resourceCulture);
@@ -86,6 +96,46 @@ namespace AnimatedForm.Properties {
         internal static System.Drawing.Bitmap _200w {
             get {
                 object obj = ResourceManager.GetObject("200w", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2022 {
+            get {
+                object obj = ResourceManager.GetObject("2022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2022_1 {
+            get {
+                object obj = ResourceManager.GetObject("2022.1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20221 {
+            get {
+                object obj = ResourceManager.GetObject("20221", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2022a {
+            get {
+                object obj = ResourceManager.GetObject("2022a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +303,26 @@ namespace AnimatedForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blade_Runner_Blackout_2022_Title_Card {
+            get {
+                object obj = ResourceManager.GetObject("Blade-Runner-Blackout-2022-Title-Card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blade_runner_promo_1024x576 {
+            get {
+                object obj = ResourceManager.GetObject("blade-runner-promo-1024x576", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blade_runner28__cropped__medium {
             get {
                 object obj = ResourceManager.GetObject("blade_runner28__cropped__medium", resourceCulture);
@@ -286,6 +356,16 @@ namespace AnimatedForm.Properties {
         internal static System.Drawing.Bitmap br_honeybee {
             get {
                 object obj = ResourceManager.GetObject("br-honeybee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap COR_MGA_130214teessidetele_20_256 {
+            get {
+                object obj = ResourceManager.GetObject("COR_MGA_130214teessidetele_20.256", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +443,26 @@ namespace AnimatedForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ft1youztz9skft8930qb {
+            get {
+                object obj = ResourceManager.GetObject("ft1youztz9skft8930qb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap galactic_advertising_by_behindspace99_dbmdxvp {
+            get {
+                object obj = ResourceManager.GetObject("galactic_advertising_by_behindspace99-dbmdxvp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Heroes_Tactics_screenshot {
             get {
                 object obj = ResourceManager.GetObject("Heroes-Tactics-screenshot", resourceCulture);
@@ -406,6 +506,16 @@ namespace AnimatedForm.Properties {
         internal static System.Drawing.Bitmap license {
             get {
                 object obj = ResourceManager.GetObject("license", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap map_LAX_to_HIA {
+            get {
+                object obj = ResourceManager.GetObject("map-LAX-to-HIA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,6 +583,16 @@ namespace AnimatedForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seqpfo1wjikfry52qvp5 {
+            get {
+                object obj = ResourceManager.GetObject("seqpfo1wjikfry52qvp5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spinner {
             get {
                 object obj = ResourceManager.GetObject("spinner", resourceCulture);
@@ -523,9 +643,29 @@ namespace AnimatedForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tumblr_oig7vyRDjn1tvppquo1_1280 {
+            get {
+                object obj = ResourceManager.GetObject("tumblr_oig7vyRDjn1tvppquo1_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap u_unnamed {
             get {
                 object obj = ResourceManager.GetObject("u-unnamed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wde1ie679xd5blro5ist {
+            get {
+                object obj = ResourceManager.GetObject("wde1ie679xd5blro5ist", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

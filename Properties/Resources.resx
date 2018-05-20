@@ -112,17 +112,23 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="image_704+" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\image_704+.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beach-view-space-map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\beach-view-space-map.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="license" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\license.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\nico.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2022a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2022a.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blockanimation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blockanimation.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,6 +141,12 @@
   </data>
   <data name="map-reptek" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\map-reptek.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\21.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6-screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\6-screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Heroes-Tactics-screenshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Heroes-Tactics-screenshot.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,20 +163,29 @@
   <data name="30-Screen060-bradbury" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\30-Screen060-bradbury.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3-Screen172" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\3-Screen172.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20221" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blade_runner28__cropped__medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\blade_runner28__cropped__medium.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="galactic_advertising_by_behindspace99-dbmdxvp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\galactic_advertising_by_behindspace99-dbmdxvp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="narrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\narrator.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tumblr_oig7vyRDjn1tvppquo1_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tumblr_oig7vyRDjn1tvppquo1_1280.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bladerunner-animation-unicorn-gaff-deckard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Bladerunner-animation-unicorn-gaff-deckard.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="new_day_in_la__blade_runner_by_derbz-dbqy57z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\new_day_in_la__blade_runner_by_derbz-dbqy57z.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="200w" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\200w.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="A01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\A01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3edcf8638656a453636f02257ca767" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\3edcf8638656a453636f02257ca767.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ba287c6b71b8c9d9ab259ae5eba74035" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\ba287c6b71b8c9d9ab259ae5eba74035.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,38 +193,53 @@
   <data name="3-Screen109" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\3-Screen109.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dawn_by_derbz-da4swfh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\dawn_by_derbz-da4swfh.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="52a379e8d6c8b54917c0a6d600739ff2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\52a379e8d6c8b54917c0a6d600739ff2.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LAX_LA-1024px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\LAX_LA-1024px.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="COR_MGA_130214teessidetele_20.256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\COR_MGA_130214teessidetele_20.256.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="taffeys" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\taffeys.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="br-honeybee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\br-honeybee.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wde1ie679xd5blro5ist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wde1ie679xd5blro5ist.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4k-blade-runner-2049-art-sci-fi-movie-178" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\4k-blade-runner-2049-art-sci-fi-movie-178.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="u-unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\u-unnamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="steamuserimages-a.akamaihd.net3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\steamuserimages-a.akamaihd.net3.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2022.1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2022.1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\spinner.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4k-blade-runner-2049-art-spinner-police-sci-fi-car-1711" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\4k-blade-runner-2049-art-spinner-police-sci-fi-car-1711.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="map-LAX-to-HIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-LAX-to-HIA.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blade-Runner-Blackout-2022-Title-Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blade-Runner-Blackout-2022-Title-Card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1949198_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1949198_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="demo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\demo2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="steamuserimages-a.akamaihd.net3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\steamuserimages-a.akamaihd.net3.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ft1youztz9skft8930qb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ft1youztz9skft8930qb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="aces" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\aces.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\21.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="seqpfo1wjikfry52qvp5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seqpfo1wjikfry52qvp5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="demo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\demo3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,23 +247,26 @@
   <data name="28059db00e7083851c1f9dc6f9182f14-1200-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\28059db00e7083851c1f9dc6f9182f14-1200-80.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="A01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\A01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3-Screen172" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\3-Screen172.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\demo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="br-honeybee" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\br-honeybee.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\nico.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="beach-view-space-map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\beach-view-space-map.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4k-blade-runner-2049-art-spinner-police-sci-fi-car-1711" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\4k-blade-runner-2049-art-spinner-police-sci-fi-car-1711.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="observer_policecar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\observer_policecar.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3edcf8638656a453636f02257ca767" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\3edcf8638656a453636f02257ca767.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="narrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\narrator.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taffeys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\taffeys.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_704+1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\image_704+.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,26 +277,28 @@
   <data name="2-Screen008" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\2-Screen008.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="6-screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\6-screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blade_runner28__cropped__medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\blade_runner28__cropped__medium.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Poker-Dice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Poker-Dice.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4k-blade-runner-2049-art-sci-fi-movie-178" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\4k-blade-runner-2049-art-sci-fi-movie-178.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2022" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1_hawaii_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\1_hawaii_14.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_day_in_la__blade_runner_by_derbz-dbqy57z" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\new_day_in_la__blade_runner_by_derbz-dbqy57z.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_704+" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\image_704+.jpeg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="360_ldiamond_0207" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\360_ldiamond_0207.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dawn_by_derbz-da4swfh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\dawn_by_derbz-da4swfh.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LAX_LA-1024px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\LAX_LA-1024px.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blade-runner-promo-1024x576" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blade-runner-promo-1024x576.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

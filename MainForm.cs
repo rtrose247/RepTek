@@ -15,10 +15,13 @@ namespace AnimatedForm
 {
     public partial class MainForm : Form
     {
+        //
+        private MidiHelper1 midiHelper = null;
 
         public MainForm()
         {
             InitializeComponent();
+            BringToFront();
         }
 
         //RED
@@ -28,6 +31,8 @@ namespace AnimatedForm
             //(new System.Threading.Thread(() => {
             //    (new Show1()).Show();
             //})).Start();
+            //
+            //
             Form s1 = new Show1();
             s1.Show();
         }

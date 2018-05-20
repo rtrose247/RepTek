@@ -17,6 +17,9 @@ namespace AnimatedForm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form s5 = new Show5();
+            s5.Show();
+            //Next=>
             this.Close();
         }
     }
