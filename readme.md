@@ -35,4 +35,4 @@ Arranged by rtrose247
 
 ![alt text](./narrator.jpg "Narrator")
 ![alt text](./map-reptek.png "Map")
-![alt text](screenshots/demo1.png "demo")
+![alt text](./demo1.png "demo")
