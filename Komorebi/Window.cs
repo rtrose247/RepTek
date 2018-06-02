@@ -74,12 +74,14 @@ namespace Komorebi
             sun.scale = new Vector3(2f);
 			sun.update();
 
-            monkey.loadModelFromFile("PaperUnicorn.obj");//monkey.3ds");
+            monkey.loadModelFromFile("blade_runner_police_spinner_blue.rot.4.obj");//monkey.3ds");
             monkey.position = new Vector3(30f, 4f, 2f);
-            monkey.scale = new Vector3(0.02f); //1f);// 3f);
+            monkey.scale = new Vector3(0.5f); //1f);// 3f);
             monkey.update();
-            monkey.diffuse = new Vector3(0.1f, 0.1f, 0.8f);
-            monkey.ambient = new Vector3(0.05f, 0.05f, 0.4f);
+            //monkey.diffuse = new Vector3(0.1f, 0.1f, 0.8f);
+            //monkey.ambient = new Vector3(0.05f, 0.05f, 0.4f);
+            monkey.diffuse = new Vector3(1.0f, 1.0f, 0.8f);
+            monkey.ambient = new Vector3(0.5f, 0.5f, 0.8f);
 
             rmonkey.loadModelFromFile("brgun.obj");//monkey.3ds");
             rmonkey.position = new Vector3(18.5f, 2f, -27.5f);
@@ -188,7 +190,9 @@ namespace Komorebi
                     shadowMapShader.render(tree, camera.viewMatrix);
                 }
 
-                // Render Phong-Monkey
+                // Render depth map shader //Phong-Monkey
+                //depthMapShader.bindModelData(monkey);
+                //depthMapShader.render(monkey, camera.viewMatrix);
                 shadowMapShader.bindModelData(monkey);
                 shadowMapShader.render(monkey, camera.viewMatrix);
 

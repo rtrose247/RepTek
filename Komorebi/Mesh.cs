@@ -73,7 +73,7 @@ namespace Komorebi
                     isTextured = true;
 
                     //RTR
-                    //textureCoordinates.Capacity = model.Meshes[0].TextureCoordinateChannels[0].Count;
+                    textureCoordinates.Capacity = model.Meshes[0].TextureCoordinateChannels[0].Count;
                     foreach (Assimp.Vector3D element in model.Meshes[0].TextureCoordinateChannels[0])
                     {
                         textureCoordinates.Add(new Vector2(element.X, element.Y));

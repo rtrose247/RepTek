@@ -10,7 +10,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd C:\Users\rtrose\OneDrive\RepTek\RepTek\assimp-net-master\AssimpNet.Sample\bin\Net45-Release\brsp.jpg
+map_Kd brsp.jpg
 
 newmtl White_0
 Ns 92.156863
