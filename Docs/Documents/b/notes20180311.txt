@@ -1,0 +1,26 @@
+Dear Bob :
+This is now the second company to send an insurance quote to 'Aimee Hart' with an incorrectly listed address. 
+This email serves as a notice of fact: the policy claimant 'Aimee Hart' does not reside at 634 Lamont Dr.
+Please correct your records- thank you!
+Sincerely,
+Richard T. Rose
+----
+Phases of a turn:
+Move
+Investigate
+Detect
+Combat
+Discard
+----
+Skills:
+Investigation=> 2
+Detection => 2
+Combat =>
+( sums to 6 : maybe upgrade-able ...?)
+
+
+
+
+
+
+

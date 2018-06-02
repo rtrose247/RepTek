@@ -1,0 +1,300 @@
+https://stackoverflow.com/questions/19282827/deferred-rendering-not-working-as-expected
+
+
+----
+
+
+	
+
+I'm fairly experienced with opengl and GLSL. For my engine I wanted to implement deferred lighting, knowing it was not going to be a trivial task. After a few hours I was able to get things mostly working. Here is a screenshot of all the buffers I've rendered:
+
+enter image description here The upper left is the normals, the upper right is the albedo, the lower left is the position and the lower right is the final render. (There is only one light being rendered right now.) I use various shaders to render all the things to a frame buffer. I had previously used a forward rendering lighting shader. To hopefully provide the same results, I used the same data from that vertex shader to render the different buffers. The light source moves and changes based on the position of my camera, unlike my forward renderer. Here is the code for the vertex shaders (the fragment ones just render the pixels they got from the vertex one)
+
+Position shader:
+
+varying vec4 pos;
+void main(void)
+{
+    gl_Position =gl_ModelViewProjectionMatrix*gl_Vertex;
+    pos = gl_ModelViewMatrix*gl_Vertex;
+}
+
+Normal shader
+
+varying vec3 normal;
+void main(void)
+{
+     gl_Position =gl_ModelViewProjectionMatrix*gl_Vertex;
+    normal = normalize(gl_NormalMatrix*gl_Normal);
+}
+
+For the albedo I just use opengl's regular shader and just bind textures.
+
+Here is the final light shader which is being rendered as a quad over the screen:
+
+uniform sampler2D positionMap;
+uniform sampler2D normalMap;
+uniform sampler2D albedoMap;
+varying vec2 texcoord;
+uniform mat4 matrix;
+void main()
+{
+    vec3 position = vec3(texture2D(positionMap,texcoord));
+    vec3 normal = vec3(texture2D(normalMap,texcoord));
+
+    vec3 L = normalize(gl_LightSource[0].position.xyz - position);
+    float l = length(L)/5.0;
+    float att = 1.0/(l*l+l);
+
+    //render sun light
+    vec4 diffuselight = max(dot(normal,L), 0.0)*vec4(att,att,att,att);
+    diffuselight = clamp(diffuselight, 0.0, 1.0)*2.0;
+    vec4 amb = vec4(.2,.2,.2,0);
+
+    vec4 texture = texture2D(albedoMap,texcoord);
+
+    gl_FragColor =  ((diffuselight)+amb)*texture;
+
+}
+
+====
+
+
+Stack Overflow
+
+    Questions
+    Developer Jobs
+    Tags
+    Users
+
+Log In Sign Up
+
+Join Stack Overflow to learn, share knowledge, and build your career.
+Email Sign Up
+or sign in with
+Google
+Facebook
+Deferred Rendering Not Working as Expected
+Ask Question
+up vote
+1
+down vote
+favorite
+	
+
+I'm fairly experienced with opengl and GLSL. For my engine I wanted to implement deferred lighting, knowing it was not going to be a trivial task. After a few hours I was able to get things mostly working. Here is a screenshot of all the buffers I've rendered:
+
+enter image description here The upper left is the normals, the upper right is the albedo, the lower left is the position and the lower right is the final render. (There is only one light being rendered right now.) I use various shaders to render all the things to a frame buffer. I had previously used a forward rendering lighting shader. To hopefully provide the same results, I used the same data from that vertex shader to render the different buffers. The light source moves and changes based on the position of my camera, unlike my forward renderer. Here is the code for the vertex shaders (the fragment ones just render the pixels they got from the vertex one)
+
+Position shader:
+
+varying vec4 pos;
+void main(void)
+{
+    gl_Position =gl_ModelViewProjectionMatrix*gl_Vertex;
+    pos = gl_ModelViewMatrix*gl_Vertex;
+}
+
+Normal shader
+
+varying vec3 normal;
+void main(void)
+{
+     gl_Position =gl_ModelViewProjectionMatrix*gl_Vertex;
+    normal = normalize(gl_NormalMatrix*gl_Normal);
+}
+
+For the albedo I just use opengl's regular shader and just bind textures.
+
+Here is the final light shader which is being rendered as a quad over the screen:
+
+uniform sampler2D positionMap;
+uniform sampler2D normalMap;
+uniform sampler2D albedoMap;
+varying vec2 texcoord;
+uniform mat4 matrix;
+void main()
+{
+    vec3 position = vec3(texture2D(positionMap,texcoord));
+    vec3 normal = vec3(texture2D(normalMap,texcoord));
+
+    vec3 L = normalize(gl_LightSource[0].position.xyz - position);
+    float l = length(L)/5.0;
+    float att = 1.0/(l*l+l);
+
+    //render sun light
+    vec4 diffuselight = max(dot(normal,L), 0.0)*vec4(att,att,att,att);
+    diffuselight = clamp(diffuselight, 0.0, 1.0)*2.0;
+    vec4 amb = vec4(.2,.2,.2,0);
+
+    vec4 texture = texture2D(albedoMap,texcoord);
+
+    gl_FragColor =  ((diffuselight)+amb)*texture;
+
+}
+
+This has a lot of functions that are referenced elsewhere, but I think you can get the general basis from the pictures and the code. This is the main rendering function:
+
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+//render skybox
+glLoadIdentity();
+renderSkybox();
+//skybox.renderObject();
+glLoadIdentity();
+renderViewModel();
+
+
+renderCamera();
+glMatrixMode(GL_MODELVIEW);
+GLfloat position[] = {-Lighting.x,-Lighting.y,-Lighting.z,1};
+glLightfv(GL_LIGHT0, GL_POSITION, position);
+glDisable(GL_LIGHTING);
+
+glm::mat4 modelView,projection,final;
+glGetFloatv(GL_MODELVIEW_MATRIX, &modelView[0][0]);
+glGetFloatv(GL_PROJECTION_MATRIX, &projection[0][0]);
+final=modelView*projection;
+
+Lighting.setupDepthImage();
+glLoadIdentity();
+
+for (int i = 0; i < objects.size(); i++)
+{
+   objects[i].renderObjectForDepth();
+}
+    Lighting.finishDepthImage();
+
+//render the 3 buffers
+
+//normal buffer
+glBindFramebuffer(GL_FRAMEBUFFER, Lighting.Normal.frameBuffer);
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+for (int i = 0; i < objects.size(); i++)
+{
+  objects[i].renderObjectWithProgram(Lighting.normalShader);
+}
+//albedo
+glBindFramebuffer(GL_FRAMEBUFFER, Lighting.Albedo.frameBuffer);
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+for (int i = 0; i < objects.size(); i++)
+{
+    objects[i].renderObjectWithProgram(0);
+}
+//position
+glBindFramebuffer(GL_FRAMEBUFFER, Lighting.Position.frameBuffer);
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+for (int i = 0; i < objects.size(); i++)
+{
+    objects[i].renderObjectWithProgram(Lighting.positionShader);
+}
+//go back to rendering directly to the screen
+ glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+
+renderCamera();
+glTranslatef(-test.position.x, test.position.y, -test.position.z);
+test.updateParticle(1);
+
+//render the buffers for debugging
+renderViewModel();
+glMatrixMode(GL_PROJECTION);
+glLoadIdentity();
+glOrtho(0, 1280, 800, 0, -1, 1);
+glMatrixMode(GL_MODELVIEW);
+glLoadIdentity();
+
+//render the full screen quad for the sun
+glUseProgram(Lighting.sunShader);
+
+glUniform1i(glGetUniformLocation(Lighting.sunShader,"normalMap"),0);
+glUniform1i(glGetUniformLocation(Lighting.sunShader,"albedoMap"),1);
+glUniform1i(glGetUniformLocation(Lighting.sunShader,"positionMap"),2);
+glUniformMatrix4fv(glGetUniformLocation(Lighting.sunShader, "matrix"), 1, GL_FALSE, &final[0][0]);
+
+glActiveTexture(GL_TEXTURE0);
+glBindTexture(GL_TEXTURE_2D, Lighting.Normal.texture);
+glActiveTexture(GL_TEXTURE1);
+glBindTexture(GL_TEXTURE_2D, Lighting.Albedo.texture);
+glActiveTexture(GL_TEXTURE2);
+glBindTexture(GL_TEXTURE_2D, Lighting.Position.texture);
+
+
+
+
+glBindFramebuffer(GL_FRAMEBUFFER, Lighting.debugFinal.frameBuffer);
+ glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+glBegin(GL_QUADS);
+glTexCoord2f(0, 1);
+glVertex2f(0, 0);
+glTexCoord2f(1, 1);
+glVertex2f(1280, 0);
+glTexCoord2f(1, 0);
+glVertex2f(1280, 800);
+glTexCoord2f(0, 0);
+glVertex2f(0, 800);
+glEnd();
+
+glBindFramebuffer(GL_FRAMEBUFFER, 0);
+glActiveTexture(GL_TEXTURE0);
+glBindTexture(GL_TEXTURE_2D, 0);
+
+glUseProgram(0);
+//normals
+glBindTexture(GL_TEXTURE_2D,Lighting.Normal.texture);
+glBegin(GL_QUADS);
+glTexCoord2f(0, 1);
+glVertex2f(0, 0);
+glTexCoord2f(1, 1);
+glVertex2f(640, 0);
+glTexCoord2f(1, 0);
+glVertex2f(640, 400);
+glTexCoord2f(0, 0);
+glVertex2f(0, 400);
+glEnd();
+//albedo
+glBindTexture(GL_TEXTURE_2D,Lighting.Albedo.texture);
+glBegin(GL_QUADS);
+glTexCoord2f(0, 1);
+glVertex2f(640, 0);
+glTexCoord2f(1, 1);
+glVertex2f(1280, 0);
+glTexCoord2f(1, 0);
+glVertex2f(1280, 400);
+glTexCoord2f(0, 0);
+glVertex2f(640, 400);
+glEnd();
+//position
+glBindTexture(GL_TEXTURE_2D,Lighting.Position.texture);
+glBegin(GL_QUADS);
+glTexCoord2f(0, 1);
+glVertex2f(0, 400);
+glTexCoord2f(1, 1);
+glVertex2f(640, 400);
+glTexCoord2f(1, 0);
+glVertex2f(640, 800);
+glTexCoord2f(0, 0);
+glVertex2f(0, 800);
+glEnd();
+//final image
+glBindTexture(GL_TEXTURE_2D,Lighting.debugFinal.texture);
+glBegin(GL_QUADS);
+glTexCoord2f(0, 1);
+glVertex2f(640, 400);
+glTexCoord2f(1, 1);
+glVertex2f(1280, 400);
+glTexCoord2f(1, 0);
+glVertex2f(1280, 800);
+glTexCoord2f(0, 0);
+glVertex2f(640, 800);
+glEnd();
+View3D();
+
+
+
+SDL_GL_SwapWindow(window);
+glLoadIdentity();
+
+
+
+

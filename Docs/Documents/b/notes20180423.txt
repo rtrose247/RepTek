@@ -1,0 +1,11 @@
+Sprints(//):
+//
+Composite two images using alpha blending
+e.g., GDI, OpenTK...
+//
+Opening scene
+//
+Side-view combat screen (<=compositing is ok)
+//
+Midi music plays
+e.g., config file playlist

@@ -1,0 +1,25 @@
+
+
+BLADE RUNNER 2050:
+
+* REP TEK
+
+- C.H.A.R.M. model
+cats|humans|aliens|robots|mutts(dogs)
+
+
+-plots
+
+(+)techniques
+-use 2D compositing
+-2D+3D overlays
+-komorebi/assimp
+
+
+By monkeytime | brachiator - I'm stuck with a valuable friend, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=3874914
+e.g.,
+LAX_LA-2014px.pjg
+
+
+
+

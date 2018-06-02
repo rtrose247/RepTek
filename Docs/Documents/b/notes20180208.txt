@@ -1,0 +1,358 @@
+contact name:
+Christy
+call or text:
+(540) 327-2320
+====
+New to Columbus and lost everything (Columbus)
+1
+I just recently transferred with my job to Columbus from Dallas Texas and worked about a week and the business decides that it wants to shut it's doors. I have been working towards finding other means of employment but it's been difficult with no vehicle because I had a company truck with my last job. I have been staying here and there wherever I can manage but it is getting really stressful, and I end up in places that are not healthy to any single attractive female to be. If anyone has a room to rent that they could spare I don't have much but I do cook and clean and I am getting a vehicle soon and I do jobs here and there to help out. Please anything right now would help. 
+====
+*ideas*
+Summary
+    1.1 The meta-plot
+        1.1.1 Overcoming the Monster
+        1.1.2 Rags to Riches
+        1.1.3 The Quest
+        1.1.4 Voyage and Return
+        1.1.5 Comedy
+        1.1.6 Tragedy
+        1.1.7 Rebirth
+    1.2 Precursors
+
+=> how to model this, in logical terms:
+e.g., 	Subject | verb | object
+	Actor* | relation | object*
+
+Overcoming "Monster" (e.g., technology|man|.)
+count(p) > count(m)
+p: protagonist (good guy units)
+m: monster or adversary (bad guys)
+
+Vampirism model:
+count(HP(p))>count(HP(m))
+HP: hit points = "life force"
+HP increases: modeling immortality
+"unlock" immortality
+Vampire hunter D imagery/gameplay: many crosses/graves/zombies/...
+
+Rags to Riches:
+(maybe)
+$ exponential growth curve
+
+gain of $ => gain of time|movement capability|matching cards|...|ESPER knowledge base
+
+
+Quest:
+plan(s) involving : people, places, things
+- carry out actions, e.g., grid search, in the fulfillment of goals
+
+Voyage and Return:
+modeled as a series of way-points in a (linked) list
+
+maybe "points" as in,
+comedy:
+increase in :) score
+
+tragedy:
+pain, suffering, PTSD :( score
+:) vs. :( balance <=> ??good/evil?? naive|experienced
+2 Reception
+3 See also
+4 References
+5 External links
+
+Rebirth:
+human=>REP=>?
+
+----
+Gameplay/drivers/themes:
+
+List matching activity:
+mini-eonomy is a summation of needs/goals
+=> robots searching for humans ...   <==> humans searching for humans|robots ....
+robots posing as human
+Using "match lists" on the "free" and uncensored networks (net neutrality reference)
+=> conflicts arise from "human|robot" matching and competition
+(maybe)
+human thought | materializing via Quantum 3D printing
+you mean - they think it - they can print it ? 
+Yep. all thanks to the new ESP(ER) technology.
+
+Drama matrix:
+=> new robots infiltrating human families,homes,the workplace...hostage situations...or "the public"
+=> public places:
+e.g.,
+- carnival
+- the mall
+- movie theater
+- stores
+- warehouse(s)
+- random(*) scene generation
+- city generation
+- randomly modeled traffic stops: 
+	- randomly structured intersections: traffic stop with ground and (partial) air combo
+	- < cars, trucks, | blades, drones >
+	- drones, ESP+ "show thinking"
+	- emotional response radar (ERR)
+	- random road tee-offs
+	- hex maze style roads
+	- random numbers of humans/REPs 
+	<= ratio reflects the date, eg., 20XX...10001 (AD) | total points :) :( | total $ | total EXP level
+- etc.
+
+ESPER & SIM
+current date <=> projected future date <=> projected past date (time travel capability)
+powered by $|score
+
+=> (maybe) array of conflicts in the drama matrix
+
+C#/code ideas:
+Scene management
+Card management
+Mini-games/scenario switching & management
+Application visualization (e.g., 3D cubes ...)
+
+Scenarios:
+LL or roommate moving in a new person as a tenant: a loved one or "family member" (e.g., think crowding)
+- robot/human is unknown
+- robot detection => instant fight OR rep sympathizer
+
+Scenarios:
+People warehouses (future apts are large buildings with many floors)
+Alien slums (hives)
+Robot warehouses (e.g., lots of stackable cubes, inside of each one is 1-2 robots)
+Restaurants
+-random generations of some building/road configurations...
+-need to do a sweep of all floors ...
+etc.
+
+fight mode transition => particle system (bursting triangles) 
+rep symp => all rep detecs pursue the player, in addition to REP leads
+Reps tracking <= via drone (indicated with aircraft model, e.g., mini MQ9 drone, or symbol)
+
+On-screen text/symbols:
+Unicode text rendering as textured quads via QuickFont
+
+Menus:
+- game screens
+- turn taking
+- proceed to next checkpoint (or REP lead)
+
+*anti-shooter*
+Investigation/conflicts:
+=> resolve conflicts via: 
+conflict = player vs. REPs|<other humans>|<aliens>
+(maybe) emotional factors (card game?)
+(maybe) karate-chess combat game
+(maybe) shooter style action (least effective: bullets don't kill REPs...)
+victory: REP is arrested/disabled
+
+Proceed to next city
+(e.g., world capitols)
+
+Some side-effect outcomes/suprises:
+	- behavior based:
+	- hoarding animals => overwhelming empathy, leads to freeing them all (animal stampede).
+	- hoarding items => item stampede (random).
+	- can undo (animals/items come back, LOL)
+	- sometimes, animal killing (bizarre solution)
+	- hoarding of substances => spontaneous generation of REPs (disguised as animals/objects?)
+Need a class system to allow *optional* animations to look funny without the objects causing harm to player
+	- shapeshifting "DNA virus" affects animals,robots,aliens,objects
+	- (maybe) use mesh transitional animations to swap mesh models
+
+Increasing difficulty level:
+-more REPs appear in later battles
+-combination of date|exp|$
+
+Leads to check out REPs are located at random location on city map: model of "skyway" transit system
+- mix of ground + air
+- mix of lightweight indoor + outdoor settings, combo of these "composited" onto a hex map
+- multi-level hex map(s)
+- some random combinations possible
+
+- (maybe)
+3 parallel grids: air|ground|underground(e.g., basement|.)
+
+The model(s) predict:
+- a stable equilibrium of birth, death, and trafficking of
+H|A|R
+- hmm. a sort of inter-species, inter-galactic exchange of sorts?
+- yeah. maybe. commerce. as above, so below. LOL.
+- yeah, right.
+OR, H|A|R some combination of exponential growth/decay
+- we want to ensure we're "on the right track"
+- or that we are on the right curve
+
+
+3 "cells": H/a/r on ground or <sea|air|space> | H/A/R in air | H/A/R underground | ocean
+
+Twist:
+- H/a/r hoarding in 1+ apts. LOL.
+
+
+Need:
+storyboard. script.
+
+Maybe:
+simple, blocks world physics with elastic collisions
+earth-like gravity as well as some modeling larger scales (e.g., solar system, galaxy/ies)
+(maybe)
+gravitational (at least) modeling + electrostatic models (maybe, for space/cyberpunk...)
+e.g., PhysX library
+- projectiles
+- lasers
+- explosions
+- smoke
+- fire
+- rain
+- snow
+- slow light
+
+----
+
+
+- ESP|PSI fields <= could also be electrostatic
+
+other graphics idea(s):
+-simulated memory-mapped video with a 2D array
+-can have multiple, stacked overlays
+-plotting (graphs)
+
+Annotation boxes:
+https://matplotlib.org/examples/pylab_examples/demo_annotation_box.html
+pylab_examples example code: demo_annotation_box.py
+
+Matplotlib country flags
+https://stackoverflow.com/questions/44246650/automating-bar-charts-plotting-to-show-country-flags-as-ticklabels
+
+(maybe) 
+turtle gfx
+battleship
+behavioral chess
+<= show thinking (maybe ... rendering in 2D, 3D ...)
+"save" data => maybe "loop" it with EXP+ (always increasing...?) <= infinite lives approach
+
+LOOP:
+(if CTRL-A)
+player autopilot
+render
+take screenshot (give it a hashcode ? unicode ? QR code...?)
+advance time
+advance scenario...
+save current game in gametree
+etc.
+
+----
+From "real world" (google):
+Open Source Intelligence
+Social Media Threat Monitoring
+Fraud, Data Leaks
+----
+BR 2049 the horse in the chimney |=> identification and confirmation bias
+Bonus:
+C/H/A/R/D
+cats|humans|aliens|robots|dogs
+(maybe) tongue-in-cheek classes:
+% needy % profitable % elite % collective PSY(?)
+
+e.g.,
+LION|SCARECROW|TIN MAN
+
+evil hacker has army of evil androids/REPs
+
+(maybe)
+civilization transplant => ship off-world
+OR
+re-union of the "weird" similar to Tomita's
+=> bermuda triangle/atlantis/agartha
+
+Some physics "fun facts":
+----
+Galaxy escape velocity:
+537 km/s
+0.179c
+
+The end of the solar system is about 122 astronomical units (AU) away from the sun, where one AU is 93 million miles (150 million kilometers). That's about three times as far out as Pluto, which is about 40 AU from the sun, or about six times farther away from Earth than Neptune's orbit.
+
+1 light hour = 7.2 AU
+16.8 c hours = 122 AU
+
+fractional c
+(maybe) near-c relativistic equations
+(maybe) calculate energy/mass/velocity conversions
+
+Typical examples
+Example	g-force*
+Maximum for human on a rocket sled	46.2 g
+Sprint missile	100 g
+Brief human exposure survived in crash	> 100 g
+Space gun with a barrel length of 1 km and a muzzle velocity of 6 km/s, as proposed by Quicklaunch (assuming constant acceleration)	1,800 g
+26 more rows
+g-force - Wikipedia
+https://en.wikipedia.org/wiki/G-force
+Feedback
+About this result
+People also ask
+What is the maximum acceleration of a car?
+How many G's can kill a human?
+e.g., max is like 10-100 g
+
+There are isolated incidents of humans surviving abnormally high G-forces, most notably the Air Force officer John Stapp, who demonstrated a human can withstand 46.2 G's
+
+(maybe)
+- toy relativity
+- toy gravity
+- (toy) nuclear blast simulation
+- (toy) atom collision
+- (toy) periodic table
+- (toy) planet/moon/asteroid collisions
+- simple aerodynamics models
+- blocks world/lego bricks model
+----
+$ git config --global user.email "email@example.com"
+
+Confirm that you have set the email address correctly in Git:
+
+$ git config --global user.email
+email@example.com
+----
+irrlicht|urho|....
+<*>
+
+GLSL
+shader examples
+simple scene
+ogl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

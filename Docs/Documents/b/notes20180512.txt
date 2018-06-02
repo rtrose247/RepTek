@@ -1,0 +1,220 @@
+- space travel <= BSG game | planets/gods/hex-based "hive" game :)
+- VR | time travel
+	=> (maybe) inside ESPER system
+	=> 
+	=> connected to Atlantis (underwater island/ship ...)
+	=> connected to CRN (based on the idea of atlantis)
+	=> SHIVA
+	=>
+	=> multiple tangent timelines, e.g., "wheel of fortune"
+
+https://www.kopazar.com/en/knight-online-item/diez/239955--7-no-reb-priest-rosetta-set-serwerde-tek
+
+...
+
+http://tyrell-corporation.pp.se/downloads/
+
+http://www.synthtopia.com/content/2009/12/27/vangelis-blade-runner-blues-live/
+http://mama.indstate.edu/users/nizrael/jukebox.html
+http://members.tripod.com/~Millenium_MIDIs/af.htm
+
+https://www.youtube.com/watch?v=-fu7jN2_2pE
+
+
+
+----
+
+Notice/Disclaimer:
+No copyright nor trademark infringement is intended(*). 
+The individual copyright holders retain their respective copyrights/trademark, with 
+derived images used with permissions pending, in an effort to promote research into the subject
+of what an "open source" game and animation engine *might* look like. Fair use is intended, for the purpose of creating a "parody" of subject matter.
+This is partly driven by Google(TM) keword+image searches, 
+where "found" art images that may be subject to copyright, whereas the result of the Google(TM) search result is being shared with the idea that the "parody" material is "copyleft", modifiable, and share-able; 
+such as e.g., 
+searching for "futuristic interiors, futuristic exteriors, BR game, C# BR game", etc.
+The collection/gameplay is mostly inspired by "Blade Runner: Rep-Detect" (2012) by Designer I. J. Thompson,
+an "unlicensed/unauthorized" creation with a corresponding module that can be played in the VASSAL game engine.
+Besides aiming to create a more "native" and potentially cross-platform-esque game/animations,
+there is a long-term, over-arching goal of fostering reseach into gaming and
+filling in an expanded story/universe, which is anticipated to draw support from the artistic and community.
+This seems to suggest, also, that the choice of license may need to be left deferred, also, pending the results of the search.
+With regard to the referenced software libraries, a license compatibility model appears to be implied with the use of CC (creative commons), CPOL (Code Project Open License), Gnu GPLv3, LGPL, MIT, etc.:
+License type  | Description 					| Acronym | Remix | Cultural | Open
+Public Domain | Freeing content globally without restrictions 	CC0 	Yes 	Yes 	Yes 	Yes
+CC-BY 		| Attribution alone 				BY 	Yes 	Yes 	Yes 	Yes
+CC-BY-SA 	| Attribution + ShareAlike 			BY-SA 	Yes 	Yes 	Yes 	Yes
+CPOL		| Open content attribution/commercial use	CPOL	Yes	Yes	Yes	Yes
+MIT		| "						MIT	Yes	Yes	Yes	Yes	
+
+Original Music by Vangelis(*)
+Arranged by rtrose247
+
+* all content subject to change
+
+
+----
+- "quantized pallette" sample code
+- practice alpha blending, fade-to-black/whi/gray
+- MIDI queue/shuffler
+	=> need : MIDIs that can be loops
+	=> some are short, e.g., 8 bars
+- UNICODE hash code symbol chooser (<= "unlock" these)
+- (optional) Country flag selector 
+
+(maybe)
+- image magick (C#)	=> for some special effects
+- ffmpeg/#  		=> synthetic video/s
+etc.
+
+
+
+-paypal
+e.g.,
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input name="cmd" value="_s-xclick" type="hidden">
+<input src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!" type="image" border="0">
+<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" border="0" height="1">
+<input name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+" type="hidden">
+</form>
+
+----
+
+jefflin276@gmail.com
+
+
+----
+
+T:
+If they - the powers that be -
+had been using unlicensed, unauthorized REP technology - all along - throughout history -
+would you really want to know ...?
+
+A:
+....
+
+T:
+We need to find out what they were after. We need them brought in, alive.
+
+A:
+Uh, ok, yeah. We will do our best. But anyway, you know, we make no guarantees.
+
+T:
+Indulge me.
+
+A:
+Right. Just try not to get your @$$ hashed again this time.
+
+T:
+(Nods). I will keep that in mind, Det. You do the same.
+
+
+----
+Examples:
+sci basic /3d
+glGUI + openTK
+OpfDesigner
+AlphaForms
+Point cloud viewer....
+Simple Palette Quantized
+Roguesharp
+
+----
+=>some app ideas/graphics example(s)
+
+GLGUI
+{
+
+Assimp
+...
+For multi-window demo:
+3 cubes-
+random interior textures
+...
+re-use for interior search pattern
+2-levels : 5x2 rooms (10+10)
+...
+similarly
+3...10+ cubes-
+random exterior textures
+draw on hex grid
+(hint: maybe need a keyboard cursor to 'select')
+----
+fighting interface
+----
+driving interface
+----
+choose player
+
+}
+
+Idea is to wrap in GLGUI(!).
+
+
+
+
+
+----
+
+![alt text](https://github.com/rtrose247/reptek/map-reptek.png)
+
+
+----
+
+AnimatedForm
+	Splash screen + MIDI
+
+Game map
+Join game as : {Red, Blue, Green, Yellow}
+
+Button click location => update player position
+Show pop-up message
+Image transition
+
+
+
+...
+
+Rogue-like + "Procedural Dungeon" idea
+
+
+...
+
+
+splash-screen
+
+animatedform(<=MIDI)
+
+mainform
+
+
+animated scenes + MIDI
+=> in-game with MIDI + WAV
+
+GLGUI{} plaza stuff ...
+
+Assimp
+
+Quickfont Dialog windows
+
+
+Todo:
+Make mip-maps for a skybox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

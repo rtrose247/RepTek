@@ -1,0 +1,215 @@
+Hint:
+"Home" screen
+
+like 
+"home" project
+
+*acked
+this is why we are where we are-
+everything, is a *ack
+
+random dungeon generation
+e.g.,
+crossword puzzle => maze algo
+
+funny quotes
+rhyming
+e.g.,
+"hoity toity soy sauce"
+etc.
+
+----
+gfx
+"UFOs" <= with cloaking
+
+----
+for images
+- palette swapping
+
+...
+
+https://leanpub.com/phaserjsgamedesignworkbook/read
+Phaser.js Game Design Workbook
+
+- teaching
+- open source
+- cloud computing
+- image processing
+- video
+- games
+- expert systems
+- cyber security
+- DevSecOps Sec+DevOps
+- troubleshooting <= systems analyst
+
+cloud
+e.g., cloud render farm
+
+----
+https://www.cyotek.com/source-code
+----
+//s
+C#/py graphics
+e.g.,
+C#/python/matplotlib 
+=> use matplot lib to plot a map of the world's capital cities
+//
+C# wrapper for *palette quantizer*
+C# wrapper for console app
+=> quantize images (non-GIF/non-animated)
+=> (maybe) save palettes in binary/RIFF format
+//note: octree method
+//also used in computer graphics (frustum culling)
+OpenTK+OctTree
+//
+Komorebi mod => "Komorebi2" 
+=> gradually adding shaders
+=> model a scene from "BR"
+//
+//
+(maybe)
+bgfx# wrapper from scratch
+//
+//
+(maybe)
+C# image processing algo
+e.g.,
+segmentation
+using k-means
+"KMC" demo
+//
+//
+C# OpenTK 
+mixing still frame + animated
+conditional texture quads:
+animated or not
+=>
+      _isAnimating = ImageAnimator.CanAnimate(_image);
+
+System.Drawing.ImageAnimator
+
+        ImageAnimator.Animate(_image, this.OnFrameChangedHandler);
+
+//
+//=>
+image processing game : find clues
+
+//beahavioral equations
+//e.g.,
+(maybe) mathnet-symobolics
+
+//
+//
+Demos:
+Apt.
+"CarRace" Road => road blasters|outrun demo
+Casa-NoExe
+DOD  => enscript + associative array
+Solar System
+
+//
+//
+//
+(maybe) eventually need:
+Free Cloud for games
+2+ multi-player interactive games
+similar to e.g., VASSAL
+....
+//
+//
+//
+"Turn-based" graphics+dialog demo
+=> change player position drawn in game world
+
+Game world concept:
+E* I*
+=>
+series of nested E(I) 
+exterior+interior cubes
+with, adujstable flow layout manager
+=>
+1. warm-up:
+array layout
+then, (pseudo-) mazes
+
+2. turn-taking demo
+R*
+*rep*lication side-effect => generates more cubes ...
+(maybe)
+memory issue: start free-ing up older regions
+with /backtrack/ capability
+=> hence it is an artificial "memory" sim
+LOL
+=> idea is to help teach "imagination" to a computer with RNG
+random number generation
+----
+//
+Background music
+MIDI collection
+----
+//D20 <= dice tables
+
+//HexKit <= war-gaming sim <= BSG space sim
+
+//s
+sample scenes:
+They are attacking our Web pages !
+(OR)
+The Web pages are attacking ! <= OpenTK billboarding
+///
+"Earn" Karma by talking to NPCs
+(non-playable characters)
+eventually => word-net driven dialog
+
+//choose character <= BladeRunner "Line UP" graphics with player select
+=> how to test card image
+
+//face chara
+=> load and "animate" 
+=> e.g., 
+combine with Enscript/QuickFont dialog windows
+
+//Player interface, e.g., ESPER 
+(+)"radial" menu display
+
+Need:
+hex editor <= working with palettes
+unicode viewer <= hash codes for images
+
+----
+//s
+stil-frame + animated cubes
+then, array layout
+then, pseudo-random maze
++ hexgrid
+
+
+ShadowEngine demo => OpenTK
+e.g., "Plaza-like"
+Car Race|Plaza|House/casa <= has collision detection
+etc.
+
+(Eventually)
+2D bitmaps (e.g., maze pics) => can render in 3D wall structures using an auto-layout
+e.g.,
+what if each bit = 1 unit of distance in OpenTK
+(=> suggests scale may also be modeled as a factor)
+(=> future use: nesting bitmaps using variable scale in an auto-layout)
+
+platform-jumping + cubes
+...
+
+https://medium.com/@haikus_by_KN/how-we-design-games-now-and-why-bcbc1deb7559
+
+
+
+
+
+
+
+
+
+
+
+
+

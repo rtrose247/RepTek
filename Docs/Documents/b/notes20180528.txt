@@ -1,0 +1,946 @@
+"BCL"
+Basic Compositing language
+;)
+a simple, shorthand for alpha blending 2+ images and compositing
+also used for scene flow control
+using a plug-in architecture, more advanced techniques/templates may be used
+with application to
+=> games
+=> animation
+
+(+ maybe eventually)
+=> annotation
+=> story-boarding
+=> synthetic video
+etc.
+
+Gabriel Björk Stiernström
+Concept Artist & Illustrator
+
+
+----
+From Code Project:
+Enscript+DOD style associative array(s)
+
+
+//s
+=> each game play mode is 1 // 
+=> each location = at least 1 //
+//
+Simple Quantized Pallete => batch mode
+//
+=> SharpDX sound playback
+//
+=> Random Forest + Scene Flow Control
+//
+=> *** Pre-defined sequences | intro | transitions ***
+=> e.g., intro | combat | outcome | transition | *
+//
+=> random dungeon generator
+//
+=> Fast Bitmap library
+//
+=> Enscript 
+//
+=> Quickfont dialog windows
+//
+=> 
+GLGUI demo
+=> hexgrid
+=> Komorebi +
+=> texture cubes
+//
+=> OpenTK picking example + cubes demo
+//
+=> OpenTK elevator(E*) animation
+----
+later, plan to composite 
+----
+//e.g.,
+=>GLGUI(Komorebi(OpenTKTutorial6) ) )
+=>GLGUI(Komorebi(OpenTK picking example) ) )
+etc.
+...
+
+----
+ToDo: all images, general, i's,e's, to be quantized in batches => 256 
+=> (hint:) make console app with (1) string arg (filename)...then expand to process folder ....
+
+
+----
+Suggesting a random forest of images: exteriors, interiors | <= auto-layout 
+- random cube stacks
+- [background]
+- [middle ground]<= grid/player(s)/character(s)
+- [foreground] <= player/characters
+
+*** eventually => everything will be in associative array(s) :) ***
+* currently => object oriented => plan to scale
+* need: parameterized arrays
+
+Hint:
+List of *gifs => render in sequence (window updates...)
+
+Hint:
+*gifs in OpenTK Window :):)
+
+Hint:
+face chara => similar to animated *gifs :)
+(able to cycle=>if just 1 char)
+
+plot(device):
+G:
+A pattern has emerged from some recent investigations....
+A: What do you mean?
+G:Well, in an attempt to blend in- to find suitable housing, employment, transportation-
+We believe REPs are using public listings and matching to meet these needs.
+Everywhere a suspected REP incident has occurred, we've found one of these:
+=> (shows unicode hash)
+A: (maybe...) each listing is a hash code?
+- just like, each memory, say in a library, has its own hash code
+G: they are searching for the right libraries ...
+G: ... to arrive at some kind of solution ... so it seems.
+A: ...
+
+Archer
+Guza
+
+
+
+Image - Mudeenu-season2.png | Chaotiki | FANDOM powered by Wikia
+chaotic.wikia.com
+
+Royal Snack — Weasyl
+Weasyl
+Royal Snack by Reptek
+
+Greymon by tph301 on DeviantArt
+tph301.deviantart.com
+
+Peyton x Prince Mudeenu by Ruby2015 on DeviantArt
+ruby2015.deviantart.com
+
+Bowser by Reptek on DeviantArt
+Reptek - DeviantArt
+SEAN by Reptek
+
+
+Internally Lost by Reptek on DeviantArt
+Reptek - DeviantArt
+
+Reptek | DeviantArt
+DeviantArt
+Reptek 2 0 Sitting Pose 6 by Reptek
+
+
+Jurassic Lunch at the Park by Reptek on DeviantArt
+Reptek - DeviantArt
+Jurassic Lunch at the Park by Reptek ...
+
+Reptek - Get Quote - 13 Photos - IT Services & Computer Repair ...
+Yelp
+Photo of Reptek - Ocean Township, NJ, United States
+
+Reptek - Get Quote - 13 Photos - IT Services & Computer Repair ...
+Yelp
+
+
+
+King Shark vs Killer Croc by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+King Shark vs Killer Croc
+
+
+BatmanUnlimited-KillerCroc 13 by GiuseppeDiRosso on DeviantArt
+giuseppedirosso.deviantart.com
+Here is a cropped shot of Killer Croc from Batman Unlmited Mechs vs Mutants.
+
+Alien Ice Queen by Kairu-Hakubi on DeviantArt
+kairu-hakubi.deviantart.com
+even I didn't expect anyone to do this request. i know i should shade it but fehh
+
+Grumpy Gebbu by Psychosocial -- Fur Affinity [dot] net
+furaffinity.net
+
+Nanaue (Superman/Batman) | DC Database | FANDOM powered by Wikia
+dc.wikia.com
+
+
+Comfort (Colored) by The-Jasmine-Nation on DeviantArt
+the-jasmine-nation.deviantart.com
+
+NERV Anti-G Weapon by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+
+Ultraman Belial — Weasyl
+Weasyl
+Ultraman Belial by Reptek
+
+Zilla Jr by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+Zilla Jr
+
+Images tagged with #reptek on instagram
+SocImage
+P.D. Love #boaconstrictor #boa #princessdiamond #snake #reptile #
+
+OP Art Animal — Weasyl
+Weasyl
+
+Zamtrios Ninja Concept by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+Zamtrios Ninja Concept
+
+18422479_1971654529746976_6036239055273517367_o.jpg (1700×2048) | Brands Mecha Fanart by Keiryuu Seo | Pinterest | Robot, Sci fi and 2d
+pinterest.com
+
+Shark inflation by canson -- Fur Affinity [dot] net
+furaffinity.net
+
+Monster Hunter Things
+monsterhunterthings.tumblr.com
+
+show me your fursona | Tumblr
+
+Image - D1 Nosferatu Concept.jpg | Disgaea Wiki | FANDOM powered by Wikia
+disgaea.wikia.com
+Summary Licensing This file is copyrighted. We believe that any use of this image on this wiki, that does not hamper the owner's ability to profit from their work, constitutes Fair Use
+
+Image - Scorpio.png | RangerWiki | FANDOM powered by Wikia
+powerrangers.wikia.com
+
+Arkitekt gruppen Drammen AS
+Arkitekt gruppen Drammen AS
+Toyota, Rep tek
+
+Reptek - Get Quote - 13 Photos - IT Services & Computer Repair ...
+Yelp
+
+Mobile – Reptek
+Reptek
+
+Images tagged with #reptek on instagram
+SocImage
+
+God Kong — Weasyl
+Weasyl
+
+The Lizard vs Ant-Man by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+
+
+Ark Xbox & PS4 "Unlock Tek Engrams Permanently No Bosses" - YouTube
+YouTube
+
+...
+"black knight" satellite - LOL
+...
+
+----
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0234	The type or namespace name 'Windows' does not exist in the namespace 'SharpDX' (are you missing an assembly reference?)	SharpDX.Samples	C:\Users\rtrose\Downloads\SharpDX-Samples-master\SharpDX-Samples-master\Desktop\Common\DemoApp.cs	47	Active
+
+The type or namespace name Windows does not exist in the namespace SharpDX
+
+
+----
+
+
+https://stackoverflow.com/questions/18580712/opentk-opengl-texture-not-drawing
+
+accepted
+In the fixed-function OpenGL pipeline, you must also Enable texture units before a texture bound to one will be applied to anything you draw.
+
+The normal OpenGL API binding for this is glEnable (GL_TEXTURE_2D). The OpenTK equivalent would be: GL.Enable (EnableCap.Texture2D).
+
+
+https://github.com/SFML/SFML.Net/pull/78
+
+
+----
+sample scenes:
+1-Archer+Karma in elevator
+2-randomly generated homage to aztec temples with Teotihuacan image samples(2D=>cube)
++Aztec models(3D)
+
+//s
+=>Edit TyrellWip3.256
+----
+
+----
+
+Suicidator City Generator | PERKUP
+perkup.jp
+
+Grow Your Own City. Suicidator 3D City Generator for Blender - SolidSmack
+solidsmack.com
+Sure you could fritter your time away and fiddle with a 3D City on an iPad, but what if you could create realistic 3D cities… with a push of a button, and for free? That’s what I’m talkin’...
+
+Blender Parte II – Alternativas viáveis: Suicidator | darkgrains
+darkgrains.wordpress.com
+Em nossa pesquisa rumo ao aprimoramento do jogo, buscamos diversas tecnologias viáveis e baratas de uso prático no Blender. Sem sombra de dúvidas, a que mais nos chamou atenção foi a ‘Suicidator'...
+
+Other people in the morning vs me in the morning (by Andrea… – Weird ...
+Weird Stuff - Blog Nook
+
+500 × 400
+Shi'nefer Nakano | Fairy Tail Fanon Wiki | FANDOM powered by Wikia
+Fairy Tail Fanon Wiki - Fandom
+
+----
+govt brings forward police cyber security spending :)
+...
+----
+
+//s
+Scenario:
+Roy Baty (or similar) kidnaps the "princess"
+mission goal(s) => capture suspected REP|rescue princess alive
+
+etc.
+
+searched for suicidator city generator blender
+found:
++suicidator
++scene city
+
+https://github.com/cyotek/SkylineGenerator
+https://github.com/cyotek/
+https://github.com/cyotek/Cyotek.Windows.Forms.ImageBox
+
+----
+search:
+anime princess
+anime rpg faces
+=>image similarity search
+
+MV Message Busts | Galv's RPG Maker Scripts & Plugins
+galvs-scripts.com
+https://galvs-scripts.com/2015/11/01/mv-message-busts/
+
+Can someone help me? Topic :: rpgmaker.net
+rpgmaker.net
+
+Scarlet emo set by Redface5x on DeviantArt
+redface5x.deviantart.com
+
+Faceset for Actor3_5 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+
+Faceset SF_Actor1_8 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+
+Shirois Stuff | RPG Maker Forums
+RPG Maker Forums
+
+Japan faceset for RPG Maker MV by Koneko387 on DeviantArt
+
+Faceset no. 20 by unknown-designer on DeviantArt
+
+Faceset SF_Actor3_3 from RPG Maker MV by TheStoryteller01 on DeviantArt
+
+Game-Nerd-001's DeviantArt Favourites
+
+Laslow/Inigo RPG Maker VX Ace Face sheet by Elementalworks on DeviantArt
+
+Anime girls created by specialized AI program | Inquirer Technology
+technology.inquirer.net
+You can customize your anime girl to have purple eyes, and even have her mouth open in the imaging, for whatever extra sexy effect that can create.
+
+VXAce
+tkool.kagati.com
+
+Leila Furyibia RPG Maker MV Faces by PrettySkitty16 on DeviantArt
+
+APH- Mermaid!Belarus faceset for RPG Maker VX Ace by Koneko387 on DeviantArt
+
+Best face maker ever! by SaphireLilly on DeviantArt
+saphirelilly.deviantart.com
+this is about the best face maker ive ever seen, and she is allowing anyone to download and use it for free, you just have to give her credit. its brand new, so its not perfect yet, but its wonderf...
+
+Character Generator Bits 'n' Pieces | RPG Maker Forums
+forums.rpgmakerweb.com
+[IMG] [IMG] Feel free to use anything here in your personal or commercial games. I just ask that credit is given to myself either as Rainbow...
+Rainbow-grenade
+
+RPG faces just because by eternitymaze on DeviantArt
+eternitymaze - DeviantArt
+RPG faces just because by eternitymaze ...
+
+RPG Maker MV 'Faces' - Black Butler by JustCre8ive22 on DeviantArt
+justcre8ive22.deviantart.com
+Following on from the 'Zelda' series of characters, I decided to make some 'Face' images using RPG Maker MV for Black Butler/Kuroshitsuji characters. Top row, from left to right, are Ciel, Sebastia...
+
+The CPAN Search Site - search.cpan.org
+search.cpan.org
+
+
+Face sets one!! by Aveondcrazy on DeviantArt
+aveondcrazy.deviantart.com
+I was being creative this morning! I made them using A RPG maker character maker!
+
+Sprite Resources. (Fire Emblem Planet)
+z14.invisionfree.com
+
+Rpg Maker MV Character Generator Parts Green Clothes1 | rpgmakermv | Pinterest | Rpg maker, RPG and Characters
+pinterest.com
+Rpg Maker MV Character Generator Parts Green Clothes1
+
+RPG Maker MV 'Faces' - The Legend of Zelda VILLAIN by JustCre8ive22 ...
+JustCre8ive22 - DeviantArt
+
+Faceset SF_Actor2_7 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+This is a faceset for SF_Actor2_7 from the RPG Maker MV “base resource” characters that can be used for any modern, scifi, shadowrun or horror settings. &n...
+
+
+Faceset for Actor1_6 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+This is a faceset for Actor1_6 from the RPG Maker MV stock characters. It’s not an edit of the stock portrait but a recreation which I made in a 16-layer paint shop file using the M...
+
+RPG MAKER VX faces by Brett-Neufeld on DeviantArt
+brett-neufeld.deviantart.com
+Here are some faces I made for the RPG Maker VX program. I didn't want to use the default ones, so I made my own. If you use RPG Maker VX and want to use these, use the download button to the right...
+
+Alternate/recoloured faces psd | RPG Maker Forums
+forums.rpgmakerweb.com
+Made it to make it easier for me to change colours, feel free to use. No credit to me needed, edits of MV. The files have several layers and masks, to...
+
+384 × 384Images may be subject to copyright
+Image - Hungary faceset rpg maker by adricarra-d7cj37k.png | Hetalia Games Wiki | FANDOM powered by Wikia
+hetalia-games.wikia.com
+
+2p England - Faceset by animeArtluvr469 on DeviantArt
+animeartluvr469.deviantart.com
+Part of the face-set collection used in 'Hetafire' Feel free to use but please remember to credit me for the faceset. 2P England model edit by me/bowlroll *Other facesets* 2P America - 2p Amer...
+
+people1-3-8 | Rpg Maker VX Resource planet
+Rpg Maker VX Resource planet - WordPress.com
+
+rpg resources - Luke faceset by FelipeNero on DeviantArt
+felipenero.deviantart.com
+
+People4-3-8 | Rpg Maker VX Resource planet
+vxresource.wordpress.com
+
+RPG Maker - Non-Pixel Resources and Others on rpg-maker-artists - DeviantArt
+rpg-maker-artists.deviantart.com
+
+People5 by fangirlotaku7 on DeviantArt
+fangirlotaku7.deviantart.com
+
+sorejanai.blog.shinobi.jp
+
+
+RPG maker MV emotions faces set from Palxan and Verdibona | RPG ...
+RPG Maker Forums
+Spoiler
+
+https://thestoryteller01.deviantart.com/art/Faceset-for-Actor2-1-from-RPG-Maker-MV-569358635
+
+Faceset matching stock sprite Actor1_2 from RPG Maker MV (includes version for XP/VX) | TheStoryteller01
+thestoryteller01.wordpress.com
+This is a faceset for Actor1_2 from the RPG Maker MV stock characters. It’s not an edit of the stock portrait but a recreation which I made in a 19-layer paint shop file using the MV generator...
+
+actor1-1-8 | Rpg Maker VX Resource planet
+vxresource.wordpress.com
+
+Faceset SF_Actor1_2 from RPG Maker MV by TheStoryteller01 on DeviantArt
+
+Hetalia ~ England Faceset by angel-of-britannia on DeviantArt
+
+Futuristic Characters Pack | Create Your Own Game!
+RPG Maker
+Futuristic Characters Pack
+
+Rpg Maker Vx Ace Enemy Graphics Download - strongwindws
+strongwindws.weebly.com
+
+Fantasy Hero Character Pack | Create Your Own Game!
+rpgmakerweb.com
+
+Dark Alice Face Sets Request Topic :: rpgmaker.net
+RPGMaker.net
+
+Index of /temp-uploads/Virtuous Skies/Images/facesets
+
+Faceset SF_Actor1_1 from RPG Maker MV by TheStoryteller01 on DeviantArt
+
+Rpg maker Vx faces 2 by Jameswhite89 on DeviantArt
+Jameswhite89 - DeviantArt
+
+Avadan - Face Sets - Gallery - Game Dev Unlimited Forums
+gdunlimited.net
+Avadan uploaded in Face Sets: Character set made by Avadan.
+
+Faceset for Actor1_1 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+
+
+This is a faceset for Actor1_1 from the RPG Maker MV stock characters. It’s not an edit of the stock portrait but a recreation which I made in a 16-layer paint shop file using the M...
+
+RPGMV Custom Face parts of "Killua Zaoldyeck" recreated in "Cover ...
+RPG Maker Forums
+
+Wide Smile - Ann Faceset by MultiMouths on DeviantArt
+multimouths.deviantart.com
+The last two faces give me a bunch of trouble, that is Wide Smile Ann, a character of mine, with all the rights owned, so don't try to take her only because is hard have a face like that, if ..
+
+Galerie - Kategorie: Faces - Bild: Spiritual
+rpg-vault.deHunter x Hunter 03 – Magic Amputation | Hachimitsu
+blog.hachimitsu.org
+
+2011 GIF - Find & Share on GIPHY
+giphy.com
+
+Exibir posts - Akeshima
+centrorpg.com
+
+A Witch for RPG Maker VX Ace | Rpg Maker VX Resource planet
+vxresource.wordpress.com
+Credits to Tabi no Yadokari
+
+Storytellers MV Facesets [Updated 01/01/17 - SF_People1_7] | RPG ...
+RPG Maker Forums
+This is Evil_2. I took a lot of inspiration from the stock portrait but I used different clothes and eyebrows to match the sprites better.
+
+MC Face Sprite Sheet2 by Goldfang on DeviantArt
+goldfang.deviantart.com
+
+Killer Gin - download the latest demo! | RPG Maker Forums
+forums.rpgmakerweb.com
+
+Kizami Yuuya RPG Maker MV Faces by PrettySkitty16 on DeviantArt
+prettyskitty16.deviantart.com
+
+Faceset SF_Actor2_5 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+This is a faceset for SF_Actor2_5 from the RPG Maker MV “base resource” characters that can be used for any modern, scifi, shadowrun or horror settings. &n...
+
+Cronus' MV Generator Add-Ons | Page 2 | RPG Maker Forums
+forums.rpgmakerweb.com
+[IMG] Male Faces [IMG] Male Noses [IMG] Thanks for working hard and being willing to share your work!! May I make an observation? The left...
+
+
+RPG Maker Web on Twitter: "https://t.co/l6Zajq1Fzg Have you submitted yourself as a character for the RPG Maker MV School Project? Pictur
+ed: Forum User Lemongreen!… https://t.co/dxnfEDRiWw"
+twitter.com
+
+
+Spiritual-5-8a | Rpg Maker VX Resource planet
+Rpg Maker VX Resource planet - WordPress.com
+... 192 in Actor faces
+
+
+Nyo England Face Set by inuyashazeldaeragon on DeviantArt
+inuyashazeldaeragon.deviantart.com
+
+face086a - Face Sets - Gallery - Game Dev Unlimited Forums
+gdunlimited.net
+
+Galerie - Kategorie: Faces - Bild: Spiritual
+rpg-vault.de
+
+Faces | Rpg Maker VX Resource planet
+Rpg Maker VX Resource planet - WordPress.com
+Basic actor faces + one special
+
+Index of /temp-uploads/Virtuous Skies/Images/facesets
+fiveworlds.org
+
+RPG_Proyect-Zhiar_my_Character by blackenedkrono on DeviantArt
+blackenedkrono.deviantart.com
+
+Pedido: Big Faces de RPG Maker VX e RPG Maker VX Ace
+centrorpg.com
+
+Battlers and Face Assets for VX Ace | RPG Maker Forums
+forums.rpgmakerweb.com
+
+Pin by Megean Hershey on game making resources | Pinterest | RPG
+pinterest.com
+
+Galerie - Kategorie: Faces - Bild: Evil
+rpg-vault.de
+
+Faceset Male Rpg Maker MV by Haruhi81 on DeviantArt
+haruhi81.deviantart.com
+
+Faceset no. 42 by unknown-designer on DeviantArt
+
+Face Set - England (RPG Maker VX Ace) by CommandoCherry on DeviantArt
+
+Resource Requests – Archeia.moe
+Division heaven
+Let me know if these links don't work and I'll send new ones. So my characters names are Kyra, Vikis, Yumiko, Randgrior, Ryome, and Elma
+
+RPG faces just because by eternitymaze on DeviantArt
+eternitymaze.deviantart.com
+
+RPG Maker MV 'Faces' - Black Butler by JustCre8ive22 on DeviantArt
+justcre8ive22.deviantart.com
+
+GethN7's Royalty Free People Faces RTP Addons | RPG Maker Forums
+forums.rpgmakerweb.com
+I'm posting here some royalty free addons for People 5, 6, 7 and People 8's faces, which the RTP does not provide, and when I say royalty free, that...
+
+Akatsuki avec un Face Maker by Only-Tourist-or-not on DeviantArt
+only-tourist-or-not.deviantart.com
+
+Faceset matching stock sprite Actor3_5 from RPG Maker MV (includes version for XP/VX) | TheStoryteller01
+thestoryteller01.wordpress.com
+
+ayuda para encontrar faces restantes
+mundo-maker.com
+
+Face Set~ Russia (Blonde) RPG Maker VX Ace by CommandoCherry on DeviantArt
+
+D'Art Creations - RPG Maker RESOURCES
+D'Art Creations
+Sample Generated Faces with D'Art Hair Gradients
+
+THUG2 Anime Faces for RPG Maker MV by skatefilter5 on DeviantArt
+skatefilter5.deviantart.com
+
+Facesets for Actor1 sheet from RPG Maker MV | RPG Maker MV
+RPG Maker MV
+... Actor1_4 MV.png ...
+
+Faceset for Actor1_8 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+
+This is a faceset for Actor2_7 from the RPG Maker MV stock characters. It’s not an edit of the stock portrait but a recreation which I made in a 17-layer paint shop file using the MV gen...
+
+Faceset for SF_Actor1_3 from RPG Maker MV by TheStoryteller01 on DeviantArt
+thestoryteller01.deviantart.com
+
+Face Set~ Spain RPG Maker VX Ace by CommandoCherry on DeviantArt
+commandocherry.deviantart.com
+
+And I'm done~! The demo for my game should be ready soon after~! (once I figure out some things) But for now... I used RPG Maker Generator as my base (skin, hair, nose and one of the mouths),...
+
+Hetalia ~ Pirate!England Faceset by angel-of-britannia on DeviantArt
+angel-of-britannia.deviantart.com
+Arrgh, Me Hearties ~ The ocean & humanity's first frontier. The title given to one who loves the sea. Unfortunately, you don't get anything if you guess where that's from~ Nothing muc...
+
+Pin by Snowhunter on RPGmaker | Pinterest | RPG
+Pinterest
+
+RPG Maker Headshots 01 by StephODell on DeviantArt
+stephodell.deviantart.com
+A while back, I was messing around with RPG Maker VX, and created these. I am planning on using them later on, for something, as well as donating them to for their use as well. From top left to bot...
+
+
+EVERNA FireHeart Saga and Fantasy Worlds: RPG Maker Resources 4: Kaduki Sprite and Character Sets!
+fireheart-vadis.blogspot.com
+
+people1-3-8 | Rpg Maker VX Resource planet
+vxresource.wordpress.com
+
+Character List - Tiberium Chronicles RPG Project [Archived Project] - CNCNZ.com Forums
+forums.cncnz.com
+
+Custom Face Generator - RPG Maker MV by Amysaurus121 on DeviantArt
+Amysaurus121 - DeviantArt
+Custom Face Generator - RPG Maker MV by Amysaurus121 ...
+
+
+Facesets by Daheji
+rmrk.net
+
+Bleach anime face maker by atem-pharoah on DeviantArt
+atem-pharoah.deviantart.com
+
+I know some may not look like the real character (especially the espada, seeing that they don't have the bits of their mask) but I'm sure it will do Top Row: Ulquiorra, Gin, Aizen, Grimmjow, Szayel...
+
+
+Hint:
+=>Need to use height/width proportions to determine face chara layout
+or, alternative	maybe: lookup tables....
+
+Minnena
+mihuashi.com
+
+Frontier Works Futuristic Heroes and BGM | Make Your Own Game
+
+RPG faces just because by eternitymaze on DeviantArt
+
+What am I doing with my time...? I have exams coming up, toying aroung with rpg maker should not count as a good use of my time XD Faces made with RPG maker VX ACE and edited in Photoshop to actual...
+
+Need help with RPG avatar faces
+Treehouse
+
+Ralph 2 Ralphina maids and bunny girl face set by Redface5x on DeviantArt
+redface5x.deviantart.com
+This is my version of Ralph tg-ed to Ralphina the maid/bunny girl.
+
+rpg maker more actor faces - Google Search | RPG Maker | Pinterest
+pinterest.se
+
+rpg maker more actor faces - Google Search
+
+Avadan - Face Sets - Gallery - Game Dev Unlimited Forums
+
+Maki's Chibi RTP (VX and later VX-ACE) | RPG Maker Forums
+forums.rpgmakerweb.com
+Hello! I decided to take on the ever daunting task of redrawing the RTP characters in a my goofy style for busts and facesets. I'll be trying to do all...
+
+Heroes RPG MAKER VX by Haruhi81 on DeviantArt
+haruhi81.deviantart.com
+
+Rpg Maker VX Resource planet | Your best english site for Rpg Maker ...
+Rpg Maker VX Resource planet - WordPress.com
+Gallery ...
+
+gdunlimited.net
+
+RPG MAKER VX RTP faceset edit 3 by Tenbed on DeviantArt
+tenbed.deviantart.com
+
+Facesets et Characte
+rpgmakervx-fr.com
+
+Japanese-style Sideview battlers | RPG Maker Forums
+forums.rpgmakerweb.com
+
+Index of /temp-uploads/Virtuous Skies/Images/facesets
+fiveworlds.org
+
+[Bust]
+rpg maker vx ace character portrait | Rpg maker vx ace sprites and such | Pinterest | Personagens
+br.pinterest.com
+rpg maker vx ace character portrait
+
+Pixel Bust Samples by Amysaurus121 on DeviantArt
+amysaurus121.deviantart.com
+
+pixanna.nl
+
+Ralph 2 Ralphina maid Dark blue hair face set by Redface5x on DeviantArt
+redface5x.deviantart.com
+Ralphina maid w/ dark blue hair.
+
+Material: ~Eidojitsu~ | Meaning of Life
+silentblackwing.wordpress.com
+Hola, soy Koizu un miembro mas del staff del “significado de la vida”, solo vine para darles a conocer la apertura de mi tienda, en donde podrán ver y/o adquirir material rpg maker VX. …
+
+Finally more facesets! | Rpg Maker VX Resource planet
+vxresource.wordpress.com
+Gallery button didnt work again :/
+
+Pin by Snowhunter on RPGmaker | Pinterest | RPG and Rpg maker vx
+pinterest.com
+
+VX/VXA] RTP and Kaduki Faceset Recolors/Edits
+RMRK.net
+Purple hair, emotions.
+
+Loregand MotherF*cking Tenko... kidding I like Tenko a lot because his way cool of make a story take your way, but he can be very annoying and a lil useless when the meaning is FIGHT, because stay ...
+
+RPG maker VX ACE: SHADED L.Tenko by MultiMouths on DeviantArt
+multimouths.deviantart.com
+
+Lithuania Face Set by JigokuTsuriana on DeviantArt
+jigokutsuriana.deviantart.com
+For The quality turned out a little better on this one. Any face sets I make are completely free to use. No credit needed, seeing them used is enough for me!
+
+Face Set~ Ukraine (RPG Maker VX Ace) by CommandoCherry on DeviantArt
+commandocherry.deviantart.com
+
+More Expressions - Face Sets - Gallery - Game Dev Unlimited Forums
+gdunlimited.net
+
+Spirit and face graphics Topic :: rpgmaker.net
+RPGMaker.net
+If you can make them it would help me a lot, thanks in advance.
+
+rpgmaker – Page 3 – Archeia.moe
+Division heaven
+Tag: rpgmaker
+
+RPG Maker VX/Ace FaceSets | GrandmaDebsLittleBits
+GrandmaDebsLittleBits - WordPress.com
+
+Galerie - Kategorie: Faces - Bild: Actor5
+
+Faces | Rpg Maker VX Resource planet
+Rpg Maker VX Resource planet - WordPress.com
+
+Ylva - Face Sets - Gallery - Game Dev Unlimited Forums
+gdunlimited.net
+Ylva uploaded in Face Sets: Made by Enterbrain
+
+Bride by SchwarzeNacht on DeviantArt
+schwarzenacht.deviantart.com
+
+portrait-picture for rpg maker vx/ace (enterbrain) edit of the rtp-portrait-pictures Diese Ressourcen sind für den RPG Maker VX/Ace von Enterbrain erstellt, nur mit der Lizenz fü...
+
+Labyrinth
+chrisnk.la.coocan.jp
+
+Michael Angelo Villarama's (xXD0nateloXx) Rpg maker vx ace portrait edits Album
+s1003.photobucket.com
+Portraits edit by PS - View the full album on Photobucket.
+
+Tatanya's Sprites | RPG Maker Forums
+forums.rpgmakerweb.com
+Tatanya's Resources Please use only in non-commercial projects, with credit. I am in touch with Tatanya, so if you want to use comercial, PM me and...
+
+Pin by A-Bill SnZ on Cute | Pinterest | Anime
+Pinterest
+Rpg, Motivational Quotes, Tumblr Posts, Faces, Funny Stuff, Random, Anime, Knight, Stop It
+
+face generator in japanese
+RMRK.net
+I spend some time to create a faceset with this site :
+
+Plein de ressources pour vos projets.
+lepalaiscreatif.net
+
+2018
+moca-news.net
+
+twisoku.ldblog.jp
+
+RTP Faces[VXA]
+RMRK.net
+Credit
+
+rpg
+avangs.info
+
+RTP Faces[VXA]
+RMRK.net
+Credit
+tkool.kagati.com
+
+ameblo.jp
+
+eurs.blog65.fc2.com
+
+Anime Style Generator Parts | RPG Maker Forums
+RPG Maker Forums
+Reference Images:
+
+rpg maker more actor faces - Google Search | RPG Maker | Pinterest ...
+Pinterest
+
+RMVXA] Facet Request
+RMRK.net
+[RMVXA] Facet Request
+
+RPG Maker - Non-Pixel Resources and Others on rpg-maker-artists - DeviantArt
+rpg-maker-artists.deviantart.com
+
+Joshua RPG Maker VX ACE Faceset by SomeKindaFan1 on DeviantArt
+somekindafan1.deviantart.com
+
+He's like the only one with an almost complete faceset
+
+Ace - RTP Redraws (Actor 1) | RPG Maker MV
+rpgmakermv.co
+
+Ralph 2 Ralphina maid white hair face set by Redface5x on DeviantArt
+redface5x.deviantart.com
+
+Galerie - Kategorie: Faces - Bild: Evil
+rpg-vault.de
+
+Battlers and Face Assets for VX Ace | RPG Maker Forums
+forums.rpgmakerweb.com
+Hello I need someonee to make me Faces and Battlers for these Gaurds: [ATTACH] I only need Faces and Battlers for two of them. (preferably the red...
+
+Hint:
+#hashtag trashbag :)
+
+Alice in Wonderland – Archeia.moe
+divisionheaven.me
+I made this originally for Member+ but I got permission to release it publicly for RPG Maker’s Birthday!
+
+[VX-ACE] Big Faces
+rpgmakingreloaded.forumcommunity.net
+
+HBGames.ORG View topic - Raven's RMVX
+hbgames.org
+
+Disgaea: Succubus by Final-Boss-Emiko on DeviantArt
+final-boss-emiko.deviantart.com
+Why, hello there, male demographic. This is the Succubus. Contrary to her humanoid form, she is a monster type. She can use different types of magics and succubus skills, such as health drain and l...
+
+rpg-vault.de
+Pin by sunsaz on Rpg | Pinterest | RPG
+Pinterest
+
+Liuka's Chest: Faceset série CHIBI - Ator 3
+
+rpg resources - Azure faceset by FelipeNero on DeviantArt
+felipenero.deviantart.com
+resources I'm creating to help the rpgmaker users ^^
+
+
+Fire Emblem Face Sets by Chaco-late on DeviantArt
+chaco-late.deviantart.com
+
+This is a "Face Art" palette I made for characters from Fire Emblem Radiant Dawn and Path fo Radiance. Basically, you can use this Faceset in RPG Maker VX and it will work fine. @Fire Emblem charac...
+
+RPG Maker VX Ace Lite - SteamStat.ru
+steamstat.ru
+
+Forum: Seeking Anime artist or Pixel artist for Free Distributed RPG ...
+DeviantArt Forum
+fc09.deviantart.net/fs71/f/201…
+
+search:
+anime mech(a)
+anime rpg mecha
+...
+Nexon Showcasing 15 Games in G-Star 2014
+treeofsaviorgame.com
+Nexon is set to make appearance with 15 game titles in the upcoming G-Star 2014 global game trade show starting next week. Many of the trailers including Tree of Savior are not up yet as of...
+
+[Master Of Eternity(M.O.E)] 4 (Leas episode 4) - YouTube
+youtube.com
+
+ROBOTECH Kraken by Nidaram.deviantart.com on @deviantART | Mecha ...
+Pinterest
+"Kraken" front/back art for Palladium Books' ROBOTECH: The Masters Saga Sourcebook. Based on a mecha design from the Southern Cross anime.
+
+Diaclone Reboot - DA-05 Powered Suit System Set A & B Cosmic Marines Ver.
+bigbadtoystore.com
+
+Mecha Damashii » Features: Top 10 Best Mecha Games Of All Time
+Mecha Damashii
+cg_temjin
+
+
+----
+
+
+https://github.com/knunery/FantasyNameGenerator
+
+https://github.com/rlguy/FantasyMapGenerator
+=> schlarrafia
+
+...
+
+
+----
+
+
+
+
+
+
+----
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+Hint:
+"Home" screen
+
+
+like 
+"home" project
+
+
+----
+ImageMagickNet
+xcopy ..\..\..\DLLs\$(ConfigurationName)\*.* . /y
+
+----
+robo-cats
+----
+
+security <= SecDevOps
+
+open source intelligence
+- 
+- electronic services
+- expert systems
+etc.
+LOL
+
+Emo* equations
+e.g.,
+hate	H*
+love 	L*
+fear	F*
+anger 	A*
+envy	E*
+
+
+
+
+
+
+
+
+
+
+
+
+

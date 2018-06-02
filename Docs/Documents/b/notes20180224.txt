@@ -1,0 +1,132 @@
+(e)xterior:
+"futuristic exteriors" search
+
+Google search generated 
+2/24/2018
+2000 ET
+For images that may be subject to copyright, "fair use" is intended
+
+(i)nterior:
+"futuristic interiors" search
+
+(m)edieval
+medieval+medieval castle
+
+
+----
+3d
+exterior
+psuedo-random generation:
+layout
+# bldgs
+bridges
+
+random,scattered cubes
+
+also, some scenarios 
+stacked bridges:
+e.g., road block
+
+interior
+psuedo-random:
+random cubes layout
+# cubes
+(maybe) connecting walkways
+
+some scenarios:
+stacked cubes
+
+2+ multi-level floors
+
+
+=> composite onto hex-maps
+
+Game is:
+Game map
+=> exterior building shots : exterior phase
+(optional) city tech rules
+=> interior phase
+sweep | rep detect | combat
+
+varying combat styles:
+hex-based (tactical)
+up-close hand-to-hand/karate style
+
+graphics:
+bgfx | (maybe: fraubasch | nehe | irr | urho)
+
+FX:
+buildings=>cubes
+particles=>smoke|rain
+	glass|explosions
+
+Etc.
+
+Game map 
+=> random city fly-over => exterior (
+: can be ring of cubes along perimeter
+: smaller set (1+) of texture building cubes 
+: can have multiple 2+ floors <= scenario determines 
+)
+
+=> interior
+: REP combat
+
+
+formations
+: humans
+: REPs
+: cars
+: drones
+: fighter jets
+: ships
+
+
+----
+Modern time
+e.g., 2049
+"canned" exterior|interior generation
+- scenario based
+
+need:
+"canned" medieval layouts
+(maybe) extend random cubes algo
+- Schlaraff scenarios
+- scenario based
+
+Main "search" => cube stacks 
+Taller stacked cubes => increases chance of triggering combat
+
+(later)
+Composite game ideas:
+Tarot+
+Tarot+Astro+Chakras
+"Show thinking" => REP detect
+etc.
+----
+Save the Image to a MemoryStream and then grab the byte array.
+http://msdn.microsoft.com/en-us/library/ms142148.aspx
+
+  Byte[] data;
+
+  using (var memoryStream = new MemoryStream())
+  {
+    image.Save(memoryStream, ImageFormat.Bmp);
+
+    data = memoryStream.ToArray();
+  }
+----
+
+conflict generation
+=> combat
+=> (maybe) random drama matrix
+
+
+Sclaraff'
+:
+Eliminate REPs from medieval history(!)
+:
+Then, return (or escape) to future
+
+
+

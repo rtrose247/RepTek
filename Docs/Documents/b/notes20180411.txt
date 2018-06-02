@@ -1,0 +1,41 @@
+
+- texas hold-em poker
+- poker dice
+- 8-ball (20 questions/answers empathy test|VK)
+- chess 	<= embedded mini-game	<= maybe useful for clues (animation only...?)
+- cyvasse 	<= medieval tie-in
+- spacewar 	<= FASA-like battlestar galactica
+- tarot
+
+REP TEK RPG
+unicon <= ESPER | prolog | ...
+
+* animations (win/lose)
+- flying cards/poker chips :)
+- flying chess board/pieces
+
+* techniques
+textured cubes
+- some animated gifs
+- high contrast <= neon effect
+
+bgfx
+- procedural sky
+...
+- memory-mapped array <= outdoor | indoor (array of cubes)
+
+(sometimes)
+- rugged outdoor terrain
+- weather
+
+etc.
+
+----
+
+- "room for rent" (LOL?!)
+
+
+
+
+
+

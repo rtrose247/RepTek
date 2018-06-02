@@ -1,0 +1,423 @@
+----
+c#<->p
+e.g.,
+using System;
+...
+namespace HelloWorld {
+public class myObj 
+		//Console app
+		static void Main(string[] args)
+			//data structures e.g.,
+			var v = new List<Tuple<int, string, tring> {} etc.
+p( obj(a,b) :- p1(), p()2, etc. )
+----
+maybe:
+C# { p ( facts | rules) }
+C# => command|move P() => answer [] => C#
+----
+(maybe)
+Bottom-up, theoretical "learning" via:
+simulating data storage in
+DNA <=> double helix model for long term storage |proteins <=? MHC model from immunology => glue |synapses : 
+neural net / random boolean networks / Bayes / GMM / HMM
+attribute bagging
+mathematical functions <= geometry | integral | derivative | complex numbers | complex plane | chaos eq 
+- predator/prey models
+- etc.
+
+Understanding "human" behavior/conflict resolution:
+- character generation on-demand (fill-in during scenario generation)
+- population models (e.g., background) of humans|aliens|REPs|cat/dog [CHARD model]
+- let "warehouses" be a randomly chosen set of CHARD
+- "toy" behavioral modeling/limbic system (Maslov|needs/rewards/punishments | 
+emotional probablistic/matrix calculations)
+=> biological function e.g., burp|bathroom|sex|space conflicts
+=> drama matrix with "built-in" taboo constraints/restriction
+=> hostage situation vs. romantic involvement (<= "charm")
+=> intra-couple + robot combos LOL
+=> neighbor|neighbor LOL
+=> hierarchical networks of human|h*|r* +/- romantic involvement (eg., 0.01--0.05) | could be relation "unknown" :)
+=> *suggests* REG-EX generation e.g., C*|H*|A*|R*|D* 
+=> gravity (falling objects, people) = conflicts
+=> explosions
+=> post-event argument (anger management) or maybe (it's ok / forgiveness) | dice roll e.g., 2D6
+=> hoarding behaviors | <= load-driven conflict generator
+	(R* => activation)
+	eventually: space conflict | spontaneous stamped | animated, marching cubes LOL 
+(maybe) people, (places), things
+"places" could be modeled as a texture-mapped cube
+
+=> what-if scenarios (imagination)
+=> e.g., 
+Exponential economic growth/loss functions
+Exponential population e+x|e-x functions (<= could be viewed as, e.g., pie chart + projected)
+escalating gangs:
+robot infringement | as-a takeover scenario | robot gangs | c/h/a/r/d gangs | etc.
+
+Newtonian physics
+- (maybe simple) physics engine
+- momentum | ... force | KE/PE 
+- "toy" gravity model ; models load with "built-in" force, unless 0G situation (maybe 1+ scenarios)
+- elastic collisions
+- particle systems
+
+"Gradient descent" game modeled as
+- particles landing on a convex surface, e.g., icosahedron
+- particles converge, e.g., at center of bounding box => a "solution" was reached
+- (maybe try:) animation of simplex methods
+
+Formations:
+- regular grid formations: 
+e.g., triangular, SQ/Diamond, 2D,3D(pyramid, diamond/cube),
+"spherical" as in C60
+- maybe 2..60XN how many "bucky" balls is it
+- C60 simulation
+- gravity: e.g., -1|0|1..100G(?) <= affects moves/flight
+- (maybe) allow CHARD to survive impacts with surface OR atmospheric/Gravity edge 
+=> max boundary is specified as part of the scenario
+=> maybe allow transition from +/-1G to Space//SpaceWar 
+=> play until: win/lose/draw|"player" fatigue maybe modeled as amount of time in game(max should be <2hr)
+
+=> scaled games (in loop):
+- allow city|planet|system|+ maps
+- rapid projection endings (generate stats)
+
+*** SCREEN shots on timer (in automated mode)
+* branching story line
+* in-memory tree: save state, hash code, in isolated folder (for later scenario load option...)
+
+POP-up 
+Weapons animations
+
+Random Cube=> Enemy|Player power ups
+
+Automated SpaceWar(s)
+- scale: 
+- earth hex map
+- starts with solar system
+- hex map
+- pre-populated with planets in specific locations
+- (+)proportional scale
+- gravity/relativity 
+- "hops" in terms of 'c'
+- (maybe) orbiting black-hole (approaching)
+- (maybe) Planet X type scenario
+- (maybe) randomly sized fleets : choose 0.1X(envoy|refugee), 1X(invasion force), 10-100X (overwhelming force)
+- (*) later on: branches into multi-star system scenario, 1+ black holes
+- (*) expansion pack: multi-galaxy/star system(s) => constellation based
+- multiple factions => map coloring algorithm(s)
+- etc.
+
+Quantum theory:
++/- spin | particles | anti-particles  | mirror neurons 
+<= truth tables X cells X spin states
+<= EPR parallelism
+<= correlated networks
+<= synchronization (intra-network)
+<= information propagation model (e.g., message broadcast | receive )
+<= einstein's travel at 'c' : relativistic effect
+<= human thought | weapon | => psionics ("fictional" 
+concept of thought power manifesting to change physical and/or meta-physical reality)
+etc.
+(maybe) human|robot spontaneous generation of "soul" <= possible? what would it mean? etc.
+:
+salvation/beliefs matrix
+etc.
+
+What is needed, basically: higher order lambda|pi calculus
+- try modeling these in lower level language ? "toy"
+- try different combinations of input data, operators, algorithms
+
+Application(s) to game theory
+"Sampling from the Imagination Engine"
+=> arbitrary game grids
+=> arbitrary sets of pieces 
+=> 2D | 3D layouts
+=> rules consisting of operators/moves
+=> turn based
+=> real-time (maybe)
+=> on-the-fly rule selection = branching choice
+	: <= tactical board game | chess-like | cards | (plugin:composite) >
+=> cards : e.g., rules for poker OR "special powers" game
+=> towers of hanoi (esp. in human|robot animations)
+	: maybe short-hand representation of hu.|ro.|obj* initial config
+	: e.g., 2D text file
+=> Conway Life rules
+=> Fractal generation
+=> (possibly) random mesh generation
+=> ring(s) of game boards
+=> random number generator
+=> probability estimation (e.g., gauss|normal curve, odds, log of odds, poisson, etc.)
+=> chess engine (look-ahead)
+=> just-in-time compilation (loading|caching binary files|code+data|etc.)
+=> "karate chess" model
+=> Overall REP Tek board with "sectors"
+
+"House Rules"
+- planning games with overwhelming odds: e.g., 10-100 REPs to 1+ human|animal|alien combo
+- (maybe) start with 100-1000 HP (follows exponential based on Level)
+losing HP => "negative" HP scores translated to "H" human score
+- different scenarios:  inner E(agarth) | earth | space models
+- winning vs. losing : based on ending HP/Score
+win/lose determined by:
+Max HP/Score       
+- Score based on damage received vs. "Retiring" REPs 
+- HP based on damage received vs. defeating REPs <= 0-sum game of HP (add REPs HP to overall score if retired)
+- visualize on number line: use log scale
+: -10^x | -1000 | 0 | +1000 | 10^x
+(H) losing | 0 = equilibrium | (H|R)* winning H*|R* <= (maybe) signal REP sympathizer
+
+*default*
+(H)...(H*R*)
+REP symp rules
+- winning against humans => decreases R* score
+- as overall REP Tek game progresses
+- H <=> R oscillator
+(maybe|eventually|place-holder) load as external definition file with simple equations
+Goal => max Score 
+Score => H(-) ... (H+|R+)
+
+- side battles: 
+game will progress until end-game condition is reached
+max "H" score (negative HP for player/s in party)
+all opposing/enemy are "0" or frozen status
+- (maybe) some scenarios calls for "reinforcement" choose backup, possible if scenario says 
+- e.g., -10000 | -100000 | -inf
+- e.g., each unit -1000 up to MAX reinforcement score
+- choose random option
+
+*Automatons*
+Simulating human thought | reasoning abilities
+Gamification=>
+e.g.,
+using a concept network such as WordNet
+overlapping 2-3 rotating hexagons => convolutional neural net (CNNs)
+- implied connection further +|- DNA chain || DNA | protein | neural correspondence
+- remote linkages : intra-chain (single chromosome) 
+- "unlocking" one DNA chain : jump to next chromosome
+- concepts, such as 'SNPs' single nucleotide polymorphisms
+=> Human Genome Map
+- "unlocking" maybe can be done via 
+shooting one vertex in the next ring : with some function (this is maybe similar to SVM : Support Vector Machine)
+=> unique chains of concepts + operator equations e.g., proteins lock in unique hashing via (Base128?Barcode|Unicode(s)|QR code|combo)
+
+Motivations(for characters|agents):
+=> obtaining unique hash codes
+=> "unlocking" DNA/memory
+=> "scoring" is multi-factor : Individual + Society
+
+Tree-Hashing
+=>
+Non-linear
+*branch points in the game/story*
+=> generate image-based hash ; be able to dump it in binary format
+=> maybe also String-based hash, store in Story | Tree
+
+Eventually...
+'Total' brain model:
+=> need a 'hierarchical' function
+=> maybe organize into cognitive centers | use brain wave functions
+
+In parallel (||):
+News headline feed
+Wordnet | anagram shuffling algo
+=> hypothesis generation and test
+=> hashing with unique combo of words|concepts|*maybe|optionally* chained to operator(s)
+=> (maybe) random bezier surfaces
+=> () random networks
+
+Is the system "Turing complete" ?
+Yes:
+Basically it is hierarchy of (G(B(P(R|KB|A|N))))
+Game:Board:Piece:Rules+Knowledge Base+Algorithms+Network
+
+Plan is:
+compact representation of the above models
+<a|b|c|d|...> 
+essentially, a correlation matrix or "chained operator" list
+
+"Driving" algorithm
+:
+camera control loop <=> execution phases
+:
+Inner core game of 'Rep Detec' => REP TEK
+with optional, "toy" side game(s): *random what-if scenarios*
+- these are stand-ins for the Rep Detection/Rep Combat 2D6 style roles:
+- REP detection => "show thinking" function
+determines human/REP units reveal
+----
+Tactical RPGs:
+- Agarth* RPG => schlaraffia grid search and simulated "pocket tactics" games vs. covert/obvious/revealed REPs
+- embedded chess|cyvasse <= even if "poor" AI
+- embedded *breakthrough* game
+- "Apartment" building sweep <= people warehouse LOL
+- other 'sweeps' : gas station, grocery store, library, office, school, rnd warehouse(s)
+[Add-ons]
+- could be, light-weight, place-holders (for starters)
+- Space War(s)
+- "power" card game
+- hearts
+- poker
+- (maybe: as a sample) random 5-draw poker game with Unicode deck ("alien" poker with arbitrary scoring function).
+- etc.
+----
+
+----
+Eventually
+speech skills | NLP
+e.g.,
+AlexPoint/OpenNlp
+
+Etc.
+---
+
+script elements:
+-theories
+-such as:
+"Any population can be modeled as a sum of exponentials"
+- gameplay => conflicts and goals
+
+Dialog continues...
+- Darwinism. Social Darwinism. Class-warfare. Communism. Capitalism.
+- local, conventional wars. stand-offs. stalemates. 
+- you get the idea
+=> international tie-in (ironic)
+
+----
+initially:
+- need to *simplify* everything
+- start with basic 2D+3D Rep TEK
+- render game action + menu overlay
+- quickfont|midi support
+- screenshots
+- *simple* KB knowledge acquisition game (<= can be "floating cubes" or similar device)
+- "ESPER" backdrop
+- later => (optional) scenarios | branching side games
+la.night
+"experimental" simulated google set: images with (c) used with "fair use" intent :)
+
+
+----
+----
+App hints:
+----
+- gameboard = connected cells
+----
+- "Helper" Menu bar
+- (eventually) Use quickfont for menus
+maybe can start with *tiled menu* screen
+=> 2D menu system 
+
+Initial skills: 3 vars
+Combat
+Detection
+Investigation
+<C|D|I>
+=> 6 = 2|2|2
+
+Menus:
+File|Tools|Help
+----
+Resign|Hand|Declare|Move|Detection|Combt|End Turn|Hand Counts|Shared Windows(<=eventually)
+
+Hand => Red|(Blue|Green|Yellow) : player choice enables these on the "client" app
+
+Declare => Moving|Staying
+	
+Move (button) => die roll (e.g.,2D6)
+	*** Move=2 *** <T>
+(log move info)
+* Red moves from Red's Home to a space *
+* Red moves from a space to a space *
+*** Detection=3 *** <T>
+*** V-K result: The Suspect is a Replicant! ***
+
+Detection => 
+-administer voigt kampff
+-get result
+
+Combat =>
+-Blade Runner
+-Replicant/Sympathizer
+
+(appears) series of 1D6 rolls
+*** Blade Runner Combat=2 *** <T>
+*** Replicant/Sympathizer Combat=6 *** <T>
+*** Blade Runner Combat=3 *** <T>
+*** Blade Runner Combat=4 *** <T>
+*** Replicant/Sympathizer Combat=4 *** <T>
+*** Blade Runner Combat=1 *** <T>
+*** Replicant/Sympathizer Combat=2 *** <T>
+
+Roll until REP rolls higher 1D6 => escape
+
+End Turn (Button)
+* Red's turn has ended *
+
+Each turn:
+- draw cards equal to detection (e.g., n=2)
+- up to maximum (e.g., 5 in VASSAL| eventually, 5...50+ <= entire deck)
+- (maybe) use normal cards
+e.g.,
+=> face cards for human|REP decision 
+=> simple 1D6 combat
+=> (maybe) simple, or "canned" animations
+=> scripted dialog
+=> location cards : *expanded* deck
+
+
+*** Detection=6 *** <T>
+*** V-K result: The subject is Human. ***
+* Red's turn has ended *
+* T (Red) is moving *
+*** Move=3 *** <T>
+* Red moves from the Tyrell Corporation to a space *
+* Red moves from a space to a space *
+* Red moves from a space to Animoid Row *
+
+etc.
+
+Maybe:
+Unicode for card representation
+2D board short-hand
+
+File => New|Load|Save Game|Save Game As...|Close Game|Begin Logfile...|Preferences|Quit
+
+Tools => Refresh counters
+
+Help => Help|User's Guide|Quick Start|(About Module)|(About VASSAL)
+etc.
+
+
+----
+App state management => app class
+
+
+LIBS
+- assimp | puremidi | quickfont | ... C#OTK/OGL lesson | mfc_ogl
+-
+----
+
+Etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

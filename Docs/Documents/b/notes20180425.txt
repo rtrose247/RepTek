@@ -1,0 +1,151 @@
+Sprints(//):
+//
+Composite two images using alpha blending
+e.g., GDI, OpenTK...
+//
+Opening scene
+//
+Side-view combat screen (<=compositing is ok)
+//
+Midi music plays
+e.g., config file playlist
+
+----
+http://tvtropes.org/pmwiki/pmwiki.php/Main/FlippingTheTable
+----
+Blade Runner (Vangelis)
+Copyright © 1995-2009 MIDIWORLD All rights reserved
+----
+
+=>
+show thinking
+
+----
+https://zapier.com/sign-up
+Connect GitHub + PayPal
+
+====
+https://stackoverflow.com/questions/428494/is-it-possible-to-use-showdialog-without-blocking-all-forms
+
+
+const int GWL_STYLE   = -16;
+const int WS_DISABLED = 0x08000000;
+
+[DllImport("user32.dll")]
+static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+[DllImport("user32.dll")]
+static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+void SetNativeEnabled(bool enabled){
+    SetWindowLong(Handle, GWL_STYLE, GetWindowLong(Handle, GWL_STYLE) &
+        ~WS_DISABLED | (enabled ? 0 : WS_DISABLED));
+}
+
+
+class FormB : Form{
+    void Foo(){
+        SetNativeEnabled(false); // defined above
+        FormD f = new FormD();
+        f.Closed += (s, e)=>{
+            switch(f.DialogResult){
+            case DialogResult.OK:
+                // Do OK logic
+                break;
+            case DialogResult.Cancel:
+                // Do Cancel logic
+                break;
+            }
+            SetNativeEnabled(true);
+        };
+        f.Show(this);
+        // function Foo returns now, as soon as FormD is shown
+    }
+}
+
+class FormD : Form{
+    public FormD(){
+        Button btnOK       = new Button();
+        btnOK.DialogResult = DialogResult.OK;
+        btnOK.Text         = "OK";
+        btnOK.Click       += (s, e)=>Close();
+        btnOK.Parent       = this;
+
+        Button btnCancel       = new Button();
+        btnCancel.DialogResult = DialogResult.Cancel;
+        btnCancel.Text         = "Cancel";
+        btnCancel.Click       += (s, e)=>Close();
+        btnCancel.Parent       = this;
+
+        AcceptButton = btnOK;
+        CancelButton = btnCancel;
+    }
+}
+
+
+====
+Start FormB in a new thread in FormA:
+
+        (new System.Threading.Thread(()=> {
+            (new FormB()).Show();
+        })).Start();
+
+Now, any forms opened in the new thread using ShowDialog() will only block FormB and NOT FormA or FormC
+
+----
+1.
+How I came to live with Karma- here at the Casino is...
+Well, you see-  she saved me.
+We had met first in Los Angeles Airport (LAX) and, later on assignment, when we
+touched down in Honolulu.(show background image).
+I realized I had no luggage, no wallet. Somehow everything I owned was either lost in transit, or stolen.
+We were both former cops. "Five-0", as they say.
+We got called back in response to a heightened state of emergency. Everyone had orders to report to Hawaii.
+We thought it was nuts. No one had any information. Except we were all booked at the same hotel ("YUKON"- yes, all caps).
+Karma felt sorry for me and said I could stay with her until I got things sorted out (the next day).
+2.
+The reason for the most recent emergency? It turned out
+REPs (Resident Engineered Personnel) did most of the work these days, both on and off-world.
+In 2020, no planes were used in the attacks on Tyrell Corp.
+Instead, they said it was a gang of REPs that had staged the attack.
+Looking for information, was Tyrell's usual cryptic response(show Dr. Tyrell). 
+Here today since his own company had used REP technology to clone him and continue operations there.
+
+3.
+And, as an added bonus, now, the kicker-
+we had been sharing our data with Tyrell, the attackers used the data link to hack in. Our system, ESPER (electronic sensory perception and expert reasoning) has been compromised and is in "safe" mode. We are still formulating a plan, but we need to keep this quiet, and we are going to need your help to unlock some of the data for us.
+
+
+----
+displacing millions,
+in search of a solution- and finding none, perhaps, out of frustration perhaps,
+or possibly furthering some hidden agenda, the attacks proved had both deadly and symbolic.
+The shock was heard around the world. 
+
+As luck would have it, hindsight proved to be twenty-twenty-
+It would be corporate generosity that would bail us out-
+Instead of allowing the human populace to fall into further distress, and possibly
+bankruptcies extending to other regions worldwide,  a collaboration
+between the global asset holders and debt/credit managers led to a new spin on monetizing the debt.
+This time once the debt was monetized, globally, a "reversal of fortunes" policy was created to offset losses,
+where the so-called debt owed by citizens was used as cash deposits to pay for expenses.
+To avoid the effects of runaway inflation, the currency was not allowed to fluctuate according to market forces,
+but rather, "mark to model" circa June, 2020, and not to expire until either 2033, or the end of the state of emergency,
+whichever was first. Those having cash surpluses, before the policy, were given an untold amount of leverage, as an incentive bonus,
+and undisclosed amounts of on-demand cash as their "merger" fee, which the corporations gleefully used to expand their empires
+both here, abroad, on and off-world.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

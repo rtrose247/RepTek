@@ -1,0 +1,188 @@
+ToDo's
+- quantize all images <= batch mode(?)
+- random skyboxes
+- animated gifs in OpenTK
+- (sample)card game/s
+- dice
+- planets game		<= skybox + models
+- BSG game		<= space tactical game <= skybox + models
+- driving game		<= skyboxes ....
+- platform jump? 	<= skyboxes ....
+- rampage game
+- kabala game
+- VK emotion game
+- international flags
+
+"Rules"
+shooting => e.g., for demo, "aces" setting : >1 hit loses
+- REPs must be captured and brought in alive
+- hex grid : fighting game 
+- => & tactical game
+
+VK <=> "cellular ping" technology with drones
+
+Capture REPs => win cards
+Winning hands (e.g., trump cards) => clues => ESPER
+Other Detectives/REPs can steal cards
+Plot player positions on board
+----
+etc.
+
+----
+Them animals - sounds like "manimals", so to speak ;)
+----
+"instant karma" => scale up large, building size ; similar to Mario/Rampage(TM)
+----
+OpenTK multi-pass texturing
+Try K* with and without phong shader <= try different shaders
+----
+Search for MIDIs
++
+MIDI remix
+----
+=> move MIDI code to MainWindow
+=>
+=> Draw player as overlay on MainWindow (hint: alpha transparent window?)
+=> 3D rendering in OpenTK e.g., gifs
+	=> (randomized) sky boxes
+=> GLGUI/ImGUI wrapping
+
+
+----
+BR-intro + BR-Chariots remix
+
+
+============
+TIMELINE:
+============
+1982 Blade Runner Partnership formed
+2000 Programmable Mannequins appear
+2010 Tyrell Corp. begins Nexus series
+2019 Off-world REPs Nexus 6 break into Tyrell
+2020 Off-world REPs attack Tyrell Corp.
+2022 Electromagnetic Pulse (EMP) attack LA
+2030 Tyrell+Wallace Corp. Merger+Venture
+2049 Investigation into Rachel/Deckard case
+2050 State of Emergency @ Honolulu
+
+
+
+Karma modes:
+- shape shift?
+- dice role => determines next scene
+
+* anti-shooter
+gun => net : freezes
+1-time use
+
+----
+Evolution SDK
+tempo.obj
+
+-bleh
+
+//s
+Qfont Dialog Window()
+//
+
+----
+Auto-satirical : e.g.,
+-What was that- the "README"?
+-No one ever reads the "README".
+-Typically true.
+
+----
+
+"Short-hand" image compositing language
+=> using alpha blending
+
+
+----
+
+random forests
+
+----
+
+
+XAudio2 from "marble maze"
+
+...SharpDX
+
+----
+
+C# + parsing
+https://tomassetti.me/parsing-in-csharp/
+
+We Care Arts
+Berkeley Center in Kettering
+3035 Wilmington Pike
+Kettering OH 45429
+937-252-3937
+
+----
+//hands
+.poker dice
+.standard deck
+.tarot
+.planets
+.kabala
+=> unlock ESPER
+:)
+=> helps Karma
+----
+random forest + *Unicode* hash codes
+;)
+
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

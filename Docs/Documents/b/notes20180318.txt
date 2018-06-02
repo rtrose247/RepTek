@@ -1,0 +1,51 @@
+
+Math.NET Symbolics http://symbolics.mathdotnet.com
+computer-algebra
+mathnet
+dotnet
+fsharp
+symbolic-manipulation
+math
+
+
+----
+Integrating():
+-maybe-
+e.g.,
+Math.NET | <= symbolic math eq's
+
+prolog(?)
+-chess
+-21
+-poker
+MIDI
+QuickFont
+
+
+----
+Computer AI-
+goals:
+races around board
+calls "suspicion" each turn
+does not try to escape with REPs
+(maybe) keeps some information from player (keeps some clues hidden from ESPER)
+arrests REPs/humans
+etc.
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,194 @@
+Script:
+Office Briefing room - normal lighting. maybe smoke in air.
+(Police Chief):
+A recent accident investigation at a (refinery) has revealed the use of unlicensed REPs as laborers.
+We are investigating to see how this could have happened.
+
+(player)
+What are REPs?
+
+REP - Resident Engineered Person/Personnel : artificial humans.
+
+(player)
+I thought they were outlawed on Earth.
+
+They still are. They tried using them on our planet and it failed.
+
+(player)
+Why ?
+
+Besides predictably disrupting the global economy, REPs had a tendancy to disrupt society. None too friendly, either.
+See, their emotions are not exactly stable. Although some of the emotional balance is based in memory, there is an algorithm ...
+Over time, their neural net evolves and they may begin to learn their own emotional responses to people, places, things.
+Fear, anger, envy. And a lack of moral restraint, to put it midly.
+
+(player) Hmm...
+
+Now, look: six REPs posing as humans smuggled in from offworld colonies have now been taken into custody.
+Since this report came in, the ESPER system has gone into SAFE mode. It appears to be the result of a hack.
+We are isolating the grid location of the attack and will get that to you.
+(was: full alert).
+
+(player) What is ESPER?
+
+ESPER: Electronic Sensory Perception and Expert Reasoning system.
+ESPER is saying we have 24 hours to resolve the issue
+or an apparent threat to the city will likely cause some sort of catastrophic event.
+
+(player) What sort of catastrophe?
+
+We're not sure, yet, ESPER is indicating certain members of the public might be injured or killed.
+The Department takes threats like this very seriously.
+Although ESPER usually tries to give us a complete picture, ESPER in SAFE mode says since it is a fluid situation and it is still evolving, the exact nature of the threat is currently unknown. Any further details will remain classified until we can troubleshoot the ESPER.
+We're working on getting the details. The current direction we have is to transport the evidence obtained at the site to (REP Corp) for inspection, analyzing for clues, and to help put together our next steps. We will relay any new leads from ESPER as they emerge.
+
+(Maybe:) This guy will fly you to REP Corp.
+
+(player)
+OK, thanks.
+
+----
+Transition to building rooftop.
+--
+Show car flying to 'REP Corp'.
+--
+At REP Corp:
+
+Office briefing room: similar to Tyrell Corp. Bright, reflective surfaces, sunlight, gold hues (maybe).
+Maybe a yellow hex grid.
+
+Introduce:
+- Rep Tek game rules (from Rep Detec board game)
+
+Game board is a series of grids. Each detective has a home location.
+The game board will be rendered in two ways: 2D overhead view (100% of board), and current 3D view of game location.
+Each location should have different background models of the setting. 
+A random mix of humanoids. Some of 
+
+Detection is done via "show thinking". A special dice role:
+
+all humanoids in the grid location
+
+- (Maybe:) mini-games:
+	- 
+	- 
+	- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+Background
+Tyrell Corp.
+Nexus 6|8
+Nexus 8 : purpose built with a natural lifespan
+
+Wallace Corp.
+Created replicants who obey
+
+ideas:
+tarot+zodiac : major+minor arcana 
+	tarot+color wheel
+	=> measurement of time; finding clues...
+	=> each hour corresponding to the major arcana
+
+"Karate chess" engine
+
+Scenarios:
+Speed trap...
+Circle of spinners...
+
+Helicopters...
+Flying car...
+Transport from rooftop...
+Rescue attempt...
+"Toy soldiers" (e.g., knights vs. robots)
+
+Serial numbers:
+Pre-blackout 
+Post-blackout
+
+genres:
+- fantasy RPG|sci-fi detective|space war
+
+engines:
+- 3D flight sim (e.g., in-game animations)
+- card games
+	* "Show thinking" tarot game .... 
+- hex chess
+- "karate chess" for hand-to-hand combat
+- "Specter Ops" maze game
+- Rogue dungeon exploration (esp. time travel fantasy RPG)
+- Image analysis grid game (inspired by Blade Runner '97)
+
+- maybe:
+	* clues => clue|mastermind
+
+From BR2049 : VR Experience
+- memory analysis
+- memory reconstruction
+=> 3D scene exploration
+implants : human memories that were edited, contain flaws
+find flaw => restore earlier scene data (before the edit)
+floating face(s) 
+"A replicant blade runner retiring a human => could bring on another prohibition and the end of (Wallace corporation | RepliCorp)"
+Editing memories by substituting "alternative data" 
+
+----
+Organize scenes with the use of grids
+----
+
+Flexible game menu:
+e.g.,
+		*
+	*		*
+	*		*
+		*
+
+Resign|Hand|Declare|Move|Detection|Combat|End Turn|Hand Counts|Shared Windows
+
+
+
+
+
+
+
+	
+
+----
+
+
+
+
+
+
+
+WIRED:
+Uber's Plan to Launch Flying Cars in LA by 2020 Really Could Take Off
+By Jack Stewart
+
+"After grabbing an elevator, passengers will tap their phones to pass through a turnstile and access the roof. Presumably they’ve been prescreened, because there’s no airport-style security in evidence. An agent in an orange vest takes a group of four passengers out to the waiting aircraft. There’s a pilot up front, and a small overhead display with the estimated arrival time. Then it’s just sit back, relax, and chuckle at the suckers stuck in the old-timey traffic far below."
+
+
+Other titles
+---------
+Blade Runner: Black Out 2022
+Nexus Dawn 2036
+2048 nowhere to run
+
+
+
+
+
+	

@@ -1,0 +1,122 @@
+Yukon		| 	"U"-con
+- unicorn
+- unicode
+----
+- Unicon
+
+
+"Home" square
+skills inventory/adjust skills level 1|2|3|4
+- Investigation
+- Detection
+- Combat
+- *Future use* Others TBD
+
+Lock control	(CTRL L)
+Increase	(CTRL ])
+Decrease	(CTRL [)
+* T (Red) locks Combat=2 *
+* T (Red) locks Investigation=2 *
+* T (Red) locks Detection=2 
+
+Menus:
+(Maybe)
+(<-->	Show/hide server controls)
+
+Resign
+- Become observer
+- Join another side
+- cancel
+
+Hand (CTRL H)
+- Red 		CTRL R
+- Blue 		CTRL B
+- Green 	CTRL G
+- Yellow	CTRL Y	
+
+Declare
+- Moving
+- Staying
+
+Move => roll your move
+e.g.,
+*** Move=3 *** <T>
+
+Detection => roll Detection
+Get Result
+
+Combat
+- Blade Runner
+- Replicant/Sympathizer
+
+End Turn => * Red's turn has ended *
+
+Hand Counts => pop-up window showing # cards in each player's hand
+
+Shared Windows
+- Red/Blue
+- Red/Green
+- Red/Yellow
+----
+- Blue/Green	(if playing)
+- Blue/Yellow	(if playing)
+- Green/Yellow 	(if playing)
+- All players
+
+[Camera] => Screenshot
+
+Zoom
+- 160 %
+- 100 %
+- 63 %
+- 39 %
+- Other ... => Enter zoom:
+- Fit width
+- Fit height
+- Fit visible
+
+[O] => show/hide overview image of board
+CTRL+SHIFT O
+
+
+
+----
+QuickFont
+Nuget PM>
+Install-Package QuickFont.Desktop -Version 4.4.6159.26433 
+
+Install-Package SharpFont -Version 4.0.1 
+
+* Add references to quickfont, sharpfont in each project
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error		Could not copy the file "C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\packages\SharpFont.Dependencies\bin\msvc10\x64\freetype6.dll" because it was not found.	Example			
+
+Install-Package freetype -Version 2.8.0.1 
+(X) failed
+
+Drag and drop a reference to freetype6.dll in
+C:\Users\rtrose\Downloads\QuickFont-master\QuickFont-master\packages\SharpFont.Dependencies.2.6\bin\msvc10\x64
+to QuickFont.Shared project
+
+Change freetype6.dll Copy Always => Do not copy
+
+
+
+----
+e.g.,
+Use Stencil font
+
+To do:
+OpenGL Stencil buffer
+IrrLicht
+Urho
+...
+----
+Unicode
+https://www.codeproject.com/Articles/35771/A-viewer-of-the-Unicode-character-set
+
+
+
+

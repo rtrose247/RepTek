@@ -1,0 +1,32 @@
+TODO:
+-Popup slash screen(s)....
+-3D skybox maze gen. <= procedural cubes
+- random stacks on E* exteriors
+- random stacks of I* <= smaller scale, "mall" layout
+- model loading
+- OpenTK + MIDI playback <= Animated Form|.
+- IrrKlang
+...
+Need to study, e.g.,
+- OpenTK procedural dungeon
+- random forest generator <= series of nodes
+- Pascal's triangle + serpenski <= nested conflict(s) generator 
+...
+- Model loading 
+- fly/driving sim. <= player + camera control(s)
+- (maybe) regex <= layout gen
+- (maybe) road layout gen
+- random stacking (<= range of heights) 
+- (maybe) random textured hex (<= small #s)
+- eventually: RepTek "3D" ring layout
+
+GLGUI
+
+----
+
+"$(SolutionDir)AssimpNet.Interop.Generator\bin\$(Configuration)\AssimpNet.Interop.Generator.exe" "$(TargetDir)$(TargetFileName)" "$(ProjectDir)AssimpKey.snk"
+
+
+
+
+

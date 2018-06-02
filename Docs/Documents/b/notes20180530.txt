@@ -1,0 +1,53 @@
+Hint:
+"Home" screen
+
+like 
+"home" project
+
+*acked
+this is why we are where we are-
+everything, is a *ack
+
+random dungeon generation
+e.g.,
+crossword puzzle => maze algo
+
+funny quotes
+rhyming
+e.g.,
+"hoity toity soy sauce"
+etc.
+
+"UFOs" <= with cloaking
+
+----
+for images
+- palette swapping
+
+...
+
+https://leanpub.com/phaserjsgamedesignworkbook/read
+Phaser.js Game Design Workbook
+
+- teaching
+- open source
+- cloud computing
+- image processing
+- video
+- games
+- expert systems
+- cyber security
+- DevSecOps Sec+DevOps
+- troubleshooting <= systems analyst
+
+cloud
+e.g., cloud render farm
+
+
+
+
+
+
+
+
+

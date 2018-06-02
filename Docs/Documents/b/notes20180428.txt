@@ -1,0 +1,39 @@
+
+Location
+Games : Max Payne : Files	
+Filename
+evolutionsdk.zip
+Category
+SDK	
+Uploader
+TheUnbeholden	
+Added
+May 21st, 2014	
+Size
+112.02mb (117,464,035 bytes)
+Downloads
+588 (1 today)	
+MD5 Hash
+9384d0bafaafa584fbb6f89a2a3674b4 
+
+
+Description
+
+A disillusioned Blade Runner must pursue a twisted serial killer against the backdrop of an overcrowded and over-indulged Los Angeles while clinging to his humanity and morals in a city where the line between right and wrong is all too blurry.
+
+------------------
+A disillusioned Blade Runner must pursue a twisted serial killer against the backdrop of an overcrowded and over-indulged Los Angeles while clinging to his humanity and morals in a city where the line between right and wrong is all too blurry.
+-----------------------------------
+
+This is the SDK for Blade Runner : Evolution. It contains pretty much everything that I've been working on. I didn't include all my LVL files, only the ones that were complete or very near to completion. But, at least you can load the ones that are included up to see how I did things.
+What you will find in this package...
+Ignore;" mce_style="mso-list:
+Ignore;">· the DATA folder. It goes inside your Max Payne game folder. Once placed there you will be able to use all the enclosed entities, etc in any level that you make.
+Ignore;" mce_style="mso-list:
+Ignore;">· BLADE-PREFABS. Inside this folder are a few prefabs that were made for Evolution.
+Ignore;" mce_style="mso-list:
+Ignore;">· INCOMPLETE-MODELS. Inside this folder are 2 models that I started on, but never quite finished.
+Ignore;" mce_style="mso-list:
+Ignore;">· LVL-FILES. A few of the raw levels themselves.
+
+HAVE FUN

@@ -1,0 +1,69 @@
+rnf8h-6505384932@pers.craigslist.org
+Need a guy friend - w4m (Richmond, Preble County, Ohio)
+body: average
+status: separated
+age: 42
+Just looking for someone to hang out with. I prefer males, Women get on my nerves, even though I am one, lol. I just got out of a relationship of 15 years. He was my best friend. Just not ready for anything physical right now. But need to get out, and meet new people. I'm 41, white, 4"11, about 120lbs. I love music and dancing. And have a good sense of humor. I'm 420 friendly. Also like mudding, fishing, hiking. Kind of a tomboy, but not butchy, lol. So if your between 35 and 50, and need a friend to, hit me up. Thanks for reading!! 
+====
+Example Scenario/Text:
+When hunting REP(s), e.g., in a neighborhood, etc.
+- (Screen displays) Fugitive alert 
+
+Need: *suspicion rules*
+If for example, player is trailing REP for too long, or too far,
+or player shoots and misses repeatedly (TBD)
+:
+emotional response => for REP
+- (Screen displays) Fugitive sympathizer alert
+
+(maybe:)
+other BR will shoot at the player, try to arrest player
+
+
+Rep Detec rules:
+sympathizers escape to their apt with REP (instead of bringing to HQ)
+
+
+----
+Blade Runner: Rep-Detect is a game of action and suspense based on the 1982 film Blade Runner. In this game, players portray one of the film’s titular detectives and must search futuristic Los Angeles for five genetically-engineered humanoid Replicants, who have illegally escaped to Earth from the off-world colonies and are virtually indistinguishable from the human population. It is the Blade Runner's job to shoot to kill, upon detection, any trespassing Replicant. However, it is possible that any one of the Blade Runners may become a fugitive Sympathizer and attempt to escape the city with one or more Replicants.
+
+In the game, players move about the city by rolling a die and moving any amount of spaces up to the number rolled, in any direction. Players investigate locations from the film by drawing cards, and test Suspects using the Voight-Kampff empathy test from the film. If a Suspect is revealed to be a Replicant the Blade Runner must engage it in combat, and later on, the players' characters will likely end up fighting against each other.
+----
+To-do's
+- recreate scenes from the movie/animation
+- use animation (e.g., introduce a new combat map)
+- consider random hex maps, random 10x10 square map
+- consider 2x5 room e.g, apt sweep. or multi-level office. e.g., 90 units
+
+- city model
+
+etc.
+----
+Blade
+Runner(s)
+----
+
+(maybe:)
+Nested maps (may be 1 scenario)
+City block, similar to Specter Ops (16x16)
+=>Buildings arranged on grid
+
+Rules:
+City tech (Battletech)
++ maybe: emotional scoring => "limit" like ability 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

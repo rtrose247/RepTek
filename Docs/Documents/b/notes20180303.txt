@@ -1,0 +1,83 @@
+
+-
+- C# graph code => adjacency matrix for (traffic|path finding)
+-
+Overlapping mini-games:
+e.g.,
+Monopoly
+Life
+Rep Detect
+Conway's Life (<= generation)
+Towers of Hanoi
+
+etc.
+---
+Grids- on demand
+G.O.D.
+Need:
+e.g.,
+Orientation angles
+axis spec
+location (in 'space')
+drawing loop
+
+'Grids'
+=> rules ; turns
+e.g.,,
+=> card games | Tarot | Astrol Sim |  
+'behavioral'/adaptive chess |
+voigt kampf sim |
+karate chess | 'hangman' life system |
+apt floor sweep | 
+(maybe)
+scenarios : {
+	school | traffic stop at intersection (red light(s) / green light(s)
+	gas station |
+	warehouse sim(s) |
+
+}
+etc.
+
+Background =>
+Hierarchical Hexmap Tessellations ('HHTs')
+or, in the more general case,
+hierarchical space filling composites
+=> mazes
+
+(maybe) some algo's:
+Convex Hull
+Delauney|Voronoi
+"Toy" FEA <= finite element analysis | mesh tools
+
+- random conflict generator
+- 
+path-finding
+physics
+etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

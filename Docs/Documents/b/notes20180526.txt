@@ -1,0 +1,270 @@
+"BCL"
+Basic Compositing language
+;)
+a simple, shorthand for alpha blending 2+ images and compositing
+also used fors scene flow control
+using a plug-in architecture, more advanced techniques/templates may be used
+with application to
+=> games
+=> animation
+
+(+ maybe eventually)
+=> annotation
+=> story-boarding
+=> synthetic video
+etc.
+
+Gabriel Björk Stiernström
+Concept Artist & Illustrator
+
+
+----
+From Code Project:
+Enscript+DOD style associative array(s)
+
+
+//s
+=> each game play mode is 1 // 
+=> each location = at least 1 //
+//
+Simple Quantized Pallete => batch mode
+//
+=> SharpDX sound playback
+//
+=> Random Forest + Scene Flow Control
+//
+=> *** Pre-defined sequences | intro | transitions ***
+=> e.g., intro | combat | outcome | transition | *
+//
+=> random dungeon generator
+//
+=> Fast Bitmap library
+//
+=> Enscript 
+//
+=> Quickfont dialog windows
+//
+=> 
+GLGUI demo
+=> hexgrid
+=> Komorebi +
+=> texture cubes
+//
+=> OpenTK picking example + cubes demo
+//
+=> OpenTK elevator(E*) animation
+----
+later, plan to composite 
+----
+//e.g.,
+=>GLGUI(Komorebi(OpenTKTutorial6) ) )
+=>GLGUI(Komorebi(OpenTK picking example) ) )
+etc.
+...
+
+----
+ToDo: all images, general, i's,e's, to be quantized in batches => 256 
+----
+Suggesting a random forest of images: exteriors, interiors | <= auto-layout 
+- random cube stacks
+- [background]
+- [middle ground]<= grid/player(s)/character(s)
+- [foreground] <= player/characters
+
+*** eventually => everything will be in associative array(s) :) ***
+* currently => object oriented => plan to scale
+* need: parameterized arrays
+
+Hint:
+List of *gifs => render in sequence (window updates...)
+
+Hint:
+*gifs in OpenTK Window :):)
+
+
+plot(device):
+G:
+A pattern has emerged from some recent investigations....
+A: What do you mean?
+G:Well, in an attempt to blend in- to find suitable housing, employment, transportation-
+We believe REPs are using public listings and matching to meet these needs.
+Everywhere a suspected REP incident has occurred, we've found one of these:
+=> (shows unicode hash)
+A: (maybe...) each listing is a hash code?
+- just like, each memory, say in a library, has its own hash code
+G: they are searching for the right libraries ...
+G: ... to arrive at some kind of solution ... so it seems.
+A: ...
+
+Archer
+Guza
+
+
+
+Image - Mudeenu-season2.png | Chaotiki | FANDOM powered by Wikia
+chaotic.wikia.com
+
+Royal Snack — Weasyl
+Weasyl
+Royal Snack by Reptek
+
+Greymon by tph301 on DeviantArt
+tph301.deviantart.com
+
+Peyton x Prince Mudeenu by Ruby2015 on DeviantArt
+ruby2015.deviantart.com
+
+Bowser by Reptek on DeviantArt
+Reptek - DeviantArt
+SEAN by Reptek
+
+
+Internally Lost by Reptek on DeviantArt
+Reptek - DeviantArt
+
+Reptek | DeviantArt
+DeviantArt
+Reptek 2 0 Sitting Pose 6 by Reptek
+
+
+Jurassic Lunch at the Park by Reptek on DeviantArt
+Reptek - DeviantArt
+Jurassic Lunch at the Park by Reptek ...
+
+Reptek - Get Quote - 13 Photos - IT Services & Computer Repair ...
+Yelp
+Photo of Reptek - Ocean Township, NJ, United States
+
+Reptek - Get Quote - 13 Photos - IT Services & Computer Repair ...
+Yelp
+
+
+
+King Shark vs Killer Croc by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+King Shark vs Killer Croc
+
+
+BatmanUnlimited-KillerCroc 13 by GiuseppeDiRosso on DeviantArt
+giuseppedirosso.deviantart.com
+Here is a cropped shot of Killer Croc from Batman Unlmited Mechs vs Mutants.
+
+Alien Ice Queen by Kairu-Hakubi on DeviantArt
+kairu-hakubi.deviantart.com
+even I didn't expect anyone to do this request. i know i should shade it but fehh
+
+
+Grumpy Gebbu by Psychosocial -- Fur Affinity [dot] net
+furaffinity.net
+
+Nanaue (Superman/Batman) | DC Database | FANDOM powered by Wikia
+dc.wikia.com
+
+
+Comfort (Colored) by The-Jasmine-Nation on DeviantArt
+the-jasmine-nation.deviantart.com
+
+NERV Anti-G Weapon by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+
+Ultraman Belial — Weasyl
+Weasyl
+Ultraman Belial by Reptek
+
+Zilla Jr by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+Zilla Jr
+
+Images tagged with #reptek on instagram
+SocImage
+P.D. Love #boaconstrictor #boa #princessdiamond #snake #reptile #
+
+OP Art Animal — Weasyl
+Weasyl
+
+Zamtrios Ninja Concept by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+Zamtrios Ninja Concept
+
+18422479_1971654529746976_6036239055273517367_o.jpg (1700×2048) | Brands Mecha Fanart by Keiryuu Seo | Pinterest | Robot, Sci fi and 2d
+pinterest.com
+
+Shark inflation by canson -- Fur Affinity [dot] net
+furaffinity.net
+
+Monster Hunter Things
+monsterhunterthings.tumblr.com
+
+show me your fursona | Tumblr
+
+Image - D1 Nosferatu Concept.jpg | Disgaea Wiki | FANDOM powered by Wikia
+disgaea.wikia.com
+Summary Licensing This file is copyrighted. We believe that any use of this image on this wiki, that does not hamper the owner's ability to profit from their work, constitutes Fair Use
+
+Image - Scorpio.png | RangerWiki | FANDOM powered by Wikia
+powerrangers.wikia.com
+
+Arkitekt gruppen Drammen AS
+Arkitekt gruppen Drammen AS
+Toyota, Rep tek
+
+Reptek - Get Quote - 13 Photos - IT Services & Computer Repair ...
+Yelp
+
+Mobile – Reptek
+Reptek
+
+Images tagged with #reptek on instagram
+SocImage
+
+God Kong — Weasyl
+Weasyl
+
+The Lizard vs Ant-Man by Reptek -- Fur Affinity [dot] net
+Fur Affinity
+
+
+Ark Xbox & PS4 "Unlock Tek Engrams Permanently No Bosses" - YouTube
+YouTube
+
+...
+"black knight" satellite - LOL
+...
+
+----
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0234	The type or namespace name 'Windows' does not exist in the namespace 'SharpDX' (are you missing an assembly reference?)	SharpDX.Samples	C:\Users\rtrose\Downloads\SharpDX-Samples-master\SharpDX-Samples-master\Desktop\Common\DemoApp.cs	47	Active
+
+The type or namespace name Windows does not exist in the namespace SharpDX
+
+
+----
+
+
+https://stackoverflow.com/questions/18580712/opentk-opengl-texture-not-drawing
+
+accepted
+In the fixed-function OpenGL pipeline, you must also Enable texture units before a texture bound to one will be applied to anything you draw.
+
+The normal OpenGL API binding for this is glEnable (GL_TEXTURE_2D). The OpenTK equivalent would be: GL.Enable (EnableCap.Texture2D).
+
+
+https://github.com/SFML/SFML.Net/pull/78
+
+
+----
+
+sample scenes:
+1-Archer+Karma in elevator
+2-randomly generated homage to aztec temples with Teotihuacan image samples
+
+
+
+
+
+
+
+
+
+
+

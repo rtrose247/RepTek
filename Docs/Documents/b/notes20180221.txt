@@ -1,0 +1,50 @@
+
+
+Example Scenario/Text:
+When hunting REP(s), e.g., in a neighborhood, etc.
+- (Screen displays) Fugitive alert 
+
+Need: *suspicion rules*
+If for example, player is trailing REP for too long, or too far,
+or player shoots and misses repeatedly (TBD)
+:
+emotional response => for REP
+- (Screen displays) Fugitive sympathizer alert
+
+(maybe:)
+other BR will shoot at the player, try to arrest player
+
+
+Rep Detec rules:
+sympathizers escape to their apt with REP (instead of bringing to HQ)
+
+
+----
+Blade Runner: Rep-Detect is a game of action and suspense based on the 1982 film Blade Runner. In this game, players portray one of the film’s titular detectives and must search futuristic Los Angeles for five genetically-engineered humanoid Replicants, who have illegally escaped to Earth from the off-world colonies and are virtually indistinguishable from the human population. It is the Blade Runner's job to shoot to kill, upon detection, any trespassing Replicant. However, it is possible that any one of the Blade Runners may become a fugitive Sympathizer and attempt to escape the city with one or more Replicants.
+
+In the game, players move about the city by rolling a die and moving any amount of spaces up to the number rolled, in any direction. Players investigate locations from the film by drawing cards, and test Suspects using the Voight-Kampff empathy test from the film. If a Suspect is revealed to be a Replicant the Blade Runner must engage it in combat, and later on, the players' characters will likely end up fighting against each other.
+----
+To-do's
+- recreate scenes from the movie/animation
+- use animation (e.g., introduce a new combat map)
+- consider random hex maps, random 10x10 square map
+- consider 2x5 room e.g, apt sweep. or multi-level office. e.g., 90 units
+
+- city model
+
+etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blade
+Runner(s)

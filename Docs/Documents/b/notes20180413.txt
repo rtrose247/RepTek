@@ -1,0 +1,104 @@
+----
+anti-shooting game(?)
+some notes on battle system:
+- shooting REPs does not ultimately kill them(!)
+- must do hand-to-hand combat to defeat them
+
+----
+some notes on party system:
+- REPs from BladeRunner (original) can join your party
+- Bad REPS must be captured
+e.g.,
+DJ 'Bad B Side' LOL
+
+
+some notes on emotional scoring:
+- simple icons => emoticons | drawn as bitmaps over character positions (or, maybe on HUD)
+	=> may be transient (e.g., during dialog, or 'show thinking; suspicion' plays
+
+- "cellular" ping possible with remote drones
+- 
+- primal triggers ; knee-jerk reactions
+<= explanation | (maybe) game play simulation : limbic system
+
+Story:
+- humanity's struggles with pure narcissim, anxiety, depression,
+- generations of conflict and, simultaneously, 
+- its rebelion against virtuous god and, simultaneously, its lauding of (false?) gods
+- besides weapons, genetic engineering, 
+- commerce being one of its greatest achievements
+- its wars, many of them hot, some cold, nevertheless the great toll on human life continued unabated,
+- reaveled an urgent need for greater tolerance, greater empathy
+- and while reproductive rates had peaked, still the population persisted and continued to placed undue stress on the foodchain
+- which resulted in a greater state of emergency and a heightened sense of awareness globally
+- after several mass extinctions, persistent droughts, anomalous weather, disrupted animal migrations, 
+and disrupted/displaced crop production, finally a united front of leading scientists stepped in and instituted a plan to 
+save the environment and place humanity back on a path towards global homeostasis. 
+- there needed to be an upgrade in diets, and eventually, mental capabilities.
+thus eating animals became outlawed.
+several false starts, misunderstandings, and mostly falsely escalated, triggered conflicts between individuals, 
+- religious sects, cults, and sometimes nation states ensued due to a last ditch effort to grab all of the resources.
+- eventually every resource ran dry.
+- after the great economic collapse that had not been witnessed since the last century -
+- they said that in the year 2020,
+- hindsight would be twenty-twenty, and that it would be corporate genoristy that bailed us out.
+- Political parties merged and ran de facto corporate fascism and communism 
+- which at first people resisted, then surrendered to the benefits gained
+- in lieu of slaving away for the benefit of the public trust.
+
+- what emerged over time was
+- an increased willingness for humans to give the earth back to nature, and gradually over time
+- the different nations agreed to live in increasingly
+- ambitious high-rise structures, many of them constructed like "super malls", 
+- allowing re-wilding 90% of earth's surface, stabilisation of animal populations and 
+- increasingly successful genetic engineered crops flourished again
+- after reduced strain that had been previously induced by progressive urban sprawl.
+- to aid in the transition period of the waning, collapsed work force,
+- they engineered an intermediate, hybrid solution
+- a stepping stone towards filling the labor gap thus freeing humanity
+- to pursue a common goal: commerce; seeing with a collective, enlightened mind; 
+- it began with the original programmable mannequins
+- Anneken's Mannequins(-TM), was the name of the first company to mass produce the early models
+- they were engineered for two-fold purpose:
+- to aid humanity in its search to tune emotional responses to external stimuli, as well as psychic/spiritual forces at work,
+- ESPER with psionics was invented;
+- Electronic Sensory Perception with Expert (Systems) Reasoning
+- psionic tech was the stable, middle ground where emotional/spiritual needs of humans
+- were increasingly sensed by an empathic algorithm; a 2-way receiver/transmitter that faciliated stablisation 
+- of emotions and faster, easier conflict resolution;
+- an increased sense of inner peace and outward awareness during these troubled times;
+- and, simultaneously, a solution to a collapsed, disillusioned labor force;
+- Resident Engineered Personnel, they called them, newly created laborers,
+- the (REPs) were gifted with enhanced AI, superior reasoning capability and strength, and the ability to charm most humans.
+- almost unexpectedly, social unrest ensued. 
+- no planes were used in the attacks on Tyrell Corp(-TM).
+- after a series of human/robot rebellions, including the "black out" in 2022 when
+- EMP air burst over Tyrell in LA, and other major population centers, erasing most identities and system memory, worldwide. 
+- Over night, progress stopped. 
+- REPs became outlawed on earth.
+- Years later, 2050 and after, a new line of REPs was created 
+- from the remnants 
+- many older model REPs survived. including several of Anneken's Mannequins(-TM).
+- Several ESPER/Psionic equipped.
+
+Sample Dialog:
+----
+(Briefing)
+We've got another situation 
+
+(gives scenario)
+
+Captain: "Try not to get your a$$ hashed"
+Player: "Yes, sir."
+
+- strangely, people increasingly began to talk to each other solely with their minds 
+=> mental telepathy was coming, and scientists said, humanity was not ready for it wholesale
+----
+
+
+
+
+
+
+
+
