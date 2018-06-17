@@ -1,0 +1,23 @@
+//s
+each game entity:
+-can display as text (e.g., getObjectName...)
+-can draw as 2D polygon <= for 2D card system(s)
+-can draw as 3D	=> cube|model
+
+//s
+need to have a random number generator(RNG) for:
+- conflict type
+- characters
+- place/setting
+- props
+- algorithms => behavioral|combat|
+
+=>
+random forest gen.
++pascal triangle
+
+
+scenes: random forest
+formations: some hard-coded, +pascal triangles
+
+battle map: hexmap with players,obstacles,vehicles...

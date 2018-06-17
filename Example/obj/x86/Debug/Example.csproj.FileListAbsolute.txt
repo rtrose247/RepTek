@@ -41,8 +41,8 @@ C:\Users\rtrose\Downloads\RepTek\Example\bin\x86\Debug\QuickFont.pdb
 C:\Users\rtrose\Downloads\RepTek\Example\bin\x86\Debug\QuickFont.xml
 C:\Users\rtrose\Downloads\RepTek\Example\bin\x86\Debug\OpenTK.dll.config
 C:\Users\rtrose\Downloads\RepTek\Example\bin\x86\Debug\SharpFont.xml
-C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csprojResolveAssemblyReference.cache
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csproj.CoreCompileInputs.cache
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.exe
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.pdb
+C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csprojAssemblyReference.cache

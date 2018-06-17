@@ -1,0 +1,192 @@
+"G" search:
+honolulu 3D model
+----
+C# random forest
++ pascal's triangle(s)...
+----
+Grid wars
+----
+(maybe)
+Bayes theorem
+=>
+ESPER
+----
+
+GLGUI(
+ SharpBgfx
+	<=ltc_demo
+	<=bgfx marmalade
+ Komorebi
+ Plaza-like
+ ...
+)
+
+I*E* demo
+
+...
+
+----
+
+OpenCV|CUDA|GPU
+SIFT
+SURF
+Texture learning
+...
+(eventually)
+fraubasch
+...
+
+----
+You will need some information about yourself to register
+Please have the following information and materials to complete registration: 
+Full Name
+
+Email
+
+Birthdate
+
+Social Security Number (SSN) or Individual Tax Identification Number (ITIN)
+
+Tax filing status
+
+Current address
+Do you have this information available? 
+
+----
+bgfx(#)
+vfx
+
+----
+auto-layout grids;
+bezier patches;
+
+image compositing <= analysis + synthesis
+- e.g., SIFT/SURF features
+- 4x4 grid
+- (maybe) hex grid bitmap => color histograms
+- hexbin'd histograms => model learning 
+- 
+- py+openCV
+-(...)C#/openCV
+-(...)C#/py+matplotlib
+
+* research papers => opencv trecvid texture learning and image search
+
+e.g.,
+
+
+Konstantinos Avgerinakis | Computer and Communication Engineering ...
+ResearchGate
+Figure 3: Block diagram of the texture recognition framework: Activity Areas(AAs)
+"Compute LBP-flow for each sample m"
+LBP-flow(m):{LBP m|xy, m|xt, m|yt}
+
+example workflow:
+- images=>quantize palettes=>compute Im histograms=>high-level clustering=>
+	hexbin'd blobs/histograms=>Texture patch model learning=>
+	image synthesis(substituted/blended hexes|alpha blending)
+
+- transfer color histo's to other images!! :)
+- color histo tool/s
+
+----
+anti-hacking tools
+-firewall
+-VPN?
+-...
+	
+ 
+pyimagesearch.com
+----
+Practical Python and OpenCV
+PyImageSearch Gurus
+PyImageConf
+OpenCV 3 Tutorials
+FREE OpenCV Course
+About
+Contact
+Clever Girl: A Guide to Utilizing Color Histograms for Computer Vision and Image Search Engines
+By Adrian Rosebrock on January 22, 2014 in Image Descriptors 
+
+...
+https://pandas.pydata.org/pandas-docs/version/0.18/visualization.html
+...
+
+maybe: try git
+browser(s)
+CMake
+Etc.
+
+----
+https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewadvanced
+
+After downloading the ISO file, you can burn it to a DVD using disc burning software or create a bootable USB drive to install Windows 10 in your computer. If asked, you can use following product keys at the time of installation:
+8N67H-M3CY9-QT7C4-2TR7M-TXYCV
+or
+6P99N-YF42M-TPGBG-9VMJP-YKHCF
+or
+NKJFK-GPHP7-G8C3J-P6JXR-HQRJR
+
+----
+https://insidersurveys.windows.com/s3/insiders-in-action-2018-helper-contest
+
+Enter our Insiders in Action contest: Your Windows, your world
+How do you use technology to help others? Share a photo of how you make the world a better place with the help of technology, and you could win!
+
+Whether you're using tech to bring your community together, inspire a love of learning, or solve an important problem, we want to hear from you! Did you develop an app to improve your students’ learning experience? Do you help people with different abilities access technology? Are you using cutting edge tech--like augmented reality, AI, or robotics--to transform an age-old problem? The possibilities for helping others in ways big and small are endless, and we want to learn about your passion for doing so.
+
+Submit a *photo* of how you use technology to help, then tell us who you are helping and why for the chance to be featured on the Windows Insider website! Past winners have had their stories told via an article shared to millions of people in the Windows Insider community and beyond. 
+To enter: 
+Review the Official Contest Rules.
+Use this online form to share a photo that illustrates your actions (English-only).
+Submit by June 27, 2018 for a chance to be profiled in an article and featured on the Windows Insider Website.
+You can enter the Insiders in Action: Photo Contest multiple times, however each entry must be unique.
+You can enter as many Insiders in Action contests as you like. (Watch for news of more exciting Insider in Action contests coming soon!)
+
+
+----
+
+synthetic ovaries
+
+LOL
+
+
+----
+3D DeepDream using Neural Renderer
+This is the code for 3D DeepDream in the paper Neural 3D Mesh Renderer (CVPR 2018) by Hiroharu Kato, Yoshitaka Ushiku, and Tatsuya Harada.
+Related repositories:
+Neural Renderer 
+Single-image 3D mesh reconstruction
+2D-to-3D style transfer
+3D DeepDream
+
+...
+
+Neural Renderer
+Applications 
+3D Reconstruction (in preparation)
+Style Transfer (in preparation)
+DeepDream (in preparation)
+
+
+ShapeNet database
+(+)3D mesh from 2D images <= neural 3D mesh renderer
+
+
+----
+C# | NLP SDKs
+
+
+Funny aliens. :) | Funny | Pinterest | Aliens, Comic and Funny pictures
+Pinterest
+
+SMBC
+satturday morning breakfast cereal
+Zach Weinersmith
+
+Language Log » Harvest time
+languagelog.ldc.upenn.edu
+
+
+read:https://www.zdnet.com/article/windows-security-heres-why-we-dont-fix-some-bugs-right-away-microsoft-reveals/
+

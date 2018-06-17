@@ -23,7 +23,6 @@ C:\Users\rtrose\Downloads\RepTek\SequencerDemo\bin\Debug\Sanford.Multimedia.Midi
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\bin\Debug\Sanford.Multimedia.Timers.dll
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\bin\Debug\Sanford.Threading.dll
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\bin\Debug\Sanford.Multimedia.Midi.pdb
-C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csprojResolveAssemblyReference.cache
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.AboutDialog.resources
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.Form1.resources
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.Properties.Resources.resources
@@ -32,3 +31,4 @@ C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csproj.Co
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.exe
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.pdb
+C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csprojAssemblyReference.cache

@@ -18,7 +18,6 @@ C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\bin\Debug\Sanford.Colle
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.dll
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.Timers.dll
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\bin\Debug\Sanford.Threading.dll
-C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.csprojResolveAssemblyReference.cache
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.UI.DeviceDialog.resources
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.UI.InputDeviceDialog.resources
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.UI.OutputDeviceDialog.resources
@@ -28,3 +27,4 @@ C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multi
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.dll
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.pdb
+C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.csprojAssemblyReference.cache

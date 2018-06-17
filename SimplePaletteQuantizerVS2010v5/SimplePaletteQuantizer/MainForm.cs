@@ -149,12 +149,20 @@ namespace SimplePaletteQuantizer
             if (!imageLoaded) return;
 
             // prepares quantizer
-            errorCache.Clear();
+            //errorCache.Clear();
+            //
+            //tmp
+            //reset() first
+            //=>
+            //
+            //activeQuantizer.Finish();
+            //
+            //
 
             // tries to retrieve an image based on HSB quantization
-            Int32 parallelTaskCount = activeQuantizer.AllowParallel ? Convert.ToInt32(listParallel.Text) : 1;
-            TaskScheduler uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
-            Int32 colorCount = GetColorCount();
+            //Int32 parallelTaskCount = activeQuantizer.AllowParallel ? Convert.ToInt32(listParallel.Text) : 1;
+            //TaskScheduler uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
+            //Int32 colorCount = GetColorCount();
 
             // disables all the controls and starts running
             // given "myFileName"
@@ -164,7 +172,7 @@ namespace SimplePaletteQuantizer
             //============
             sourceImage = Image.FromFile(myFileName);
             imageLoaded = true;
-            Text = Resources.Running;
+            //Text = Resources.Running;
             //============
             //
             //============
@@ -177,76 +185,86 @@ namespace SimplePaletteQuantizer
             //
             //
             sourceFileInfo = new FileInfo(myFileName);
-            pictureSource.Image = Image.FromFile(sourceFileInfo.FullName);
+            pictureSource.Image = Image.FromFile(myFileName);
             //============
             //
-            DateTime before = DateTime.Now;
+            //DateTime before = DateTime.Now;
 
             // quantization process
-            Task quantization = Task.Factory.StartNew(() =>
-                targetImage = ImageBuffer.QuantizeImage(sourceImage, activeQuantizer, activeDitherer, colorCount, parallelTaskCount),
-                TaskCreationOptions.LongRunning);
+            //Task quantization = Task.Factory.StartNew(() =>
+            //    targetImage = ImageBuffer.QuantizeImage(sourceImage, activeQuantizer, activeDitherer, colorCount, parallelTaskCount),
+            //    TaskCreationOptions.LongRunning);
 
             //============
-            while (this.targetImage == null)
-            {
-                //redraw
-                //=>
-                this.Invalidate();
-                //
-                System.Threading.Thread.Sleep(1000);
-                Application.DoEvents();
-            }
+            //while (this.targetImage == null)
+            //{
+            //    
+            //    System.Threading.Thread.Sleep(1000);
+            //    Application.DoEvents();
+            //}
             //============
 
-
+            //
+            //
             // finishes after running
-            quantization.ContinueWith(task =>
-            {
-                // detects operation duration
-                TimeSpan duration = DateTime.Now - before;
-                TimeSpan perPixel = new TimeSpan(duration.Ticks / (sourceImage.Width * sourceImage.Height));
+            //quantization.ContinueWith(task =>
+            //{
+            //    // detects operation duration
+            //    //TimeSpan duration = DateTime.Now - before;
+            //    //TimeSpan perPixel = new TimeSpan(duration.Ticks / (sourceImage.Width * sourceImage.Height));
 
-                // detects error and color count
-                Int32 originalColorCount = activeQuantizer.GetColorCount();
-                String nrmsdString = string.Empty;
+            //    // detects error and color count
+            //    //Int32 originalColorCount = activeQuantizer.GetColorCount();
+            //    //String nrmsdString = string.Empty;
 
-                // calculates NRMSD error, if requested
-                if (checkShowError.Checked)
-                {
-                    Double nrmsd = ImageBuffer.CalculateImageNormalizedMeanError(sourceImage, targetImage, parallelTaskCount);
-                    nrmsdString = string.Format(" (NRMSD = {0:0.#####})", nrmsd);
-                }
+            //    // calculates NRMSD error, if requested
+            //    //if (checkShowError.Checked)
+            //    //{
+            //    //    Double nrmsd = ImageBuffer.CalculateImageNormalizedMeanError(sourceImage, targetImage, parallelTaskCount);
+            //    //    nrmsdString = string.Format(" (NRMSD = {0:0.#####})", nrmsd);
+            //    //}
 
-                // spits some duration statistics (those actually slow the processing quite a bit, turn them off to make it quicker)
-                editSourceInfo.Text = string.Format("Original: {0} colors ({1} x {2})", originalColorCount, sourceImage.Width, sourceImage.Height);
-                editTargetInfo.Text = string.Format("Quantized: {0} colors{1}", colorCount, nrmsdString);
+            //    // spits some duration statistics (those actually slow the processing quite a bit, turn them off to make it quicker)
+            //    //editSourceInfo.Text = string.Format("Original: {0} colors ({1} x {2})", originalColorCount, sourceImage.Width, sourceImage.Height);
+            //    //editTargetInfo.Text = string.Format("Quantized: {0} colors{1}", colorCount, nrmsdString);
 
-                // new GIF and PNG sizes
-                Int32 newGifSize, newPngSize;
-                //============
-                // retrieves a GIF image based on our HSB-quantized one
-                //GetConvertedImage(targetImage, ImageFormat.Gif, out newGifSize);
+            //    // new GIF and PNG sizes
+            //    //Int32 newGifSize, newPngSize;
+            //    //============
+            //    // retrieves a GIF image based on our HSB-quantized one
+            //    //GetConvertedImage(targetImage, ImageFormat.Gif, out newGifSize);
 
-                //// retrieves a PNG image based on our HSB-quantized one
-                //GetConvertedImage(targetImage, ImageFormat.Png, out newPngSize);
+            //    //// retrieves a PNG image based on our HSB-quantized one
+            //    //GetConvertedImage(targetImage, ImageFormat.Png, out newPngSize);
 
-                //// spits out the statistics
-                //Text = string.Format("Simple palette quantizer (duration 0:{0:00}.{1:0000000}, per pixel 0.{2:0000000})", duration.Seconds, duration.Ticks, perPixel.Ticks);
-                //editProjectedGifSize.Text = projectedGifSize.ToString();
-                //editProjectedPngSize.Text = sourceFileInfo.Length.ToString();
-                //editNewGifSize.Text = newGifSize.ToString();
-                //editNewPngSize.Text = newPngSize.ToString();
-                //
-                pictureTarget.Image = targetImage;
+            //    //// spits out the statistics
+            //    //Text = string.Format("Simple palette quantizer (duration 0:{0:00}.{1:0000000}, per pixel 0.{2:0000000})", duration.Seconds, duration.Ticks, perPixel.Ticks);
+            //    //editProjectedGifSize.Text = projectedGifSize.ToString();
+            //    //editProjectedPngSize.Text = sourceFileInfo.Length.ToString();
+            //    //editNewGifSize.Text = newGifSize.ToString();
+            //    //editNewPngSize.Text = newPngSize.ToString();
+            //    //
+            //    //tmp
+            //    //
+            //    System.Threading.Thread.Sleep(1000);
+            //    //
+            //    //=>
+            //    pictureTarget.Image = targetImage;
+            //    //
+            //    //
+            //    System.Threading.Thread.Sleep(1000);
 
-                // enables controls again
-                SwitchControls(true);
+            //    // enables controls again
+            //    //SwitchControls(true);
 
-            }, uiScheduler);
+            //}, uiScheduler);
 
+            //pictureTarget.Image = targetImage;
+            //redraw
+            //=>
+            //this.Invalidate();
             //=>2+
-            System.Threading.Thread.Sleep(1000);
+            //System.Threading.Thread.Sleep(1000);
             //=>1+
             //Application.DoEvents();
 
@@ -576,7 +594,7 @@ namespace SimplePaletteQuantizer
             {
                 editFilename.Text = Path.GetFileName(dialogOpenFile.FileName);
                 editDirectory.Text = Path.GetDirectoryName(dialogOpenFile.FileName);
-                //previewSourceImage = Image.FromFile(dialogOpenFile.FileName);
+                previewSourceImage = Image.FromFile(dialogOpenFile.FileName);
                 sourceFileInfo = new FileInfo(dialogOpenFile.FileName);
                 sourceImage = Image.FromFile(dialogOpenFile.FileName);
                 imageLoaded = true;
@@ -595,14 +613,32 @@ namespace SimplePaletteQuantizer
             // as array of FileInfos
             var myFiles = sourceFileInfo.Directory.GetFiles();
             // Enable choices
-            EnableChoices();
+            //EnableChoices();
             // for each image, 
             // - call convert function : GenerateProjectedGif
             // - update source
             // - update images
             // - save image
+            //
+            //============
+            //
+            Text = Resources.Running;
+            //
+            //============
+            //
             for (int i = 0; i < myFiles.Length; i++)
             {
+                //=>
+                GC.Collect();
+
+                //re-init
+                //ChangeQuantizer();
+                //ChangeColorCache();
+                //ChangeColorModel();
+                //
+                // prepares quantizer
+                errorCache.Clear();
+
                 //release
                 //=>
                 //sourceImage = null;
@@ -610,7 +646,13 @@ namespace SimplePaletteQuantizer
                 sourceFileInfo = myFiles[i];
                 sourceImage = Image.FromFile(sourceFileInfo.FullName);
 
-                Text = Resources.Running;
+                //============
+                //=>
+                System.Threading.Thread.Sleep(1000);
+                GenerateProjectedGif();
+                System.Threading.Thread.Sleep(1000);
+                //============
+
                 //SwitchControls(false);
                 DateTime before = DateTime.Now;
 
@@ -623,6 +665,8 @@ namespace SimplePaletteQuantizer
                 //=>
                 //
                 // quantization process
+                targetImage = null;
+                // quantization process
                 Task quantization = Task.Factory.StartNew(() =>
                     targetImage = ImageBuffer.QuantizeImage(sourceImage, activeQuantizer, activeDitherer, colorCount, parallelTaskCount),
                     TaskCreationOptions.LongRunning);
@@ -631,13 +675,34 @@ namespace SimplePaletteQuantizer
                 while (this.targetImage == null)
                 {
                     System.Threading.Thread.Sleep(1000);
-                    Application.DoEvents();
+                    //(X)
+                    //Application.DoEvents();
                 }
-                //============
-                // finishes after running
-                //pictureTarget.Image = targetImage;
+                //
+                //
+
                 quantization.ContinueWith(task =>
                 {
+                    //=>
+                    //Application.DoEvents();
+                    //============
+                    // finishes after running
+                    pictureTarget.Image = targetImage;
+                    //
+                    System.Threading.Thread.Sleep(1000);
+                    pictureSource.Invalidate();
+                    pictureTarget.Invalidate();
+                    Invalidate();
+                    System.Threading.Thread.Sleep(1000);
+                    //
+                    //(maybe)
+                    lock (this)
+                    {
+                        Application.DoEvents();
+                    }
+                    //
+                    System.Threading.Thread.Sleep(1000);
+
                     // detects operation duration
                     TimeSpan duration = DateTime.Now - before;
                     TimeSpan perPixel = new TimeSpan(duration.Ticks / (sourceImage.Width * sourceImage.Height));
@@ -647,18 +712,18 @@ namespace SimplePaletteQuantizer
                     String nrmsdString = string.Empty;
 
                     // calculates NRMSD error, if requested
-                    if (checkShowError.Checked)
-                    {
-                        Double nrmsd = ImageBuffer.CalculateImageNormalizedMeanError(sourceImage, targetImage, parallelTaskCount);
-                        nrmsdString = string.Format(" (NRMSD = {0:0.#####})", nrmsd);
-                    }
+                    //if (checkShowError.Checked)
+                    //{
+                    //    Double nrmsd = ImageBuffer.CalculateImageNormalizedMeanError(sourceImage, targetImage, parallelTaskCount);
+                    //    nrmsdString = string.Format(" (NRMSD = {0:0.#####})", nrmsd);
+                    //}
 
                     // spits some duration statistics (those actually slow the processing quite a bit, turn them off to make it quicker)
-                    editSourceInfo.Text = string.Format("Original: {0} colors ({1} x {2})", originalColorCount, sourceImage.Width, sourceImage.Height);
-                    editTargetInfo.Text = string.Format("Quantized: {0} colors{1}", colorCount, nrmsdString);
+                    //editSourceInfo.Text = string.Format("Original: {0} colors ({1} x {2})", originalColorCount, sourceImage.Width, sourceImage.Height);
+                    //editTargetInfo.Text = string.Format("Quantized: {0} colors{1}", colorCount, nrmsdString);
 
                     // new GIF and PNG sizes
-                    Int32 newGifSize, newPngSize;
+                    //Int32 newGifSize, newPngSize;
 
                     //retrieves a GIF image based on our HSB-quantized one
                     //GetConvertedImage(targetImage, ImageFormat.Gif, out newGifSize);
@@ -667,12 +732,18 @@ namespace SimplePaletteQuantizer
                     //GetConvertedImage(targetImage, ImageFormat.Png, out newPngSize);
 
                     // spits out the statistics
-                    Text = string.Format("Simple palette quantizer (duration 0:{0:00}.{1:0000000}, per pixel 0.{2:0000000})", duration.Seconds, duration.Ticks, perPixel.Ticks);
-                    editProjectedGifSize.Text = projectedGifSize.ToString();
-                    editProjectedPngSize.Text = sourceFileInfo.Length.ToString();
+                    //Text = string.Format("Simple palette quantizer (duration 0:{0:00}.{1:0000000}, per pixel 0.{2:0000000})", duration.Seconds, duration.Ticks, perPixel.Ticks);
+                    //editProjectedGifSize.Text = projectedGifSize.ToString();
+                    //editProjectedPngSize.Text = sourceFileInfo.Length.ToString();
                     //editNewGifSize.Text = newGifSize.ToString();
                     //editNewPngSize.Text = newPngSize.ToString();
-                    pictureTarget.Image = targetImage;
+                    //
+                    //tmp
+                    //
+                    //
+                    System.Threading.Thread.Sleep(1000);
+                    //
+                    //
 
                     // enables controls again
                     //SwitchControls(true);
@@ -681,9 +752,6 @@ namespace SimplePaletteQuantizer
                 //
                 //
                 //
-                //Invalidate();
-                //GenerateProjectedGif();
-                //Invalidate();
                 //
                 //
                 //
@@ -692,7 +760,11 @@ namespace SimplePaletteQuantizer
                 //
                 //=> process
                 //
-                //myUpdateImages(sourceFileInfo.FullName);
+                System.Threading.Thread.Sleep(1000);
+                myUpdateImages(sourceFileInfo.FullName);
+                System.Threading.Thread.Sleep(1000);
+                //
+                //Invalidate();
                 //
                 //
                 //
@@ -704,19 +776,24 @@ namespace SimplePaletteQuantizer
                 //
 
                 //
-                // problem:=>
+                // avoid problem:=>
                 // this.targetImage is null
-                // (maybe) copy from update images()?
+                // wait
                 while (this.targetImage == null)
                 {
                     System.Threading.Thread.Sleep(1000);
-                    Application.DoEvents();
+                    //(X)
+                    //Application.DoEvents();
                 }
+                //=>
+                //Application.DoEvents();
 
                 //=> save
                 //
+                String updateFileName = Path.GetFileNameWithoutExtension(sourceFileInfo.Name) + ".256.jpg";
+
                 System.IO.FileStream fs = new FileStream(
-                    System.IO.Path.Combine(myDirectory, sourceFileInfo.Name), FileMode.Create);
+                    System.IO.Path.Combine(myDirectory, updateFileName), FileMode.Create);
                 // Saves the Image in the appropriate ImageFormat based upon the  
                 // File type selected in the dialog box.  
                 // NOTE that the FilterIndex property is one-based.  
@@ -727,10 +804,18 @@ namespace SimplePaletteQuantizer
                 //============
                 fs.Flush();
                 //============
-                System.Threading.Thread.Sleep(10 * 1000);
                 //
+                GC.Collect();
                 //
-            }
+                //============
+                //System.Threading.Thread.Sleep(10 * 1000);
+                //
+                //(maybe)
+                lock (this)
+                {
+                    Application.DoEvents();
+                }
+            }//<= end for
         }
 
         private void ListSourceSelectedIndexChanged(object sender, EventArgs e)

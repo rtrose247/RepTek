@@ -1,0 +1,189 @@
+compact description language : F#
+maybe,also,
+F#+enscript calls<=interactive dialog.... 
+
+(...)C#/F# plugin
+
+https://www.codeproject.com/Articles/241577/Embedded-scripting-using-Fsharp
+Embedded Scripting using F#
+Vladimir Ivanovskiy, 22 Aug 2011 
+
+----
+hexbin blending:
+L|R<=left|right 50%
+T|B<=top|bottom 50%
+
+hexmap floor(<=can be texture-6)
+
+"Karate" sim
+K*
+
+Maybe try, a sort-of simple algo with RNG+modulo:
+e.g.,
+
+Player person grid | REP grid
+7 8 9
+4-5-6
+1 2 3
+0
+--------------------------------
+>Hex map
+--------------------------------
+
+741	<=
+963	=> moves dx/dy (variable dx*/dy*)
+
+(jump<=space?) => dz
+up/down arrows
+pg up/pg dn
+
+"Very simple collisions test" during K* combat
+maybe:
+loop{
+determine initiative(player|REPs)
+player move input
+update positions
+queue player attack(s)
+after player(s) move,and after REPs counter(if any => can be random or card/profile-driven)
+even/odd test
+
+both even : miss
+player even/REP odd: REP blocks
+player odd/REP even: REP hit
+
+calculate HP/damage
+
+}
+
+
+Need:
+toggle
+-movement menu/keys <= "0"
+-combat menu/keys   <= "0"
+-...
+
+E{cruise loop}
+=>T:set down
+I{interiors loop}|elevators transition
+=>T:take-off
+E{cruise loop}
+
+maybe a loosely hierarchical, random forest
+/R/Root=> universe as point
+/S/scene manager
+=>init setting(<=opening scene defines)
+=>altitude
+=>xyz position
+
+try with I1: 10 units scale
+I1-interior
+M1-model
+E1-exterior
+H1-hexmap/hexbin floor
+...
+stills|animated gifs
+...
+...
+
+"silly" demo idea:
+- chara driven parties
+- 1 player vs. 1 computer chara
+- (...)decide if individual/cloned face, or ensemble(maybe all faces in set are unique)
+- for cloned faces=>use party with staggered face animations...<=choose when to cycle|draw as quad overlay
+- single chara=>boss fight|<=with one REP party
+- win battles, find cards, capture REPs, unlock clues
+
+(maybe):
+"Q" option=>quick battle "auto-pilot" :)
+
+determine win/lose
+
+3D|Dice|Cards=>pop-up notifications with special quads
+
+Dialog=>Quickfont windows
+
+
+----
+Demo(s)
+secret-hipster
+
+
+Code sample
+Random rnd = new Random();
+int month = rnd.Next(1, 13); // creates a number between 1 and 12
+int dice = rnd.Next(1, 7); // creates a number between 1 and 6
+int card = rnd.Next(52); // creates a number between 0 and 51
+
+----
+https://stackoverflow.com/questions/27950737/2d-movement-animation-for-sprites-using-one-sprite-sheet-with-four-directions
+
+I would replace all of your AnimateXXXX methods with a single method:
+public void AnimateLoop(GameTime gameTime, int loopFirstFrame, int loopLastFrame)
+{
+    timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
+    if (timeSinceLastFrame > milisecondsPerFrame)
+    {
+        timeSinceLastFrame -= milisecondsPerFrame;
+        currentFrame++;
+    }
+    if (currentFrame > loopLastFrame || currentFrame < loopFirstFrame)
+        currentFrame = loopFirstFrame;
+}
+And then call them like this:
+// Down
+if (lastPostion.Y < position.Y)
+    AnimateLoop(gameTime, 15, 19);
+// Up
+if (position.Y < lastPosition.Y)
+    AnimateLoop(gameTime, 10, 14);
+// Right
+if (lastPosition.X < position.X)
+    AnimateLoop(gameTime, 5, 9);
+// Left
+if (position.X < lastPosition.X)
+    AnimateLoop(gameTime, 0, 4);
+
+
+----
+
+bezier patches...
+
+----
+https://stackoverflow.com/questions/10788982/is-there-any-async-equivalent-of-process-start
+
+
+static Task RunProcessAsync(string fileName)
+{
+    // there is no non-generic TaskCompletionSource
+    var tcs = new TaskCompletionSource<bool>();
+
+    var process = new Process
+    {
+        StartInfo = { FileName = fileName },
+        EnableRaisingEvents = true
+    };
+
+    process.Exited += (sender, args) =>
+    {
+        tcs.SetResult(true);
+        process.Dispose();
+    };
+
+    process.Start();
+
+    return tcs.Task;
+}
+
+
+OSIRIS-Rex
+
+Regolith explorer
+
+
+
+
+
+
+
+
+

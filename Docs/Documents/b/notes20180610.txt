@@ -1,0 +1,56 @@
+"G" search:
+honolulu 3D model
+----
+C# random forest
++ pascal's triangle(s)...
+----
+Grid wars
+----
+(maybe)
+Bayes theorem
+=>
+ESPER
+----
+
+GLGUI(
+ SharpBgfx
+	<=ltc_demo
+	<=bgfx marmalade
+ Komorebi
+ Plaza-like
+ ...
+)
+
+I*E* demo
+
+...
+
+----
+
+OpenCV|CUDA|GPU
+SIFT
+SURF
+Texture learning
+...
+(eventually)
+fraubasch
+...
+
+----
+You will need some information about yourself to register
+Please have the following information and materials to complete registration: 
+Full Name
+
+Email
+
+Birthdate
+
+Social Security Number (SSN) or Individual Tax Identification Number (ITIN)
+
+Tax filing status
+
+Current address
+Do you have this information available? 
+
+----
+

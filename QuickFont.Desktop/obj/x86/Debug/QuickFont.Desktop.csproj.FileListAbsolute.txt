@@ -20,8 +20,8 @@ C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\bin\x86\Debug\SharpFont.dll
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\bin\x86\Debug\SharpFont.xml
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\bin\x86\Debug\SharpFont.dll.config
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\bin\x86\Debug\OpenTK.dll.config
-C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\x86\Debug\QuickFont.Desktop.csprojResolveAssemblyReference.cache
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\x86\Debug\QuickFont.Desktop.csproj.CoreCompileInputs.cache
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\x86\Debug\QuickFont.Desktop.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\x86\Debug\QuickFont.dll
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\x86\Debug\QuickFont.pdb
+C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\x86\Debug\QuickFont.Desktop.csprojAssemblyReference.cache
