@@ -19,6 +19,8 @@ namespace Secret_Hipster
         private SierpinskiCarpet sierpinskiCarpet;
         private Grid grid;
         private Vector2 lastMousePos;
+        //
+        private Grid2 grid2;
 
         public Game(int width, int height) : base(width, height)
         {
@@ -37,7 +39,10 @@ namespace Secret_Hipster
             camera.Position = new Vector3(0, 10, 20);
 
             spritebatch = new Spritebatch(camera);
+            //
             grid = new Grid(Color.White);
+            grid2 = new Grid2(Color.White);
+            //
             quadHandler = new QuadHandlerClass2();
             sierpinskiCarpet = new SierpinskiCarpet(12);
         }
@@ -84,7 +89,8 @@ namespace Secret_Hipster
 
             //sierpinskiCarpet.Draw(spritebatch);
             grid.Draw(spritebatch);
-
+            grid2.Draw(spritebatch);
+            //
             SwapBuffers();
         }
 

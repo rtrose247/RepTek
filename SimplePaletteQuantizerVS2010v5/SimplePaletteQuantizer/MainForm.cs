@@ -629,7 +629,8 @@ namespace SimplePaletteQuantizer
             for (int i = 0; i < myFiles.Length; i++)
             {
                 //=>
-                GC.Collect();
+                //need(?)
+                //GC.Collect();
 
                 //re-init
                 //ChangeQuantizer();
@@ -639,15 +640,26 @@ namespace SimplePaletteQuantizer
                 // prepares quantizer
                 errorCache.Clear();
 
-                //release
                 //=>
                 //sourceImage = null;
                 //targetImage = null;
                 sourceFileInfo = myFiles[i];
-                sourceImage = Image.FromFile(sourceFileInfo.FullName);
+                //
+                //create target file name to save
+                String updateFileName = Path.GetFileNameWithoutExtension(sourceFileInfo.Name) + ".256.jpg";
+                //
+                //determine if target file already exists
+                String targetFileName = System.IO.Path.Combine(myDirectory, updateFileName);
+                //
+                //if the intended filename exists in the target location, skip calculation....
+                //this should help in the event of repeated runs over the same directory-
+                //e.g., after a crash recovery
+                if (File.Exists(targetFileName))
+                    continue;
 
                 //============
                 //=>
+                sourceImage = Image.FromFile(sourceFileInfo.FullName);
                 System.Threading.Thread.Sleep(1000);
                 GenerateProjectedGif();
                 System.Threading.Thread.Sleep(1000);
@@ -790,7 +802,7 @@ namespace SimplePaletteQuantizer
 
                 //=> save
                 //
-                String updateFileName = Path.GetFileNameWithoutExtension(sourceFileInfo.Name) + ".256.jpg";
+                //String updateFileName = Path.GetFileNameWithoutExtension(sourceFileInfo.Name) + ".256.jpg";
 
                 System.IO.FileStream fs = new FileStream(
                     System.IO.Path.Combine(myDirectory, updateFileName), FileMode.Create);
@@ -805,7 +817,7 @@ namespace SimplePaletteQuantizer
                 fs.Flush();
                 //============
                 //
-                GC.Collect();
+
                 //
                 //============
                 //System.Threading.Thread.Sleep(10 * 1000);

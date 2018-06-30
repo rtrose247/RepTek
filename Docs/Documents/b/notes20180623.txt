@@ -1,0 +1,446 @@
+//s
+Think "SCL"
+simple compositing language
+
+a series of scenes/each has programmed camera
++ "auto-layout" with 3D cubes+models
+
+=>
+exp with
+//
+LTC
+//
+Komorebi
+...
+
+some auto-layouts:
+-1+ "sky scraper(s)" ||
+-driving sim, ]] [[
+-simple platform jumping action
+=> e.g., auto-aim for next "rooftop"
+
+//
+e.g., animated GIF cube
+//
+poker dice
+
+
+...
+WWPP|westwood preservation project
+some game screens,sources/sourced,e.g.,
+"BR/westwood studios(*) preservation/restoration project"
++fair use fan art
+etc.
+
+...
+
+https://venturebeat.com/2017/06/14/blade-runner-2049-will-get-its-own-mobile-game/
+
+“We are excited to be working with Next Games on this exciting new endeavor. 
+
+The world of Blade Runner is uniquely rich ground for storytelling across a variety of platforms, 
+games included.”
+
+Blade Runner 2049 is set thirty years after the events of the first film. A new blade runner, 
+LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what’s left of society into chaos. 
+K’s discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former LAPD blade runner who has been missing for thirty years.
+
+The companies released a screen shot of the game, but they had no other details or launch date. 
+Next Games went public recently, and it has made mobile games such as The Walking Dead: No Man’s Land. 
+Alcon Entertainment is a film production company that has made movies such as The Blind Side.
+...
+//RE: Scenes
+(semi-)random forest with pre-sorted image library
+
+*: query expansion =>
+
+indoor/outdoor scenes
+"point blank" scenes
+1-shot only "house" rules
+"karma cubes" LOL || instant karma=>rampage-like mini-game
+etc.
+
+probably need:
+choices(abc) + branching story line
+T*=>decision tree RPG
+
+//
+also,maybe try, eventually:
+some 3d reconstruction algorithms
++3d mesh extraction
+----
+https://github.com/hiroharu-kato/mesh_reconstruction
+single-image 3D reconstruction "Neural 3D Mesh Renderer" by H. Kato, Y. Ushiku, and T. Harada. 
+----
+
+"trunk" of tree
+(T):main sequence images
++scripted dialog
+
+I* initial image candidates => sort
+Q* quantize all images
+S* storyboard
+T|F* forest=> DDCF | data-driven control flow(!) | decision-tree
+F(*) face animations
+F|C  face|chara
+Sc|Sg()	
+scaling|segmentation
+
+[]image analysis....
+[]inset compositing, e.g. 4:1
+[]hexbin composites
+
+
+[C] image convolution....
+e.g.,
+"Deep Dream"
+
+i interiors
+e exteriors
+m medieval
+s space
+w main sequence/westood/world => "go global"
+
+a()alpha blending
+C* cubes
+G* grids
+H* hash codes
+h  hexmap|hilbert's|...
+m  models|music|...
+fg|bg foreground|background|...
+(maybe...) "loki's minions" LOL
+
+(C) clustering via: histograms/some sorting by hand
+=> image compositing/alpha/blending
+=> scene transitions (e.g., "guassian" blur effects....)
+=> (maybe) image stitching....
+=> uniq|tree pruning|QC quality check
+=> filename driven|menu lookup(s)
+
+image names retained(<=mostly)
+a sort-of, ad hoc(?) "expert" system
+
+or, alternatively,
+"deep dive" into BR universe/image training set
+
+----
+
+[RevShare]
+Looking for 3D character designer to create a Blade Runner inspired Cyberpunk Stealth game — polycount
+polycount.com
+We are Frost Phoenix Studio and we are looking for a 3D Character designer + Animator and a programmer to join our current well established team.
+
+RepTek(*) \C\TM\ disclaimers
+goal=>Creative Commons/Public Domain image search and image processing/computer animation tool(s)
+
+additional credits(*):
+e.g,
+Blade Runner Game | gaming | Pinterest | Runner games and Gaming
+pinterest.com
+
+1920 × 1080
+ArtStation - Cyberpunk Special Forces, Timo Peter
+artstation.com
+
+640 × 350
+File:Blade Runner (videogioco).png - Wikipedia
+it.wikipedia.org
+
+Blade Runner: Revelations - An upcoming VR game based on Blade Runner universe - Game News Plus
+gamenewsplus.net
+Blade Runner 2049 surely gave a lot of game related material to developers and we are here to reap the fruits of it. Recently, Seismic Games announced that they've formed a partnership...
+
+Blade Runner 2049: Replicant Pursuit - Virtual Reality Story | NextBigFuture.com
+nextbigfuture.com
+
+This is what BioShock would look like as a 2D isometric RPG - VG247
+vg247.com
+Stasis Labs has re-imagined some of your favorite games as 2D isometric RPGs. BioShock, Assassin’s Creed 4, BioShock Infinite and more. Even Blade Runner. 
+Have a look through the link and...
+
+Ruiner is like Blade Runner meets Hotline Miami and 80s anime
+technobuffalo.com
+https://www.youtube.com/watch?v=jkjIsnjKhew 
+Devolver's booth played home to some awesome games in its typical fashion this year at PAX East. One such game was the freshly announced Ruiner. This is a top-down shooter from a Poland-based developer by the na
+
+The Video Game to Play if You Love 'Blade Runner' | GQ
+GQ
+The Video Game to Play if You Love Blade Runner
+
+Keycodes and Passwords - Deus Ex Mankind Divided Unlock Guide
+gamepur.com
+This guide will show all the keycodes and Passwords for locked doors, security panels, and other electronic locks in Deus Ex: Mankind Divided.
+
+Deus Ex The Fall Trailer Released (video)
+geeky-gadgets.com
+Deus Ex The Fall will be arriving on mobile devices in late summer and will cost $6.99 
+
+Art director talks about the graphical effects of the Titan Shield in Deus Ex: Mankind Divided - Game Idealist
+gameidealist.com
+Eidos Montreal's Jonathan Jacques Belletete talks about the unique graphical effects of the Titan Shield in Deus Ex: Mankind Divided.
+
+Classic '90s shooter video game Syndicate is back - Dan Silver - Mirror Online
+mirror.co.uk
+Four players can tackle levels based on missions from the original games
+
+Deus Ex: Mankind Divided review | Stuff
+stuff.tv
+Serious (and sweary) sci-fi storytelling, played the way you want. Power up those augs - Adam Jenson is back
+
+Blade Runner - GameSpot
+gamespot.com
+Blade Runner is an interesting mood piece, but somewhere along the production line, someone forgot to include a game.
+(!)
+
+Download Blade Runner (Windows) - My Abandonware
+myabandonware.com
+Remember Blade Runner (Windows), an old video game from 1997? Download it and play again on MyAbandonware.
+
+Amazon.com: Riddle of the Sphinx - PC: Video Games
+amazon.com
+Violent sand storms have once again covered most of the Sphinx and Great Pyramids. After years of digging, noted archaeologist Sir Gil Blythe 
+Geoffreys uncovers a secret chamber overlooked...
+
+Blade Runner (Game) - Giant Bomb
+Giant Bomb
+The game's plot runs alongside that of the film
+
+Blade Runner, la aventura gráfica de PC más allá de Orión - HobbyConsolas Juegos
+hobbyconsolas.com
+En 1997, Westwood Studios nos regalaba una de las mejores aventuras gráficas para PC: Blade Runner. Recordamos el título que nos hizo perseguir replicantes
+
+Westwood Studio's "Blade Runner" computer game. | Westwood's Blade Runner | Pinterest | Blade, Electric sheep and Fanfiction
+pinterest.com
+Westwood Studio's "Blade Runner" computer game.
+
+
+The Best Game On The App Store Gets Multiplayer And Survival Modes [Infinity Blade] | Cult of Mac
+cultofmac.com
+Char Entertainment and Epic Games' Infinity Blade
+
+15 Best Cyberpunk Games - FizzleTop
+fizzletop.com
+Genre with endless possibilies Cyberpunk is one of those genres that you can't get bored of. The possibilities are endless when it comes to atmosphere, technology and story. 
+Man vs machine,...
+
+Blade Runner (1997 video game) - Wikipedia
+Wikipedia
+BladeRunner PC Game (Front Cover).jpg
+
+Good Old Games - Gemini Rue - PlayOnMac - Run your Windows applications on Mac easily!
+playonmac.com
+
+10 Video Games to Play After Watching Blade Runner 2049 - GameRevolution
+GameRevolution
+Gemini-Rue-Blade-Runner-2049
+
+Blade Runner Night - Belfast Film Festival
+belfastfilmfestival.org
+We invite you to join us in an immersive club night set in the futuristic dystopian streets of down town LA. 
+Where replicant humans roam among us, 
+technology has advanced and entertainment...
+
+Black Panther: How Wakanda Was Inspired By Gotham City In Dark Knight
+heroichollywood.com
+'Black Panther' director Ryan Coogler explains how his take on Wakanda was partially inspired by Gotham City in Christopher Nolan's 'The Dark Knight'.
+
+Blade Runner Game by lizarkeo on DeviantArt
+Lizarkeo - DeviantArt
+Blade Runner Game by lizarkeo ...
+
+Blade Runner All Game Cutscenes Cinematic - YouTube
+YouTube
+Blade Runner All Game Cutscenes Cinematic
+
+Chaos Legion Full Movie All Cutscenes Cinematic - YouTube
+youtube.com
+Developer: Capcom Production Studio 6 Publisher: Capcom Like Us On FaceBook : https://www.facebook.com/pages/Uplaynetwork/436753143023058 For More: http://ww...
+
+Shadowrun: Dragonfall | Like Blade Runner 2049? You'll love these 12 of the best cyberpunk video games - Gaming
+telegraph.co.uk
+
+Cool Stuff: Blade Runner and Fifth Element Video Game Renderings – /Film
+slashfilm.com
+Steven Chagnon, Alina Gal, and Ilya Nedyal collaborated to create screenshots for a Blade Runner video game using CryEngine 2 for a Movie-themed Game-Artist.net competition. 
+After the jump...
+
+Westwood's Blade Runner is an all-time classic in danger of being ...
+Eurogamer
+Blade Runner was comprised of meticulous pre-rendered backgrounds populated with 3D characters built using voxels. 
+Westwood had to pare back the models, ...
+
+DET :: The Art Of Gaming
+“Sound's always been a big part of a game's atmosphere to me. Mike Legg's been friends with New Age composer David Arkenstone for a long time; ...
+
+Blade Runner: Revelations Gets First Teaser Trailer
+uploadvr.com
+Upcoming Daydream exclusive Blade Runner: Revelations just received its first 
+*teaser trailer*, showcasing a promising glimpse of gameplay.
+
+Blade Runner Screenshots for Windows - MobyGames
+mobygames.com
+Blade Runner Screenshot: your living room, and faithful dog Maggie
+
+Blade Runner: Revelations Receives Debut Teaser Trailer [UPDATE] – VRFocus
+vrfocus.com
+The Google Daydream exclusive Blade Runner spin-off is set for release later this year.
+
+Geek Art Gallery: Posters: Don't Walk
+geekartgallery.blogspot.com
+"Don't Walk" by Chris Thornley (aka Raid71) Limited edition prints available for purchase from Bottleneck Gallery . US$45 A Blad...
+
+lucy
+Blade Runner Screenshots for Windows - MobyGames
+mobygames.com
+Blade Runner Screenshot: goodbye kiss
+
+Blade Runner | PC | Longplay | Part 1 | HD 720p 60FPS - YouTube
+youtube.com
+Blade Runner is a 1997 point-and-click adventure game developed by Westwood Studios and published by Virgin Interactive for Microsoft Windows. 
+The game is no [longer available|in print]...
+
+Agosto de 2012 - Mi Cyberlaberinto - Mi Cyberlaberinto | The Future | Pinterest | Ciencia, Ciudad y Paisajes
+ar.pinterest.com
+
+Let's Play Blade Runner - part 11 - Izo - YouTube
+youtube.com
+Even if Izo's probably not a replicant, there's definitely something fishy about him.
+
+New Blade Runner Game Episode 2 - YouTube
+youtube.com
+Here is my new Blade Runner Game play through. New Blade Runner Game Episode 2 -~-~~-~~~-~~-~- Please watch: "RESIDENT EVIL HD REMASTERED Episode 3" https://..
+
+Image - Irons Apartment.jpg | Caleb's Pathfinder Campaign Wiki | FANDOM powered by Wikia
+pdd.wikia.com
+
+Observer - Official Gameplay Trailer (Upcoming Cyberpunk Horror Game 2017) - YouTube
+youtube.com
+Here is the Official Gameplay Trailer of Upcoming Cyberpunk Horror Game Observer. Share your thoughts, leave a comment also Subscribe. Release Date: 15 Aug 2...
+
+» Future Imperfect – THE LOST ART OF WESTWOOD’S BLADE RUNNER
+tyrell-corporation.pp.se
+The Deadendthrills website has a great article about Westwood's Blade Runner game (an article that contains some truly stunning graphics from 3D artist David Austin taken from the game). The...
+
+ArtStation - Blade Runner redesign, Nathaniel Pengson
+artstation.com
+This was done for the Brainstorm challenge on facebook. My basic story here was that Deckard had a little fun, but now its time to get back to work.
+
+Indie Retro News: Harvest - A Graphic Adventure similar to Snatcher (Kickstarter Success)
+indieretronews.com
+Game Type : Adventure Developer/Project By : GondeFire Productions Kickstarter Goal : $10,000 ( Funded ) Developer Quote : HARVEST is a Graphic Adventure 
+similar to Snatcher, Phoenix Wright....
+
+Blade Runner 2022, Neo Yokio and Anime's Appropriation
+Vulture
+Blade Runner 2022. Photo: Crunchyroll
+
+'Blade Runner Black Out 2022' Is Finally Released And It Is A Fantastic Piece Of Anime
+forbes.com
+The anime short Blade Runner Black Out 2022 is finally out and it as good as I knew it would be.
+
+Image - Iggy.jpg | Off-world: The Blade Runner Wiki | FANDOM powered by Wikia
+bladerunner.wikia.com
+
+Watch the Blade Runner anime from Cowboy Bebop director Shinichiro Watanabe - The Verge
+theverge.com
+A short in the form of a prequel
+
+A Breathtaking Blade Runner Fan Film: XXIT » Fanboy.com
+fanboy.com
+
+1050 × 600Images may be subject to copyright. Learn More
+Neofeud: A Cyberpunk Adventure Game With Bladerunner Vibes & Game Of Thrones Politics - Gaming Central
+gamingcentral.in
+Neofeud is a Dystopic Cyberpunk adventure game in the vein of Blade Runner, 
+but with an overlay of Game of Thrones-like political intrigue, 
+and 1366x768, hand-painted, stylized visuals. ...
+
+This cover art for the Sega Genesis version of Shadowrun shows us some runners mid-mission, 
+where the combat oriented characters fight to protect t… | Pinteres…
+pinterest.com
+
+Star Citizen creates huge cities like Blade Runner 2049. ~ Prisoner Of The Mind
+prisonerofthemind.net
+
+Star Citizen's new planet-sized cities unveiled at Citizencon - Neowin
+neowin.net
+During Cloud Imperium Games' CitizenCon presentation this year, the studio unveiled some massive features it is implementing to the game. 
+These include planet-sized cities and alien fauna.
+
+ArtStation - Blade Runner - Tech Concepts., Frank Capezzuto III
+artstation.com
+Tech and hologram concepts.
+
+Designing the technology of ‘Blade Runner 2049’ « Adafruit Industries – Makers, hackers, artists, designers and engineers!
+blog.adafruit.com
+Engadget has a great in-depth piece about the designing of the technology in Blade Runner 2049. Check it out here. Peter Eszenyi was Territory’s creative lead on Blade Runner 2049. 
+He joined …
+
+Lenovo Introduces Mirage Solo Daydream Standalone Virtual Reality Headset & Mirage Camera for VR180 Video Recording
+cnx-software.com
+Standalone / All-in-One Android virtual reality headsets have been around for a couple of years, mostly from Chinese vendors. 
+
+We Need a New Blade Runner Game Right Now | Attack of the Fanboy
+Attack of the Fanboy
+It's hard to fully express just how influential Blade Runner has been on the entertainment industry, 
+both in film and video games.
+
+Huntdown Impressions | GameGrin
+GameGrin
+What's more is the game features local co-op multiplayer and promises 60 FPS gameplay meaning the 
+Blade Runner inspired visuals look simply beautiful.
+
+The Cinema Behind Star Wars: Blade Runner | StarWars.com
+starwars.com
+Star Wars influenced how Earth looked in the future, and Earth influenced how Star Wars looked in the past 
+-- the circle is now complete.
+
+xenoblade chronicles 2
+
+Max's Game Art Blog: Blade Runner: Art analysis
+
+Screenshot - Blade Runner Batman v1.0 (Batman Arkham Knight)
+sfx.thelazy.net
+
+
+
+...
+
+*cover* images=>wildcard=>
+(maybe)"game over" => "(c)over of blade runner game" screen: "overkill"!
+
+other ideas(...):
+pop-up targets
+
+...
+
+(maybe)sometimes:
+[6*]=>hex cells|hex maze game
+
+image dimensions may be a factor for
+sequencing/image analysis game....
+image warping (convolution)
+
+...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

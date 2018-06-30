@@ -1,0 +1,65 @@
+Q* quantize all images
+S* storyboard
+T|F* forest=> DDCF | data-driven control flow(!) | decision-tree
+F(*) face animations
+F|C  face|chara
+Sc|Sg()	
+scaling|segmentation
+
+[]image analysis....
+[]inset compositing, e.g. 4:1
+[]hexbin composites
+
+
+[C] image convolution....
+e.g.,
+"Deep Dream"
+
+i interiors
+e exteriors
+m medieval
+s space
+w main sequence/westood/world => "go global"
+
+a()alpha blending
+C* cubes
+G* grids
+H* hash codes
+h  hexmap|hilbert's|...
+m  models|music|...
+fg|bg foreground|background|...
+(maybe...) "loki's minions" LOL
+
+(C) clustering via: histograms/some sorting by hand
+=> image compositing/alpha/blending
+=> scene transitions (e.g., "guassian" blur effects....)
+=> (maybe) image stitching....
+=> uniq|tree pruning|QC quality check
+=> filename driven|menu lookup(s)
+
+image names retained(<=mostly)
+a sort-of, ad hoc(?) "expert" system
+
+or, alternatively,
+"deep dive" into BR universe/image training set
+
+e.g.,
+"learning" to animate
+
+
+chara lib
+=> face|grids
+
+...
+"Emgu CV/C#" maybe can help....
+...
+
+OpenCVsharp
+
+
+
+
+
+
+
+

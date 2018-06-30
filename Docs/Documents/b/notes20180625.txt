@@ -1,0 +1,246 @@
+Q* quantize all images
+S* storyboard
+T|F* forest=> DDCF | data-driven control flow(!) | decision-tree
+F(*) face animations
+F|C  face|chara
+Sc|Sg()	
+scaling|segmentation
+
+[]image analysis....
+[]inset compositing, e.g. 4:1
+[]hexbin composites
+
+
+[C] image convolution....
+e.g.,
+"Deep Dream"
+
+i interiors
+e exteriors
+m medieval
+s space
+w main sequence/westood/world => "go global"
+
+a()alpha blending
+C* cubes
+G* grids
+H* hash codes
+h  hexmap|hilbert's|...
+m  models|music|...
+fg|bg foreground|background|...
+(maybe...) "loki's minions" LOL
+
+(C) clustering via: histograms/some sorting by hand
+=> image compositing/alpha/blending
+=> scene transitions (e.g., "guassian" blur effects....)
+=> (maybe) image stitching....
+=> uniq|tree pruning|QC quality check
+=> filename driven|menu lookup(s)
+
+image names retained(<=mostly)
+a sort-of, ad hoc(?) "expert" system
+
+or, alternatively,
+"deep dive" into BR universe/image training set
+
+e.g.,
+"learning" to animate
+
+
+chara lib
+=> face|grids
+
+...
+"Emgu CV/C#" maybe can help....
+...
+
+OpenCVsharp
+
+----
+*keyword search* 
+runway show
+futuristic runway show
+
+Lily-Rose Depp leads arrivals at futuristic sci-fi Chanel show - Photo 1
+HELLO! Fashion Magazine
+Creative director Karl Lagerfeld is known for creating jaw-dropping sets for his fashion show, 
+and his SS17 presentation was no different.
+
+Chanel Robots Casually Storm The Runway At The Futuristic Paris Show! | CocoPerez.com
+perezhilton.com
+Welcome to the future.
+
+Jessica Minh Anh to host world's first solar-powered fashion show ...
+Daily Mail
+The J Summer Fashion Show will be held at Gemasolar (pictured), a futuristic
+
+Are these Manhattan towers the future of sustainable design? - Curbed NY
+ny.curbed.com
+A Dallas-based architecture firm has released a conceptual proposal packed with drone landing areas, micro homes and more
+
+Beads of Babylon: Paris Fashion Week: Paco Rabanne - Spring Summer 2012.
+beadsofbabylon.blogspot.com
+Contemporary and futuristic, what's not to love! Here are my favourites from Paco Rabanne's runway show at 
+Paris Fashion Week.
+
+Pinterest
+Gareth Pugh Fall 2011 Ready-to-Wear Fashion Show - Fei Fei Sun (Elite):
+
+Pin by LOKI on FASHION | Pinterest | Fashion
+Pinterest
+Fashion
+
+Lunar Runway Fashion: Gianfranco Ferre Shows Futuristic 'Star Trek' Styles
+trendhunter.com
+Lunar Runway Fashion - For Fall 2009 Tommaso Aquilano and Roberto Rimondi showed their second show for Gianfranco Ferré. 
+This show had a futuristic feel. 
+
+Cyberpunk Fashion - High Tech | Cyberpunk, Tech and Aesthetic fashion
+pinterest.com
+Imgur: The most awesome images on the Internet.
+
+prada
+gucci
+
+Dazed
+adidas Originals hit Florence with futuristic fashion show
+
+3ders.org - 3D printing to shape future of fashion, says Syrian fashion designer Nabil El-Nayal | 3D Printer News & 3D Printing News
+3ders.org
+Syrian fashion designer Nabil El-Nayal, a pioneer of 3D printing in the fashion world, speaks about the potential benefits 
+and difficulties of 3D printing in fashion.
+
+Gucci - FW 2017 Milan Woman
+indigitalimages.com
+
+ScriptShadow: Screenwriting and Screenplay reviews: Mute
+scriptshadow.blogspot.com
+Genre: Noir sci-fi
+Premise: A mute bruiser living in futuristic Germany goes on a desperate search for his missing girlfriend. 
+Along the wa...
+
+Image - Hussein-chalayan-bubble-dress.jpg | Gagapedia | FANDOM powered by Wikia
+ladygaga.wikia.com
+Licensing: This file is copyrighted. It will be used in a way that 
+qualifies as fair use under US copyright law.
+
+
+
+
+Note:
+google image search is kind of like a "memory game"....
+
+
+futuristic | triggahappi
+triggahappi.wordpress.com
+
+Q* quantized images
+
+compositing
+i|e||h
+
+h=>humanoids
+
+some image techniques,
+e.g.,
+gray scale
+...
+segmentation
+
+(maybe...)
+hough applied to h* images
+...c* chara faces
+...h* humanoid figure extraction | outline
+or,
+some faked "holographic" projections of h* might well do... 
+(for a "runway show" type scenario....)
+
+(maybe...)
+here is a gimic:
+cell phones
+"keycards" to hideouts could be...
+how about pseudo "IP" addresses?
+
+some memories maybe in REPs. 
+some maybe in manneq.
+
+then...
+random h* figures with c* chara faces dialog
+...
+image similarity search
+e.g., matching chara to found images
+
+eventually...
+"learned" images/textures may get a unique hash code
+maybe md5
+
+other image processing ideas:
+Y|Cb|Cr split effect
+1=>3
+
+a note on "runway" image samples
+many are 1,2,3 then fewer are 3+...n
+some are more (10+)
+
+some simple formations may suffice.
+maybe can occupy 1 or more "cells" on grid
+1,2,3,4....
+
+some of the h* set may include more i*/e*
+probably should make note/re-use these
+
+----
+h=>"walking" billboard quads
++ static (actual billboards)
+----
+e.g.,
+some rooms have grid with billboarded human figures
+
+some walls have "poster" billboard
+
+----
+I can't really draw humanoids-
+you know, people?!
+
+What about
+try this:
+"nested" humanoid scene
+e.g.,
+4x platform/dais=>
+  *
+*	*
+  *
++grid
+  *
+*+++++++*
+  *
+
+see?
+
+OK,yeah...
+
+
+----
+note:
+the mini-study on runway will prove useful for rendering 
+other scenes with random, NPCs (non-player characters)
+
+"walking"
+maybe done via,
+hover- sin(x)
+mirror image lower 1/2
+...
+mirror image 100% L/R
+
+finding image discontinuities- identify if it is 
+more than 1 h* - in "foreground".
+
+
+image collecting...
+"if I can just make it to...N/triangle/whatever"
+----
+"Oh, cool-I made it to the next pyramid/or whatever!"
+made it to row 12...out of 48(!)
+
+
+

@@ -10,9 +10,9 @@ namespace Secret_Hipster.Primitives
 {
     public class Grid : IDrawable
     {
-        private Buffer verticesBuffer;
-        private Buffer colorBuffer;
-        private Matrix4 modelMatrix;
+        public Buffer verticesBuffer;
+        public Buffer colorBuffer;
+        public Matrix4 modelMatrix;
 
         public Grid(Color color)
         {
@@ -29,7 +29,7 @@ namespace Secret_Hipster.Primitives
         }
 
         //10=>100
-        private IEnumerable<Vector3> GenerateVertices()
+        public IEnumerable<Vector3> GenerateVertices()
         {
             for (int i = -100; i < 100; i++)
             {
@@ -50,7 +50,7 @@ namespace Secret_Hipster.Primitives
             yield return new Vector3(100, 0, 100);
         }
 
-        private IEnumerable<Vector3> ColorData(Color color)
+        public IEnumerable<Vector3> ColorData(Color color)
         {
             for (int i = 0; i < this.verticesBuffer.Length; i++)
             {

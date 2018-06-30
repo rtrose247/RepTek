@@ -34,8 +34,15 @@ namespace Secret_Hipster.Util
             //var ii = Environment.CurrentDirectory.LastIndexOf(@"\");
             //var path = Environment.CurrentDirectory.Substring(0, ii);
             //
+            //i=>interiors
+            //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\i\\256")).ToString();
             //
-            String myDirectory = (System.IO.Path.Combine(dir, "Textures\\i\\256")).ToString();
+            //e=>exteriors
+            String myDirectory = (System.IO.Path.Combine(dir, "Textures\\e\\256")).ToString();
+            //
+            //r=>runway|actually "h" for (h)umanoid models
+            //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\r\\256")).ToString();
+
             // Get list of images
             //
             //DirectoryInfo d = new DirectoryInfo(@"D:\Test");//Assuming Test is your Folder
@@ -75,12 +82,13 @@ namespace Secret_Hipster.Util
             double jj = 0;
             //elevation
             int y = 0;
+            int ystep = 1;
 
-            for (y = 0; y < 99; y++)
+            for (y = 0; y < 9; y++)
             { 
-                for (int i = -3; i < 4; i++)
+                for (int i = -10; i < 10; i++)
                 {
-                    for (int j = -3; j < 4; j++)
+                    for (int j = -10; j < 10; j++)
                     {
                         TextureQuad cube;
                         //
@@ -88,13 +96,14 @@ namespace Secret_Hipster.Util
                         if (i % 2 == 0)
                         {
                             cube = new TextureQuad(this.myTextures[myTexCounter]);
-                            cube.Position = new Vector3(3 * i, 3 * y + 1, 3 * j);
+                            cube.Position = new Vector3(6 * i, 6 * y + 1, 6 * j);
                             cube.StartAfterSeconds = ii + jj;
                         }
                         else
                         {
                             cube = new TextureQuad(this.myTextures[myTexCounter]);
-                            cube.Position = new Vector3(3 * i, 3 * y + 1, 3 * j);
+                            float alty = 0.50f * ystep;
+                            cube.Position = new Vector3(3 * i, alty + 1, 3 * j);
                             cube.StartAfterSeconds = ii + jj;
                         }
 
@@ -108,8 +117,11 @@ namespace Secret_Hipster.Util
                         if (myTexCounter >= myTextureIndex)
                             myTexCounter = 0;
                     }
+                    //
                     jj = 0;
                     ii += 0.5;
+                    //
+                    ystep++;
                 }
 
             }//end for(s)

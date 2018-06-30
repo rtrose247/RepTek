@@ -1,0 +1,89 @@
+image groups=>
+chara	face/character images/animations
+h.night
+la.night
+i	interiors
+e	exteriors
+m	medieval(castles,etc.)
+w	westwood bladerunner game set
+r	futuristic runway show|runway show => many h*
+s	space
+
+
+a simple labeling classification scheme
+e.g.,
+i/e	interior/exterior
+v/p	vehicle/player(person) passable
+
+ip	interior|person only
+ipv	interior|person or vehicle 
+
+ep	exterior|person
+ev	exterior|vehicle
+epv	exterior|person/vehicle
+
+b	billboard poster (will be seen on exterior surface)
+
+
+some ideas on ip/ep/ipv/epv
+- sometimes may be possible to try doing a "wildcard"
+change ip=>ipv|epv, ep=>ipv|epv
+"experimental" may lead to cue spinner in wrong display. could look "funny" in many cases....
+
+(+)
+character names:
+list of names of major characters if present
+h|npc=>humanoids only
+
+"dogs playing poker" theme
+can be
+ip
+or
+b=>billboard (exterior)
+
+here is a simple idea:
+"image classification" game
+please classify the current view as 
+-interior
+-exterior
+-billboard/poster
+=> bonus points
+
+(c) might be a combat scene
+
+maybe:
+inspect:character=>dialog
+inspect:character=>dialog|card
+or
+=>(c)ombat
+
+----
+https://www.eurogamer.net/articles/2017-10-06-westwoods-blade-runner-is-an-all-time-classic-in-danger-of-being-forgotten
+----
+
+v=>
+westwood bladerunner game cut scenes
+
+need:
+flow of
+images|video cut scenes|dialog
+...
+may need to splice some dialog as overlay on video
+
+=>storyboard
+image|video *keyframe* alignment
+
+
+
+----
+
+
+
+
+
+
+
+
+
+
+
