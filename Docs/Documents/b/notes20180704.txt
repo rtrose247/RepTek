@@ -1,0 +1,136 @@
+----
+http://cdas.com/how-much-is-too-much-transformative-works-vs-derivative-works-photographer-wins-appropriation-art-copyright-case/
+
+How Much Is Too Much? Transformative Works vs. Derivative Works: Photographer Wins Appropriation Art Copyright Case
+4-5 minutes
+
+Patrick Cariou, a professional photographer won his case in District Court in New York against well-known appropriation artist Richard Prince and the Gagosian Gallery after several of Cariou’s pieces were appropriated without consent in Prince’s “Canal Zone” series showing at the Gagosian in 2008.
+
+Prince admits to appropriating a total of 41 photographs from Cariou’s book, “Yes, Rasta” published in 2000, for his show but claimed the “fair use” defense, citing that his work was sufficiently transformative to be deemed a new work of art. The District Court disagreed. Judge Deborah Batts, granted a Motion for Summary Judgment in favor of Cariou on the issue of copyright infringement and ordered Prince to deliver all infringing copies of the work for impounding and destruction.
+
+Embodied in Section 107 of the 1976 Copyright Act are four elements courts must consider when determining whether fair use is an adequate and applicable defense: (1) the purpose and character of the work (i.e. the extent to which the work is transformative, not merely derivative of a earlier work), (2) the nature of the copyrighted work, (3) the amount and substantiality of the portion used in relation to the copyrighted work as a whole, and (4) the effect of the use upon the potential market for or value of the copyrighted work.
+
+The heart of this case focused on the first element and examining whether Prince’s work was merely derivative of the original photos or transforms them. While the Defendants argued use of copyrighted materials as “raw ingredients” when creating “appropriation art” is always transformative and fair use, the Judge disagreed stating there was no precedent that would deem this use fair absent transformative comment on the original work.
+
+The preamble of Section 107 describes certain types of works that fit within the purpose of fair use, such as criticism, comment, news reporting, teaching scholarship or research. The four factors are to be considered in examining the purpose. Courts have distinguished infringing derivative works from transforming fair use by requiring that the new work must “supersede the objects of the original creation…altering the first [work] with new expression, meaning or message.” A derivative work is one that merely “recasts, transforms, or adapts an original work into a new mode of presentation.”
+
+The Judge’s analysis highlights the distinction between a derivative work that requires consent from the underlying copyright owner and a transformative work in situations where an artist appropriates the work of another artist’s as the “raw ingredients” for their own work. As the term “transforms” is included in the definition of a derivative work, if the new work is absent any comment on the original or on the broader culture associated with the underlying art, it will be infringing. To hold otherwise would be eviscerate the original artist’s right to authorize derivative works. There would be no need for the distinction and no limitation on how one artist can appropriate the aesthetic value of another artist’s work.
+
+A redefinition of the fair use defense as sought by Prince and his gallery would create a level of disrespect to the original artist’s work because it would promote a devaluation of the art as its only seen as “ingredients” to “play with” in the creation of a new piece. Their work would have no more value than the cloth of a designer before they create fashion design or paint to a painter before it graces the canvas. As Prince testified that he did not “really have a message” in using the photographs, the judge ruled there was little to no transformative intent.
+
+As the history of the fair use defense makes evident, the doctrine calls for a case-by-case analysis. But if the applicability of the fair use defense hinges on whether the artist has the intent to create a new message, why should caveats exist for “appropriation art” that do not exist in other mediums?
+
+----
+think preservation+restoration
+to facilitate the return, and re-telling of BR 1997
+set in the BR universe
+to allow new commentary and dialog
+the images were re-packaged and re-rendered in a new, custom game engine
+software development kit
+free and open source
+
+see, in the absence of the original westwood data - some 1TB in missing
+an estimated 10M dollars in assets.
+thus it is pointing to a community effort, perhaps, to research what it would take to 
+remix, and/or restore and ultimately preserve the westwood rendering of this fictional universe....
+
+if we give models - the toy models - 
+the danger is, of course, that these may be mistaken - for the real thing.
+that is not the intent, but rather, to permit a fusion or blend 
+an expanded narrative along with
+applying image/video processing techniques in the context of 
+producing a computer animated, role playing, video game.
+having multiple modes- embedded games- expanded from the original effort/algorithms.
+In addition, having an expanded rule set- and expert system.
+
+A popular game world/universe as an example, and how eventually to leverage a system like this
+in other artistic efforts-
+besides "google image search" for bladerunner-
+there is more out there, to explore, and learn....
+OK
+----
+http://foundrylawgroup.com/copyright-copywrong-what-are-derivative-and-transformative-works/
+
+
+Copyright & Copywrong: What are Derivative and Transformative Works?
+June 3, 2015
+
+By Zainab Hussain
+
+Recently, we’ve been asked several times about the nature of a certain work as it relates to copyright infringement.
+
+“Is my work a derivative of theirs? I should be fine, right?”
+
+“Sure, I incorporate some of their copyrighted work, but mine is transformative enough, so I’m good, right?”
+
+As with most gray areas, the answer is maybe. But gray areas are frustrating when you are trying to 
+budget for intellectual property infringement risk on a realistic assessment. So what are the black and white areas of copyright 
+law as it relates to derivative and transformative works?
+
+A derivative work is a work, fixed in tangible medium that includes elements of an original, 
+previously copyright-protected work. The original work is often referred to as the original, 
+parent, or underlying work, and the work that incorporates it is referred to as the derivative. 
+The Spanish translation of Dan Brown’s novel “The Da Vinci Code” is an example of a derivative work. 
+Both the original and derivative works have separate copyright protection. 
+Under the U.S. Copyright Act, the copyright protection afforded to the derivative work is only that which is new, on top of the original work.
+
+A subset of derivative works is the doctrine of transformative works. 
+Transformative works make use of copyrighted material, but do so in a way that the resulting work is fully copyrightable. 
+The author of the transformative work does, however, claim copyright over material in the original work, as used in his or her transformative piece. 
+But, in the face of such a lavish grant of rights in copyright, courts must carefully deem what is actually transformative (and thus, fair use), and 
+what is just copyright infringement, using a four-part test.
+
+And that’s where the black and white ends, and the gray begins. In the recently settled Cariou v. Prince case, the doctrine of transformative works as it stood was turned on its head. Briefly, Cariou published a book of photographic portraits taken in Jamaica. Prince, a known appropriation artist, added some content of his own on top of several of Cariou’s portraits. While no commentary, criticism or other motive existed to deem Prince’s work transformative under the Copyright Act, the court nonetheless found that no commentary or criticism was necessary (despite the statute’s language), and that Prince’s work is in fact, transformative. It’s a decision that has had the photographer-community up in arms, and the appropriation artist community rejoicing.
+
+Taking it one step further, Prince is back in the news, this time, involving more than just a single artist. He may have involved…you. His latest exhibition, part of the Frieze Art Fair in New York, features blown-up screenshots (yes, screenshots) of random Instagrammers’ posts, without their consent or knowledge. Whereas Prince transformed Cariou’s photographs into “paintings” (by painting minimally significant things like eyeballs or a few leaves onto photographs), Prince did nothing to alter the images here, instead removing or substituting original captions and certain comments for his own would-be comments.
+
+It remains to be seen whether any interested party files a lawsuit against Prince for misappropriation of their Instagram photos and copyright infringement for not being legally transformative enough. Because the content has been removed and displayed outside of the Instagram ecosystem, this isn’t a case of contacting the platform to take action. But when single screenshot works are selling for $90,000, it may not take long for someone to get in on the action. Or perhaps in Prince’s case, inaction?
+
+(not legal advice)
+----
+T:
+We can't have unlicensed use of REP technology ....ok?
+And, no open source version - either - unless....
+
+Det.A:
+what?
+
+T:
+well, we might be able to give away the older stuff
+like the programmable mannequins
+can we open source that?
+
+R:
+Um, ok- I think so. Make it so?
+
+T:
+Yes. Please.
+Work out the details.
+Push it online as soon as you can.
+
+R:
+Yes, sir.
+
+Det.A:
+And if we do find unlicensed REPs?
+
+T:
+Plan to bring them in, too- alive.
+
+Det.A:
+So they can be questioned..(.)
+
+T:
+(nods) yes. and, patched.
+
+OK
+----
+https://www.legalzoom.com/articles/what-are-derivative-works-under-copyright-law
+=>
+get a license
+$
+----
+https://en.wikipedia.org/wiki/Derivative_work
+
+s
+

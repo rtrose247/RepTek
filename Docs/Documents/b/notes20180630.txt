@@ -8,7 +8,7 @@ m	medieval(castles,etc.)
 w	westwood bladerunner game set
 r	futuristic runway show|runway show => many h*
 s	space
-
+t	tarot
 
 a simple labeling classification scheme
 e.g.,
@@ -23,7 +23,26 @@ ev	exterior|vehicle
 epv	exterior|person/vehicle
 
 b	billboard poster (will be seen on exterior surface)
+----
+key locations
+can be "keyed"
+e.g.,
+k
++(location name)
+----
+fields:
+b.i.e.n.p.v|.
+(maybe)
++
+(c)=>combat scene
 
+optional args...
+q=>QR code for image
+m=>md5
+w|l|o
+(w)eather options
+(l)ighting options
+(o)rientation(<=describe xyz if different camera angle)
 
 some ideas on ip/ep/ipv/epv
 - sometimes may be possible to try doing a "wildcard"
@@ -49,8 +68,6 @@ please classify the current view as
 -billboard/poster
 => bonus points
 
-(c) might be a combat scene
-
 maybe:
 inspect:character=>dialog
 inspect:character=>dialog|card
@@ -74,8 +91,77 @@ may need to splice some dialog as overlay on video
 image|video *keyframe* alignment
 
 
+----
+https://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+----
+
+* =>
+video analysis could help
 
 ----
+main sequence
+search:
+"bladerunner game"
+
+----
+interesting twists
+
+https://github.com/gradientspace/geometry3Sharp
+C# geometry library
+...
+2D convex hull
+...
+
+
+
+----
+https://www.codeproject.com/Articles/32836/A-simple-C-library-for-graph-plotting
+no code(?)
+----
+C# image clustering
+
+
+https://www.codeproject.com/Articles/91675/Computer-Vision-Applications-with-C-Fuzzy-C-means?fid=1578038&df=90&mpp=25&prof=True&sort=Position&view=Normal&spc=Tight&fr=26
+
+Computer Vision Applications with C# - Fuzzy C-means Clustering
+Christophe Gauge, 9 Mar 2011 
+
+
+
+https://www.codeproject.com/Articles/792895/Clustering-Similar-Images-Using-MapReduce-Style-Fe
+<= with R
+----
+note:
+mass download for firefox "works",
+however, sometimes corrupt or 0-byte images....
+----
+quantize=>md5=>sort|uniq
+OK
+----
+expanded query search=>"westwood bladerunner game"
+----
+C# ffmpeg video playback
+----
+C# image cluster
+
+C# md5
+...
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/d448e5bc-1ede-4b6c-8e98-92d534ed7370/how-to-calculate-md5-checksum-for-a-file?forum=csharpgeneral
+Use the follow(ing) code:
+Passing the fileName, this method will return the MD5 hash.
+protected string GetMD5HashFromFile(string fileName)
+{
+  using (var md5 = MD5.Create())
+  {
+    using (var stream = File.OpenRead(filename))
+    {
+      return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-",string.Empty);
+    }
+  }
+}
+----
+
+
 
 
 

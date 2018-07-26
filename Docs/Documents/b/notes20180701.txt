@@ -1,0 +1,354 @@
+image groups=>
+chara	face/character images/animations
+h.night
+la.night
+i	interiors
+e	exteriors
+m	medieval(castles,etc.)
+w	westwood bladerunner game set
+r	futuristic runway show|runway show => many h*
+s	space
+t	tarot
+
+a simple labeling classification scheme
+e.g.,
+i/e	interior/exterior
+v/p	vehicle/player(person) passable
+
+ip	interior|person only
+ipv	interior|person or vehicle 
+
+ep	exterior|person
+ev	exterior|vehicle
+epv	exterior|person/vehicle
+
+b	billboard poster (will be seen on exterior surface)
+----
+key locations
+can be "keyed"
+e.g.,
+k
++(location name)
+----
+fields:
+b.i.e.n.p.v|.
+(maybe)
++
+(c)=>combat scene
+
+...
+b.i.e.n.p.v.x.y.z|.
+x=>width
+y=>height
+z=>elevation
+...
+
+optional args...
+q=>QR code for image
+m=>md5
+w|l|o
+(w)eather options
+(l)ighting options
+(o)rientation(<=describe xyz if different camera angle)
+
+some ideas on ip/ep/ipv/epv
+- sometimes may be possible to try doing a "wildcard"
+change ip=>ipv|epv, ep=>ipv|epv
+"experimental" may lead to cue spinner in wrong display. could look "funny" in many cases....
+
+(+)
+character names:
+list of names of major characters if present
+h|npc=>humanoids only
+
+"dogs playing poker" theme
+can be
+ip
+or
+b=>billboard (exterior)
+
+here is a simple idea:
+"image classification" game
+please classify the current view as 
+-interior
+-exterior
+-billboard/poster
+=> bonus points
+
+maybe:
+inspect:character=>dialog
+inspect:character=>dialog|card
+or
+=>(c)ombat
+
+----
+https://www.eurogamer.net/articles/2017-10-06-westwoods-blade-runner-is-an-all-time-classic-in-danger-of-being-forgotten
+----
+
+v=>
+westwood bladerunner game cut scenes
+
+need:
+flow of
+images|video cut scenes|dialog
+...
+may need to splice some dialog as overlay on video
+
+=>storyboard
+image|video *keyframe* alignment
+
+
+----
+https://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+----
+
+* =>
+video analysis could help
+
+----
+main sequence
+search:
+"bladerunner game"
+
+----
+interesting twists
+
+https://github.com/gradientspace/geometry3Sharp
+C# geometry library
+...
+2D convex hull
+...
+
+
+
+----
+https://www.codeproject.com/Articles/32836/A-simple-C-library-for-graph-plotting
+no code(?)
+----
+C# image clustering
+
+
+https://www.codeproject.com/Articles/91675/Computer-Vision-Applications-with-C-Fuzzy-C-means?fid=1578038&df=90&mpp=25&prof=True&sort=Position&view=Normal&spc=Tight&fr=26
+
+Computer Vision Applications with C# - Fuzzy C-means Clustering
+Christophe Gauge, 9 Mar 2011 
+
+
+
+https://www.codeproject.com/Articles/792895/Clustering-Similar-Images-Using-MapReduce-Style-Fe
+<= with R
+----
+note:
+mass download for firefox "works",
+however, sometimes corrupt or 0-byte images....
+----
+quantize=>md5=>sort|uniq
+OK
+----
+expanded query search=>"westwood bladerunner game"
+----
+C# ffmpeg video playback
+----
+C# image cluster
+
+C# md5
+...
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/d448e5bc-1ede-4b6c-8e98-92d534ed7370/how-to-calculate-md5-checksum-for-a-file?forum=csharpgeneral
+Use the follow(ing) code:
+Passing the fileName, this method will return the MD5 hash.
+protected string GetMD5HashFromFile(string fileName)
+{
+  using (var md5 = MD5.Create())
+  {
+    using (var stream = File.OpenRead(filename))
+    {
+      return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-",string.Empty);
+    }
+  }
+}
+----
+simplest of all sorts:
+alpha sort
+OK
+
+idea:
+semi-randomized alpha sort with a genetic(recombinant)algorithm
+
+goal:
+traverse "all" nodes (or, at least get the spanning tree)
+
+tarot=>21|56||genes=>23(22XX|22XY)||how to unlock "hash" codes <= unicode
+OK
+----
+(maybe)
+3D from 2D
+----
+search:
+"futuristic cars"
+"flying cars"
+=>
+"futuristic flying cars" :)
+----
+(ideas:)
+image subtraction
++model extraction
+
+image database
+----
+https://stackoverflow.com/questions/35380868/extract-frames-from-video-c-sharp?rq=1
+I ended up using MediaToolkit to solve a similar problem after having a ton of trouble with Accord.
+
+I needed to save an image for every second of a video:
+
+using (var engine = new Engine())
+{
+    var mp4 = new MediaFile { Filename = mp4FilePath };
+
+    engine.GetMetadata(mp4);
+
+    var i = 0;
+    while (i < mp4.Metadata.Duration.Seconds)
+    {
+        var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(i) };
+        var outputFile = new MediaFile { Filename = string.Format("{0}\\image-{1}.jpeg", outputPath, i) };
+        engine.GetThumbnail(mp4, outputFile, options);
+        i++;
+    }
+}
+
+Hope this helps someone some day.
+
+answered Mar 2 (2018) at 0:02 
+----
+https://combatace.com/forums/topic/18753-mig-31-firefox/
+
+search:
+"futuristic fighter jets"
+
+----
+video
+1080p
+
+----
+https://kotaku.com/the-blade-runner-point-and-click-adventure-game-still-l-1819251960
+
+The Blade Runner point-and-click adventure game still looks stunning. Westwood Studios’ 1997 adaptation was groundbreaking 
+at the time for having multiple endings and a story that changed with each new choice you made. 
+*But it also had some dazzling, painstakingly crafted backgrounds.*
+OK
+----
+Here we go
+http://bladerunner.wikia.com/wiki/Blade_Runner_(1997_video_game)
+
+characters
+
+Game-play
+Variables at the Start
+
+When the game is started a few random variables are determined. The variables generated will determine which endings are available. All the variables are related to whether a given character is a replicant or human, and the final replicant of act 3.
+
+Lucy - Human or Replicant
+
+Dektora - Human or Replicant
+
+Gordo - Human or Replicant
+
+Izzo - Human or Replicant
+
+Sadik - Human or Replicant
+
+Act III Final Replicant - Dektora, Lucy, or Gordo.
+
+
+These are all randomly generated, so it is possible that all these characters could be replicants, 
+or all, except one, could be human. 
+There must be at least one replicant of this group because the final encounter in Act III is always a replicant.[1] 
+
+----
+http://www.ign.com/faqs/2010/blade-runner-complete-endings-guide-1095108
+
+ok...
+so to get characters up to the "present" date...
+
+Dr.Tyrell + JF Sebastien => either return by cloning, or their clones were killed (think about it)
+thus the date FY2050 is actually possible.
+
+note:
+The guide and the walk-through reveal the "break in (to Tyrell Corp) and steal the DNA info" approach
+
+Ray McCoy does this in certain variations of the game, and it can be used to save Lucy|Dektora
+
+a twist:
+DNA information might be used to save Roy...LOL
+
+----
+http://bladerunner.wikia.com/wiki/Blade_Runner_(police)?li_source=LI&li_medium=wikia-footer-wiki-rec
+
+Behind the Scenes
+
+The term "Blade Runner" originates not from any works by Philip K. Dick but from a little known 1974 novella by Alan E. Nourse. This novel was called The Bladerunner and in the novel, the reason for the term is given. Bladerunners (the term is one word in this novel) are black market medical suppliers for underground physicians. 
+The term appears to refer to the scalpel blade, a picture of a medical scalpel is prominently on the book cover illustration. 
+
+Yes- I read it, too.
+
+Scalpel?
+OK
+----
+Hint:
+different levels can have different geometry- right?
+OK :)
+----
+https://www.bugcodemaster.com/article/extract-images-frame-frame-video-file-using-ffmpeg
+
+ffmpeg -i video.webm -vf "select=eq(pict_type\,I)" -vsync vfr ff/thumb%04d.jpg -hide_banner
+
+start at 7s|max frames : ~1200 (1hr?)
+-ss 00:00:07.000 -vframes 1200
+
+ffmpeg -i videoplayback.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr ff/thumb%04d.jpg -vframes 1200 -hide_banner
+
+----
+keyframes are cool
+
+making a time-lapsed, key-frame video is possible
+
+new animations possible
+=> (r*) organized sequences of keyframes 
+
+- ordered
+- un-ordered
+
+...
+
+----
+====
+SIFT+Hexbin features => maybe
+"hash" code
+----
+sample audio
+=> sound effects
+----
+random forest+keyframe classification=> clustering
+interesting(?)
+
+...
+OK
+----
+some goals:
+form composite images
+(_)transition images
+
+
+special cases
+(for handling input/animation):
+- combat sequence|combat cursor
+- VK tests
+- K.I.A. database interaction
+- ESPER image analysis
+- spinner map display
+- pop-up menu selection
+
+...
+hint:
+random recombinant video(s)
+
