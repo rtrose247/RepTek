@@ -38,10 +38,15 @@ namespace Secret_Hipster.Util
             //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\i\\256")).ToString();
             //
             //e=>exteriors
-            String myDirectory = (System.IO.Path.Combine(dir, "Textures\\e\\256")).ToString();
+            //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\e\\256")).ToString();
             //
             //r=>runway|actually "h" for (h)umanoid models
             //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\r\\256")).ToString();
+
+            //brg
+            String myDirectory = (System.IO.Path.Combine(dir, "Textures\\brg\\256")).ToString();
+
+
 
             // Get list of images
             //
@@ -84,7 +89,7 @@ namespace Secret_Hipster.Util
             int y = 0;
             int ystep = 1;
 
-            for (y = 0; y < 9; y++)
+            for (y = 0; y < 19; y++)
             { 
                 for (int i = -10; i < 10; i++)
                 {
@@ -96,7 +101,7 @@ namespace Secret_Hipster.Util
                         if (i % 2 == 0)
                         {
                             cube = new TextureQuad(this.myTextures[myTexCounter]);
-                            cube.Position = new Vector3(6 * i, 6 * y + 1, 6 * j);
+                            cube.Position = new Vector3(2 * i, 2 * y + 1, 2 * j);
                             cube.StartAfterSeconds = ii + jj;
                         }
                         else
@@ -119,7 +124,7 @@ namespace Secret_Hipster.Util
                     }
                     //
                     jj = 0;
-                    ii += 0.5;
+                    ii += 2.0;
                     //
                     ystep++;
                 }

@@ -1,0 +1,2892 @@
+image groups=>
+a	art
+chara	face/character images/animations
+h.casino
+h.night
+la.night
+i	interiors
+e	exteriors
+m	medieval(castles,etc.)
+w	westwood bladerunner game set
+r	futuristic runway show|runway show => many h*
+s	space
+t	tarot
+
+a simple labeling classification scheme
+e.g.,
+i/e	interior/exterior
+v/p	vehicle/player(person) passable
+
+ip	interior|person only
+ipv	interior|person or vehicle 
+
+ep	exterior|person
+ev	exterior|vehicle
+epv	exterior|person/vehicle
+
+b	billboard poster (will be seen on exterior surface)
+...
+c	cockpit=>an interior with visible exterior....maybe other vehicles
+	i>e>p|v||person|vehicle movement allowed|maybe p|v composite| p|v passable?
+	except(!):a vehicle inside of cockpit would be prohibited(collision violation...)
+	....it may be possible to jump (p) from inside spinner vehicle to another vehicle(v) => p into v | NOT v into v
+
+ss,sv	spaceship|space vehicle
+w	weapon(s) present
+w+	weapon(s) firing
+...
+
+----
+key locations
+can be "keyed"
+e.g.,
+k
++(location name)
+----
+fields:
+b.i.e.n.p.v|.
+(maybe)
++
+(c)=>combat scene
+
+...
+b.i.e.n.p.v.x.y.z|.
+x=>width
+y=>height
+z=>elevation
+...
+
+optional args...
+q=>QR code for image
+m=>md5
+w|l|o
+(w)eather options
+(l)ighting options
+(o)rientation(<=describe xyz if different camera angle)
+
+some ideas on ip/ep/ipv/epv
+- sometimes may be possible to try doing a "wildcard"
+change ip=>ipv|epv, ep=>ipv|epv
+"experimental" may lead to cue spinner in wrong display. could look "funny" in many cases....
+
+(+)
+character names:
+list of names of major characters if present
+h|npc=>humanoids only
+
+"dogs playing poker" theme
+can be
+ip
+or
+b=>billboard (exterior)
+
+here is a simple idea:
+"image classification" game
+please classify the current view as 
+-interior
+-exterior
+-billboard/poster
+=> bonus points
+
+maybe:
+inspect:character=>dialog
+inspect:character=>dialog|card
+or
+=>(c)ombat
+
+----
+https://www.eurogamer.net/articles/2017-10-06-westwoods-blade-runner-is-an-all-time-classic-in-danger-of-being-forgotten
+----
+
+v=>
+westwood bladerunner game cut scenes
+
+need:
+flow of
+images|video cut scenes|dialog
+...
+may need to splice some dialog as overlay on video
+
+=>storyboard
+image|video *keyframe* alignment
+
+
+----
+https://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+----
+
+* =>
+video analysis could help
+
+----
+main sequence
+search:
+"bladerunner game"
+
+----
+interesting twists
+
+https://github.com/gradientspace/geometry3Sharp
+C# geometry library
+...
+2D convex hull
+...
+
+
+
+----
+https://www.codeproject.com/Articles/32836/A-simple-C-library-for-graph-plotting
+no code(?)
+----
+C# image clustering
+
+
+https://www.codeproject.com/Articles/91675/Computer-Vision-Applications-with-C-Fuzzy-C-means?fid=1578038&df=90&mpp=25&prof=True&sort=Position&view=Normal&spc=Tight&fr=26
+
+Computer Vision Applications with C# - Fuzzy C-means Clustering
+Christophe Gauge, 9 Mar 2011 
+
+
+
+https://www.codeproject.com/Articles/792895/Clustering-Similar-Images-Using-MapReduce-Style-Fe
+<= with R
+----
+note:
+mass download for firefox "works",
+however, sometimes corrupt or 0-byte images....
+----
+quantize=>md5=>sort|uniq
+OK
+----
+expanded query search=>"westwood bladerunner game"
+----
+C# ffmpeg video playback
+----
+C# image cluster
+
+C# md5
+...
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/d448e5bc-1ede-4b6c-8e98-92d534ed7370/how-to-calculate-md5-checksum-for-a-file?forum=csharpgeneral
+Use the follow(ing) code:
+Passing the fileName, this method will return the MD5 hash.
+protected string GetMD5HashFromFile(string fileName)
+{
+  using (var md5 = MD5.Create())
+  {
+    using (var stream = File.OpenRead(filename))
+    {
+      return BitConverter.ToString(md5.ComputeHash(stream)).Replace("-",string.Empty);
+    }
+  }
+}
+----
+simplest of all sorts:
+alpha sort
+OK
+
+idea:
+semi-randomized alpha sort with a genetic(recombinant)algorithm
+
+goal:
+traverse "all" nodes (or, at least get the spanning tree)
+
+tarot=>21|56||genes=>23(22XX|22XY)||how to unlock "hash" codes <= unicode
+OK
+----
+(maybe)
+3D from 2D
+----
+search:
+"futuristic cars"
+"flying cars"
+=>
+"futuristic flying cars" :)
+----
+(ideas:)
+image subtraction
++model extraction
+
+image database
+----
+https://stackoverflow.com/questions/35380868/extract-frames-from-video-c-sharp?rq=1
+I ended up using MediaToolkit to solve a similar problem after having a ton of trouble with Accord.
+
+I needed to save an image for every second of a video:
+
+using (var engine = new Engine())
+{
+    var mp4 = new MediaFile { Filename = mp4FilePath };
+
+    engine.GetMetadata(mp4);
+
+    var i = 0;
+    while (i < mp4.Metadata.Duration.Seconds)
+    {
+        var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(i) };
+        var outputFile = new MediaFile { Filename = string.Format("{0}\\image-{1}.jpeg", outputPath, i) };
+        engine.GetThumbnail(mp4, outputFile, options);
+        i++;
+    }
+}
+
+Hope this helps someone some day.
+
+answered Mar 2 (2018) at 0:02 
+----
+https://combatace.com/forums/topic/18753-mig-31-firefox/
+
+search:
+"futuristic fighter jets"
+
+----
+video
+1080p
+
+----
+https://kotaku.com/the-blade-runner-point-and-click-adventure-game-still-l-1819251960
+
+The Blade Runner point-and-click adventure game still looks stunning. 
+Westwood Studios’ 1997 adaptation was groundbreaking 
+at the time for having multiple endings and a story that changed 
+with each new choice you made. 
+*But it also had some dazzling, painstakingly crafted backgrounds.*
+=>westwood preservation project?
+OK
+----
+Here we go
+http://bladerunner.wikia.com/wiki/Blade_Runner_(1997_video_game)
+
+characters
+
+Game-play
+Variables at the Start
+
+When the game is started a few random variables are determined. The variables generated will determine which endings are available. All the variables are related to whether a given character is a replicant or human, and the final replicant of act 3.
+
+Lucy - Human or Replicant
+
+Dektora - Human or Replicant
+
+Gordo - Human or Replicant
+
+Izzo - Human or Replicant
+
+Sadik - Human or Replicant
+
+Act III Final Replicant - Dektora, Lucy, or Gordo.
+
+***
+twist:
+human|REP(s)
+you(player)|Detective who is seen in key-framed video/images
+=> chase
+***
+
+These are all randomly generated, so it is possible that all these characters could be replicants, 
+or all, except one, could be human. 
+There must be at least one replicant of this group because the final encounter in Act III is always a replicant.[1] 
+
+----
+http://www.ign.com/faqs/2010/blade-runner-complete-endings-guide-1095108
+ok...
+so to get characters up to the "present" date...
+
+Dr.Tyrell + JF Sebastien => either return by cloning, or their clones were killed (think about it)
+thus the date FY2050 is actually possible.
+
+although,JF Sebastien(from original movie/game) likely would have died from "Methusala syndrome"
+to survive, JF would need to be a new copy, or patched, or both ....
+
+Problem:aging. Deckard and Gaff aged in 2049. 
+Original movie, video game "2019" age => (_)closer to BR blackout 2022
+
+2019-2019=...=2049 (30yrs.)
+
+so, guess what -
+you (player) are going to have to chase 'em
+robotic/humanoid clones => recombinant DNA, human/cybernetic organisms (cyborgs)
+back into the past (FY2019)... nab 'em...
+go "back to the future...!" get it-
+avoid "retiring" innocents -
+*follow the prompts to avoid wrong moves*
+*perform grid searches*
+*investigate*
+*unlock clues*
+
+potential targets (if advised) => clones|humans|aliens|robots|cats|dogs|...
+OK
+----
+note:
+The guide and the walk-through reveal the "break in (to Tyrell Corp) and steal the DNA info" approach
+Ray McCoy does this in certain variations of the game, and it can be used to save Lucy|Dektora
+
+a twist:
+DNA information might be used to save Roy...LOL
+
+side-story/quest:
+sort of a "holy grail" - return copy of BR1997 to one of the key characters
+(e.g., maybe R|T|...)
+*may* be used in trade, for DNA info above
+
+----
+http://bladerunner.wikia.com/wiki/Blade_Runner_(police)?li_source=LI&li_medium=wikia-footer-wiki-rec
+
+Behind the Scenes
+
+The term "Blade Runner" originates not from any works by Philip K. Dick but from a little known 1974 novella by Alan E. Nourse. This novel was called The Bladerunner and in the novel, the reason for the term is given. Bladerunners (the term is one word in this novel) are black market medical suppliers for underground physicians. 
+The term appears to refer to the scalpel blade, a picture of a medical scalpel is prominently on the book cover illustration. 
+
+Yes- I read it, too.
+
+Scalpel?
+OK
+----
+Hint:
+different levels can have different geometry- right?
+OK :)
+----
+https://www.bugcodemaster.com/article/extract-images-frame-frame-video-file-using-ffmpeg
+You can extract all frames from a video file to image files. Use the following command to extract all frames from a video file called video.webm:
+
+ffmpeg -i video.webm thumb%04d.jpg -hide_banner
+
+...
+
+keyframes
+=>
+ffmpeg -i video.webm -vf "select=eq(pict_type\,I)" -vsync vfr ff/thumb%04d.jpg -hide_banner
+
+start at 7s|max frames : ~1200 (1hr?)
+-ss 00:00:07.000 -vframes 1200
+
+BR longplay
+ffmpeg -i videoplayback.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr ff/thumb%04d.jpg -hide_banner
+
+BR longplay2
+ffmpeg -i longplay2.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr lp2/n%04d.jpg -hide_banner
+640x480
+
+BR Blackout 2022
+ffmpeg -i videoplayback2.mp4 f2/b%04d.jpg -hide_banner
+ffmpeg -i videoplayback2.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr kf2/k%04d.jpg -hide_banner
+
+BR cut scenes (0:40)
+ffmpeg -i br-ww-cutscenes.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr csk/c%04d.jpg -hide_banner
+640x360
+
+BR cut scenes 2 (1:06)
+ffmpeg -i blade-runner-full-game-movie-all-cutscenes-2.106.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr ck2/cc%04d.jpg -hide_banner
+1280x720(!)
+ffmpeg -framerate 4 -i ck2/256~/cc%04d.256.jpg -c:v libx264 -pix_fmt yuv420p Blade-Runner-game-cutscenes-2.106.mp4
+frames=16061 time=01:06:54.50
+ffmpeg -i Blade-Runner-game-cutscenes-2.106.mp4 -i Blade-Runner-game-cutscenes-2.106.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 Blade-Runner-game-cutscenes-2.106-with-audio.mp4
+ffmpeg -i blade-runner-full-game-movie-all-cutscenes-2.106.mp4 -f mp3 -ab 192000 -vn Blade-Runner-game-cutscenes-2.106.mp3
+
+...
+WAMMP
+https://github.com/fstarred/wammp
+...
+
+=>make video
+ffmpeg -i t1996/256/t%04d.256.jpg -c:v libx264 -pix_fmt yuv420p intro.mp4
+	
+
+SBZ
+starblazers video
+ffmpeg -i sbz--videoplayback.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr sbz/s%04d.jpg -hide_banner
+
+----
+keyframes are cool
+
+making a time-lapsed, key-frame video is possible
+
+new animations possible
+=> (r*) organized sequences of keyframes 
+
+- ordered
+- un-ordered
+
+...
+
+----
+====
+SIFT+Hexbin features => maybe
+"hash" code
+----
+sample audio
+=> sound effects
+----
+random forest+keyframe classification=> clustering
+interesting(?)
+...
+at least, try starting with an initial tree structure....
+(LOL)
+OK
+----
+some goals:
+form composite images
+(_)transition images
+
+special cases
+(for handling input/animation):
+- combat sequence|combat cursor
+- VK tests
+- K.I.A. database interaction
+- ESPER image analysis
+- spinner map display
+- pop-up menu selection
+
+...
+VK test(s) might actually trigger combat (Leon)
+
+...
+hint:
+random recombinant video(s)
+R(v)
+----
+maybe try,
+e.g.,
+"open loop" ffmpeg player(s)
+synch'd
+
+https://www.youtube.com/watch?v=brGguuW3Cmg
+PC Longplay [179] Blade Runner
+
+----
+//s
+quantized video trailer
+
+//
+quantized keyframes
+
+...
+//
+video segmentation
+
+//
+audio segments<=ffmpeg
+BR longplay + BR2K22
+
+(*)
+image differencing
+image average/averaging => composite keyframe
+grayscale | YCbR edge detection => target outlines
+...
+an idea, maybe:
+point-and-click interaction, & animation:
+e.g.,
+clicks => selected 1+ hexbins for target(s)
+ID target as either human or "REP".
+hmmm....maybe.
+OK
+----
+***
+histogram shifts
+hexbin compare => edges => segmentation => labeling
+(sometimes) random recombinant hexbin/s might work
+***
+
+----
+(!)
+Maybe see:
+Turing School of Software and Design
+OK :)
+----
+keyframe analysis
+e.g.,
+"videoplayback".mp4 <= long playthrough
+3000 files|~220MB (q* compress to...)=> 180?
+----
+problem:
+Chief:
+Det. Archer-
+We think somebody is impersonating you.
+
+A:
+Oh?!....greattt(!)....
+
+K(arma):
+We're working on catching him. Presently chasing some leads. 
+You want in on it?
+
+A:
+You bet I do- and, uh, is this going to be wanted, alive or ...
+G:
+yeah-
+K:
+yeah, alive.
+
+A:
+OK
+----
+=>
+or,
+each animated keyframe sequence=>get a card | new clue | combat | etc.
+"activities"
+
+*an interactive, story-telling/role-playing game* and
+SDK
+includes as examples:
+- image processing
+- video processing
+programs
+...
+
+----
+search:
+medieval scenes
+----
+use arrow keys to navigate the random recombinant 
+(decision tree) forest! LOL
+only stun- do not shoot-
+unless advised that we are going weapons hot ("5" key) - 
+bullseye - not funny! - got it?
+OK
+----
+probably will need to segment the video clips....by hand
+=> keyframe video clips
+(OK)
+----
+might need to publish on "cloud"
+how many Gig on github?
+
+What is my disk quota? - User Documentation - GitHub Help
+https://help.github.com/articles/what-is-my-disk-quota/
+
+We try to provide abundant storage for all Git repositories, within reason. ... Tip: If you regularly push large files to GitHub, consider introducing Git Large File Storage (Git LFS) as part of your workflow. ... File and repository size limitations.
+About storage and bandwidth usage - User ... - GitHub Help
+https://help.github.com/articles/about-storage-and-bandwidth-usage/
+
+All personal and organization accounts using Git LFS receive 1 GB of free storage and 1 GB a month of free bandwidth.
+...
+How much space do you get on GitHub?
+If your repository exceeds 1GB, you might receive a polite email from GitHub Support requesting that you reduce the size of the repository to bring it back down. 
+In addition, we place a strict limit of files exceeding 100 MB in size. 
+For more information, see "Working with large files."
+----
+idea
+...
+random recombinant video(s) *with hash codes*
+R(v)|h*	<= hashed key-frame sequences
+:)
+----
+long-term
+"image classification game(s)"
+----
+video storyboarding
+etc.
+----
+...
+every time we got a new key-frame - or a quantized image or video - or annotation segment -
+it felt as if we were getting another step closer to solving it - (i.e.,the game itself).
+...
+----
+P.S.
+no copyright infringement is intended
+- for educational purposes -
+- commentary/parody on the original subject matter -
+- transormative artistic effort -
+----
+//s
+need:
+how to check card deck
+=>
+chara face animation
+
+----
+//s
+cards system
+
+//s
+clues
+
+//s
+dice
+
+//s
+hash codes for random recombinant video sequences
+
+some scenes may be "pristine"
+i.e., devoid of any major character(s)
+....
+
+----
+search:
+C# openTK game
++
+renaissance art
+(?)
+----
+back to the story
+the question becomes-
+can we create AI that is sufficient to 
+(a) auto-encode (perception+learning=>memory)
+(b) bootstrap its own detection+reasoning algorithms?
+...
+TBD
+----
+
+development with more "drag-and-drop" ease
+would be nice....someday....!
+
+----
+(maybe)
+binarized edge-detection differences in Y|Cb|R ... heavy line similar to Canny<>
+
+image subtraction:using reference/averaged keyframe(s)
+edge subtraction 
+etc.
+
+
+----
+(+)
+Emo Algo game
+
+...
+
+----
+https://stackoverflow.com/questions/20295398/ffmpeg-clip-audio-interval-with-starting-and-end-time
+...
+ffmpeg - Trim audio file without re-encoding
+
+Use ffmpeg to trim an audio file without re-encoding it.
+
+Trim starting from 10 seconds and end at 16 seconds (total time 6 seconds)
+
+ffmpeg -i input.mp3 -ss 10 -t 6 -acodec copy output.mp3
+
+Trim from 00:02:54.583 to end of file
+
+ffmpeg -i input.mp3 -ss 00:02:54.583 -acodec copy output.mp3
+
+Trim from 00:02:54.583 for 5 minutes (aka 300 seconds)
+
+ffmpeg -i input.mp3 -ss 00:02:54.583 -t 300 -acodec copy output.mp3
+...
+https://snipplr.com/view.php?codeview&id=68795
+# Trim from 00:02:54.583 to end of file
+ffmpeg -i input.mp3 -ss 00:02:54.583 -acodec copy output.mp3
+
+# Trim from 00:02:54.583 for 5 minutes
+ffmpeg -i input.mp3 -ss 00:02:54.583 -t 300 -acodec copy output.mp3
+
+----
+https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#
+Here is a simple Windows bat file to split incoming file into 50 parts. 
+
+Each part has length 1 minute. Sorry for such dumb script. 
+
+I hope it is better to have a dumb windows script instead of do not have it at all. Perhaps it help someone. (Based on "bat file for loop" from this site.)
+
+set var=0
+@echo off
+:start
+set lz=
+if %var% EQU 50 goto end
+if %var% LEQ 9 set lz=0
+echo part %lz%%var%
+ffmpeg -ss 00:%lz%%var%:00 -t 00:01:00 -i %1 -acodec copy -vcodec copy %2_%lz%%var%.mp4
+set /a var+=1
+goto start
+
+:end
+echo var has reached %var%.
+exit
+----
+https://gist.github.com/protrolium/e0dbd4bb0f1a396fcb55
+Extract Audio
+
+ffmpeg -i input-video.avi -vn -acodec copy output-audio.aac
+
+vn is no video.
+acodec copy says use the same audio stream that's already in there.
+
+ffmpeg -i video.mp4 -f mp3 -ab 192000 -vn music.mp3
+
+The -i option in the above command is simple: it is the path to the input file. 
+The second option -f mp3 tells ffmpeg that the ouput is in mp3 format. 
+The third option i.e -ab 192000 tells ffmpeg that we want the output to be encoded at 192Kbps and -vn tells 
+ffmpeg that we dont want video. The last param is the name of the output file.
+
+* change to: mp4=>mp3 audio | 500 parts (3hrs/500 ~21+/-s)
+ffmpeg -i videoplayback.mp4 -f mp3 -ab 192000 -vn longplay.mp3
+
+ffmpeg -i videoplayback2-360-with-audio.mp4 -f mp3 -ab 192000 -vn longplay2.mp3
+----
+oops
+videoplayback-720p-with-audio.mp4
+
+images:
+-animals(?)
+-bikes
+-buddha's chicken
+-BSG|SW|...
+-plants
+
+life...going extinct(!)
+----
+idea:
+ESPER terminal with blank screen <= may load other ("out-of-game") images for analysis
+
+c.h.a.r.d.
+LOL
+----
+//s
+RPG sprite sheet(s)
+
+trying a "shotgun cloning" approach
+
+need:
+C# blob + centroids....
+for automatic processing
+
+OR
+image annotation
+e.g.,
+https://github.com/HTLife/BoundingBoxAnnotation
+Red|Green|Yellow|Black
+=>
+keyframes
+
+//
+cut scenes
+
+//
+
+----
+https://www.codeproject.com/Articles/9727/Image-Processing-Lab-in-C?msg=2138426
+https://github.com/Sidneys1/BatchImageProcessor
+maybe
+https://github.com/HTLife/BoundingBoxAnnotation
+maybe
+https://github.com/TrifonT/Annotator
+
+maybe
+http://www.aforgenet.com/framework/
+http://www.aforgenet.com/projects/iplab/
+
+----
+plot
+can be random access
+(+)
+=> suggest: next scene/activity
+
+"you win"
+-if visit every scene
+-capture all REPs
+-cards
+-etc.
+...
+
+maybe:
+poker dice/tarot => next scene(?)
+TBD
+
+//world capitals
+e.g.,
+https://github.com/datasets/airport-codes
+
+//international flags
+https://github.com/DJuttmann/CountryFlags
+
+
+//unicode v. app
+e.g.,
+https://github.com/GoldenCrystal/NetUnicodeInfo
+
+
+gameplay:
+in some scenes, with Det. back to you => must be human
+other scenes: Det. => REP|combat
+
+...
+resolution:
+most=>high res + Q
+640x360(with border)=> might be useful as "flashback" images
+
+csk
+cut scene keyframes
+
+//transcripts
+...
+https://www.codeproject.com/Questions/1062787/Convert-audio-file-to-text-in-csharp
+=>
+https://msdn.microsoft.com/en-us/library/system.speech.recognition.speechrecognitionengine.setinputtowavefile.aspx
+
+also,
+IBM Watson looks *very* interesting
+https://speech-to-text-demo.ng.bluemix.net/
+
+amazon also has a service....|e.g.,alexa
+=>
+try out the service
+pricing
+(LOL)
+OK
+----
+
+//s
+longplay
+audio chunked into,
+765 segments *mp3
+262-263MB
+
+need:
+isolated sound effect(s)
+
+OR
+use video intervals => audio segments in
+e.g.,
+longplay.mp3
+
+----
+search:
+C# video game reconstruction
+
+VS Thesis
+=>
+VisualSFM
+
+----
+search:
+RPG Maker sprite sheet
+
+
+
+westwood bladerunner game map
+westwood blade runner game stategy guide map
+----
+=>
+Super Adventures in Gaming: Blade Runner (PC)
+Super Adventures in Gaming - Blogger
+The 'Designer Cut' option apparently strips in game dialogue down to only the clues, to speed up second playthroughs. 
+It's crazy that they thought of that ...
+
+----
+longplay1=>k
++audio
+
+cut scenes keyframes|csk
++audio
+
+longplay2=>k
++audio
+(480x)
+
+maybe:
+key frame image/sequence alignment
+
+
+...
+More on Speech/Speech-to-Text:
+https://msdn.microsoft.com/en-us/magazine/dn857362.aspx
+https://msdn.microsoft.com/en-us/magazine/msdnmag1214.aspx
+search:
+Speech Platform 11 SDK
+MSSpeech_SR_en-US_TELE.msi
+Microsoft spech recognition
+
+https://github.com/Zoomicon/SpeechLib
+
+https://github.com/Azure-Samples/cognitive-services-speech-sdk
+
+...
+
+https://github.com/ForkandBeard/Alferd-Spritesheet-Unpacker
+sprites => individual image
+
+might be used for chara(?)
+
+interesting...
+https://github.com/nickgravelyn/SpriteSheetPacker
+Sprite Sheet Packer is a fully featured tool for combining multiple individual images into a single, efficiently laid out image
+
+
+https://github.com/loodakrawa/SpriterDotNet
+...
+https://github.com/DavidYork/SpriteGenerator
+2 yrs ago
+This was built with Visual Studio for Mac
+
+
+?
+https://github.com/dusanst/DynamicSpriteSheets
+
+----
+need:
+anime face unpacker
+LOL
+
+----
+Speaker:
+"Thank you I decline."
+LOL
+----
+search:
+least expensive eyeglasses
+(seriously)
+
+----
+https://hackernoon.com/reverse-engineering-visual-novels-101-d0bc3bf7ab8
+
+https://www.codeproject.com/Articles/15017/The-Dining-philosophers
+
+
+Search:
+face rocognition tool
+https://github.com/ThibaultMontaufray/Droid-Image
+https://github.com/ThibaultMontaufray/Tools4Libraries
+
+https://github.com/beremaran/eigenfaces-recognizer
+https://github.com/apurva444/Face-Recognition-Module
+Face detection and recognition using Haar cascade classifier (viola-jones algorithm) and recognition with eigenface and linear regression algorithm.
+
+...
+interesting idea
+
+https://github.com/alikimoko/Image-Interpolation
+Interpolation between frames
+
+
+https://github.com/Vandenn/CSC741M_MP2
+An automatic video segmentation and keyframe extraction system. 
+
+
+https://github.com/mattya/chainer-DCGAN/blob/master/
+Chainer implementation of Deep Convolutional Generative Adversarial Network (http://arxiv.org/abs/1511.06434)
+
+
+http://studentguru.gr/b/jupiter/archive/2010/02/01/speech-recognition-with-c-dictation-and-custom-grammar
+
+
+wow
+https://www.codeproject.com/Articles/483347/Speech-recognition-speech-to-text-text-to-speech-a
+Starting with Speech Recognition - no exe
+
+wow
+https://www.codeproject.com/Articles/890117/Speech-Recognition-in-Mono-and-NET-Csharp
+=>
+https://github.com/devmathews/Speech.Recognition.Example
+
+maybe:
+C# resource ripper
+
+
+...
+!!
+https://docs.microsoft.com/en-us/uwp/api/Windows.Media.FaceAnalysis.FaceDetector
+https://github.com/Microsoft/Windows-universal-samples
+...
+The Social Experience
+
+Adventure Works is a cross device UWP app for sharing adventures and experiences with fictional friends by 
+using APIs for Camera, Inking, Speech, Project Rome and more. 
+Azure Cognitive Services provides the required inteligence.
+
+
+----
+A moonlighter, freelancer- of sorts....
+
+----
+!!
+interesting idea():
+https://www.codeproject.com/Articles/606856/A-Customizable-Architecture-for-D-Graphics-Applic?msg=471530
+Mar 2015
+
+...
+http://miconvexhull.codeplex.com/
+Please change bookmarks to: https://designengrlab.github.io/MIConvexHull/
+!!The new repository is: https://github.com/DesignEngrLab/MIConvexHull.git
+
+...
+see:
+WPF Samples
+speech
+face detector
+
+----
+https://www.slideshare.net/ptrelford/building-cross-platform-games-with-xamarin-birmingham-2015-53654313
+
+interesting:
+user input
+logic
+collision detection
+score
+render
+
+----
+
+e.g.,
+F#(
+  C#
+
+).
+
+----
+http://www.dsi.unive.it/~orsini/wordpress/?page_id=247
+Renzo Orsini
+
+Casanova
+The programming language Casanova was born at the Department of Environmental Sciences, Informatics and Statistics at  Università Ca’ Foscari Venezia by a team led by Giuseppe Maggiore, now at  NHTV Breda University of Applied Sciences.
+The language is “designed around games”, in the sense that it has many features to simplify the design and development of videogames, but it can be applied to other contexts, too.
+
+
+https://archive.codeplex.com/?p=casanova
+...
+https://github.com/vs-team/casanova-mk2
+
+Casanova is a declarative programming language for games. It is derived from F#, thus is a member of the ML family. 
+Casanova enjoys full Unity integration but can also be used with other engines and libraries. 
+
+maybe:
+F# | OpenTK
+
+(?)
+https://www.slideshare.net/ptrelford/building-cross-platform-games-with-xamarin-birmingham-2015-53654313
+http://tryfsharp.org
+OK
+----
+...
+
+!!
+https://www.reddit.com/r/proceduralgeneration/comments/457g4p/writeup_procedural_castle_in_f/
+
+https://github.com/SayToMe/Frolog
+LOL
+
+https://jamesmccaffrey.wordpress.com/2015/03/01/why-i-dont-like-the-f-language/
+I have no issue with any developer or researcher who likes F# but 
+in my opinion F# will always be a niche programming language like Prolog or LISP.
+
+Essentially
+"Prolog" has not lived up to its expectations....
+
+OK
+----
+
+https://fsharpforfunandprofit.com/posts/completeness-seamless-dotnet-interop/
+
+...
+"face detection game"
+hmm
+
+"getting a face"=>wins trump card(s)|...
+
+e.g.,
+face(s) detected=> protect | stun | shoot | memorize(?) |... <= moves come from "suggestion list"...
+
+maybe, as in,
+"add support" during sequence playback
+....
+
+----
+https://stackoverflow.com/questions/17440555/using-timer-and-game-loop
+The general premise behind the timer is to repeat some code every n.
+To create the timer use this:
+ System.Timers.Timer aTimer = new System.Timers.Timer();
+         aTimer.Elapsed+=new ElapsedEventHandler(OnTimedEvent);
+         // Set the Interval to 1 millisecond.  Note: Time is set in Milliseconds
+         aTimer.Interval=1;
+         aTimer.Enabled=true;
+Then you implement this method:
+private static void OnTimedEvent(object source, ElapsedEventArgs e)
+     {
+        //Whatever you need repeated
+     }
+The full example can be found here: 
+http://msdn.microsoft.com/en-us/library/system.timers.timer(v=vs.71).aspx
+
+----
+maybe
+Bxfr.Net
+(sound effects)
+
+----
+hint:
+Pascal's triangle=>stacking
+...
+another hint (maybe):
+e.g.,
+[Skybox[
+e(
+	8 * i<=interiors
+	P: grayscale * [m 's] <=Pascal stacking
+)
+
+OK
+
+----
+hint:
+interior
+place-holder wall=>wall-sized TVs
+...
+----
+more on F#
+maybe,
+see:
+http://usingprogramming.com/post/2017/09/20/running-f-code-in-powershell
+
+http://fsprojects.github.io/FSharp.Management/index.html
+
+----
+https://github.com/fsprojects/FSharp.Management
+
+----
+more...
+on
+face detection:
+=>
+if a face is detected,
+choice: good|bad||human|REP||stun|stun|...
+
+----
+some ideas
+random forest=>"cruise sequences"
+"vampire hunter" game
+LOL
+C# anime tool
+LOL
+----
+maybe
+(+) hough transform
+indoor/outdoor classifier....
+
+
+hmm
+here we go (again...)
+R(v)
+random recombinant video
+*keyframes
+=>
+key sequences(!)
+----
+
+*3D sweep
+*rampage
+*road blasters style driving game
+*spy hunter
+*...
+
+
+----
+search:
+vampire hunter d game
+
+LOL
+OK
+----
+anime
+cyber punk
+C# 3D game
+
+----
+hmm
+standard camera description
+(e.g., matrix)
+
+----
+search:
+C# vfx game
+
+
+"Charlie's Angels"(c)
+-he kicked his own @$$
+LOL
+----
+interesting
+codeproject:"reputation"points
+=>
+:)
+----
+very interesting
+https://www.codeproject.com/Articles/1247960/Learn-D-Math-made-by-the-GPU-by-Creating-a-D-Engin
+
+Downloading "VoxEngine.zip" from the article Learn 3D Math made by the GPU by Creating a 3D Engine on CPU. 
+Please note that downloads for this article are governed by the The Code Project Open License (CPOL).
+OK
+----
+idea:
+"video cubes"
+...
+for compositing
+i.e.,
+stacking=>need to have similar camera angles... <= compute/estimate similarity matrix
+
+it would be nice
+to reconstruct the camera from scenes in BR game
+:)
+
+=>
+keyframes:
+(+)maybe:some more hand annotation
+as noted above
+camera axis-angle
+
+*
+key-frame animated video cubes(<= how many)|simple "maze" layout(s)
+animated "skybox" maze(s)
+...
+
+----
+hint:
+face detection
+click=>bonus points
+-usually: stun
+-some "red X" targets (shoot) <= *most* prohibited
+-some are no choice(X)
+-etc.
+
+=>
+also allows for,
+face substitution|<=e.g.,anim chara
+----
+note:
+"trixie" is usually difficult to identify
+also,"lucy" difficult
+crystal.runciter.clovis.<=often difficult
+"score" these
+interesting: face detection in stills=>trigger: k|c=>keyframe video|combat
+----
+sorry if this is repetitive...so
+need:
+scene control
+(what type of sequence: is this)
+=>
+- render loop			|R=>
+- keyframed video		|V
+- audio				|A
+- user feedback loop		|U
+- face detection (in videos)	|<=CPU Fx
+- substitutions			|S
+- combat:face detection=stun	|C
+- cutscenes			|"cs"
+- custom animation		|An
+
+arriving at location:may start with a combat|c
+detecting a face=>shoot=>(sort-of)in-scene combat
+plan to use,e.g,
+mixture of I's|E's|Posters|video cubes|models|... <=stills|keyframes
+OK
+----
+demo idea:"poster" slalom
+...
+----
+*
+probably will need,
+C# UWP-style code | C# OTK |etc.
+----
+more "face" idea:
+"anime" face recognition at "shooting range"
+
+...
+https://www.freelancer.com/community/articles/top-7-programming-languages-used-in-video-games
+As you can see, developers have a wide range of tools and programming languages that they can use to start developing their games. 
+But before choosing any engine or programming language, you must think about the target platforms and the target audience—could you 
+imagine a teenager now sitting in front of a PC playing with mouse and keyboard? That may be the standard a decade ago, but it's not that popular anymore. 
+Teenagers and gamers today are now more into “touch” 
+interfaces—smartphones, tablets, and notebooks with touchscreens. 
+They grew up with having touchscreen everywhere, 
+so when you start to develop your game, please keep these details in mind before selecting any technology.
+
+OK
+----
+Related image
+L.A. Noire
+
+----
+(X)#6
+http://d289qh4hsbjjw7.cloudfront.net/rpgmaker-20150825031853275/files/futuristic-characters-pack-right.png
+rpgmakerweb.com
+lease this domain
+LOL
+----
+***
+No one had thought there could ever be built a ship that big.
+But these stewards, or custodians, whatever you want to call them - some say 
+they were the "elders" - 
+they had actually done it. 
+It was mostly planar, mostly flat, made of nearly countless tiny hexagons.
+Carbon fiber-based technology. Built into larger, stacked hexagons.
+All packed neat and tidy into a "sphere", although it was perhaps more like a rhomboid shape. 
+Some liked to call it "an oblate spheroid"...Earth, as it turned out, was part of something larger-
+mythical Eden was always right there, all along- 
+of course, a picture is worth a thousand =>
+=> cut to earth ship: <s|bh|E*|>
+
+***
+----
+"Elders" theme- could also feature the underground(undership) exploration....
+
+
+----
+idea(s):
+"trixie" in car - can cut to running
+also, the action sequences :
+
+-"trixie" karate frames/keyframes look interesting
+-karate "morphs" possible(?)
+
+----
+//s
+//audio peaks
+//speech transcripts=>dialog
+//
+//keyframe clusters
+//bg+fg segmentation
+//
+//blended videos+WWBR+3D game=>
+// video action scenes|face|shoot or stun|reaction time game <=keyframes:WWBR+BR2022
+// 3D scenes:
+
+// -"rampage" style platform jumping
+// -"driving"=>3D sweeps
+// -hexgrid combat
+// -transition scenes: map select|takeoff|landing|...|VK|.
+
+idea:
+after keyframes simmilarity+clustering=> 
+	-Random recombinants|
+	-keyframe loops
+
+
+----
+(maybe)
+UWP with custom view rendering
+DX2 sound synth|playback
+...
+----
+
+....
+a (quick) survey of BR games on Git
++OSVG clones
+....
+
+https://github.com/peterkohaut/bladerunnermodelviewer
+Quickest & dirtiest model viewer
+
+you need to have COREANIM.DAT, HDFRAMES.DAT and index.dat (extracted from startup.mix for example with 
+https://www.elberethzone.net/dragon-unpacker.html
+
+https://github.com/madmoose/replicant
+Replicant was an in-progress recreation of the 1997 Blade Runner
+PC game from Westwood Studios.
+
+DrMcCoy thought up the name. Thanks Doc!
+
+This version is no longer being developed, please follow
+https://github.com/madmoose/scummvm/tree/bladerunner/engines/bladerunner
+for new development.
+
+- madmoose
+
+=>https://github.com/madmoose/scummvm/tree/bladerunner
+
+*ah,yes: the Scumm VM conundrum* :)
+...
+https://github.com/1a2b3c4dBobAn/Blade-Racer
+https://github.com/VarunSaini1997/Blade--Runner
+https://github.com/VarunSaini1997/Blade--Runner-Ex
+A 2D shooting game
+
+https://github.com/antoniou79/BladeRunnerSubtitles
+Some (py) tools to help adding support for subtitles in Westwood's point and click adventure game Blade Runner (1997) for PC.
+
+https://github.com/felixop8/Blade-Runner-Game
+VK game
+
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&ved=2ahUKEwi_yMOB957cAhVDVK0KHWObCgkQFjAEegQIBBAB&url=https%3A%2F%2Fwww.myabandonware.com%2Fgame%2Fblade-runner-a43&usg=AOvVaw1ZVRNsJoG2Fl5bjaKlnpaQ
+
+
+----
+hmm....
+https://github.com/gpljr/HexMaze
+
+
+----
+hmm....
+some ACARS tool....
+http://www.rstools.info/Display-LauncherFeb17.pdf
+
+----
+(!)
+casinos:
+Honolulu Casinos
+https://www.worldcasinodirectory.com/hawaii/honolulu
+
+You will find the following games in Honolulu casinos: Blackjack, Roulette, Slot machines, Let It Ride Bonus Poker, Ultimate Texas Hold'em, 
+Three Card Poker, Dice, Fun 21 Blackjack, 
+Poker Pro Texas Hold'em, Blackjack Pro, Craps, 
+Baccarat, 3 Card Poker, Video Poker, Pai Gow Poker, Let it Ride, Lucky Ladies, Tournaments, ...
+
+----
+(!!)
+electronic arts preservation team
+
+
+----
+interesting:
+Blade Runner Windows 7 64bit Edition
+https://www.youtube.com/watch?v=0kNoqUMqxJA
+(X)
+unable to download
+
+https://www.replaying.de/files/blade-runner-patch-windows-vista-7-8-x64/
+
+
+...
+
+----
+https://taskandpurpose.com/trump-space-force-mission-nasa/
+
+...
+http://earthsky.org/space/icecube-observatory-detects-neutrino-blazar-source
+The detection of two distinct astronomical messengers – neutrinos and light – 
+is a powerful demonstration of how so-called multimessenger astronomy can 
+provide the leverage we need to identify and understand some of the most 
+energetic phenomena in the universe.  Since its discovery as a neutrino source 
+less than a year ago, blazar TXS 0506+056 has been the subject of intensive scrutiny. 
+Its associated stream of neutrinos continues to provide deep insights into the physical processes 
+at work near the black hole and its powerful jet of particles and radiation, 
+beamed almost directly toward Earth from its location just off the shoulder of Orion. 
+
+https://www.nytimes.com/2018/07/12/science/space-neutrinos-blazar.html
+But TXS 0506+056, the "Texas source" (of neutrinos), is very far away, some 4 billion light-years. 
+It is one of the brightest objects in the universe, said Dr. Halzen.
+The neutrino that set off the alarm in 2017 had an energy of some 300 trillion electron volts, 
+by the units of energy and mass that physicists prefer. Which means it had been produced by a proton 
+that had been a booster to that energy, nearly 50 times the energy delivered by the 
+Large Hadron Collider at CERN, the biggest particle accelerator on Earth.
+
+Call it the Large Hadron Collider in the sky. Presumably it is some kind of supermassive black hole 
+rumbling in the heart of that distant galaxy. For now, how this cosmic accelerator works in detail is a mystery.
+----
+http://westwoodbladerunner.blogspot.com/
+Reverse Engineering Bladerunner(TM)
+
+Monday, 9 February 2015
+The Blueprint
+Created a blueprint for BLADE.EXE located here
+Posted by Michael Liebscher
+Sunday, 8 February 2015
+The Update
+ResidualVM or ScummVM: I decided to go with ResidualVM since the actors and 
+items will have a greater visual fidelity using a hardware based graphics layer. 
+This past week I begain acquainting myself with the 0.2.1 code line. 
+Being able to play Blade Runner from start to finish in ResidualVM is about a year, or more, away.
+
+Over the next week I will be posting my technical notes. 
+* "blueprint" is an "unrolled" main loop
+* file format information for original WWBR game
+* RPG class info from actor file format
+...
+
+----
+
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=9&ved=2ahUKEwiilNea7KHcAhVQRqwKHUgCD7QQFjAIegQICBAB&url=https%3A%2F%2Fwww.gog.com%2Fforum%2Fgeneral%2Fa_review_of_the_only_official_blade_runner_videogame_ever_made%2Fpost4&usg=AOvVaw1u3rpqvHz2L5eGAE00661J
+
+http://forums.residualvm.org/viewtopic.php?t=88
+Post subject:
+PostPosted: Sat May 28, 2011 10:03 pm 
+Offline
+
+Blade Runner has been brought up several times on the ScummVM boards (
+http://forums.scummvm.org/viewtopic.php?t=1549) and it would seem that while it is within the scope of 
+ResidualVM it has most of its logic hard coded. That means it would (most likely) take a lot more work to 
+bring support for the game into ResidualVM than what the Grim engine has taken.
+
+----
+hint/idea:
+intesting twist
+WWBR 97 game : characters are either human|REP
+* different each time
+* carrying out their own objectives=>random shuffle starting locations|action plans
+(suggests)
+=> chasing REPs: some clues at a location, should point to the next location ...
+e.g.,
+clues|hassles|...
+clues are semi-random=>non-linear game
+
+----
+http://forums.scummvm.org/viewtopic.php?p=79038&sid=14c9076e4bc5766da8fdcef65a4f05b7
+Feb 15, 2014
+In conclusion: we would very much love to see people working on reverse-engineering Blade Runner 
+(or any other game, for that matter) for ScummVM. Smile
+
+Talk to us, and we will look if how you approach things would fit into our project credo. Since we're all individuals, we have of course 
+different ideas about what those credo encompasses, meaning 
+we will discuss it out and hopefully reach a conclusion everyone can live with.
+We do like people to stick around to maintain the engine afterwards, instead of just dumping an engine an moving on. 
+We also like do have clean, readable, maintainable code. 
+Both for the maintainer's sake, and for our sake. Because 
+it's always possible people get busy or lose interesting, so someone else has to take over, 
+and such a person is easier found when the code is clean.
+
+Should we reach the conclusion that your game and/or approach is not a for for ScummVM, there's always the possibilty to ask the ResidualVM 
+people. They are also a nice bunch and eager to help.
+
+As a third idea, you can of course always start your own project and use ScummVM code as your base 
+(provided you keep the license GPLv2+-compatible, of course). Yes, this is a bit more daring, but still possible. 
+We are also happy to help you with that endavour, and some of our people might join your project.
+
+Of course, this is all dependant on you not being a raging arsehat, trampling on helping 
+hands and burning bridges left and right... Many of us don't like helping people like that.
+
+And now I'm locking this thread. This is getting ridiculous.
+----
+http://www.afqa123.com/2015/03/07/deciphering-blade-runner/
+=>
+As I was exploring these formats, I created a command line tool which let me browse the contents of the MIX files and load data from individual entries inside the container. 
+The source of the project is available via my Github repository. 
+
+https://github.com/bdamer/br-mixer
+
+(+)
+http://www.afqa123.com/2012/03/08/how-do-you-know-youre-not-a-replicant/
+----
+
+interesting:
+https://gamehubs.com/article.php?id=how-blade-runner-2049-could-be-an-amazing-game
+
+----
+new:
+microsoft video indexer API (v2)
+
+
+----
+https://github.com/TommasoScalici/MathExtensions
+...
+https://github.com/quozd/awesome-dotnet
+
+
+----
+interesting
+:
+https://the-eye.eu/public/Books/IT%20Various/metaprogramming_in_.net.pdf
+https://archive.codeplex.com/?p=metadotnetbook
+...
+https://www.linqpad.net/
+=>
+LINQPad’s Dump method is famous for its capacity to eat almost anything!
+Tuned with numerous heuristics, it intelligently walks object graphs for the best possible output. 
+It even turns lazy objects into hyperlinks and asynchronous values into placeholders whose content materializes in the future!
+Images and bitmaps render as images and bitmaps, and types from Reactive Extensions and Dataflow fully animate.
+Dump any WPF or Windows Forms object and it will actually render.
+----
+!!
+https://github.com/Frassle/OpenTKExamples
+
+----
+
+F#+C# random forests
+...
+
+----
+random(image)forest
+
+
+
+----
+https://github.com/jpatokal/openflights/
+https://openflights.org
+
+...
+
+https://github.com/IngoScholtes/NETVisualizer
+
+...
+
+https://www.adsbexchange.com/ 
+http://www.virtualradarserver.co.uk
+
+
+----
+hmm
+https://techaeris.com/2015/11/30/genome-editing-allow-scientists-create-the-perfect-baby/
+
+----
+
+probably need,
+- scummvm bladerunner eng
+- BR97 file format reader
+- BR97 main loop <= reverse eng. BR Web site
+
+need more info
+- core anim. file
+...would be nice...(maybe eventually)
+esp. if clean background scenes.
+
+----
+image "runs":
+304+323
+=>
+interior cockpit|
+exterior visible through window...
+
+----
+idea(s)
+"random stack" algorithm for outdoor city rendering
+
+and, textured cube/s transitioned sweep. shoot|stun<=computer assist
+like "area 51" VR game
+
+shoot/stun based on 
+-face detection
+if there is a face, algo determines to prompt "shoot or stun"
+-algo determines if face is human or REP
+
+*player decides if clicking shoot or stun*
+e.g.,"Z":stun
+"X" shoot
+...
+cooperative shoot|stun
+human vs. CPU <= scoring
+
+-longer term:
+over time...with player feedback (point+click)
+- shoot|stun matching=>may learn if it is "human" or "REP" <= measuring bias 
+- adding info: pointing on a keyframe before shooting may indicate, for future ref, 
+this is a human(*:photograph=>learn)|this is a REP(*:stun)|this is a robot(*:shoot)|....
+
+...
+what to do for close-in shots:
+- give the subject a gun
+- everytime player shoots or stun|<= do a retaliation roll (subject is armed? 
+* display arms
+* "return fire"
+
+...
+
+
+----
+
+
+----
+random forest=> image transition(s)
+-interior|exterior => 
+images/scenes compositing technique, as in, "mall sweeps"
+-in other words,
+as a trend, in general
+- interior scenes transition to interior
+- exterior to exterior
+- *unless* intentionally cross from interior to exterior||e|i 
+<= so could be an override. e.g., player key (such as, [ or ] to force a scene transition i|e||e|i....)
+
+"autolayout" help => i|e transitions...
+
+for example,e.g.,
+top-down of intersection is like,
+----|****|----
+****|****|****
+----|****|----
+
+the same applies to a camera:
+e.g., 
+[-|-|-]
+[-|-|-]
+[-|-|-] or
+e.g.,NASA style
+[+++++]
+[+++++]
+[+++++]
+
+
+in case- has this been mentioned ?
+another "R(s) random stack"
+layout
+e.g.,
+cubes in random stacked heights
+=> 
+form buildings, streets|alleys - on a regularized grid
+
+
+----
+keyboard controls:
+
+----
+
+(image) search:
+M83 'Midnight City' Official video
+
+...
+
+fatkun chrome image download
+
+
+...
+
+https://github.com/mdabros/SharpLearning
+
+http://accord-framework.net/docs/html/T_Accord_MachineLearning_DecisionTrees_RandomForest.htm
+
+
+...
+
+----
+screens:
+party
+skills
+etc.
+
+
+----
+more ffmpeg:
+ffmpeg -i blade-runner-theme-vangelis.mp4 -vf "select=eq(pict_type\,I)" -vsync vfr brtv/brtv%04d.jpg -hide_banner
+
+
+----
+search:
+ArcCorp
+
+
+----
+interesting:
+https://stackoverflow.com/questions/22921865/3d-estimation-of-tennis-courts-using-opencv
+
+opencv camera calibration
+
+search:
+c# opencv camera calibration single image
+...
+hough transform similarity image similarity classification
+...
+
+...
+https://github.com/timzhang642/3D-Machine-Learning
+Single Image 3D Interpreter Network (2016) [Paper] [Code]
+...
+http://3dinterpreter.csail.mit.edu/
+
+
+----
+a "what-if"
+based on a real-life scenario:
+He used ACARS to gain access to the plane’s onboard computer system and uploaded Flight Management System data.
+Once in, he demonstrated how it was possible to manipulate the steering of a Boeing jet 
+while it was in autopilot mode.
+----
+search:
+C# RPG application
+https://sourceforge.net/projects/arm/
+...
+C# tile engine
+https://github.com/ALenfant/WorldEngine
+https://github.com/mrking95/OpenGLGame
+
+bleh
+----
+hint|idea
+gameplay =>
+e.g.,
+take image searches => classify(i|e|"p" poster|...) => cluster similar images =>
+transition sequence =>
+attempt to align to keyframe video sequences
+
+so:
+<I> =>  <Ic> clusters => scene transition strategy => <Vk>|<Vk|i> <= interactive video keyframe playback
+
+actions,e.g.,
+shoot|stun|admin(annotate)|or NOP||click "OK" => gain Exp.|Skills upgrades|clues|party++|etc.
+
+a scene may transition to a round of combat when:
+REP(s) detected.... 
+
+----
+"Big Blend" idea
+-BR97 game(clues|DNA information=>"the patch")
+-scummvm<=madmoose replicant
+-REP detect grid search <= game board|3D autolayout + scene generator
+-anime + sbz(starblazers)
+-standard deck
+-tarot = unlocking plot|abilities
+-planets game <= space war (Disney Black Hole|BSG|...|CERN|.)
+-FASA-like game mode & rules
+*square|hex grid(s)
+
+maybe,eventually:
+-"worst case scenario":toy flight sim + a sort of "ACARS" satire(<=where in the world is _REP_X_)|a plane chase|...|formation flying
+-world at war flight sim
+
+-BR97|BR2022 anime|sbz|BR2049|...|
+
+cards:
+-poker|tarot||REP Detect style deck
+dice:
+-poker dice
+-RPG dice rolls <= scene transitions|combats|...
+
+spinoff idea:
+-animated keyframed video sequence(s):
+-"classic" 8-bit spoof game => GIF-like animated sequence
+-"classic" commodore 6502 game
+-VK tests
+-image analysis sequences
+...
+may be displayed on some walls as "poster"
+
+----
+Mig-31
+firefox
+hmm
+cool
+http://thinkinrussian.blogspot.com/p/download-flightsim-model.html
+
+----
+idea
+"show thinking"
+during clustering...may also be displayed on a hex grid
+TBD
+----
+here we go
+firefox panels
+
+so, suggests would need to have:
+search:
+C# chroma-key image compositing
+
+e.g.,
+https://github.com/fschultz/NetImageLibrary
+
+https://github.com/suicvne/AlphaBlender
+
+----
+
+ok...so...
+IronPython.NET
++
+https://www.nuget.org/packages/OpenTK.NETCore/
+maybe
+....
+
+
+----
+search:
+(e.g.,in Windows Store):
+windows cognitive
+etc.
+interesting:
+"Windows Community Toolkit" custom controls
+...
+Express Scribe (Free)
+
+transcipts:
+800_10-800_20 => 
++4
+800_21-	| 25
++5
+800_25	| 30
+
+ok:
+Express Scribe => resequences & renames *wav files
+
+hint...:
+"Speaker 1" should always the player (if possible)
+hint:
+by convention, cut scenes without the player present, may as well omit "Speaker 1"
+
+*.dat files refer back to their source file (e.g., *wav *mp3) 
+
+	
+----
+plot:
+McCoy gets "core" DNA info from Eisenduler scene.
+interesting....
+
+
+----
+Ref:
+https://speech-to-text-demo.ng.bluemix.net/
+
+interesting
+Crowd Control: A crowdsourced science fiction novel written by CNET readers.
+
+Speaker 0: Mainframe and shooting range.
+Speaker 1: The Tyrell corporation today recalled the last four functioning entertainment model nexus five replicants from off world service 
+Dr Eldon Tyrell speaking at a shareholders meeting denied allegations-
+
+
+----
+
+https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwimoNu9-bjcAhUIS60KHfy8C_IQjhx6BAgBEAM&url=https%3A%2F%2Fimgur.com%2Fgallery%2Fp6EQl&psig=AOvVaw1KFpJKChx_TKJ-AsVgOsP4&ust=1532561880954275
+
+Indie Retro News: The Weird Story of Waldemar the Warlock - An old school point and click adventure with horror and black humor (Kickstarter+Demo)
+indieretronews.com
+Game Type : Adventure Developer/Project By : enComplot Kickstarter Goal : 40,000 Game Quote : 
+A very nice looking Adventure game has just appeared via Kickstarter titled "The Weird Story"...
+
+----
+(maybe)
+obtaining picture info from coreanim.dat(?)
+
+http://www.afqa123.com/2015/03/07/deciphering-blade-runner/
+interesting
+so it may be load by scummVM(?).
+e.g.,
+I did not actually try to load the individual animations in my code, 
+but you can look at the ScummVM fork linked to in thebert’s comment above to see it in action (SliceAnimations::open). The 
+header of the DAT file contains an entry for each animation, which also gives you the offset in the file (line 73 of SliceAnimations.cpp).
+
+---
+thebert says:
+March 24, 2015 at 11:51 pm
+do you know madmoose ScummVM Fork + the bladerunner engine he is working on (last commit Feb/2015)?
+
+https://github.com/madmoose/scummvm/tree/bladerunner
+
+COREANIM.DAT access can be found in
+
+scummvm-bladerunner\engines\bladerunner\slice_animations.cpp
+
+starting with ine 101
+
+bool SliceAnimations::openCoreAnim() {
+return _coreAnimPageFile.open(“COREANIM.DAT”);
+}
+
+bool SliceAnimations::openHDFrames() {
+return _framesPageFile.open(“HDFRAMES.DAT”);
+}
+
+so he seems to “understand” the COREANIM.DAT format
+
+----
+(sarcasm)
+Great! So "we" are only 3+ years behind.
+
+----
+=>
+BR MIXER
+Command line tool to extract resources for Westwood’s Blade Runner game. Read more about it here. Source code available on Github.
+
+https://github.com/bdamer/br-mixer
+
+*interesting*
+
+----
+
+main idea:
+2 games in 1
+combine BR97 with REP DETECT
+=>
+card-driven action
+
+hint:
+visiting a location triggers a video <= game state|location
+
+----
+//REP DETECT
+need: cards
+
+collection "c": cards
+N=55
+56: 2x Rachel: "I owe you one" card
+
+next:
+quantize these
+
+all cards are 250x350
+
+OK - done!
+
+note:
+In VASSAL, cards have associated sounds...
+need to review card face-up/face-down rules, or maybe simplify....
+
+----
+bleh
+
+I know - this has turned into somewhat of a "blockchain"
+anyway - we're almost there
+OK
+
+----
+essentially, need: 
+-state transition, with timers
+-media playback capability
+-threads:player,interface,AI(enemy|npc|cooperative|.)\
+-image compositing
+-...
+
+*might be able to combine, using asynch construct(s)
+e.g.,
+async method()
+=>
+{
+	continue next statement,
+}
+-asynch done
+...
+
+looking at ScummVM+BRMixer(...)
+
+----
+add video
+https://www.youtube.com/watch?v=XiW0u5PHXkY
+720p
+5:17:30
+
+...
+ffmpeg -i Dopefish-Blade-Runner-Full-Playthrough.mp4 -vf  "select=eq(pict_type\,I),crop=960:720:160:0" -vsync vfr lp3/nn%04d.jpg -hide_banner
+...
+"pad=width=:height=720:x=0:y=0:color=black"
+...
+ffplay -i Dopefish-Blade-Runner-Full-Playthrough.mp4 -vf "cropdetect=24:16:0"
+[Parsed_cropdetect_0 @ 000001d7aa676980] x1:160 x2:1119 y1:0 y2:719 w:960 h:720 x:160 y:0 pts:2400000 t:26.666667 crop=960:720:160:0
+
+ffmpeg -i YourMovie.mp4 -vf "crop=640:256:0:36" YourCroppedMovie.mp4
+
+"Dopefish-" crop=960:720:160:0
+=>
+960x720
+ffmpeg -i Dopefish-Blade-Runner-Full-Playthrough.mp4 -vf "crop=960:720:160:0" BRDF-Blade-Runner-Full-Play-960x720.mp4
+50hrs...?
+
+frames=571510 time=05:17:30.23 
+(processing time stats....fps=5.0 q=-1.0 Lsize= 1490006kB bitrate= 640.7kbits/s speed=0.166x)
+
+(+)
+add audio
+ffmpeg -i BRDF-Blade-Runner-Full-Play-960x720.mp4 -i Dopefish-Blade-Runner-Full-Playthrough.mp4 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 BRDF-Blade-Runner-Full-Play-960x720.mp4
+
+
+
+OK
+----
+
+looking at aligning keyframes
+(opening scene)
+
+later: scene alignment (indexed by keyframe)
+
+1440:	thumb56	<=from "longplay"
+960:	nn34
+
+t56	|nn34			22
+t81	|nn58			23
+t104	|nn80			24
+t113	|nn88			25
+
+t164|nn143
+t165|nn144
+
+(approx.) synch =>longplay(1) is ~20...21+ frames ahead of longplay3
+
+hint(s):
+-the slight delay between videos...is giving some "extra" frames | maybe useful for some extra "tweening"
+-Qz palette => this is masking the differences between resolutions 1440|960
+-intro sequence(through 
+v1:*...t187-t188
+v3:*...nn184
+...
+t250|nn276
+
+can see McCoy, exiting Runciter's:
+-walking
+-running
+
+appearance of crosshairs => trigger a combat scene (or maybe also, triggered by a REP detect card)
+
+~~~
+an interesting idea....
+some keyframes|intervals can be repeaters
+e.g.,
+repeat frame 1-N
+or, 1-2,1-2-3, adjacent frames, such as, 
+2074.2075
+2074.2075.2076
+2078.2079.2080
+"reversible repeaters"
+"random repeaters" <= can skip around frames in an interval
+etc.
+
+other examples maybe using "repeater" animation(s):
+*image analysis
+*VK test
+
+
+----
+wish list (music):
+-orbital|daft punk|
+-1980s 
+-
+-
+
+----
+some results:
+longplay	v1	1440x1280	3023	
+longplay2	v2	640x480		2937
+longplay3	v3	960x720		5274
+cutscenes2.106	ck2	1280x720	1080
+
+most compatible
+v1+v3 => back-to-back videos
+(+)
+*blended* tweened intro scene => WWBR97 "intro" scene => through Runciter's (~180 frames) (maybe farther....)
+(+)
+all cut scenes (maybe)	=> csk2
+(+)
+BR-Blackout-2022(<=select scenes, and/or keyframe video/s)
+
+idea:
+"cheap" 1st alignment
+-blended intro
+- v1:t1800|v3:nn2100 => *maybe* alternating v1|v3 300 keyframes at a time, v1(300)|v3(300)|...
+bleh
+*sort of*
+
+note:*proportional* alignment exp. 
+...a help? (for compositing....):
+v1/v3	0.57319
+v3/v1	1.74463
+
+hmmm....
+ok, effective frames/sec
+v1	3:11:10	11560s	0.6068(ratio)	0.2615	<= every 3.82s
+v3	5:17:30	19050s	1.64709(ratio)	0.2768	<= every 3.61s
+ck2	1:06:55	 4015s	0.3473|0.21076	0.2689	<= every 3.71s
+====
+~3.71333s avg in between frames
+
+0.2693
+
+=>make video
+ffmpeg -i t1996/256/t%04d.256.jpg -c:v libx264 -pix_fmt yuv420p intro.mp4
+ffmpeg -framerate 23.98 -i f2/256~/b%04d.256.jpg -c:v libx264 -pix_fmt yuv420p br-2022-demo.mp4
+
+...
+also, add audio track:
+e.g.,
+https://superuser.com/questions/590201/add-audio-to-video-using-ffmpeg
+ffmpeg -i input.mp4 -i input.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k output.mp4
+
+longplay.mp3 
+ffmpeg -framerate 0.2693 -i ff/256~/thumb%04d.256.jpg -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k longplay-qkv.mp4
+
+or, trying:
+ffmpeg -r 3.7133 
+
+...cool...
+
+then, later on:
+https://trac.ffmpeg.org/wiki/Concatenate
+Using intermediate files
+
+If you have MP4 files, these could be losslessly concatenated by first transcoding them to MPEG-2 transport streams. With H.264 video and AAC audio, the following can be used:
+
+ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate1.ts
+ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate2.ts
+ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy -bsf:a aac_adtstoasc output.mp4
+
+some refs:
+https://superuser.com/questions/908280/what-is-the-correct-way-to-fix-keyframes-in-ffmpeg-for-dash
+
+-force_key_frames
+-force_key_frames expr:gte(t,n_forced*3.7133)
+=>
+ffmpeg -framerate 0.27 -i ff/256~/thumb%04d.256.jpg -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k -force_key_frames expr:gte(t,n_forced*3.7133) longplay-qkv.mp4
+
+bleh
+-filter "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=30'"
+
+ffmpeg -i ff/256~/thumb%04d.256.jpg -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k -force_key_frames expr:gte(t,n_forced*3.7133) -filter "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=30'" longplay-qkv.mp4
+Filtergraph 'minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=30'' was defined for video output stream 0:0 but codec copy was selected.
+Filtering and streamcopy cannot be used together.
+
+interesting...
+seems to finish frames at 3:06 instead of...3:11:10
+
+...
+going to try,
+make intermediate output video with 25fps
+e.g.,
+ffmpeg -i outputtt.mp4 -filter "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=25'" mi-qkv.mp4
+ffmpeg -i outputtt.mp4 -filter "minterpolate='mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:fps=25'" mi-bidir-qkv.mp4
+
+...
+blehh
+
+https://superuser.com/questions/1088382/change-framerate-in-ffmpeg-without-reencoding
+2a.
+ffmpeg -i longplay-qkv.mp4 -c copy -an -video_track_timescale 30 longplay-v30.mp4
+3.
+ffmpeg -f lavfi -i color=s=1440x1080:r=25:d=1 -profile:v main -video_track_timescale 25 0.mp4
+4.
+ffmpeg -f concat -i list.txt -c copy -video_track_timescale 25 longplay-25fps.mp4
+5.
+ffmpeg -ss 1.1 -i longplay-25fps.mp4 -c copy -avoid_negative_ts make_zero longplay-v25.mp4
+
+----
+... ... ...
+30frames|21s
+43-44|76-77s=>1.75fps
+53-54|111-112=>2fps
+
+1000frames|3824s=>
+
+
+----
+
+https://stackoverflow.com/questions/10957412/fastest-way-to-extract-frames-using-ffmpeg
+ffmpeg -i input.mp4 -filter:v fps=fps=1/60 ffmpeg_%0d.bmp
+
+v1=>4fps [fff4]
+ffmpeg -i videoplayback~o.mp4 -vf fps=fps=4 -vsync vfr fff4/ffff%04d.jpg -hide_banner
+
+similarly,
+v3=>4fps [fff5]
+ffmpeg -i Dopefish-Blade-Runner-Full-Playthrough.mp4 -vf fps=fps=4 -vsync vfr fff5/fffz%04d.jpg -hide_banner
+*(redo)
+ffmpeg -i BRDF-Blade-Runner-Full-Play-960x720.mp4 -vf fps=fps=4 -vsync vfr fff5/fffz%04d.jpg -hide_banner
+
+v1+v3=>122,000 frames(!).
+
+*note*
+the average framerate approach...was not quite working...frame drift
+for smoother animation...and "synch" - looks like need to have more frames
+framerate=>aim is 4fps
+
+synch issue....
+longplay-qkv
+after ~1hr, speech is ~75-90s behind video keyframes...
+after ~2hr, speech is ~100-120s behind video...
+
+***
+some more keyframe example(s)
+trying with, "starblazers : the battle at pluto"
+sbz:23:40=>  555|frames|1420s
+ffmpeg -framerate 0.39 -i sbz/256~/s%04d.256.jpg -force_key_frames expr:gte(t,n_forced*2.558558) sbz-qkv.mp4
+[
+frames=  555 time=00:23:35.38
+]
+
+ffmpeg -i sbz-qkv.mp4 -i sbz.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k sbz-qkv-with-audio.mp4
+
+*next:4fps*
+comparing 4fps to keyframe playback....|<=quantized
+
+ffmpeg -i sbz--videoplayback.mp4 -vf fps=fps=4 -vsync vfr sz2/ss%04d.jpg -hide_banner
+
+make video
+ffmpeg -i sz2/256~/ss%04d.256.jpg -c:v libx264 -pix_fmt yuv420p sbzqv4.mp4
+
+v1+v3
+ffmpeg -framerate 4 -i fff4/256/ffff%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay1qv4.mp4
+ffmpeg -framerate 4 -i fff5/256/fffz%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay3qv4.mp4
+
+longplay1qv4.mp4
+moov atom not found0
+longplay1qv4.mp4: Invalid data found when processing input
+bleh
+(redo)
+
+longplay3qv4.mp4:
+  Metadata:
+    encoder         : Lavf58.17.101
+    Stream #0:0: Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 960x720 [SAR 1:1 DAR 4:3], q=-1--1, 4 fps, 16384 tbn, 4 tbc
+    Metadata:
+      encoder         : Lavc58.20.104 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+[mjpeg @ 0000024a8555e400] No JPEG data found in image32.75 bitrate= 642.9kbits/s speed=0.46x
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image33.00 bitrate= 642.4kbits/s speed=0.46x
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image37.50 bitrate= 713.9kbits/s dup=2 drop=0 speed=0.448x
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image08.25 bitrate= 703.9kbits/s dup=3 drop=0 speed=0.165x
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image47.25 bitrate= 716.2kbits/s dup=4 drop=0 speed=0.118x
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image47.25 bitrate= 716.2kbits/s dup=4 drop=0 speed=0.118x
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image
+Error while decoding stream #0:0: Invalid data found when processing input
+[mjpeg @ 0000024a8555e400] No JPEG data found in image18.00 bitrate= 706.7kbits/s dup=8 drop=0 speed=0.0805x
+Error while decoding stream #0:0: Invalid data found when processing input
+frame= 5053 fps=0.2 q=-1.0 Lsize=  107122kB time=00:21:02.50 bitrate= 695.1kbits/s dup=9 drop=0 speed=0.0543x
+video:107062kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.056175%
+[libx264 @ 0000024a8555d700] frame I:117   Avg QP:10.63  size: 29227
+[libx264 @ 0000024a8555d700] frame P:1485  Avg QP:15.02  size: 24433
+[libx264 @ 0000024a8555d700] frame B:3451  Avg QP:16.92  size: 20263
+[libx264 @ 0000024a8555d700] consecutive B-frames:  6.5%  6.0%  3.9% 83.6%
+[libx264 @ 0000024a8555d700] mb I  I16..4: 52.2% 42.5%  5.3%
+[libx264 @ 0000024a8555d700] mb P  I16..4: 22.8% 33.5%  4.4%  P16..4: 13.6%  7.9%  7.0%  0.0%  0.0%    skip:10.8%
+[libx264 @ 0000024a8555d700] mb B  I16..4: 13.3% 19.1%  2.1%  B16..8: 16.9% 13.3%  7.9%  direct:16.1%  skip:11.3%  L0:50.2% L1:36.2% BI:13.6%
+[libx264 @ 0000024a8555d700] 8x8 transform intra:54.7% inter:90.2%
+[libx264 @ 0000024a8555d700] coded y,uvDC,uvAC intra: 31.7% 65.5% 31.1% inter: 40.2% 72.3% 15.3%
+[libx264 @ 0000024a8555d700] i16 v,h,dc,p: 61% 32%  6%  0%
+[libx264 @ 0000024a8555d700] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 25% 36%  4%  0%  0%  0%  1%  6%
+[libx264 @ 0000024a8555d700] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 58% 30%  7%  1%  1%  1%  1%  1%  1%
+[libx264 @ 0000024a8555d700] i8c dc,h,v,p: 40% 29% 28%  3%
+[libx264 @ 0000024a8555d700] Weighted P-Frames: Y:10.6% UV:6.6%
+[libx264 @ 0000024a8555d700] ref P L0: 37.7% 13.3% 20.0% 26.5%  2.4%
+[libx264 @ 0000024a8555d700] ref B L0: 61.1% 28.1% 10.8%
+[libx264 @ 0000024a8555d700] ref B L1: 80.4% 19.6%
+[libx264 @ 0000024a8555d700] kb/s:694.28
+
+
+
+
+***
+
+***
+hint:
+https://github.com/Evilchuck666/ffmpeg-encode-video
+ffmpeg-encode-video
+C# project
+...interesting...
+***
+
+=>make video
+ffmpeg -i t1996/256/t%04d.256.jpg -c:v libx264 -pix_fmt yuv420p intro.mp4
+ffmpeg -framerate 25 -i ff/256~/thumb%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay-qkv-25fps.mp4
+...
+v1:qkv
+ffmpeg -i ff/256~/thumb%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay-qkv-default.mp4
+[???
+frame= 3023 fps=0.0 q=-1.0 Lsize=  104276kB time=00:02:00.80
+...OK...
+Duration: 00:02:00.92, start: 0.000000, bitrate: 7064 kb/s
+Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1440x1080 [SAR 1:1 DAR 4:3], 7062 kb/s, 25 fps, 25 tbr, 12800 tbn, 50 tbc (default)
+]
+
+v3:qkv
+ffmpeg -i lp3/256~/nn%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay3-qkv-default.mp4
+
+...
+it raises the question: keyframe videos useful(?)
+...
+
+ffmpeg -i electric-youth-innocence.mp4 -filter:v fps=fps=2 -vsync vfr eui/eui%04d.jpg -hide_banner
+ffmpeg -i electric-youth-without-you.mp4 -filter:v fps=fps=2 -vsync vfr euwou/euw%04d.jpg
+
+(redo)
+ffmpeg -i ohgr-majick.mp4 -filter:v fps=fps=2 -vsync vfr mk2/mk%04d.jpg
+
+ffmpeg -i m83-midnight-city-official-video.mp4 -filter:v fps=fps=4 -vsync vfr m83/mm%04d.jpg
+ffmpeg -i saudi-coalition-strike-houthi-missile-workshops-in-saadah.mp4 -filter:v fps=fps=4 -vsync vfr saudi/sa%04d.jpg
+ffmpeg -i us-army-afghan-CH-47-chinook-night-air-assault.mp4 -filter:v fps=fps=4 -vsync vfr usa/us%04d.jpg
+
+(redo)
+ffmpeg -i blade*movie*mp4 -filter:v fps=fps=4 -vsync vfr ck2/cc%04d.jpg
+...
+extracting the audio(s):
+ffmpeg -i video.mp4 -f mp3 -ab 192000 -vn music.mp3
+ffmpeg -i chase-the-sun-extended-club-mix-planet-funk.mp4 -f mp3 -ab 192000 -vn chase-the-sun.mp3
+ffmpeg -i m83-midnight-city-official-video.mp4 -f mp3 -ab 192000 -vn m83-midnight-city.mp3
+
+ffmpeg -i electric-youth-without-you.mp4 -f mp3 -ab 192000 -vn euwou.mp3
+
+
+...
+blade-runner-full-game-movie-all-cutscenes-2.106(?)
+
+...
+(maybe)F
+https://www.youtube.com/watch?v=sbQhgEJuExY
+Farbrausch & Neuro - Masagin (HD Stereo)
+
+...
+(maybe)
+actually, better would be:
+- star trek vs. BSG video...."space battle"
+
+...
+=>make video
+ffmpeg -i t1996/256/t%04d.256.jpg -c:v libx264 -pix_fmt yuv420p intro.mp4
+ffmpeg -framerate 23.98 -i f2/256~/b%04d.256.jpg -c:v libx264 -pix_fmt yuv420p br-2022-demo.mp4
+...
+(not quantized : "proofs")
+ffmpeg -framerate 4 -i eui/eui%04d.jpg -c:v libx264 -pix_fmt yuv420p eui.mp4
+ffmpeg -framerate 4 -i euwou/euw%04d.jpg -c:v libx264 -pix_fmt yuv420p euwou.mp4
+ffmpeg -framerate 4 -i ck2/cc%04d.jpg -c:v libx264 -pix_fmt yuv420p ck2.mp4
+ffmpeg -framerate 2 -i mk2/mk%04d.jpg -c:v libx264 -pix_fmt yuv420p mk2.mp4
+...
+quantized:
+
+ffmpeg -framerate 2 -i eui/256~/eui%04d.256.jpg -c:v libx264 -pix_fmt yuv420p euiqv2.mp4
+ffmpeg -framerate 2 -i euwou/256~/euw%04d.256.jpg -c:v libx264 -pix_fmt yuv420p euwouqv2.mp4
+
+ffmpeg -framerate 4 -i m83/256~/mm%04d.256.jpg F m83qv4.mp4
+
+ffmpeg -framerate 4 -i saudi/256~/sa%04d.256.jpg -c:v libx264 -pix_fmt yuv420p saudi.mp4
+ffmpeg -framerate 4 -i usa/256~/us%04d.256.jpg -c:v libx264 -pix_fmt yuv420p usa.mp4
+
+
+also, add audio track:
+e.g.,
+https://superuser.com/questions/590201/add-audio-to-video-using-ffmpeg
+ffmpeg -i input.mp4 -i input.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k output.mp4
+...
+ffmpeg -i m83qv4.mp4 -i m83-midnight-city.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k m83qv4-with-audio.mp4
+
+ffmpeg -i euiqv2.mp4 -i eui.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k euiqv2-with-audio.mp4
+...
+etc.
+
+----
+v1
+frames=45880 time=03:11:10.00
+v3
+frames=76201 time=05:17:30.25
+============
+122081 frames
+============
+let's quantize!
+
+//s
+(redo)
+blade-runner-full-game-movie-all-cutscenes-2.106.mp4
+- WWBR97 cut scenes 2			<= fps=4
+- e.youth: 	"I"+"W/O U"		<= fps=2
+- ohgr :	majick			<= keyframes|or fps=2
+- Farbrausch - fr-063: Magellan(!)	<= fps=4 
+- M83 'Midnight City'			<= fps=4
+- us army chinook			<= fps=4
+- saudi strike				<= fps=4
+- starblazers|sbz			<= fps=4
+- cutscenes|ck2|1.06.55			<= fps=4
+- v1+v3 : quantized keyframe videos	<= keyframes
+
+some videos(v1,v3) will be including version/s based on
+*representative keyframe(s)*
+
+...
+v1+v3=>that's "a lot" of quantizing(!)
+...
+so, while quantizing, resume speech transcription [<= long poles]
+
+OK
+----
+kb
+"Magellan" by Farbrausch, won the High-End demo compo at The Ultimate Meeting 2010 in Karlsruhe, Germany
+----
+~~~~
+interesting: Lucy has a toy doll at the "captive" hideout, similar to "Trixie" from BR2022
+
+
+----
+//s
+BR2022 <= adding audio to quantized video
+ffmpeg -i BLADE-RUNNER-2049-Black-Out-2022-Anime-Short.mp4 -f mp3 -ab 192000 -vn br2022-audio.mp3
+
+ffmpeg -i input.mp4 -i input.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k output.mp4
+ffmpeg -i br-2022-demo.mp4 -i br2022-audio.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k br-2022-demo-with-audio.mp4
+
+Ya
+it worked
+*sort of*
+new  br-2022-demo-with-audio.mp4 is 22s...30s ahead(?)....744frames
+effective frame rate
+
+(redo)
+ffmpeg -framerate 25.6148 -i f2/256~/b%04d.256.jpg -c:v libx264 -pix_fmt yuv420p br-2022-qv25.6.mp4
+
+(+)BR cutscenes 2
+ffmpeg -i blade-runner-full-game-movie-all-cutscenes-2.106.mp4 -f mp3 -ab 192000 -vn br-2.106.mp3
+(+)
+electric-youth-innocence.mp4
+ffmpeg -i electric-youth-innocence.mp4 -f mp3 -ab 192000 -vn eui.mp3
+(+)
+electric-without-you.mp4
+(+)
+fr-063
+ffmpeg -framerate 4 -i fr63/256~/fr%04d.256.jpg -c:v libx264 -pix_fmt yuv420p fr64qv4.mp4
+
+----
+
+(!!)
+farbrausch:
+http://www.farbrausch.de/prod.py?which=168
+werkkzeug4 by  farbrausch
+*interesting*
+already have...
+....
+https://github.com/farbrausch/fr_public/tree/master/altona_wz4
+
+----
+going to have a *sort-of* C#|ffplay interface/design 
+-video intervals playback
+
+----
+"show thinking" (for me): literally has become, like => which frame is the CPU on?
+quantizing+
+ffmpeg
+LOL
+OK
+----
+note:
+derivative works can be copyrighted
+fair use derivative works are protected under the law
+OK
+----
+idea(s):
+electric youth : quantized : probably would be good
++ohgr
+...
++starblazers
++BR2022
+
+*quantized* everything(!)
+
+----
+idea(funny?): quantized euwou+"chase the sun".mp3
+also,euwou=>integrate with BR97 club scene(s)
+use a "video skybox"|i.e.,video cube
+-fixed position
+-rotating platform(s) possible
+LOL
+OK
+----
+(!!)
+*coincidental*compositing idea:
+-4 adjacent keyframes =>skybox | "faux" interior|exteriors
+
+(!!)
+*texturing*
+also,
+some video keyframes may be re-used for some specialized texturing
+e.g., overhead shot of "road" from e.youth "i" eui=> "floor"/street tile elsewhere...
+i's/e's from m83...
+...
+some shots (e.g., eui) will stack vertically
+...
+etc.
+
+----
+"final showdowns"
+i.e.,
+late-in-game, conflicts => triggers combat
+
+Guzza: 		[+]	@sewers
+C.Steele:	[+/-]	@kipple
+Izo
+
+1v1 and squad combat, possible <= random choice
+player-assisted random choices <= fork
+...
+
+----
+to be continued...!
+OK
+----
+quantum plasma(?)
+----
+OK
+----
+idea:
+-for movement
+First visit/cut scene mode: left/right arrow keys
+-left : backs up a frame
+-right: forward +1 frame
+this would only need to grab frames from e.g.,
+-key-framed video 
+
+*since the action is centered on the player*
+*most scenes have player in them....*
+parody/spin-off/s: 
+-image compositing *might* allow for more than one visual of the player
+e.g., out-maneuvering or combat mode against the "imposter".
+
+so there are "2" main modes of using the video:
+- left/right arrows ....|<= allows "forward/backward" movement
+- cut scene playback....
+
+...
+C# video stepper....
+...
+----
+br-2022-demo.mp4
+Duration: 00:15:13.03
+LOL
+OK
+----
+(redo)
+ffmpeg -framerate 23.98 -i f2/256~/b%04d.256.jpg -c:v libx264 -pix_fmt yuv420p br-2022-demo.mp4
+frames=22643 time=00:15:44.12
+ffmpeg -i br-2022-demo.mp4 -i br2022-audio.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k br-2022-demo-with-audio.mp4
+
+ffmpeg -i br-2022-demo.mp4 -filter:v fps=fps=4 -vsync vfr -acodec copy br-2022-demo-qv4.mp4
+ffmpeg -i br-2022-demo-qv4.mp4 -i br2022-audio.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k br-2022-demo-with-audio-qv4.mp4
+
+(maybe)
+ffmpeg -i br-2022-demo.mp4 -filter:v fps=fps=10 -vsync vfr -acodec copy br-2022-demo-qv10.mp4
+ffmpeg -i br-2022-demo-qv10.mp4 -i br2022-audio.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192k br-2022-demo-with-audio-qv10.mp4
+
+----
+search:
+findings:
+[PDF]The Reality Effect of Technoscience. - Julian
+----
+*organic(s)*
+found:plant
+found:food
+...
+----
+(maybe)
+quantize:cyberrunner...
+STvs.SW space battle...
+....
+----
+//s
+- start bg scene creation
+- speech tx
+
+
+----
+hint:
+-this might help with menus, and card game system,
+e.g.,
+"auto-layout" programming
+
+----
+3D wish list
+- "N7" building formation:
+ *
+***
+***
+- "hostage situation" modeling
+- e.g., penthouse suite
+- "hex" city 
+- pixel city
+- random squad combat on hex grid
+...
+- poker dice
+
+----
+possible *interesting* scenario:
+homeless => squatting in commercial space(s)
+...
+source videos
+i|e's (maybe)
+https://www.youtube.com/watch?v=Dtfm7LDtMpc
+Washington, D.C. Always Plays Itself
+KyleKallgrenBHH
+Published on Feb 1, 2017 
+...
+//s
+*key* : action sequences | i's + e's
+
+//
+blade-runner-8-bit-cinema
+//
+(maybe)
+orbital-funny-break-one-is-enough-official-video.mp4
+(!)
+460x360
+
+ffmpeg -i orbital-funny-break-one-is-enough-official-video-359.mp4 -vf fps=fps=4 -vsync vfr orbfb/o%04d.jpg -hide_banner
+----
+https://www.youtube.com/watch?v=sYWkiv1hTPM
+Hitchhiker's Guide to Rapid Prototypes!
+Mark Barret
+"Process:I don't have time for that!"
+
+...to self:needs refinement...
+
+----
+goals:
+-squad combat
+-hex-based movement
+-quantized video
+
+
+
+...
+---
+ray tracing '08
+interesting
+https://slideplayer.com/slide/7638677/
+Accelerating Ray Tracing using Constrained Tetrahedralizations Ares Lagae & Philip Dutré 19 th Eurographics Symposium on Rendering EGSR 2008Wednesday, - ppt download
+slideplayer.comConstrained tetrahedralizations Construct constrained tetrahedralization as a preprocess Use constrained tetrahedralization during ray traversal 
+
+
+...
+Intro to 
+OpenGL
+http://sccg.sk/~hudak/CG2/OpenGLIntro.pdf
+Matej Hudak
+FMFI UK, Bratislava, Slovakia
+...
+https://github.com/embree
+
+----
+!
+https://www.youtube.com/watch?v=yECQtsDgEXk
+Blade Runner (1997 PC Game) #01 | GAMES SHE MISSED
+Lady Lilia
+Published on Sep 22, 2017
+some observations:
+- KIA interface ... checking all tabs. 
+- Runciter is a "total douche bag" :)
+- wanted to examine objects more closely
+- e.g., Lucy reference: she wanted to read it
+
+(idea)
+dialog precedes add-in "combat" scenes <= custom 
+----
+...
+https://www.pcgamer.com/returning-to-westwoods-blade-runner/
+Andy Kelly 
+October 05, 2017
+"Blade Runner is a game with big ideas that almost always fall flat, 
+but it’s still a worthwhile experience—especially for fans of the movie. 
+There are far better point-and-click adventures on PC, but few are this atmospheric. 
+Sadly, all of the original game assets have been lost, like tears in rain, 
+so an HD remake or modern port seems unlikely. But the light that burns twice as bright 
+burns half as long."
+----
+
+idea:
+every segment is a clue
+
+----
+script:
+Speaker 1:
+"I'm looking for a girl."
+Speaker 2:
+(snickers) "Yeah?"
+Speaker 1:
+"Not just any girl. "
+"This girl -" shows picture -
+"have you seen her?"
+Speaker 2:
+"..."
+(almost as if to self) "yeah...yeah,maybe...I've seen her, I think."
+Speaker 1:
+"Where...?"
+Speaker 2:
+"I've seen her, here."
+Speaker 1:
+"...here...?"
+Speaker 2:
+"Yeah...last week. I think. Yeah."
+"It was last week...for sure."
+Speaker 1:
+"Any idea...presently...where I might find her?"
+Speaker 2:
+"Try...the pet store...the model shop...you know... them mannequins, on Animoid."
+Speaker 1:
+"OK."
+----
+640x480
+keyframes:useful
+"memory cube" array
+
+...
+
+----
+hmm
+ML.NET, the machine learning library for .NET
+----
+search:
+video keyframe hough similarity
+----
+hmm(!)
+https://github.com/Chinmay26/Multi-Viewpoint-Image-generation
+!!
+http://openaccess.thecvf.com/content_cvpr_2017/papers/Park_Transformation-Grounded_Image_Generation_CVPR_2017_paper.pdf
+https://arxiv.org/abs/1605.03557
+https://github.com/soumith/ganhacks
+https://github.com/skaae/vaeblog
+https://theneuralperspective.com/2016/11/12/improved-techniques-for-training-gans/
+https://github.com/aleju/papers/blob/master/neural-nets/Improved_Techniques_for_Training_GANs.md
+https://github.com/shaohua0116/DCGAN-Tensorflow
+https://github.com/gitlimlab/Generative-Latent-Optimization-Tensorflow
+!!
+Near-Duplicate-Video-Detection
+Detecting near-duplicate videos by aggregating features from intermediate CNN layers
+Jupyter Notebook
+----
+****
+how to be sure to capture every ending ... ?
+idea:
+download multiple source videos...
+& concatenate
+try to be comprehensive
+e.g.,
+https://www.youtube.com/watch?v=85XeH2HPnbA&index=1&list=PLvV3usB1LheAQlCoWB3LMM1KZs27FKsLT
+
+=>
+
+10a
+10b
+10c
+10d
+
+AdventureGameFan8
+Published on Jan 10, 2014
+Blade Runner is a 1997 point-and-click adventure game developed by Westwood Studios and published by Virgin Interactive Entertainment.
+The player assumes the role of "Blade Runner" Ray McCoy, who must hunt down a group of replicants (bioengineered beings designed to look like humans) 
+in 2019 Los Angeles. Rather than re-tell the 1982 Blade Runner film, the developers of the game created a different story set in the same universe, 
+which serves as a side story to the events of the film, with both narratives running parallel to one another.
+
+OK
+----
+(+)
+//s
+enriching the action/background/realism
+//
+...cyber runner...
+//
+ge aoc fleet support video 
+(maybe)
+qGkv : quantized+gauss blurr(s) keyframe video
+ffmpeg -i ge-aviation-fleet-support.mp4 -vf fps=fps=4 -vsync vfr gefs/g%04d.jpg -hide_banner
+...
+//
+(maybe)
+DC always plays itself
+
+(+)
+music
+//
+animals in club music video=>Caravan Palace - Lone Digger
+//
+bag raiders shooting star(s)
+//
+caravan palace one digger
+ffmpeg -i caravan-palace-lone-digger.mp4 -vf fps=fps=4 -vsync vfr cpodig/c%04d.jpg -hide_banner
+//
+chainsmokers:don't let me down
+//
+cyber runner
+//
+farbrausch
+//
+ohgr
+//
+orbital 
+-funny break
+-halcyon on and on
+-petrol
+//
+wknd starboy
+...
+hmm
+...
+//
+SBZ
+//
+BSG
+//
+mw cinematics
+----
+2Polygons
+Published on Feb 14, 2017
+CyberRunner:https://www.artstation.com/artwork/JBbzR 
+CyberRunner Police Spinner:https://www.artstation.com/artwork/olW6w 
+CyberRunner asset breakdown:https://www.artstation.com/artwork/rdW95 
+CyberRunner assets:https://www.artstation.com/artwork/24yLe 
+CyberRunner effects breakdown:https://www.artstation.com/artwork/24yZa
+
+Inspired by the worlds of Blade Runner and Cyber Punk
+(!)
+Josh Van ZuylenPRO
+Senior Hard Surface Artist, Cloud Imperium Games
+
+OK
+----
+
+
