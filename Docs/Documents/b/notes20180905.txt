@@ -1,0 +1,116 @@
+
+----
+...
+longplay1
+22508
+
+----
+
+longplay3
+960x720
+
+a video QC/editing
+process:
+- review all frames
+- perform frame substitution (where needed)
+- perform repairs
+
+----
+make video
+=>
+ffmpeg -framerate 4 -i fff5/256~/fffz%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay3qv4.mp4
+frames=76201 time=05:17:29.50
+
+(+) audio:
+ffmpeg -i longplay3qv4.mp4 -i longplay3.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 longplay3qv4-with-audio.mp4
+frames=76201 time=05:17:30.34
+...
+
+fff4/
+256~/
+edits:
+42673...42683.256
+42696...42702.256
+
+after QC:
+(redo)
+ffmpeg -framerate 4 -i fff4/256~/ffff%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay1qv4.mp4
+
+repair:
+frames 19376--19383
+4844s--4845.75s
+vo1 0-4843.75
+vo2 4844--fin
+(draft)
+frames=45880 time=03:11:09.25
+ffmpeg -i longplay1qv4-demo.mp4 -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 longplay1qv4-demo-with-audio.mp4
+
+ffmpeg -i longplay1qv4.mp4 -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 longplay1qv4-with-audio.mp4
+
+***
+
+longplay3 notes:
+...longplay3 audio...bleh...
+demo only...?
+or, *heavy* edits...
+
+keyframes, skyboxes only(?)
+excerpt(s):
+10140s 	Bradbury building + vehicle animation
+17710s clue
+
+idea:
+-remix with audio from longplay1, br blakout 2022,etc.
+-some implied combat scenes can be done with 2+ frames in a loop
+*implied* meaning, triggered/queued 
+-alt. endings(!)
+
+
+...
+idea(s):
+cursor:drone=>check for traps,etc.
+
+longplay1:
+implied vehicle location at ~5020 s (approx.)
+(maybe) draw-in (?)
+
+clue 9763 s (approx.)
+(+) draw-in
+
+also:
+"bare" opening frame scenes => skybox|+battle
+
+(basically):
+- each scene => roll for traps|roll for combat|roll for clue/s|...
+...
+- other activities: VK test | image analysis(esper) | reviewing clues(kia) | game save | ...
+- spinner travel
+
+10770 s (approx.)
+(+) a backup spinner would be nice (instead of on foot)
+
+
+...
+*hence, transitions are key*
+
+----
+
+//s
+a plan:
+-re-animate some key scenes
+e.g.,
+takeoff,landing,
+zooms
+|.
+
+-practice alpha-blending + composite/compositing technique(s)
+
+-etc.
+
+
+----
+
+
+
+
+

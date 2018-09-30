@@ -1,0 +1,326 @@
+
+----
+...
+longplay1
+22508
+
+----
+
+longplay3
+960x720
+
+a video QC/editing
+process:
+- review all frames
+- perform frame substitution (where needed)
+- perform repairs
+
+----
+make video
+=>
+ffmpeg -framerate 4 -i fff5/256~/fffz%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay3qv4.mp4
+frames=76201 time=05:17:29.50
+
+(+) audio:
+ffmpeg -i longplay3qv4.mp4 -i longplay3.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 longplay3qv4-with-audio.mp4
+frames=76201 time=05:17:30.34
+...
+
+fff4/
+256~/
+edits:
+42673...42683.256
+42696...42702.256
+
+after QC:
+(redo)
+ffmpeg -framerate 4 -i fff4/256~/ffff%04d.256.jpg -c:v libx264 -pix_fmt yuv420p longplay1qv4.mp4
+
+repair:
+frames 19376--19383
+4844s--4845.75s
+vo1 0-4843.75
+vo2 4844--fin
+(draft)
+frames=45880 time=03:11:09.25
+ffmpeg -i longplay1qv4-demo.mp4 -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 longplay1qv4-demo-with-audio.mp4
+
+ffmpeg -i longplay1qv4.mp4 -i longplay.mp3 -c:v copy -map 0:v:0 -map 1:a:0 -c:a aac -b:a 192000 longplay1qv4-with-audio.mp4
+
+***
+
+longplay3 notes:
+...longplay3 audio...bleh...
+demo only...?
+or, *heavy* edits...
+
+keyframes, skyboxes only(?)
+excerpt(s):
+10140s 	Bradbury building + vehicle animation
+17710s clue
+
+idea:
+-remix with audio from longplay1, br blakout 2022,etc.
+-some implied combat scenes can be done with 2+ frames in a loop
+*implied* meaning, triggered/queued 
+-alt. endings(!)
+
+
+...
+idea(s):
+cursor:drone=>check for traps,etc.
+
+longplay1:
+implied vehicle location at ~5020 s (approx.)
+(maybe) draw-in (?)
+
+clue 9763 s (approx.)
+(+) draw-in
+
+also:
+"bare" opening frame scenes => skybox|+battle
+
+(basically):
+- each scene => roll for traps|roll for combat|roll for clue/s|...
+...
+- other activities: VK test | image analysis(esper) | reviewing clues(kia) | game save | ...
+- spinner travel
+
+10770 s (approx.)
+(+) a backup spinner would be nice (instead of on foot)
+
+
+...
+*hence, transitions are key*
+
+----
+//s
+a plan:
+-re-animate some key scenes
+e.g.,
+takeoff,landing,
+zooms
+|.
+-practice alpha-blending + composite/compositing technique(s)
+-etc.
+----
+
+backgrounds(continued):
+longplay1
+
+"DNA ROW"
+DNA Row
+1:16:05 (approx.)
+4565s|18260
+
+=>40
+
+Eyeworld
+1:19:18
+4758s|19032
+
+=>45
+
+Dermo Design
+1:19:27
+...
+1:21:10
+...
+1:21:19-20
+4880s|19520 (approx.)
+
+...
+19488
+19492
+=> 50 (scene#)
+
+Lance+Luther's
+interior:
+1:19:34 (approx.)
+4774s|19097
+=>53
+
+1:53 (approx.)
+~112+s|446...453
+=>10
+ffmpeg -framerate 4 -i 10/%1d.jpg 10.4.gif
+
+Runciter's
+2:00
+120s|480...485
+(X) bleh. moving camera
+=>15
+ffmpeg -framerate 4 -i 15/%1d.jpg 15.4.gif
+
+(maybe...)
+HQ "on approach":
+4:00
+240-252.75
+962...1010
+ffmpeg -framerate 4 -i 14/%1d.jpg 14.4.gif
+=>14
+
+HQ
+4:21 (approx.)
+261s|1042...1053
+ffmpeg -framerate 4 -i 20/%1d.jpg 20.4.gif
+=>20
+
+=>50
+ffmpeg -framerate 4 -i 50/%1d.jpg 50.4.gif
+ffff19066+.256.jpg ffff19067+.256.jpg  ffff19067+1.256.jpg 
+
+Runciter's
+(sort of....)
+(vehicle present...)|<=door vertical
++chrome
++policeman
++human/humanoids
+6:52
+412s|1648...1652
+=>55
+55.4|55.4v|55.4pv
+
+White Dragon|Howie Lee's
+22:13 (approx.)
+1333s|5325...5332|*31*30*29*28*27*26*25|<=causal loop |0...6|7...14
+:)
+=>65|65.4
+
+24:21 (approx.)
+(X) bleh. moving camera
+5844|5845
+70.1|70.2
+=>70
+
+24:45
+5940
+=>75
+
+
+McCoy's Apt|McCoy's Apt Skybox
+88|88f|88x
+
+
+29:16
+=>88
+
+1756s|7025+7027
+6875+6878+7025+7027
+=>88f
+
+32:34
+1954|7818+7819
+=>88|88.4
+
+McCoy's Roof
+...
+=>90 
+
+(maybe)
+(sort of...)
+McCoy sprite (initial)
+30:18
+1818+s|7275+7276
+0...1(left)|0R...1R(right)
+p|p.4
+(sort of...|appears to be de-rezzing|parody)
+=>p
+
+HQ roof
+50:58 (approx.)
+3057-3059s|12228...12236
+95v
+(vehicle present...)|spinner|door closed
+95.4
+
+12235-12236
+95.1
+=>95
+
+12236-12238|*38*37*36|<=causal loop
+96v
+(vehicle present...)|spinner|door closed|"bunny hop"/hover animation
+96.4
+=>96
+
+
+Animoid Row
+51:05
+3065s|12260
+12260...12263
+slight camera motion|hover animation
+100|100.4
+=>100
+...
+1:11:50
+4310s|17240...17260
+111v
+=>111|111.4
+
+Animoid2
+52:10...55:24
+55:24
+3324s|
+13299
+=>105
+...
+Animoid2
+1:11:04
+4264+s|17059
+(edits)
+(quantize *again*)|blending
+=>105.4
+
+...
+ffmpeg -framerate 4 -i 01/%1d.jpg 01.4.gif
+ffmpeg -framerate 4 -i 02/%1d.jpg 02.4.gif
+ffmpeg -framerate 4 -i 03/%1d.jpg 03.4.gif
+ffmpeg -framerate 4 -i 04/%1d.jpg 04.4.gif
+
+*.4 version(s) *preferred*
+
+(+)
+55:30
+
+(maybe)
+Bullet Bob's
+ext.
+1:01:19
+
+1:08:25
+4105s|16421...16423
+=>108|108.4
+
++/-
+1:49:40
+
+...
+Bullet Bob's
+ext.
+1:30:21 (approx.)
+5421s|21684
+=>130|130.4
+
+...
+
+
+
+hint:maze scene 2:06:xx=>could trigger "trixie" combat animation(s)
+dancer(s)
+...
+...2:23:15
+...
+...
+
+----
+bscr
+background scene reconstr.
+-at first, was thinking, cardinal numbering, e.g., 01...02...03...
+-then scalar (proportional to frame #)
+-later, thinking, e.g., 45|50|... like lines in BASIC
+:)
+
+----
+
+
