@@ -1,0 +1,89 @@
+
+----
+...
+playing BR ScummVM
+"interesting" audio buzz:
+ESPER main state: 1
+
+----
+To do:
+-understand which Array is crashing in the templated a[] overload/accessor
+-logging
+-call stack
+-isolate
+-fix
+
+----
+...
+Actor acquired clue: "McCoy's Description" from 0                                                                       
+Actor acquired clue: "McCoy is a blade runner" from 0                                                                   
+Clicked on actor 28                                                                                                     
+Clicked on actor 28                                                                                                     
+Clicked on actor 28                                                                                                     
+Clicked on actor 28                                                                                                     
+Actor acquired clue: "Crime Scene Notes" from 1 => crashed
+
+
+----
+bleh
+====
+array.h:
+	T &operator[](size_type idx) {
+		//RTR 9.26.18
+		//tmp
+		//"blind" fix => return 'flags' part of clue 
+		if (idx >= _size)
+			idx = 9;
+		//tmp
+		//
+		assert(idx < _size);
+
+====
+...
+
+*fork* scummvm
+https://github.com/rtrose247/scummvm
+
+----
+adding as submodule:
+git submodule add https://github.com/rtrose247/scummvm
+
+(!)
+https://blog.github.com/2016-02-01-working-with-submodules/
+----
+*zuben* hack:=>retired
+
+Game State/transitions:
+mccoy's apt|post-sleep|howie lee's|guzza call|soup room|=> invalid loop
+:(
+
+maybe:
+in Zuben AI,
+enable Gaff goal 3 (mccoy's apt rooftop)
+
+----
+things changed:
+-array.h
+-actor_clues.cpp
+-obstacles.cpp
+--
+-zuben.cpp
+
+----
+bleh
+$ git pull
+$ git fetch origin
+$ git reset --hard origin/master
+$ git pull
+$ git submodule init
+$ git submodule update
+
+----
+
+
+
+
+
+
+
+
