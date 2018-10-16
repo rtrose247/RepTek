@@ -15,7 +15,12 @@ To do:
 
 ----
 ...
-Actor acquired clue: "McCoy's Description" from 0                                                                       Actor acquired clue: "McCoy is a blade runner" from 0                                                                   Clicked on actor 28                                                                                                     Clicked on actor 28                                                                                                     Clicked on actor 28                                                                                                     Clicked on actor 28                                                                                                     
+Actor acquired clue: "McCoy's Description" from 0                                                                       
+Actor acquired clue: "McCoy is a blade runner" from 0                                                                   
+Clicked on actor 28
+Clicked on actor 28
+Clicked on actor 28
+Clicked on actor 28
 Actor acquired clue: "Crime Scene Notes" from 1 => crashed
 
 

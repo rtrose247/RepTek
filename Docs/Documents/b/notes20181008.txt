@@ -79,10 +79,97 @@ $ git submodule init
 $ git submodule update
 
 ----
+git add (filename)
+git commit -m "(+)Zuben=>auto retire"
+git push --recurse-submodules=on-demand
+git push origin HEAD:master
+----
+
+...
+need to check:
+e.g.,
+DialogueMenu::showAt 0 164 256
+calculatePosition: 142 238 164 256 25
+etc.
+
+WARNING: Dialogue_Menu_Remove_From_List(1010)!
+Actor acquired clue: "Izo Interview" from 7
+
+----
+weavers of social justice
+----
+(!)
+interesting:
+in C:\Users\rtrose\AppData\Roaming\ScummVM\scummvm.ini 
+there is boot_param=
+where boot_param=2000000 => goes to chapter 2 & loads game console
+----
+hmm
+load/save game functions might
+use similar approach
+initializing : config file
+e.g.,
+in constructor
+KIA::KIA(BladeRunnerEngine *vm)
+----
+help(!)
+Dumming Down ScummVM
+----
+"things" from thingiverse:
+
+Deckard's Blaster Bullet and Cylinder
+Badge
+Blaster
+...
+----
+//an issue found:
+-Bradbury backtracking|from ladder to roof|back to manneq|exit right=>exception
+
+----
+interesting:
+rc01
+rc02 hacks => crowd gone:kFlagRC01PoliceDone
+|forced transition to mccoy apt|.
+
+...KIA already mod by Bob
+...zuben already retired (flag set)
+
+accessing terminal before Tyrell scene image analysis:no password=>locked out
+
+----
+vqa decoder
+read frame -1 out of bounds, frame count is 0!
 
 
+----
+//todo's:
+-speed up runciter's....
+-fix runciter HP count
+-improve zuben "auto retire"|maybe:try an ascending list of goals...ending with goal "6":zuben retire
+-fix Gaff
+-"admin" scene =>
+-"combat" scenes
+-load/save
+(maybe)
+actor 32 morphing into McCoy
+-night club row|dektora <= may require izo clues first....
 
 
+...
+(!)
+wow
+https://www.youtube.com/watch?v=zzTiaVq9RN0
+Blade Runner 2049 - Mesa (Extended)
+=>
+mirrors "tears in rain"|"strange charm" by *V*
+
+----
+idea:
+we (humans) may be as small as "quantum dots"
+
+....
+
+----
 
 
 

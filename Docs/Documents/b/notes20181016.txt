@@ -1,0 +1,229 @@
+
+----
+...
+playing BR ScummVM
+"interesting" audio buzz:
+ESPER main state: 1
+
+----
+To do:
+-understand which Array is crashing in the templated a[] overload/accessor
+-logging
+-call stack
+-isolate
+-fix
+
+----
+...
+Actor acquired clue: "McCoy's Description" from 0                                                                       
+Actor acquired clue: "McCoy is a blade runner" from 0                                                                   
+Clicked on actor 28                                                                                                     
+Clicked on actor 28                                                                                                     
+Clicked on actor 28                                                                                                     
+Clicked on actor 28                                                                                                     
+Actor acquired clue: "Crime Scene Notes" from 1 => crashed
+
+
+----
+bleh
+====
+array.h:
+	T &operator[](size_type idx) {
+		//RTR 9.26.18
+		//tmp
+		//"blind" fix => return 'flags' part of clue 
+		if (idx >= _size)
+			idx = 9;
+		//tmp
+		//
+		assert(idx < _size);
+
+====
+...
+
+*fork* scummvm
+https://github.com/rtrose247/scummvm
+
+----
+adding as submodule:
+git submodule add https://github.com/rtrose247/scummvm
+
+(!)
+https://blog.github.com/2016-02-01-working-with-submodules/
+----
+*zuben* hack:=>retired
+
+Game State/transitions:
+mccoy's apt|post-sleep|howie lee's|guzza call|soup room|=> invalid loop
+:(
+
+maybe:
+in Zuben AI,
+enable Gaff goal 3 (mccoy's apt rooftop)
+
+----
+things changed:
+-array.h
+-actor_clues.cpp
+-obstacles.cpp
+--
+-zuben.cpp
+
+----
+bleh
+$ git pull
+$ git fetch origin
+$ git reset --hard origin/master
+$ git pull
+$ git submodule init
+$ git submodule update
+
+----
+git add (filename)
+git commit -m "(+)Zuben=>auto retire"
+git push --recurse-submodules=on-demand
+git push origin HEAD:master
+----
+
+...
+need to check:
+e.g.,
+DialogueMenu::showAt 0 164 256
+calculatePosition: 142 238 164 256 25
+etc.
+
+WARNING: Dialogue_Menu_Remove_From_List(1010)!
+Actor acquired clue: "Izo Interview" from 7
+
+----
+weavers of social justice
+----
+(!)
+interesting:
+in C:\Users\rtrose\AppData\Roaming\ScummVM\scummvm.ini 
+there is boot_param=
+where boot_param=2000000 => goes to chapter 2 & loads game console
+----
+hmm
+load/save game functions might
+use similar approach
+initializing : config file
+e.g.,
+in constructor
+KIA::KIA(BladeRunnerEngine *vm)
+----
+help(!)
+Dumming Down ScummVM
+----
+"things" from thingiverse:
+
+Deckard's Blaster Bullet and Cylinder
+Badge
+Blaster
+...
+----
+//an issue found:
+-Bradbury backtracking|from ladder to roof|back to manneq|exit right=>exception
+
+----
+interesting:
+rc01
+rc02 hacks => crowd gone:kFlagRC01PoliceDone
+|forced transition to mccoy apt|.
+
+...KIA already mod by Bob
+...zuben already retired (flag set)
+
+accessing terminal before Tyrell scene image analysis:no password=>locked out
+
+----
+vqa decoder
+read frame -1 out of bounds, frame count is 0!
+
+
+----
+//todo's:
+-speed up runciter's....
+-fix runciter HP count
+-improve zuben "auto retire"|maybe:try an ascending list of goals...ending with goal "6":zuben retire
+-fix Gaff
+-"admin" scene =>
+-"combat" scenes
+-load/save
+(maybe)
+actor 32 morphing into McCoy
+-night club row|dektora <= may require izo clues first....
+
+
+...
+(!)
+wow
+https://www.youtube.com/watch?v=zzTiaVq9RN0
+Blade Runner 2049 - Mesa (Extended)
+=>
+mirrors "tears in rain"|"strange charm" by *V*
+
+----
+idea:
+we (humans) may be as small as "quantum dots"
+----
+//Runciter
+improving runciter dialog/logic
+...
+sick of having to wait for lucy's desk to be enabled....
+rc02:initalize scene()
+
+
+...
+
+//Zuben
+improving logic:=>
+        Zuben:11
+        Zuben:11:Player_Loses_Control
+        Zuben:11:Player_Gains_Control
+        Zuben:11:Actor_Face_Heading(kActorZuben|kActorMcCoy)
+        Zuben:12
+
+...
+
+	Zuben:8
+        Zuben:14
+        Zuben:9
+        Zuben:10
+        Zuben:2
+	Zuben:13
+--
+        Zuben:11
+        Zuben:11:Player_Loses_Control
+        Zuben:11:Player_Gains_Control
+        Zuben:11:Actor_Face_Heading(kActorZuben|kActorMcCoy)
+        Zuben:11:Scene_Exits_Enable
+        Zuben:12
+        Zuben:12:Scene_Exits_Enable
+
+...
+running out of ammo:
+bleh
+----
+Actor acquired clue: "Zuben Runs Away" from -1
+        Zuben:8
+        Zuben:14
+        Zuben:9
+        Zuben:10
+        Zuben:2
+        Zuben:13
+	...
+        Zuben:11
+        Zuben:11:Player_Loses_Control
+        Zuben:11:Player_Gains_Control
+        Zuben:11:Actor_Face_Heading(kActorZuben|kActorMcCoy)
+        Zuben:11:Scene_Exits_Enable
+        Zuben:5(X)...no zuben in scene....!
+try:Zuben(5=>6)(X)retire
+
+----
+an "easy" way:
+temp hacks to: shot and missed|shot and hit()
+
+----
+Chromatics "SHADOW" Extended Remix 2018 Twin Peaks Return

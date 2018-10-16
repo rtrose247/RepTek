@@ -34,10 +34,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLw", "CSharpProlog-dev-v5\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLx", "CSharpProlog-dev-v5\CSharpProlog-dev-v5\PLx\PLx.csproj", "{E84A59D2-E868-4108-BE9A-55CBB7E85E36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrologWorkbench", "prolog\sourceCode\sourceCode\Prolog\PrologWorkbench\PrologWorkbench.csproj", "{65E6D859-7578-4A05-827C-3D36AE640364}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prolog", "prolog\sourceCode\sourceCode\Prolog\Prolog\Prolog.csproj", "{171A6B22-168C-4662-8706-131C098622BD}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		QuickFont.Shared\QuickFont.Shared.projitems*{bbece6fc-ef63-40f8-a734-a500d1dfc1af}*SharedItemsImports = 4
@@ -472,62 +468,6 @@ Global
 		{E84A59D2-E868-4108-BE9A-55CBB7E85E36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E84A59D2-E868-4108-BE9A-55CBB7E85E36}.Release|x86.ActiveCfg = Release|Any CPU
 		{E84A59D2-E868-4108-BE9A-55CBB7E85E36}.Release|x86.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Debug|x86.Build.0 = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.LibraryRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.LibraryRelease|Any CPU.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.LibraryRelease|x86.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.LibraryRelease|x86.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Debug|x86.ActiveCfg = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Debug|x86.Build.0 = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Release|Any CPU.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Release|x86.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net20-Release|x86.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Debug|x86.ActiveCfg = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Debug|x86.Build.0 = Debug|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Release|Any CPU.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Release|x86.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Net45-Release|x86.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Release|x86.ActiveCfg = Release|Any CPU
-		{65E6D859-7578-4A05-827C-3D36AE640364}.Release|x86.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Debug|x86.Build.0 = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.LibraryRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.LibraryRelease|Any CPU.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.LibraryRelease|x86.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.LibraryRelease|x86.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Debug|x86.ActiveCfg = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Debug|x86.Build.0 = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Release|Any CPU.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Release|x86.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net20-Release|x86.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Debug|x86.ActiveCfg = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Debug|x86.Build.0 = Debug|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Release|Any CPU.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Release|x86.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Net45-Release|x86.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Release|x86.ActiveCfg = Release|Any CPU
-		{171A6B22-168C-4662-8706-131C098622BD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
