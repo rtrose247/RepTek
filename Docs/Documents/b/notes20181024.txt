@@ -270,4 +270,57 @@ https://www.youtube.com/playlist?list=PL1tmToucRxIfgyLfBqmQ8Io8eqUMb6EPT
 (+)
 https://www.youtube.com/watch?v=CBH0GdLVxKo&list=PL1tmToucRxIfgyLfBqmQ8Io8eqUMb6EPT&index=6&t=233s
 ----
+***
+RepTek
+enhancement:
+dice rolls + card draws => clue expansion
+...
+thus,
+=>advances BR storyline;
+...
+load+save games enhancement(s)
+...
+etc.
+try it!
+----
+bleh
+-git stash
+-create branch
+-merge branch to master
+----
+git branch 20181021
+$ git submodule init
+
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/RepTek/scummvm ((4ee0cb676c...))
+$ git submodule update
+
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/RepTek/scummvm ((4ee0cb676c...))
+$ git commit -m "(+)Zuben=>*ack|(+)Runciter retire|sines()|cosines()"
+HEAD detached from 12af1929ef
+nothing to commit, working tree clean
+
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/RepTek/scummvm ((4ee0cb676c...))
+$ git checkout master
+Checking out files: 100% (7/7), done.
+Previous HEAD position was 4ee0cb676c enhanced stability:(+)Zuben=>auto retire
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/RepTek/scummvm (master)
+$ git merge 20181021
+Checking out files: 100% (7/7), done.
+Updating 12af1929ef..4ee0cb676c
+Fast-forward
+ common/array.h                           | 833 ++++++++++++++++---------------
+ common/cosinetables.cpp                  |  12 +
+ common/sinetables.cpp                    |  14 +
+ engines/bladerunner/actor_clues.cpp      | 615 ++++++++++++-----------
+ engines/bladerunner/obstacles.cpp        |   8 +-
+ engines/bladerunner/script/ai/zuben.cpp  | 630 +++++++++++++++--------
+ engines/bladerunner/slice_animations.cpp |   8 +
+ 7 files changed, 1185 insertions(+), 935 deletions(-)
+
+----
+
 
