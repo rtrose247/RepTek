@@ -322,5 +322,110 @@ Fast-forward
  7 files changed, 1185 insertions(+), 935 deletions(-)
 
 ----
+hmm.
+multiple shots to Zuben @ McCoy apt rooftop:
+Actor acquired clue: "McCoy shot Zuben in the back" from -1
+...
+crash
+err.
+(!!)
+VQADecoder::readFrame: frame -1 out of bounds, frame count is 0!
+after Zuben @ McCoy apt rooftop
+e.g.,
+set 9:scene 46
+----
+"fixing"
+Zuben AI case 11+12 
+
+----
+bleh
+-why is there a scene transition at McCoy apt rooftop, after (X) Zuben...?
+-=> it's backtrack 'ing to China town....(!)
+
+----
+bleh
+Set_Enter(kSetKP05_KP06, kSceneKP06);
+
+...
+----
+Zuben
+goal changed
+e.g.,
+	//all others|599
+	//RTR 10.22.2018
+	//from(6):
+	if (Actor_Query_In_Set(kActorZuben, kSetCT07)) {
+		Game_Flag_Set(144);
+		Actor_Set_Goal_Number(kActorGaff, 1);
+		Set_Enter(kSetCT06, kSceneCT06);
+	}
+	else if (Actor_Query_In_Set(kActorZuben, kSetMA01)) {
+		Player_Set_Combat_Mode(false);
+		Actor_Set_Goal_Number(kActorGaff, 3);
+	}
+	//
+	//=>
+	return false;
+
+
+
+----
+perhaps()
+irony:
+-point-and-shoot targets=>clues
+-as a shortcut ....
+-thought this was an anti-shooter?
+----
+idea:
+RpTk cards=>scene jumps|clues(++)
+....
+
+game(s) can be won,with right card combinations....
+(+)
+expanded version,e.g.,=>
+RpTk+Tarot
+...
+some symbol linkages needed/suggested
+
+----
+LOL
+OK
+----
+issue:
+need to auto-enable,
+Lucy's desk area....
+----
+todo's
+-speed up runciter's....
+...
+-load/save
+(see also above)
+----
+I'm just surprised that a home improvement project would spill out onto the driveway(!)
+yeah, and you're going to see a lot more of this
+-telemarketer appears
+-We were having a conversation when you walked up
+did you know that parking your car on my water meter could puncture your tire?
+(I can park on that thing if I want to....!)
+so I can quote you on that?
+-"I have babies inside..."
+-OK. I surrender.
+-oh, you're turning this into a chess match then?
+-is this an IQ test?
+-yeah,and you're failing
+-we're not interested in anything you're selling
+-(finger)
+-oh, so your finger is for sale(!)
+-you should take some more of your meds
+"I'm sorry."
+yeah,you're sorry. You're very sorry.
+- can I quote you on that? Because that's three in a row
+oh, you can count that high?
+
+
+
+
+
+
 
 

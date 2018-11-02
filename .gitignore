@@ -192,3 +192,5 @@ paket.exe
 
 # vscode
 .vscode/
+SimplePaletteQuantizerVS2010v5/.vs/SimplePaletteQuantizer/v15/Server/sqlite3/db.lock
+.vs/RepTek/v15/Server/sqlite3/db.lock
