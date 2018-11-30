@@ -1,0 +1,429 @@
+(!!)November
+...
+2018
+----
+-plot twist(s)
+-they used the personals. online.
+-for what?
+-everything.
+-what's everything?
+-cars.employment.
+-water.food.shelter.
+-!!!
+-and...?
+-you name it.
+-shopping.
+-pets.
+-and of course(!):
+-sex.
+...
+-they did image searches.
+-for...?
+-their imagined lost loves.
+-...
+-we think(!).
+-meaning? 
+-or, from the image and address searches...
+-and various online postings...
+-so it would seem.
+-they tended to adhere to just the closest matches....
+-a strange obsession - as Dr. Tyrell called it.
+-they only like what they like....
+-and since it was all online -
+-they considered it "open source".
+-same as the military.
+-yep. uh huh.
+-...
+----
+LOL
+OK
+----
+e.g.,
+Hi-
+I'm planning to start a women's shelter.
+If you want you can help me start it. 
+I believe there is not enough sanctuary for many of us these days and I feel called to support a safe,
+eternally loving environment.
+0$ kick start plan
+Please let me know, anytime between now and 1+1/2/20XX(<=anytime).
+Maybe even if you feel it's end-of-rope; temporary stay is ok. LMK. 4 details/=>maybe relay J.
+or ping me; 
+even if open source(cc):ok
+Cheers!
+....
+----
+(?!)
+----
+....
+now here's a point where many(most) people get uneasy:
+random card draws=>
+random (future) segments=>rooms+clues
+and with an additional function,namely:
+* unlocking ESPER functions
+remember(ing): it is a cube layout function
+*
+with dice roll/random card draws:
+-kanji hashing
+-etc.
+at this point, most people are rolling(!!!).
+----
+LOL 
+OK
+----
+thinking:
+-quantum cloud function/s
+...
+interesting(?!).
+----
+todo's:
+//3D modeling scene(s)
+//ffmpeg+multiplex=>video+music overlay(s)
+//chase the sun
+//...
+//"REP threat"
+----
+-video(s):
+-Zuben's soup=>player loses control()|stuck
+-^Zuben not running out back door...bleh
+-...conditional narration in China Town(1):howie lee's => (maybe) should be automatic 1st time
+-...
+----
+Runciter's
+rc01
+rc02
+Chinatown
+
+----
+idea(s):
+-in the future,maybe...:
+-crowds forming in local churches
+-out of necessity
+-free shelter
+-running water
+-electricity
+-anime cut scene(s)<=girl with gun in front of stained glass window
+-we see it now
+-churches are reaching out more towards the public
+-whereas we humans have been, or had been, trending towards the more reclusive,
+-staying indoors type/s....
+----
+LOL
+OK
+----
+idea/s
+"bare" opening scene:skybox|battle
+-inserting a custom scene with own skybox, possible battle/demo gameplay
+-can opt out
+-designer's cut=>"play as admin" ... probably(!)
+----
+Zuben logic:
+zuben.cpp
+(+)
+re-enabling calls to Player_Gains_Control();
+
+Zuben case(s)
+12:spare/do not retire 12+
+13:spare/do not retire 12+
+14=>9
+
+"new" strategy is a modified retire 21+
+...with some exceptions:105|106|205|206|...
+
+----
+Runciter's (again...):
+fix duplicate clue issue
+----
+after Gaff's speech @ McCoy's apt roof:
+need to enable exits()....
+//=>always enable exits in Gaff:goal changed()
+----
+rc02
+(X)"peachy"
+
+----
+"Desk"
+rc51.cpp
+
+auto-load clues
+
+----
+"fixing" Yukon Hotel logic
+...
+game_constants.h
+	kSceneCT08 = 20, // Chinatown - Yukon Hotel - Backroom
+	kSceneCT09 = 21, // Chinatown - Yukon Hotel - Lobby
+	kSceneCT10 = 22, // Chinatown - Yukon Hotel - Room
+	kSceneCT11 = 23, // Chinatown - Yukon Hotel - Outside
+
+(X)door => ct09 (suspected...)
+obstacles.cpp
+
+----
+Hey- u ok? just wondering- I have an interesting idea. $0 is okay. planning on kettering, ohio. 
+my phone
+email(ing) to self. catch up later. burn after reading; cheers,t. :)
+----
+Greetings List:
+are there perhaps any topic(s) confirmed for next Thursday(11.15.2018?)
+Kindly let us know-
+Sincerely,
+R.Travis Rose
+P.S.
+I may have a proposed topic also-
+if perhaps, there is interest in video/video gaming-TBA/TBD
+Cheers-
+t.
+
+----
+-first time poster
+-long term computer enthusiast
+-as one or more proposed topic(s): possibly,
+-how I loved to forget re-creating everything from scratch,
+-and just utilize ScummVM game engine
+-to play Westwood's Bladerunner(TM) game from 1997
+-fair use licensing addressed,
+-a cross-platform c++ game engine presentation,
+
+Sincerely,
+R. Travis Rose
+----
+possible raincheck date,
+1.17.2019
+----
+Greetings Grant:
+Thanks for the email-
+A proposed topic for 11.15.2018 at WSU:
+"REP TEK: A Cyber Punk Game in Sc(R)ummVM (cross-platform game engine)"
+-set in Ridley Scott+Westwood Studio's Blade Runner(\TM\) universe
+-fair use/creative commons licensing addressed
+-game theory motivation(s)
+-sample video keyframe analysis
+-overview of Sc(R)ummVM game engine utilizing C++/SDL
+-game tree analysis
+-remix+engine+embedded language idea(s)
+-Etc.
+
+thinking 10-15 minutes presentaion+5m demo
+
+Sincerely,
+R.Travis Rose
+
+P.S.
+If you need a sample bio, I can draft that also....
+it would be something like my "linkedin",
+https://www.linkedin.com/in/travis-rose-3a33aa3/
+just let me know
+thanks,t.
+
+....
+video annotation driven remix idea/s
+----
+---------- Forwarded message ----------
+From: Chuck Gelm NC8Q <linux-sig@gelm.net>
+To: linux-sig@lists.dma1.org
+Cc: 
+Bcc: 
+Date: Thu, 8 Nov 2018 05:40:41 -0500
+Subject: Re: [Linux-SIG] Tonight's meeting
+
+
+On 11/07/2018 05:52 PM, Gary Turner wrote:
+> The December meeting has a presentation about Software Defined Radio 
+> and Linux.
+Kewel!
+
+  I am running an ADS-B live mapping server on a local intra-lan
+(Hamilton, Greene, Montgomery, Miami counties)
+with a (very inexpensive) SDR and a Raspberry Pi.
+
+  I have a portable SDR/ADS-B mapper that I can run on a laptop.
+I could demonstrate if the ADS-B signals will penetrate the WSU building.
+:-|
+
+Chuck
+
+----
+ACARS idea(s)
+image search incorporation
+annotation schema
+dialog system/s
+etc.
+
+----
+Script Creation Utility for Maniac Mansion Virtual Machine (ScummVM) is a set of game engine re-creations. 
+Originally designed to play LucasArts adventure games....
+----
+http://gameprogrammingpatterns.com/architecture-performance-and-games.html
+
+funny!
+
+
+----
+a random dungeon auto-layout:
+s|c3:cubestack: i*|e*|p* <interiors|exteriors|posters>
+skybox(es):S|c3|. <=whatever else,e.g., near the "perimeter" of the board
+maybe also:
+S|c3|iep|v 	(+vehicles)
+S|c3|iep|v|r	(+runway show)
+...
+
+an idea (or wish):
+video game/simulation specification language(s)
+
+
+----
+interesting:
+
+https://www.codeproject.com/Articles/1040361/Getting-startet-with-OpenGL-OpenTK-in-MONO-NET-for
+Getting startet with OpenGL/OpenTK in MONO/.NET for serious applications
+Steffen Ploetz, 21 Oct 2015
+
+https://www.codeproject.com/Articles/1073588/Reflections-on-a-GUI-Toolkit-Based-on-OpenGL-OpenT
+Reflections on a GUI Toolkit Based on OpenGL/OpenTK in MONO/.NET for Serious Applications
+Steffen Ploetz, 24 Jan 2016
+
+Mono|OpenTK
+
+
+---- 
+T.Rose has a M.S. in Computer Science from Virginia Tech (VT), and a
+Bachelor's in Computer Science from Wright State (WSU).
+He has worked in industry at GE Aviation as a technical support
+specialist/systems analyst, and previously for the U.S. Government as
+a computer scientist at NIST.
+He has interests in computer graphics and computer animation,
+multi-lingual and cross-platform programming.
+Favorite topics include artificial intelligence, machine learning,
+data driven evaluation, data analysis, video+video gaming, and game
+theory.
+
+----
+I wanted to teach a computer to think creatively, to have and start to develop its own imagination.
+I started to wonder- what sort of scenarios, what sort of environment(s).
+Maybe a remix engine?
+Maybe turn it into a futuristic cyber punk game.
+
+-some results:
+-
+-
+
+
+Future work:
+Client+Server game with Microsoft Azure.
+----
+interesting(?) idea:
+maybe- 
+running NST SmartFlow on Microsoft Azure server: as an anti-*ack
+:)
+----
+hmm....
+Start Your Free Account
+$200 Free Credit for 30 Days to Try
+Any Azure Product Combinations
+----
+Get Started with 12 months of free services....
+----
+Rackspace(R) is managing Azure for businesses....
+----
+interesting:
+scrum
+https://bawiki.files.wordpress.com/2017/07/scrum-gita.pdf
+...
+https://www.quora.com/Is-there-a-Scrum-Methodology-for-solo-projects-like-writing-a-novel-managing-personal-fitness-and-health-or-learning
+https://www.quora.com/What-development-process-would-you-recommend-for-a-single-developer
+https://softwareengineering.stackexchange.com/questions/141818/how-can-a-single-developer-make-use-of-agile-methods
+The goal of Agile is []"
+minimize all feedback loops as much as possible
+minimize project overhead in terms of documents/forms produced and replace it with much higher bandwidth medium, 
+which is real-time (preferably face-to-face) communications among team members.
+...
+https://research.uni-sofia.bg/bitstream/10506/647/1/S3T2009_37_YDzhurov_IKrasteva_SIlieva.pdf
+...
+----
+some idea(s):
+-sample open source game engines
+-ScummVM+RepTek=>Sc(R)ummVM
+
+-video keyframe(s) approach
+use ffmpeg to down-sample video:
+e.g.,
+	longplay3
+	4fps...
+	1/76 X 76000 => 1000frames
+----
+Output one image every second, named out1.png, out2.png, out3.png, etc. 
+ffmpeg -i input.flv -vf fps=1 out%d.png
+
+so,ok...
+longplay1qv4-with-audio.mp4
+3:11:10 @ 4fps = 11470(s) x 4 = 45880 frames
+
+[1]"mini"-keyframe analysis
+1/40	= 11470/40 = 286 keyframes	mkdir lp1 (<= for "lonpglay1|qv4|with audio")
+
+Output one image every 40s, named lp001.jpg, lp002.jpg, lp003.jpg, etc. The %03d dictates that the ordinal number of each output image will be formatted using 3 digits. 
+ffmpeg -i longplay1qv4-with-audio.mp4 -vf fps=1/40 lp1/lp%03d.jpg
+=>
+lp1286
+
+longplay3
+5:17:30 @ 4fps = 19050(s) x 4 = 76200 frames
+1/66	= 19050/66 = 289 keyframes
+ffmpeg -i longplay3qv4-with-audio.mp4 -vf fps=1/66 lp3/lppp%03d.jpg
+=>
+lp3289
+
+[2]enhanced keyframe analysis
+longplay1	11470(s)/12=>956
+longplay3	19050(s)/20=>953
+=>
+Output #0, image2, to 'lp1/lp%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.17.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc), 1440x1080 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 0.08 fps, 0.08 tbn, 0.08 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc58.20.104 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+frame=  *956* fps=0.6 q=1.6 Lsize=N/A time=03:11:12.00 bitrate=N/A speed=6.88x
+video:71105kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+--
+Output #0, image2, to 'lp3/lppp%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.17.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc), 960x720 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 0.05 fps, 0.05 tbn, 0.05 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc58.20.104 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+frame=  *953* fps=0.7 q=1.6 Lsize=N/A time=05:17:40.00 bitrate=N/A speed=14.9x
+video:38257kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+(just for fun:)
+quantized keyframes,from *qv4 (quantized video 4fps)
+
+----
+police station=>AR
+WARNING: numQueuedStreams: 0!
+WARNING: getResource: Resource AR01.VQA not found!
+----
+interesting
+www.homepagers.com/daily/piscesweekly.html
+This week's scenario is highlighted by passion,excitement and the start of new relationships.  
+The warmth you feel inside will spark your passion for life. Get out there and enjoy all that life has to give. 
+Look past others misgivings in order to take advantage of their expertise. 
+You may not understand all the workings of a new technology, but you can figure out how to use it for your own purpose. 
+Check your list and make sure you cover all the bases. 
+Others will be ready to open up to you and to share all of what they have, both spiritually and physically. 
+Lucky Numbers: 2, 11, 20, 30, 40, 41
+
+----
+

@@ -1,0 +1,162 @@
+(!!)November
+...
+2018
+----
+-plot twist(s)
+-they used the personals. online.
+-for what?
+-everything.
+-what's everything?
+-cars.employment.
+-water.food.shelter.
+-!!!
+-and...?
+-you name it.
+-shopping.
+-pets.
+-and of course(!):
+-sex.
+...
+-they did image searches.
+-for...?
+-their imagined lost loves.
+-...
+-we think(!).
+-meaning? 
+-or, from the image and address searches...
+-and various online postings...
+-so it would seem.
+-they tended to adhere to just the closest matches....
+-a strange obsession - as Dr. Tyrell called it.
+-they only like what they like....
+-and since it was all online -
+-they considered it "open source".
+-same as the military.
+-yep. uh huh.
+-...
+----
+LOL
+OK
+----
+e.g.,
+Hi-
+I'm planning to start a women's shelter.
+If you want you can help me start it. 
+I believe there is not enough sanctuary for many of us these days and I feel called to support a safe,
+eternally loving environment.
+0$ kick start plan
+Please let me know, anytime between now and 1+1/2/20XX(<=anytime).
+Maybe even if you feel it's end-of-rope; temporary stay is ok. LMK. 4 details/=>maybe relay J.
+or ping me; 
+even if open source(cc):ok
+Cheers!
+....
+----
+(?!)
+----
+....
+now here's a point where many(most) people get uneasy:
+random card draws=>
+random (future) segments=>rooms+clues
+and with an additional function,namely:
+* unlocking ESPER functions
+remember(ing): it is a cube layout function
+*
+with dice roll/random card draws:
+-kanji hashing
+-etc.
+at this point, most people are rolling(!!!).
+----
+LOL 
+OK
+----
+thinking:
+-quantum cloud function/s
+...
+interesting(?!).
+----
+todo's:
+//3D modeling scene(s)
+//ffmpeg+multiplex=>video+music overlay(s)
+//chase the sun
+//...
+//"REP threat"
+----
+-video(s):
+-Zuben's soup=>player loses control()|stuck
+-^Zuben not running out back door...bleh
+-...conditional narration in China Town(1):howie lee's => (maybe) should be automatic 1st time
+-...
+----
+Runciter's
+rc01
+rc02
+Chinatown
+
+----
+idea(s):
+-in the future,maybe...:
+-crowds forming in local churches
+-out of necessity
+-free shelter
+-running water
+-electricity
+-anime cut scene(s)<=girl with gun in front of stained glass window
+-we see it now
+-churches are reaching out more towards the public
+-whereas we humans have been, or had been, trending towards the more reclusive,
+-staying indoors type/s....
+----
+LOL
+OK
+----
+idea/s
+"bare" opening scene:skybox|battle
+-inserting a custom scene with own skybox, possible battle/demo gameplay
+-can opt out
+-designer's cut=>"play as admin" ... probably(!)
+----
+Zuben logic:
+zuben.cpp
+(+)
+re-enabling calls to Player_Gains_Control();
+
+Zuben case(s)
+12:spare/do not retire 12+
+13:spare/do not retire 12+
+14=>9
+
+"new" strategy is a modified retire 21+
+...with some exceptions:105|106|205|206|...
+
+----
+Runciter's (again...):
+fix duplicate clue issue
+----
+after Gaff's speech @ McCoy's apt roof:
+need to enable exits()....
+//=>always enable exits in Gaff:goal changed()
+----
+rc02
+(X)"peachy"
+
+----
+"Desk"
+rc51.cpp
+
+auto-load clues
+
+----
+"fixing" Yukon Hotel logic
+...
+game_constants.h
+	kSceneCT08 = 20, // Chinatown - Yukon Hotel - Backroom
+	kSceneCT09 = 21, // Chinatown - Yukon Hotel - Lobby
+	kSceneCT10 = 22, // Chinatown - Yukon Hotel - Room
+	kSceneCT11 = 23, // Chinatown - Yukon Hotel - Outside
+
+(X)door => ct09 (suspected...)
+obstacles.cpp
+
+----
+

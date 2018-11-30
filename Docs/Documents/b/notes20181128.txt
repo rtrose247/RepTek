@@ -1,0 +1,399 @@
+(!!)November
+...
+2018
+----
+-plot twist(s)
+-they used the personals. online.
+-for what?
+-everything.
+-what's everything?
+-cars.employment.
+-water.food.shelter.
+-!!!
+-and...?
+-you name it.
+-shopping.
+-pets.
+-and of course(!):
+-sex.
+...
+-they did image searches.
+-for...?
+-imagined lost loves.
+-...
+-we think(!).
+-meaning? 
+-or, from the image and address searches...
+-and various online postings...
+-so it would seem.
+-they tended to adhere to just the closest matches....
+-a strange obsession - as Dr. Tyrell called it.
+-they like what they like....
+-and since it was all online -
+-they considered it "open source".
+-yep. uh huh.
+-...
+----
+LOL
+OK
+....
+----
+women's shelter?
+....
+----
+....
+now here's a point where many(most) people get uneasy:
+random card draws=>
+random (future) segments=>rooms+clues
+and with an additional function,namely:
+* unlocking ESPER functions
+remember(ing): it is a cube layout function
+*
+with dice roll/random card draws:
+-kanji hashing
+-etc.
+at this point, most people are rolling(!!!).
+----
+LOL 
+OK
+----
+thinking:
+-quantum cloud function/s
+...
+interesting(?!).
+----
+todo's:
+//3D modeling scene(s)
+//ffmpeg+multiplex=>video+music overlay(s)
+//chase the sun
+//...
+//"REP threat"
+----
+-video(s):
+-Zuben's soup=>player loses control()|stuck
+-^Zuben not running out back door...bleh
+-...conditional narration in China Town(1):howie lee's => (maybe) should be automatic 1st time
+-...
+----
+Runciter's
+rc01
+rc02
+Chinatown
+
+----
+idea(s):
+-in the future,maybe...:
+-crowds forming in local churches
+-out of necessity
+-free shelter
+-running water
+-electricity
+-anime cut scene(s)<=girl with gun in front of stained glass window
+-we see it now
+-churches are reaching out more towards the public
+-whereas we humans have been, or had been, trending towards the more reclusive,
+-staying indoors type/s....
+----
+LOL
+OK
+----
+idea/s
+"bare" opening scene:skybox|battle
+-inserting a custom scene with own skybox, possible battle/demo gameplay
+-can opt out
+-designer's cut=>"play as admin" ... probably(!)
+----
+Zuben logic:
+zuben.cpp
+(+)
+re-enabling calls to Player_Gains_Control();
+
+Zuben case(s)
+12:spare/do not retire 12+
+13:spare/do not retire 12+
+14=>9
+
+"new" strategy is a modified retire 21+
+...with some exceptions:105|106|205|206|...
+
+----
+Runciter's (again...):
+fix duplicate clue issue
+----
+after Gaff's speech @ McCoy's apt roof:
+need to enable exits()....
+//=>always enable exits in Gaff:goal changed()
+----
+rc02
+(X)"peachy"
+
+----
+"Desk"
+rc51.cpp
+
+auto-load clues
+
+----
+"fixing" Yukon Hotel logic
+...
+game_constants.h
+	kSceneCT08 = 20, // Chinatown - Yukon Hotel - Backroom
+	kSceneCT09 = 21, // Chinatown - Yukon Hotel - Lobby
+	kSceneCT10 = 22, // Chinatown - Yukon Hotel - Room
+	kSceneCT11 = 23, // Chinatown - Yukon Hotel - Outside
+
+(X)door => ct09 (suspected...)
+obstacles.cpp
+
+----
+Hey- u ok? just wondering- I have an interesting idea. $0 is okay. 
+my phone
+email(ing) to self. catch up later. burn after reading; cheers,t. :)
+----
+
+....
+video annotation driven remix idea/s
+----
+ACARS idea(s)
+image search incorporation
+annotation schema
+dialog system/s
+etc.
+
+----
+Script Creation Utility for Maniac Mansion Virtual Machine (ScummVM) is a set of game engine re-creations. 
+Originally designed to play LucasArts adventure games....
+----
+http://gameprogrammingpatterns.com/architecture-performance-and-games.html
+
+funny!
+
+
+----
+a random dungeon auto-layout:
+s|c3:cubestack: i*|e*|p* <interiors|exteriors|posters>
+skybox(es):S|c3|. <=whatever else,e.g., near the "perimeter" of the board
+maybe also:
+S|c3|iep|v 	(+vehicles)
+S|c3|iep|v|r	(+runway show)
+...
+
+an idea (or wish):
+video game/simulation specification language(s)
+
+
+----
+interesting:
+
+https://www.codeproject.com/Articles/1040361/Getting-startet-with-OpenGL-OpenTK-in-MONO-NET-for
+Getting startet with OpenGL/OpenTK in MONO/.NET for serious applications
+Steffen Ploetz, 21 Oct 2015
+
+https://www.codeproject.com/Articles/1073588/Reflections-on-a-GUI-Toolkit-Based-on-OpenGL-OpenT
+Reflections on a GUI Toolkit Based on OpenGL/OpenTK in MONO/.NET for Serious Applications
+Steffen Ploetz, 24 Jan 2016
+
+Mono|OpenTK
+
+----
+I wanted to teach a computer to think creatively, to have and start to develop its own imagination.
+I started to wonder- what sort of scenarios, what sort of environment(s).
+Maybe a remix engine?
+Maybe turn it into a futuristic cyber punk game.
+
+....
+
+
+Future work:
+Client+Server game with Microsoft Azure.
+----
+interesting(?) idea:
+maybe- 
+running NST SmartFlow on Microsoft Azure server: as an anti-*ack
+:)
+----
+hmm....
+Start Your Free Account
+$200 Free Credit for 30 Days to Try
+Any Azure Product Combinations
+----
+Get Started with 12 months of free services....
+----
+Rackspace(R) is managing Azure for businesses....
+----
+interesting:
+scrum
+https://bawiki.files.wordpress.com/2017/07/scrum-gita.pdf
+...
+https://www.quora.com/Is-there-a-Scrum-Methodology-for-solo-projects-like-writing-a-novel-managing-personal-fitness-and-health-or-learning
+https://www.quora.com/What-development-process-would-you-recommend-for-a-single-developer
+https://softwareengineering.stackexchange.com/questions/141818/how-can-a-single-developer-make-use-of-agile-methods
+The goal of Agile is []"
+minimize all feedback loops as much as possible
+minimize project overhead in terms of documents/forms produced and replace it with much higher bandwidth medium, 
+which is real-time (preferably face-to-face) communications among team members.
+...
+https://research.uni-sofia.bg/bitstream/10506/647/1/S3T2009_37_YDzhurov_IKrasteva_SIlieva.pdf
+...
+----
+some idea(s):
+-sample open source game engines
+-ScummVM+RepTek=>Sc(R)ummVM
+
+-video keyframe(s) approach
+use ffmpeg to down-sample video:
+e.g.,
+	longplay3
+	4fps...
+	1/76 X 76000 => 1000frames
+----
+Output one image every second, named out1.png, out2.png, out3.png, etc. 
+ffmpeg -i input.flv -vf fps=1 out%d.png
+
+so,ok...
+longplay1qv4-with-audio.mp4
+3:11:10 @ 4fps = 11470(s) x 4 = 45880 frames
+
+[1]"mini"-keyframe analysis
+1/40	= 11470/40 = 286 keyframes	mkdir lp1 (<= for "lonpglay1|qv4|with audio")
+
+Output one image every 40s, named lp001.jpg, lp002.jpg, lp003.jpg, etc. The %03d dictates that the ordinal number of each output image will be formatted using 3 digits. 
+ffmpeg -i longplay1qv4-with-audio.mp4 -vf fps=1/40 lp1/lp%03d.jpg
+=>
+lp1286
+
+longplay3
+5:17:30 @ 4fps = 19050(s) x 4 = 76200 frames
+1/66	= 19050/66 = 289 keyframes
+ffmpeg -i longplay3qv4-with-audio.mp4 -vf fps=1/66 lp3/lppp%03d.jpg
+=>
+lp3289
+
+[2]enhanced keyframe analysis
+longplay1	11470(s)/12=>956
+longplay3	19050(s)/20=>953
+=>
+Output #0, image2, to 'lp1/lp%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.17.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc), 1440x1080 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 0.08 fps, 0.08 tbn, 0.08 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc58.20.104 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+frame=  *956* fps=0.6 q=1.6 Lsize=N/A time=03:11:12.00 bitrate=N/A speed=6.88x
+video:71105kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+--
+Output #0, image2, to 'lp3/lppp%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.17.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc), 960x720 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 0.05 fps, 0.05 tbn, 0.05 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc58.20.104 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+frame=  *953* fps=0.7 q=1.6 Lsize=N/A time=05:17:40.00 bitrate=N/A speed=14.9x
+video:38257kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+(just for fun:)
+quantized keyframes,from *qv4 (quantized video 4fps)
+
+----
+police station=>AR
+WARNING: numQueuedStreams: 0!
+WARNING: getResource: Resource AR01.VQA not found!
+----
+interesting
+www.homepagers.com/daily/piscesweekly.html
+This week's scenario is highlighted by passion,excitement and the start of new relationships.  
+The warmth you feel inside will spark your passion for life. Get out there and enjoy all that life has to give. 
+Look past others misgivings in order to take advantage of their expertise. 
+You may not understand all the workings of a new technology, but you can figure out how to use it for your own purpose. 
+Check your list and make sure you cover all the bases. 
+Others will be ready to open up to you and to share all of what they have, both spiritually and physically. 
+Lucky Numbers: 2, 11, 20, 30, 40, 41
+
+----
+interesting:
+
+https://stackoverflow.com/questions/2261238/random-items-in-prolog
+
+%% choose(List, Elt) - chooses a random element
+%% in List and unifies it with Elt.
+choose([], []).
+choose(List, Elt) :-
+        length(List, Length),
+        random(0, Length, Index),
+        nth0(Index, List, Elt).
+
+----
+$ cd scummvm
+
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/RepTek/scummvm ((49a1d99260...))
+$ git pull
+From https://github.com/rtrose247/scummvm
+ * [new branch]            20181102   -> origin/20181102
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+$ git branch 20181128
+
+$ git submodule init
+
+$ git submodule update
+
+$ git commit -m "(+)Zuben=>improvements|Prep for next \S\p"
+HEAD detached from 4ee0cb676c
+Changes not staged for commit:
+        modified:   engines/bladerunner/obstacles.cpp
+        modified:   engines/bladerunner/script/ai/gaff.cpp
+        modified:   engines/bladerunner/script/ai/zuben.cpp
+        modified:   engines/bladerunner/script/scene/ct09.cpp
+        modified:   engines/bladerunner/script/scene/ma01.cpp
+        modified:   engines/bladerunner/script/scene/rc02.cpp
+        modified:   engines/bladerunner/script/scene/rc04.cpp
+        modified:   engines/bladerunner/script/scene/rc51.cpp
+        modified:   engines/bladerunner/vqa_decoder.cpp
+
+no changes added to commit
+
+$ git commit -m "(+)Zuben=>improvements|Prep for next \S\p" engines/bladerunner/                                                                                                                *
+
+...
+
+$  git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  c4c5125bd5 (+)Zuben=>improvements|Prep for next \S\p
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> c4c5125bd5
+
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+$ git merge 20181128
+Updating 4ee0cb676c..49a1d99260
+Fast-forward
+ engines/bladerunner/script/ai/runciter.cpp | 175 ++++++++++++++++++--
+ engines/bladerunner/script/ai/zuben.cpp    | 249 +++++++++++++++++------------
+ engines/bladerunner/script/scene/rc01.cpp  |  29 +++-
+ engines/bladerunner/script/scene/rc02.cpp  |  67 ++++++++
+ engines/bladerunner/script/scene/rc04.cpp  |   7 +
+ engines/bladerunner/vqa_decoder.cpp        |  10 +-
+ 6 files changed, 420 insertions(+), 117 deletions(-)
