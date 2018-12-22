@@ -1,0 +1,32 @@
+December(!)
+----
+interesting:
+"SAROPS"
+search&rescue OPs
+
+----
+subtitles preview
+https://github.com/scummvm/scummvm/tree/36485b348b571679c7f68302190edb7f700496e7
+
+https://github.com/scummvm/scummvm/commit/36485b348b571679c7f68302190edb7f700496e7
+
+----
+
+https://en.wikipedia.org/wiki/Quantum_Cloud#/media/File:Antony_Gormley_Quantum_Cloud_2000.jpg
+
+By Andy Roberts from East London, England - Flickr, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=448926
+
+----
+antoniou79 added some commits 2 days ago 
+
+ 
+BLADERUNNER: Removed redundant header inclusion 
+
+
+e9c86fc 
+
+ 
+BLADERUNNER: Removed old fixes for internal TAHOMA18 
+
+
+1eb8b85
