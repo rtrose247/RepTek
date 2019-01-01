@@ -56,6 +56,7 @@ updated subtitles
 https://github.com/scummvm/scummvm/tree/8008f14fcd4026c4124e650529776c835dc24162
 https://github.com/scummvm/scummvm/commit/8008f14fcd4026c4124e650529776c835dc24162
 =>
+https://github.com/scummvm/scummvm/pull/1219
 committed to master
 ----
 Prep for merge with Sc-master
