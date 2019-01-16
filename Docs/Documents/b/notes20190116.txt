@@ -186,3 +186,14 @@ CT05...CT06...CT07 scene initialization
 		//
 		Scene_Exits_Enable();
 		//
+----
+cute!
+>find . | while read LINE; do c=$(cat $LINE | grep -c "//RTR"); [ $c -gt 0 ] && echo $LINE; done
+
+----
+merge project(s)...
+it seems what is really needed is a script to do the overlay
+
+
+----
+
