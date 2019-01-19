@@ -1,0 +1,203 @@
+January '19(!)
+
+----
+bleh:
+Chapter2 Runciter's=>Animoid Row
+getResource: Resource AWAY02_E.VQA not found!
+
+...
+eyeworld
+Set::findObject didn't find "MMNEWSP06"
+
+----
+REP TEK:Fair Use Blade Runner Game English Subtitles
+(+)for teaching and research 
+(+)promotion is for anticipated future release(s)
+----
+what is cyber punk?
+...
+----
+ToDo's
+//s
+additional Zuben ehancements...adding randomness
+
+//s
+improved load+save in new version (compare to subtitles "preview" and Sc master)
+
+//s
+begin simple compositing into a scene
+
+//s
+"secret" exit(s) => sequential scene loading | <= "gameshark"ing :)
+
+----
+z:
+"got to mix more"=> case 1
+"you not come back here .... routine?!"=> case 8
+overturns pot/pan/s=>case 14
+=> case 9
+=> case 10
+=> case 2  	| zuben heading for door
+=> case 13 	| no more retire(6)
+=> case 400 	| shows alley
+
+...
+McCoy's Apt
+=> case 21
+
+(maybe)
+... going to start chaining 21+ goals together
+
+----
+bleh
+case 12
+		//=>causing unwanted scene transition...if at McCoy apt rooftop....
+		//=>
+		//Set_Enter(kSetCT07, kSceneCT07);
+moving to retire(6)
+
+...
+in CompletedMovementTrack()
+there is no such "goal 7"
+=>
+moving to retire(6)
+(!)
+disappeared
+bleh
+=>
+moving to // | <= NOP
+
+----
+chaining cases 21+
+21...400 (sequentially)
+
+variation "2":
+106=>105 (preserve 105|106 from original)
+206=>205 (preserve 205|206 from original)
+
+hmm...
+not quite
+----
+an aside
+from auto-layout idea(s)
+maybe try
+a variation, e.g.,
+exponential-shaped distributions of cube stacks
+with images sampled from i/e/r|etc.
+
+----
+down-the-road idea:
+systems integration via shared memory using C#/C++/... memory streams
+----
+to do
+//s
+understand actor/actor_clues better...maybe improve init time
+commenting some debug("") print output in add/remove
+
+//s
+actor animation loop(s)
+
+interesting....
+actors start with 50 hit points (HP)
+waypoints
+walk loops
+XYZ
+----
+rc02
+oops
+fix mouse click()
+bool SceneScriptRC02::MouseClick(int x, int y) {
+	//
+	//RTR 10.23.2018
+	//clues are *essential* to the game:
+	//
+	//=>don't actually need this ....
+	//:)
+	if (!Actor_Clue_Query(kActorMcCoy, kClueShellCasings)) <= was kClueShellCasingsA
+
+----
+bleh
+zuben got away!
+
+----
+zuben logic
+in completed movement track
+goal chaining
+200|205|206|100|105|106
+i.e.,
+		int goal = Actor_Query_Goal_Number(kActorZuben);
+		if (goal == 200) {
+			Actor_Set_Goal_Number(kActorZuben, 205);
+		} else if (goal == 205) {
+			Actor_Set_Goal_Number(kActorZuben, 206);
+		} else if (goal == 100) {
+			Actor_Set_Goal_Number(kActorZuben, 105);
+		} else if (goal == 105) {
+			Actor_Set_Goal_Number(kActorZuben, 106);
+		}
+
+----
+Jan 6,2019
+DEVTOOLS: semi-auto creation of SUBTITLES.MIX for Blade Runner #1468 
+Merged 
+sev- merged 27 commits into scummvm:master from antoniou79:devtoolsBladeRunner 
+
+----
+To Do:
+Prep for merge with scummvm:master
+
+----
+(for future use) funny(?!) phrases:
+-queen mother
+-resident alien
+
+----
+sc(R)ummvm master updates
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/scummvm (master)
+$ git pull
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 18 (delta 16), reused 18 (delta 16), pack-reused 0
+Unpacking objects: 100% (18/18), done.
+From https://github.com/scummvm/scummvm
+   0c7077cab9..62541cec06  master     -> origin/master
+Updating 0c7077cab9..62541cec06
+Fast-forward
+ engines/bladerunner/bladerunner.h         | 2 +-
+ engines/bladerunner/game_constants.h      | 7 ++++---
+ engines/bladerunner/script/ai/zuben.cpp   | 8 ++++----
+ engines/bladerunner/script/scene/ct02.cpp | 2 +-
+ engines/bladerunner/script/scene/ma04.cpp | 4 ++--
+ 5 files changed, 12 insertions(+), 11 deletions(-)
+
+----
+"Set/Scene Logic"
+//s
+CT05...CT06...CT07 scene initialization
+=>sometimes:force zuben to appear in hallway (e.g., instead of always MA01)
+
+----
+		//RTR 1.14.2019
+		//
+		Actor_Set_Targetable(kActorZuben, true);
+		//
+		Game_Flag_Set(kFlagWarehouseOpen);
+		//
+		Scene_Exits_Enable();
+		//
+----
+cute!
+>find . | while read LINE; do c=$(cat $LINE | grep -c "//RTR"); [ $c -gt 0 ] && echo $LINE; done
+
+----
+merge project(s)...
+it seems what is really needed is a script to do the overlay
+
+
+----
+Prep for next \S\p|Merge:(+)DNA Row 01 spinner logic<=keep spinner open+unlocked(*on Windows)
+
+=>
+        modified:   engines/bladerunner/script/scene/dr01.cpp
+
