@@ -1,0 +1,45 @@
+February '19(!!)
+
+idea(s)
+source code analysis:
+-actor,scene|set,object,obstacles, clues
+- work on understanding clues and their implications....
+
+----
+//s
+At Tyrell Building:
+Rachel interview=>video corruption at start of dialogue...
+
+...resolved(!) in latest/main branch(antonio+pk) <=Feb8 '19
+----
+
+merge build approach:
+
+-input 1:upstream branch repo path to engines/bladerunner
+-input 2:current development path to engines/bladerunner
+I
+edit differences
+for each file in input 1,
+	compare to file(s) in input2
+	-same or different:
+	-same=>skip
+	-different=>see if "//RTR" lines present
+	-if no "//RTR"=>replace with upstream version
+	-if "//RTR",
+		splice:
+		for each line in //RTR comment block,copy until EOL|//----
+		for each line after EOL, find next corresponding line in RTR that is >5 chars and
+		resume source lines from upstream until next "//RTR" diff
+
+II
+checksums
+for each file in input 1,
+compare md5 to the md5 for file(s) in input 2
+if no //RTR line(s),
+same or different:
+	same=>skip
+	else,replace with upstream version
+
+----
+
+

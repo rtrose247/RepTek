@@ -1,0 +1,19 @@
+March '19(!!!)
+
+//s
+officer leary/grayford logic fork
+(combat)
+ug07
+
+//s
+ensure guzza appears in sewer scene
+
+//s
+rat on plank logic fork
+(combat)
+ug15
+----
+hint:
+git submodule init
+git submodule update
+----

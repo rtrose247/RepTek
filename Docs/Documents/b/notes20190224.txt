@@ -1,0 +1,213 @@
+February '19(!!)
+
+idea(s)
+source code analysis:
+-actor,scene|set,object,obstacles, clues
+- work on understanding clues and their implications....
+
+----
+//s
+At Tyrell Building:
+Rachel interview=>video corruption at start of dialogue...
+
+...resolved(!) in latest/main branch(antonio+pk) <=Feb8 '19
+----
+
+merge build approach:
+
+-input 1:upstream branch repo path to engines/bladerunner
+-input 2:current development path to engines/bladerunner
+I
+edit differences
+for each file in input 1,
+	compare to file(s) in input2
+	-same or different:
+	-same=>skip
+	-different=>see if "//RTR" lines present
+	-if no "//RTR"=>replace with upstream version
+	-if "//RTR",
+		splice:
+		for each line in //RTR comment block,copy until EOL|//----
+		for each line after EOL, find next corresponding line in RTR that is not whitespace and
+		resume source lines from upstream until next "//RTR" diff
+
+II
+checksums
+for each file in input 1,
+compare md5 to the md5 for file(s) in input 2
+if no //RTR line(s),
+same or different:
+	same=>skip
+	else,replace with upstream version
+
+----
+e.g.,
+find . | while read LINE; do c=$(grep -ic "//RTR" $LINE); [ $c -gt 0 ] && cat $LINE | grep -in "//RTR"; done >> RTR.txt &
+
+----
+image collection merging:
+rename script(s)=>
+ find . | while read LINE; do
+> a=$(basename ${LINE})
+> mv $a "100${a}"
+> done
+
+----
+b\a\Google Images\wwbrgm\256~ <= westwood bladerunner game
+b\a\Google Images\rpgmss\256~ <= role playing game sprite sheet(s)
+
+----
+Texture(s)
+c.night 
+(+)building facades + windows (for synthetic/alternative renderings)
+(+)
+an 	<= animals
+(+)
+cars 	<= futuristic cars
+(+)
+brg 	<= enriched blade runner game image(s) with Google image search
+(+)
+chara	<= faces + anime
+
+* quantized
+----
+To do:
+-push
+-patch
+-(maybe)look at OpenCV|...
+----
+//s
+-merge script
+-officer's shooting|logic fork
+-ESP*ER|<={3} 
+-(maybe) toy {3}
+...
+
+----
+
+rtrose@LAPTOP-SUFHGO0C MINGW64 ~/Downloads/scummvm (master)
+$ git pull
+remote: Enumerating objects: 517, done.
+remote: Counting objects: 100% (517/517), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 652 (delta 495), reused 512 (delta 491), pack-reused 135
+Receiving objects: 100% (652/652), 625.25 KiB | 89.00 KiB/s, done.
+Resolving deltas: 100% (554/554), completed with 198 local objects.
+From https://github.com/scummvm/scummvm
+   66dc8afaa3..096e870b7b  master     -> origin/master
+Checking out files: 100% (146/146), done.
+Updating 66dc8afaa3..096e870b7b
+Fast-forward
+ .gitignore                                         |    3 +
+ Makefile.common                                    |    6 +
+ README.md                                          |    2 +-
+ audio/decoders/ac3.cpp                             |   17 +-
+ audio/decoders/ac3.h                               |    2 +-
+ backends/graphics/dinguxsdl/dinguxsdl-graphics.cpp |   24 +-
+ backends/graphics/dinguxsdl/dinguxsdl-graphics.h   |    1 -
+ backends/platform/ios7/ios7_osys_main.cpp          |    6 +
+ backends/platform/ios7/ios7_osys_main.h            |    2 +
+ backends/platform/ios7/ios7_osys_video.mm          |   20 +
+ backends/platform/ios7/ios7_video.h                |    5 +
+ backends/platform/ios7/ios7_video.mm               |   46 +-
+ backends/platform/sdl/win32/win32.mk               |    3 +-
+ backends/platform/wince/wince.mk                   |    4 -
+ configure                                          |    7 +-
+ engines/bladerunner/actor.cpp                      |   55 +-
+ engines/bladerunner/actor.h                        |    4 +
+ engines/bladerunner/actor_clues.cpp                |   14 +-
+ engines/bladerunner/actor_walk.cpp                 |   15 +-
+ engines/bladerunner/ambient_sounds.cpp             |    5 +-
+ engines/bladerunner/archive.cpp                    |    8 +-
+ engines/bladerunner/aud_stream.cpp                 |   10 +-
+ engines/bladerunner/aud_stream.h                   |    7 +-
+ engines/bladerunner/audio_cache.cpp                |  129 +++
+ engines/bladerunner/audio_cache.h                  |   65 ++
+ engines/bladerunner/audio_player.cpp               |  117 +-
+ engines/bladerunner/audio_player.h                 |   42 +-
+ engines/bladerunner/audio_speech.cpp               |   22 +-
+ engines/bladerunner/bladerunner.cpp                |  373 +++---
+ engines/bladerunner/bladerunner.h                  |   23 +-
+ engines/bladerunner/chapters.cpp                   |   13 -
+ engines/bladerunner/debugger.cpp                   |    5 +-
+ engines/bladerunner/decompress_lcw.cpp             |    4 +-
+ engines/bladerunner/detection.cpp                  |   26 +-
+ engines/bladerunner/detection_tables.h             |   15 +-
+ engines/bladerunner/dialogue_menu.cpp              |   25 +-
+ engines/bladerunner/fog.cpp                        |   53 +-
+ engines/bladerunner/font.cpp                       |    4 +-
+ engines/bladerunner/game_constants.h               |   47 +-
+ engines/bladerunner/game_flags.cpp                 |    8 -
+ engines/bladerunner/game_info.cpp                  |    7 +-
+ engines/bladerunner/image.cpp                      |    4 +-
+ engines/bladerunner/item_pickup.cpp                |    5 +-
+ engines/bladerunner/light.cpp                      |  110 +-
+ engines/bladerunner/lights.cpp                     |    4 +-
+ engines/bladerunner/module.mk                      |    1 +
+ engines/bladerunner/music.cpp                      |   15 +-
+ engines/bladerunner/obstacles.cpp                  |  246 +++-
+ engines/bladerunner/obstacles.h                    |    5 +-
+ engines/bladerunner/regions.cpp                    |    1 -
+ engines/bladerunner/savefile.cpp                   |    5 +-
+ engines/bladerunner/scene_objects.cpp              |    4 +
+ engines/bladerunner/screen_effects.cpp             |    4 +-
+ engines/bladerunner/script/ai/free_slot_a.cpp      |   16 +-
+ engines/bladerunner/script/ai/gordo.cpp            |   35 +-
+ engines/bladerunner/script/ai/izo.cpp              |    4 +-
+ engines/bladerunner/script/ai/mccoy.cpp            | 1221 +++++++++-----------
+ engines/bladerunner/script/ai/moraji.cpp           |   16 +-
+ engines/bladerunner/script/ai/officer_grayford.cpp |    5 +-
+ engines/bladerunner/script/ai/officer_leary.cpp    |    7 +-
+ engines/bladerunner/script/ai/steele.cpp           |    2 +-
+ engines/bladerunner/script/ai/zuben.cpp            |  163 ++-
+ engines/bladerunner/script/ai_script.h             |   29 +-
+ engines/bladerunner/script/police_maze.cpp         |   23 +-
+ engines/bladerunner/script/police_maze.h           |    1 -
+ engines/bladerunner/script/scene/ar01.cpp          |    2 +-
+ engines/bladerunner/script/scene/ct01.cpp          |   55 +-
+ engines/bladerunner/script/scene/dr04.cpp          |   14 +-
+ engines/bladerunner/script/scene/hf01.cpp          |    4 +-
+ engines/bladerunner/script/scene/nr07.cpp          |    2 +-
+ engines/bladerunner/script/scene/rc01.cpp          |    7 -
+ engines/bladerunner/script/scene/rc03.cpp          |    6 +-
+ engines/bladerunner/script/scene_script.cpp        |    5 +-
+ engines/bladerunner/script/scene_script.h          |    2 +-
+ engines/bladerunner/script/script.cpp              |   38 +-
+ engines/bladerunner/set.cpp                        |   12 +-
+ engines/bladerunner/shape.cpp                      |   17 +-
+ engines/bladerunner/slice_animations.cpp           |    5 +-
+ engines/bladerunner/slice_renderer.cpp             |    6 +-
+ engines/bladerunner/text_resource.cpp              |    1 +
+ engines/bladerunner/time.cpp                       |    9 +-
+ engines/bladerunner/time.h                         |    1 +
+ engines/bladerunner/ui/end_credits.cpp             |    7 +-
+ engines/bladerunner/ui/esper.cpp                   |    5 +-
+ engines/bladerunner/ui/kia.cpp                     |   25 +-
+ engines/bladerunner/ui/kia_section_diagnostic.cpp  |    5 +-
+ engines/bladerunner/ui/kia_section_load.cpp        |   13 +-
+ engines/bladerunner/ui/kia_section_pogo.cpp        |    5 +-
+ engines/bladerunner/ui/kia_section_save.cpp        |   16 +-
+ engines/bladerunner/ui/kia_section_settings.cpp    |   62 +-
+ engines/bladerunner/ui/kia_section_settings.h      |    6 +-
+ engines/bladerunner/ui/ui_check_box.cpp            |    8 +-
+ engines/bladerunner/ui/ui_container.cpp            |   12 +-
+ engines/bladerunner/ui/ui_input_box.cpp            |    7 +-
+ engines/bladerunner/ui/ui_scroll_box.cpp           |   21 +-
+ engines/bladerunner/ui/vk.cpp                      |   12 +-
+ engines/bladerunner/vqa_decoder.cpp                |   90 +-
+ engines/bladerunner/vqa_player.cpp                 |   25 +-
+ engines/bladerunner/vqa_player.h                   |    2 -
+ engines/bladerunner/zbuffer.cpp                    |   26 +-
+ engines/bladerunner/zbuffer.h                      |    1 -
+...
+
+----
+RepTek=>
+git submodule init
+cd scummvm
+cd engines/bladerunner
+ls *txt
+rm *txt
+git commit -m "Evaluating Feb8 merge build|Prep for next \S\p|merge build" *
+git push origin HEAD:master
+
