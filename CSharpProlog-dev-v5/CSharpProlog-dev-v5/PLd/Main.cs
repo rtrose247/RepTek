@@ -36,10 +36,10 @@ namespace Prolog
         Console.WriteLine (PrologEngine.IntroText);
         Console.WriteLine ("\r\n--- Enter !! for command history, help for a list of all commands");
 
-        //if (Engine.ConfigSettings.InitialConsultFile != null)   // set in CSProlog.exe.config
-        //  e.Consult (Engine.ConfigSettings.InitialConsultFile); // any additional initialisations
+        if (Engine.ConfigSettings.InitialConsultFile != null)   // set in CSProlog.exe.config
+            e.Consult(Engine.ConfigSettings.InitialConsultFile); // any additional initialisations
 
-        while (!e.Halted)
+                while (!e.Halted)
         {
           Console.Write (e.Prompt);
           e.Query = ReadQuery ();

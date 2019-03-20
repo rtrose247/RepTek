@@ -100,7 +100,7 @@ namespace Secret_Hipster
             lastMousePos = new Vector2(OpenTK.Input.Mouse.GetState().X, OpenTK.Input.Mouse.GetState().Y);
         }
 
-        protected override void OnKeyDown(KeyboardKeyEventArgs e)
+        protected override void OnKeyDown(KeyboardKeyEventArgs e) 
         {
             base.OnKeyDown(e);
 
