@@ -1,0 +1,110 @@
+March '19(!!!)
+
+//s
+officer leary/grayford logic fork
+(combat)
+ug07
+=>changed officer leary/grayford goals
+
+//s
+ensure guzza appears in sewer scene
++sadik
++clovis
+
+//s
+rat on plank logic fork
+(combat)
+ug15+mccoy logic
+
+//s
+always add weapons order form
+ug13
+
+----
+hint:
+git submodule init
+git submodule update
+----
+
+...
+Sc	RpTk
+12.30	10.14
+01.16	01.22
+02.24	-
+03.07	-
+...
+
+=>
+-	10.14
+01.16*	01.22*
+02.24*	-
+
+=> ...|...|[01.16|01.22]|[02.24|01.22]|[01.16|02.24]
+
+----
+Right Click
+defined in bladerunner.cpp(<=BladeRunnerEngine::handleMouseAction)
+
+Plan merge Sc0307|RpTk 
+----
+git clone https://github.com/rtrose247/scummvm.git
+
+Prep for Feb24+Mar07 merge build|soft release: enriched images(+)animals:an(+)brg+westwood(+)rpg sprites:rpgsp
+----
+Cloning Sc from Mar12 '19
+BLADERUNNER: Fixed inability to drugged McCoy up again 
+Actors are not updated faster than 60 times per second.
+----
+Merge build from Mar12--15 
+(+)Zuben fork
+(+)RC01 user choice menu screenshot
+(+)GLGUI br spinner models
+----
+//s
+Obtain new Sc from Mar22 '19
+----
+//s
+hint:
+actor + clue + scene + set + prop(s) ...
+//s
+scorpion box + final photo(s) clue(s) |<=logic fork
+...
+//s
+Dektora + Lucy phone call => McCoy's Apt.|phone|...
+
+in engines/bladerunner
+e.g.,
+find . -name "ma*" | while read LINE; do c=$( cat ${LINE} | grep -ic "phone" ); [ $c -gt 0 ] && echo ${LINE} && grep -in "phone" ${LINE}; done >> ma+phone.txt &
+
+phone calls: to actors =>
+-guzza
+-crystal
+--
+-clovis
+-dektora
+-lucy
+----
+a possible scenario:
+e.g.,
+"phone calls for free"=> unlock all phone calls
+LOL
+OK
+----
+maybe also,
+police laboratory clues "for free"
+=> from Dino
+...
+LOL
+OK
+----
+Newest upstream is Mar27
+...
+----
+
+
+
+
+
+
+
+
