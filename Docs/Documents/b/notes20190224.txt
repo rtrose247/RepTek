@@ -27,6 +27,7 @@ for each file in input 1,
 	-if no "//RTR"=>replace with upstream version
 	-if "//RTR",
 		splice:
+		for functions:compare N-1 line prior to //RTR & copy //RTR (handle brace issue/s...)
 		for each line in //RTR comment block,copy until EOL|//----
 		for each line after EOL, find next corresponding line in RTR that is not whitespace and
 		resume source lines from upstream until next "//RTR" diff

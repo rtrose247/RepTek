@@ -104,7 +104,55 @@ BLADERUNNER: Moonbus fixes (Izo and Luther)
 Also fixed a typo that resulted in Izo's corpse persisting past chapter 2 at RC03
 
 ----
+Interesting:
+Meta-programming in .Net
+...
+----
+To do's:
+-update VS'19 
+-Fix 'ipster
+-merge build(s)
+...
+----
+"soft" release:
+-rw-r--r-- 1 rtrose 197121 34621 May 12  2018 anywhereisremix.mid
+-rw-r--r-- 1 rtrose 197121 10546 May 13  2018 Blade_Runner_2049_-_Main_Theme.mid
+-rw-r--r-- 1 rtrose 197121 30319 May 13  2018 Blade_Runner_End_Titles_Unfinished.mid
+-rw-r--r-- 1 rtrose 197121   125 Mar  7 17:25 BR-Intro.mid
+-rw-r--r-- 1 rtrose 197121 20019 Mar  7 17:25 BR-Intro2.mid
+-rw-r--r-- 1 rtrose 197121  7296 Mar  7 17:30 jerusalem.mid
+-rw-r--r-- 1 rtrose 197121 21025 May 12  2018 memoryoftrees.mid
+-rw-r--r-- 1 rtrose 197121 40121 May 12  2018 orinocoflow2.mid
+-rw-r--r-- 1 rtrose 197121  5077 Feb  3  2017 thexder.mid
+-rw-r--r-- 1 rtrose 197121 54721 May 13  2018 TV-World-Legends-Blade-Runner-Soundtrack.mid
+-rw-r--r-- 1 rtrose 197121 47165 Feb  3  2017 tx2theme.mid
+-rw-r--r-- 1 rtrose 197121 49152 May 12  2018 Vangelis_-_Antarctica_Theme.mid
+-rw-r--r-- 1 rtrose 197121 48371 Apr 25  2018 Vangelis_-_Blade_Runner.mid
+-rw-r--r-- 1 rtrose 197121 45878 May 12  2018 Vangelis_-_Chariots_of_Fire.mid
+-rw-r--r-- 1 rtrose 197121  1568 May 12  2018 Vangelis_-_Memories_of_green.mid
+-rw-r--r-- 1 rtrose 197121 67357 May 13  2018 Vangelis-Theme-From-Bladerunner.mid
 
+(+)
+"phone calls for free"|...
+----
+Lucy (on moonbus):"Oh Ray I love you so much!"
+----
+idea(s):
+Sc + MAME ...|Sc|#|...
+BR + C*	| <= embedded Cy-like g | Squad combat |....
+V + VG 	| <6> <= combat sequence(s)
+"face" game
+Txder
+...
+----
+maybe also:
+"relax" police station : shooting range...
+----
+Eval Mar28 merge build|(+)soft release|(+)phone calls for free|*
+*mid
+*moonbus combat
+...
+----
 
 
 
