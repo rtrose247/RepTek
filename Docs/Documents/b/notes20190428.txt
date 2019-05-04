@@ -1,0 +1,52 @@
+April '19(!!!!)
+
+(+)Eval merge build 4.22.19
+
+----
+(X)voice acting : volume level
+BLADERUNNER_ORIGINAL_SETTINGS
+audiopeech.cpp:
+AudioSpeech::AudioSpeech(BladeRunnerEngine *vm) {
+	_vm = vm;
+	//RTR 4.28.19
+	_speechVolume = 100;//BLADERUNNER_ORIGINAL_SETTINGS ? 50 : 100;
+	//----
+...
+
+----
+(+)scummvm dist:
+msvc=>for VS2019
+----
+
+bladerunner.cpp:1789:   _mixer->setVolumeForSoundType(_mixer->kSpeechSoundType, ConfMan.getInt("speech_volume"));
+bladerunner.cpp:1791:   // debug("syncSoundSettings: Volumes synced as Music: %d, Sfx: %d, Speech: %d", ConfMan.getInt("music_volume"), ConfMan.getInt("sfx_volume"), ConfMan.getInt("speech_volume"));
+bladerunner.cpp:1796:           _mixer->muteSoundType(_mixer->kSpeechSoundType, ConfMan.getBool("mute"));
+bladerunner.cpp:1799:   if (ConfMan.hasKey("speech_mute")) {
+bladerunner.cpp:1802:           // but we need to mute the speech
+bladerunner.cpp:1803:           _mixer->muteSoundType(_mixer->kSpeechSoundType, ConfMan.getBool("speech_mute"));
+
+----
+
+	//RTR 4.28.2019
+	//ConfMan.registerDefault("mute", "false");
+	//ConfMan.registerDefault("speech_mute", "false");
+	//----
+
+bladerunner.cpp:439:    ConfMan.registerDefault("speech_mute", "false");
+bladerunner.cpp:1799:   if (ConfMan.hasKey("speech_mute")) {
+bladerunner.cpp:1803:           _mixer->muteSoundType(_mixer->kSpeechSoundType, ConfMan.getBool("speech_mute"));
+
+
+----
+
+devtools=>create_project
+dists=>msvc=>create_msvc
+
+
+
+
+
+
+
+
+
