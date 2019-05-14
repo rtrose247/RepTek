@@ -10,3 +10,5 @@ REP TEK:Fair Use Blade Runner Game+Sc(R)ummVM Eng Subtitles
 ----
 
 Eval merge build 5.9.19|(+)voice
+----
+Eval merge build 5.14.19|(+)retain speech/voice|(+)ma02
