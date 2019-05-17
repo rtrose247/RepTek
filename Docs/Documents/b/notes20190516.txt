@@ -21,5 +21,7 @@ bb03:obtain Sebastian DNA clue
 
 ----
 Eval merge build 5.14.19|(+)retain speech/voice|(+)bb03|(+)ma02|(+)nr03
-
+----
+Eval merge build 5.14.19|(+)retain speech/voice|(+)dektora|(+)nr05|(+)nr07|(+)nr08
+----
 
