@@ -20,4 +20,4 @@ C:\Users\rtrose\Downloads\RepTek\Komorebi\obj\Debug\Komorebi.csproj.CoreCompileI
 C:\Users\rtrose\Downloads\RepTek\Komorebi\obj\Debug\Komorebi.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\Komorebi\obj\Debug\Komorebi.exe
 C:\Users\rtrose\Downloads\RepTek\Komorebi\obj\Debug\Komorebi.pdb
-C:\Users\rtrose\Downloads\RepTek\Komorebi\obj\Debug\Komorebi.csprojAssemblyReference.cache
+C:\Users\rtrose\Downloads\RepTek\Komorebi\obj\Debug\Komorebi.csproj.AssemblyReference.cache

@@ -31,4 +31,4 @@ C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csproj.Co
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.exe
 C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.pdb
-C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csprojAssemblyReference.cache
+C:\Users\rtrose\Downloads\RepTek\SequencerDemo\obj\Debug\SequencerDemo.csproj.AssemblyReference.cache

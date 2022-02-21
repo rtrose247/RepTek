@@ -44,7 +44,7 @@ namespace Secret_Hipster.Util
             //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\r\\256")).ToString();
 
             //brg
-            String myDirectory = (System.IO.Path.Combine(dir, "Textures\\brg\\256")).ToString();
+            String myDirectory = (System.IO.Path.Combine(dir, "..\\..\\Textures\\brg\\256")).ToString();
 
 
 

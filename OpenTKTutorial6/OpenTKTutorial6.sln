@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTKTutorial6", "OpenTKTutorial6.csproj", "{CE5CD75D-8626-4CD8-83FC-B7A4868DAEC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE5CD75D-8626-4CD8-83FC-B7A4868DAEC0}.Debug|x86.ActiveCfg = Debug|x86
+		{CE5CD75D-8626-4CD8-83FC-B7A4868DAEC0}.Debug|x86.Build.0 = Debug|x86
+		{CE5CD75D-8626-4CD8-83FC-B7A4868DAEC0}.Release|x86.ActiveCfg = Release|x86
+		{CE5CD75D-8626-4CD8-83FC-B7A4868DAEC0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA3DBE13-898C-466E-9550-2FB26947145E}
+	EndGlobalSection
+EndGlobal

@@ -27,4 +27,3 @@ C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multi
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.dll
 C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.pdb
-C:\Users\rtrose\Downloads\RepTek\Sanford.Multimedia.Midi\obj\Debug\Sanford.Multimedia.Midi.csprojAssemblyReference.cache

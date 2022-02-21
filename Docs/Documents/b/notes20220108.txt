@@ -1,0 +1,5 @@
+Looking at 3D:
+Assimp+OpenTK(+SharpFont)
+https://github.com/MasterQ32/OpenWorld.Engine
+=> a class library
+

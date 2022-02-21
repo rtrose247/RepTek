@@ -21,4 +21,5 @@ C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\Debug\QuickFont.Desktop.c
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\Debug\QuickFont.Desktop.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\Debug\QuickFont.dll
 C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\Debug\QuickFont.pdb
-C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\Debug\QuickFont.Desktop.csprojAssemblyReference.cache
+C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\bin\Debug\SharpFont.dll
+C:\Users\rtrose\Downloads\RepTek\QuickFont.Desktop\obj\Debug\QuickFont.Desktop.csproj.AssemblyReference.cache
