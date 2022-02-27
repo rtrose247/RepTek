@@ -22,7 +22,7 @@ namespace GLGUI
             set
             {
                 cursor = value;
-                if(ParentWindow != null)
+                if (ParentWindow != null)
                     ParentWindow.CursorHandle = cursor.Handle;
 #if REFERENCE_OPENTK_GLCONTROL
                 if(ParentControl != null)
