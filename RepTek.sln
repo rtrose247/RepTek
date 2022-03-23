@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedForm", "AnimatedForm.csproj", "{57E1436A-3560-4F00-9795-B2842524577D}"
 EndProject
@@ -29,6 +29,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLx", "CSharpProlog\PLx\PLx.csproj", "{E84A59D2-E868-4108-BE9A-55CBB7E85E36}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSProlog", "CSharpProlog\CSProlog\CSProlog.csproj", "{02CC7E7E-ACED-47A3-9A3F-CC7FE448ECBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "text_to_speech", "text_to_speech\text_to_speech.csproj", "{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -411,6 +413,34 @@ Global
 		{02CC7E7E-ACED-47A3-9A3F-CC7FE448ECBA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{02CC7E7E-ACED-47A3-9A3F-CC7FE448ECBA}.Release|x86.ActiveCfg = Release|Any CPU
 		{02CC7E7E-ACED-47A3-9A3F-CC7FE448ECBA}.Release|x86.Build.0 = Release|Any CPU
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Debug|Any CPU.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Debug|x86.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Debug|x86.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.LibraryRelease|Any CPU.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.LibraryRelease|Any CPU.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.LibraryRelease|x86.ActiveCfg = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.LibraryRelease|x86.Build.0 = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Debug|Any CPU.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Debug|Any CPU.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Debug|x86.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Debug|x86.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Release|Any CPU.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Release|Any CPU.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Release|x86.ActiveCfg = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net20-Release|x86.Build.0 = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Debug|Any CPU.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Debug|Any CPU.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Debug|x86.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Debug|x86.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Release|Any CPU.ActiveCfg = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Release|Any CPU.Build.0 = Debug|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Release|x86.ActiveCfg = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Net45-Release|x86.Build.0 = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Release|Any CPU.ActiveCfg = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Release|Any CPU.Build.0 = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Release|x86.ActiveCfg = Release|x86
+		{B4E8288F-22F4-44DF-9142-5A85DE21E9FC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

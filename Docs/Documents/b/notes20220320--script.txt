@@ -1,0 +1,29 @@
+[Script]
+Show-1
+[Det. Archer:] How I came to live with Karma- here at the Casino... she saved me. We had met first in Los Angeles Airport (LAX) and, later on assignment, when we touched down at Honolulu (International). I realized I had no luggage, no wallet. Somehow everything I owned was either lost in transit, or stolen. We were both former cops. "Five-0", as they say. We got called back in response to a heightened state of emergency. Everyone had orders to report to Hawaii. We thought it was nuts. No one had any information. Except we were all booked at the same "YUKON" hotel. Karma said I could stay with her until I got things sorted out.
+Show-2
+[Archer:] The reason for the most recent emergency? It turned out REPs (Resident Engineered Personnel) did most of the work these days, both on and off-world. In 2020, no planes were used in the attacks on Tyrell Corp. Instead, they said it was a gang of REPs that had staged the attack. "Looking for information", was Dr. Tyrell's usual cryptic response. Here today as a REP tech expert since his own company had used REP technology to clone him and continue its operations.
+Show-3
+[Archer:] And, as an added bonus, now, the kicker- we had been sharing our data with Tyrell in real-time, somebody used the data link to hack in. Our system, ESPER (electronic sensory perception and expert reasoning) has been compromised and is in "safe" mode. The Chief of Police said: "We are still formulating a plan, but we need to keep this quiet, and we are going to need your detection skills to unlock ESPER's memories and bring everything back online."
+Show-4
+TIMELINE:
+============
+1982 Blade Runner Partnership formed
+2000 Programmable Mannequins appear
+2010 Tyrell Corp. begins Nexus series
+2019 Off-world REPs Nexus 6 break into Tyrell
+2020 Off-world REPs attack Tyrell Corp.
+2022 Electromagnetic Pulse (EMP) attack LA
+2030 Tyrell+Wallace Corp. Merger+Venture
+2049 Investigation into Rachel/Deckard case
+2050 State of Emergency @ Honolulu
+Show-5
+INSTRUCTIONS:
+- Assemble team
+- Avoid obstacles
+- Clear all hassles
+- Capture all REPs
+- Find clues exploring clickable game map
+- Win battles
+- Bring ESPER back online
+- Help Karma

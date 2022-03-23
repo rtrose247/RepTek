@@ -45,4 +45,4 @@ C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csproj.CoreCompil
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csproj.CopyComplete
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.exe
 C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.pdb
-C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csprojAssemblyReference.cache
+C:\Users\rtrose\Downloads\RepTek\Example\obj\x86\Debug\Example.csproj.AssemblyReference.cache
