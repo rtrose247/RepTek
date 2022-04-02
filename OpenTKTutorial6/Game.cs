@@ -50,30 +50,30 @@ namespace OpenTKTutorial6
             textures.Add("depositphotos_23704199-stock-video-aerial-view-of-night-traffic", loadImage("depositphotos_23704199-stock-video-aerial-view-of-night-traffic.256.jpg"));
             textures.Add("animoid2", loadImage("animoid2.256.jpg"));
             //826ce1e3217432cf546c545a46c7be1e.256.JPG
-            textures.Add("warehouse2.256", loadImage("warehouse2.256.jpg"));
+            textures.Add("826ce1e3217432cf546c545a46c7be1e", loadImage("826ce1e3217432cf546c545a46c7be1e.256.JPG"));
             //Los-Angeles-skyline.256.JPG
             //textures.Add("ZHA_520_West28thStreet_NYC_01Final.125413", loadImage("ZHA_520_West28thStreet_NYC_01Final.125413.jpg"));
-            textures.Add("warehouse.256", loadImage("warehouse.256.jpg"));
+            textures.Add("Los-Angeles-skyline", loadImage("Los-Angeles-skyline.256.JPG"));
 
             //
             //
             // Create our objects
             TexturedCube tc = new TexturedCube();
-            tc.TextureID = textures["warehouse.256"];
+            tc.TextureID = textures["depositphotos_23704199-stock-video-aerial-view-of-night-traffic"];
             objects.Add(tc);
 
             TexturedCube tc2 = new TexturedCube();
             tc2.Position += new Vector3(1f, 1f, 1f);
-            tc2.TextureID = textures["warehouse2.256"];
+            tc2.TextureID = textures["animoid2"];
             objects.Add(tc2);
 
             TexturedCube tc3 = new TexturedCube();
-            tc3.TextureID = textures["warehouse2.256"];
+            tc3.TextureID = textures["826ce1e3217432cf546c545a46c7be1e"];
             objects.Add(tc3);
 
             TexturedCube tc4 = new TexturedCube();
             tc4.Position += new Vector3(1f, 1f, 1f);
-            tc4.TextureID = textures["warehouse.256"];
+            tc4.TextureID = textures["Los-Angeles-skyline"];
             objects.Add(tc4);
 
             // Move camera away from origin

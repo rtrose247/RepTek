@@ -61,6 +61,7 @@
   <ItemGroup>
     <Reference Include="AssimpNet, Version=3.3.2.0, Culture=neutral, PublicKeyToken=3edc10cb77b1bca2, processorArchitecture=MSIL">
       <HintPath>..\packages\AssimpNet.3.3.2\lib\net45\AssimpNet.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OpenTK">
       <HintPath>..\..\Secret-Hipster-master\packages\OpenTK.1.1.1589.5942\lib\NET40\OpenTK.dll</HintPath>

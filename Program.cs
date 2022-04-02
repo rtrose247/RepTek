@@ -14,7 +14,7 @@ namespace AnimatedForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new animatedFrm());
+            //Application.Run(new animatedFrm());
             Application.Run(new MainForm());
 
         }
