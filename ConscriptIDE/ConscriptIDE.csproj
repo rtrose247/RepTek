@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B15DE3FB-BFDD-4FA2-B0B8-A362B1FD79FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conscript.IDE</RootNamespace>
+    <AssemblyName>Conscript.IDE</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>Resources\Conscript.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildSettingsForm.Designer.cs">
+      <DependentUpon>BuildSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ByteCodeListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ByteCodeListBox.Designer.cs">
+      <DependentUpon>ByteCodeListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebugState.cs" />
+    <Compile Include="HostEnvironmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HostEnvironmentForm.Designer.cs">
+      <DependentUpon>HostEnvironmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunScriptForm.Designer.cs">
+      <DependentUpon>RunScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptHistoryManager.cs" />
+    <Compile Include="ScriptLoaderIDE.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildSettingsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BuildSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByteCodeListBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ByteCodeListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HostEnvironmentForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HostEnvironmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunScriptForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RunScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VariableDictionaryTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VariableDictionaryTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VariableDictionaryTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VariableDictionaryTreeView.Designer.cs">
+      <DependentUpon>VariableDictionaryTreeView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Conscript\Conscript.csproj">
+      <Project>{EE01F3D5-D9EE-4A5C-B467-9A5705516139}</Project>
+      <Name>Conscript</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
+    <None Include="Resources\BuildSettings.png" />
+    <None Include="Resources\BuildHostEnvironment.png" />
+    <None Include="Resources\BuildScript.png" />
+    <Content Include="Resources\Conscript.ico" />
+    <None Include="Resources\HelpAbout.png" />
+    <None Include="Resources\DebugStepOut.png" />
+    <None Include="Resources\DebugStepInto.png" />
+    <None Include="Resources\DebugStepOver.png" />
+    <None Include="Resources\DebugBreak.png" />
+    <None Include="Resources\DebugToggleBreakpoint.png" />
+    <None Include="Resources\DebugClearBreakpoints.png" />
+    <None Include="Resources\DebugRun.png" />
+    <None Include="Resources\EditRedo.png" />
+    <None Include="Resources\EditUndo.png" />
+    <None Include="Resources\DebugStop.png" />
+    <None Include="Resources\EditDelete.png" />
+    <None Include="Resources\FileSave.png" />
+    <None Include="Resources\FileOpen.png" />
+    <None Include="Resources\FileNew.png" />
+    <None Include="Resources\EditPaste.png" />
+    <None Include="Resources\EditCut.png" />
+    <None Include="Resources\EditCopy.png" />
+    <None Include="Resources\DebugStart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

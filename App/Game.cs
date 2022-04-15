@@ -1,14 +1,19 @@
 ﻿using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Input;
+using Secret_Hipster;
 using Secret_Hipster.Graphics;
 using Secret_Hipster.OpenGLPrograms;
 using Secret_Hipster.Primitives;
 using Secret_Hipster.Util;
 using System;
 using System.Drawing;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Secret_Hipster
+namespace RepTek
 {
     public class Game : GameWindow
     {
@@ -72,7 +77,7 @@ namespace Secret_Hipster
         protected override void OnRenderFrame(FrameEventArgs e)
         {
             base.OnRenderFrame(e);
-            
+
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.Enable(EnableCap.DepthTest);
             GL.Enable(EnableCap.Texture2D);

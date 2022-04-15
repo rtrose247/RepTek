@@ -1,0 +1,23 @@
+function main()
+{
+    Gfx_Initialise(640,480);
+    var intensity = 0;
+    for (var index = 0; index < 400; index += 10)
+    {
+        Gfx_SetColour(255 - intensity, 0, intensity);
+        intensity += 5;
+
+        Gfx_DrawLine(0, index, 400 - index, 0);
+
+        Gfx_SetColour(intensity, 255, 0);
+        Gfx_FillEllipse(index, 200, index / 4, index / 4);
+
+        Gfx_SetColour(0, 0, 0);
+        Gfx_DrawEllipse(index, 200, index / 4, index / 4);
+    }
+
+    // pause
+    for (var pause = 0; pause < 200000; pause++); 
+
+    Gfx_Shutdown();
+}
