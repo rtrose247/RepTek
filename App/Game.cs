@@ -1,6 +1,14 @@
-﻿using OpenTK;
+﻿using Conscript;
+using Conscript.Compiler;
+using Conscript.Runtime;
+using FastBitmapLib;
+using ca.axoninteractive.Geometry.Hex;
+using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Input;
+using QuickFont;
+using QuickFont.Configuration;
+using Sanford.Multimedia.Midi;
 using Secret_Hipster;
 using Secret_Hipster.Graphics;
 using Secret_Hipster.OpenGLPrograms;
@@ -8,10 +16,9 @@ using Secret_Hipster.Primitives;
 using Secret_Hipster.Util;
 using System;
 using System.Drawing;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Prolog;
+
+
 
 namespace RepTek
 {
@@ -23,9 +30,33 @@ namespace RepTek
         private SierpinskiCarpet sierpinskiCarpet;
         private Grid grid;
         private Vector2 lastMousePos;
+        //
+        private PrologEngine myPrologBrain;
+        //
+        private ScriptManager m_scriptManager;
+        private ScriptLoader m_scriptLoaderDefault;
+        //
+        public class MidiHelper
+        {
+            private bool playing = false;
+            private bool closing = false;
+            private OutputDevice outDevice;
+            private int outDeviceID = 0;
+        }
+        //
+        private static HexGrid hexgrid = new HexGrid(2f);
+        private float offset = 0.5f * hexgrid.HexRadius;
+        //
 
         public Game(int width, int height) : base(width, height)
         {
+            myPrologBrain = new PrologEngine();
+            // script manager
+            m_scriptManager = new ScriptManager();
+
+            // reference to default script loader
+            ScriptLoader m_scriptLoaderDefault;
+            //
         }
 
         // Settings, load textures, sounds

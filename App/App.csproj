@@ -5,13 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1D64C161-4597-4C01-BEB9-D5D989420CB6}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>RepTek</RootNamespace>
     <AssemblyName>App</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,9 +33,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -54,8 +58,38 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Conscript">
+      <HintPath>..\Conscript\bin\Debug\Conscript.dll</HintPath>
+    </Reference>
+    <Reference Include="CSProlog">
+      <HintPath>..\CSharpProlog\CSProlog\bin\Debug\net35\CSProlog.dll</HintPath>
+    </Reference>
+    <Reference Include="FastBitmapLib">
+      <HintPath>..\FastBitmap-master\FastBitmap\bin\Debug\FastBitmapLib.dll</HintPath>
+    </Reference>
+    <Reference Include="HexGrid">
+      <HintPath>..\HexGrid\bin\Debug\HexGrid.dll</HintPath>
+    </Reference>
     <Reference Include="OpenTK">
       <HintPath>..\OpenTKTutorial6\packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFont">
+      <HintPath>..\QuickFont.Desktop\bin\Debug\QuickFont.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Collections">
+      <HintPath>..\Sanford.Multimedia.Midi\bin\Debug\Sanford.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia">
+      <HintPath>..\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Midi">
+      <HintPath>..\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Timers">
+      <HintPath>..\Sanford.Multimedia.Midi\bin\Debug\Sanford.Multimedia.Timers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Threading">
+      <HintPath>..\Sanford.Multimedia.Midi\bin\Debug\Sanford.Threading.dll</HintPath>
     </Reference>
     <Reference Include="Secret-Hipster">
       <HintPath>..\Secret-Hipster-master\Secret-Hipster\bin\Debug\Secret-Hipster.dll</HintPath>
