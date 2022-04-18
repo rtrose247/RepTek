@@ -23,7 +23,7 @@ namespace RepTek
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var game = new Game(800, 600))
+            using (var game = new Game())
             {
                 // Run the game at 60 updates per second
                 game.Run(60.0);

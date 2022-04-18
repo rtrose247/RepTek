@@ -14,15 +14,18 @@ using Secret_Hipster.Graphics;
 using Secret_Hipster.OpenGLPrograms;
 using Secret_Hipster.Primitives;
 using Secret_Hipster.Util;
+using SimpleScene;
+using SimpleScene.Demos;
 using System;
 using System.Drawing;
+using System.Collections.Generic;
 using Prolog;
 
 
 
 namespace RepTek
 {
-    public class Game : GameWindow
+    public class Game : TestBenchBootstrap //GameWindow
     {
         private Camera camera;
         private Spritebatch spritebatch;
@@ -47,34 +50,33 @@ namespace RepTek
         private static HexGrid hexgrid = new HexGrid(2f);
         private float offset = 0.5f * hexgrid.HexRadius;
         //
-
-        public Game(int width, int height) : base(width, height)
+        public Game()
+            : base("RepTek")
         {
+            // prolog engine
             myPrologBrain = new PrologEngine();
             // script manager
             m_scriptManager = new ScriptManager();
-
-            // reference to default script loader
-            ScriptLoader m_scriptLoaderDefault;
-            //
         }
+
 
         // Settings, load textures, sounds
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            VSync = VSyncMode.On;
-            GL.Viewport(0, 0, Width, Height);
+            //VSync = VSyncMode.On;
+            //GL.Viewport(0, 0, Width, Height);
 
-            lastMousePos = new Vector2();
-            camera = new Camera(Width, Height);
+            //lastMousePos = new Vector2();
+            //camera = new Camera(Width, Height);
 
-            camera.Position = new Vector3(0, 10, 20);
+            //camera.Position = new Vector3(0, 10, 20);
 
-            spritebatch = new Spritebatch(camera);
-            grid = new Grid(Color.White);
-            quadHandler = new QuadHandler();
-            sierpinskiCarpet = new SierpinskiCarpet(12);
+            //spritebatch = new Spritebatch(camera);
+            //grid = new Grid(Color.White);
+            //quadHandler = new QuadHandler();
+            //sierpinskiCarpet = new SierpinskiCarpet(12);
+
         }
 
         protected override void OnResize(EventArgs e)
@@ -83,88 +85,58 @@ namespace RepTek
             GL.ClearColor(Color.CornflowerBlue);
         }
 
-        // Game logic, input handling
+        //SS function(s)
+        //
+        protected override void setupHUD()
+        {
+            base.setupHUD();
+
+            // HUD text....
+            //var testDisplay = new SSObject2DSurface_AGGText();
+            //testDisplay.backgroundColor = Color.Transparent;
+            //testDisplay.alphaBlendingEnabled = true;
+            //testDisplay.Label = "TEST AGG";
+            //hud2dScene.AddObject(testDisplay);
+            //testDisplay.Pos = new Vector3(50f, 100f, 0f);
+            //testDisplay.Scale = new Vector3(1.0f);
+        }
+
+        protected override void setupScene()
+        {
+            base.setupScene();
+
+            var mesh = SSAssetManager.GetInstance<SSMesh_wfOBJ>("./blade_runner_police_spinner_blue.rot.4.obj");
+
+            // add drone
+            SSObject droneObj = new SSObjectMesh(mesh);
+            main3dScene.AddObject(droneObj);
+            droneObj.renderState.lighted = true;
+            //droneObj.EulerDegAngleOrient(-40.0f,0.0f);
+            droneObj.Pos = new OpenTK.Vector3(0f, 0f, -15f);
+            droneObj.Name = "drone 1";
+
+            // add second drone
+
+            SSObject drone2Obj = new SSObjectMesh(
+                SSAssetManager.GetInstance<SSMesh_wfOBJ>("./blade_runner_police_spinner_blue.rot.4.obj")
+            );
+            main3dScene.AddObject(drone2Obj);
+            drone2Obj.renderState.lighted = true;
+            drone2Obj.EulerDegAngleOrient(-40f, 0f);
+            drone2Obj.Pos = new OpenTK.Vector3(-10f, -10f, 0f);
+            drone2Obj.Name = "drone 2";
+        }
+
+        //
+            /// <summary>
+            /// Called when it is time to setup the next frame. Add you game logic here.
+            /// </summary>
+            /// <param name="e">Contains timing information for framerate independent logic.</param>
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
 
-            if (Focused)
-            {
-                Vector2 delta = lastMousePos - new Vector2(OpenTK.Input.Mouse.GetState().X, OpenTK.Input.Mouse.GetState().Y);
-
-                this.camera.AddRotation(delta.X, delta.Y);
-                ResetCursor();
-            }
-
-            quadHandler.Update(e.Time);
-
-            if (Keyboard[Key.Escape])
-            {
-                Exit();
-            }
         }
 
-        // Render graphics
-        protected override void OnRenderFrame(FrameEventArgs e)
-        {
-            base.OnRenderFrame(e);
-
-            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-            GL.Enable(EnableCap.DepthTest);
-            GL.Enable(EnableCap.Texture2D);
-
-            spritebatch.Begin<TextureProgram>();
-            quadHandler.Draw(spritebatch);
-            spritebatch.End();
-
-            sierpinskiCarpet.Draw(spritebatch);
-
-            grid.Draw(spritebatch);
-
-            SwapBuffers();
-        }
-
-        private void ResetCursor()
-        {
-            OpenTK.Input.Mouse.SetPosition(Bounds.Left + Bounds.Width / 2, Bounds.Top + Bounds.Height / 2);
-            lastMousePos = new Vector2(OpenTK.Input.Mouse.GetState().X, OpenTK.Input.Mouse.GetState().Y);
-        }
-
-        protected override void OnKeyDown(KeyboardKeyEventArgs e)
-        {
-            base.OnKeyDown(e);
-
-            switch (e.Key)
-            {
-                case Key.W:
-                    camera.Move(0f, 0f, 0.1f);
-                    break;
-                case Key.A:
-                    camera.Move(-0.1f, 0f, 0f);
-                    break;
-                case Key.S:
-                    camera.Move(0f, 0f, -0.1f);
-                    break;
-                case Key.D:
-                    camera.Move(0.1f, 0f, 0f);
-                    break;
-                case Key.Up:
-                    camera.Move(0f, 0.1f, 0f);
-                    break;
-                case Key.Down:
-                    camera.Move(0f, -0.1f, 0f);
-                    break;
-            }
-        }
-
-        protected override void OnFocusedChanged(EventArgs e)
-        {
-            base.OnFocusedChanged(e);
-
-            if (Focused)
-            {
-                ResetCursor();
-            }
-        }
     }
 }

@@ -1,0 +1,26 @@
+Relative path to Textures
+(in Secret-Hipster):
+
+//RepTek/App/bin/Debug (master)
+$ ls -l ../../../Secret-Hipster-master/Secret-Hipster/Textures
+total 388
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 256-sample/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 Containers/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 an/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 brg/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 c/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 c.night/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 chara/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 e/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 f/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 h.night/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 i/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 la.night/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 m/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 o/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 r/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 rpgsp/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 rptk/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 s/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 t/
+drwxr-xr-x 1 rtrose 197121 0 May  3  2019 w/

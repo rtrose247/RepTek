@@ -9,7 +9,7 @@ namespace Secret_Hipster.Util
 {
     public class QuadHandler
     {
-        public List<TextureQuad> TextureQuads { get; private set; }
+        public List<TextureQuad> TextureQuads { get; set; }
         public int greenTexture;
         public int blueTexture;
 

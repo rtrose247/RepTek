@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meshomatic", "Meshomatic\Meshomatic.csproj", "{D52F55A8-08E5-488E-AD0F-BF49B1F29A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meshomatic.DumpMesh", "DumpMesh\Meshomatic.DumpMesh.csproj", "{9FB9D6E0-442D-4644-8612-7B82FAAFDA9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meshomatic.DisplayMesh", "DisplayMesh\Meshomatic.DisplayMesh.csproj", "{C74FFDCF-E7A3-4AE9-AAC1-C1F67F032B8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plaza", "plaza\Plaza.csproj", "{D6A463ED-D80E-45E8-A21E-38560AE0AF71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D52F55A8-08E5-488E-AD0F-BF49B1F29A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52F55A8-08E5-488E-AD0F-BF49B1F29A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52F55A8-08E5-488E-AD0F-BF49B1F29A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52F55A8-08E5-488E-AD0F-BF49B1F29A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FB9D6E0-442D-4644-8612-7B82FAAFDA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB9D6E0-442D-4644-8612-7B82FAAFDA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB9D6E0-442D-4644-8612-7B82FAAFDA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB9D6E0-442D-4644-8612-7B82FAAFDA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C74FFDCF-E7A3-4AE9-AAC1-C1F67F032B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C74FFDCF-E7A3-4AE9-AAC1-C1F67F032B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C74FFDCF-E7A3-4AE9-AAC1-C1F67F032B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C74FFDCF-E7A3-4AE9-AAC1-C1F67F032B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A463ED-D80E-45E8-A21E-38560AE0AF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A463ED-D80E-45E8-A21E-38560AE0AF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A463ED-D80E-45E8-A21E-38560AE0AF71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A463ED-D80E-45E8-A21E-38560AE0AF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Meshomatic\Meshomatic.csproj
+	EndGlobalSection
+EndGlobal

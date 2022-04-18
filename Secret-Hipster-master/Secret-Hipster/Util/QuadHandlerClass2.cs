@@ -12,8 +12,9 @@ namespace Secret_Hipster.Util
     //RTR 6/16/2018
     //exp. with fixed layout(s)
     //
-    class QuadHandlerClass2 : QuadHandler
+    public class QuadHandlerClass2
     {
+        public List<TextureQuad> TextureQuads { get; set; }
         //additional container for member data
         //=> bitmap array
         //public Bitmap[] myBitmaps;
@@ -22,9 +23,21 @@ namespace Secret_Hipster.Util
         public int[] myTextures;
         public int myTextureIndex;
 
+        public QuadHandlerClass2()
+        {
+            this.Init();
+        }
+
+        public void Init()
+        {
+            this.TextureQuads = new List<TextureQuad>();
+            this.CreateTexture();
+            this.CreateCubes();
+        }
+
         //Overrides
         //I's => interiors
-        public override void CreateTexture()
+        public void CreateTexture()
         {
             //Begin with "i" scenes
             //
@@ -44,9 +57,13 @@ namespace Secret_Hipster.Util
             //String myDirectory = (System.IO.Path.Combine(dir, "Textures\\r\\256")).ToString();
 
             //brg
-            String myDirectory = (System.IO.Path.Combine(dir, "..\\..\\Textures\\brg\\256")).ToString();
+            //String myDirectory = (System.IO.Path.Combine(dir, "..\\..\\Textures\\brg\\256")).ToString();
 
+            //city night
+            //String myDirectory = (System.IO.Path.Combine(dir, "..\\..\\..\\Secret-Hipster-master\\Secret-Hipster\\Textures\\c.night\\256")).ToString();
 
+            //honolulu night
+            String myDirectory = (System.IO.Path.Combine(dir, "..\\..\\..\\Secret-Hipster-master\\Secret-Hipster\\Textures\\h.night\\256")).ToString();
 
             // Get list of images
             //
@@ -76,7 +93,7 @@ namespace Secret_Hipster.Util
 
         }
 
-        public override void CreateCubes()
+        public void CreateCubes()
         {
             //simple(!)
             //use tex counter to loop through all images
@@ -89,7 +106,8 @@ namespace Secret_Hipster.Util
             int y = 0;
             int ystep = 1;
 
-            for (y = 0; y < 19; y++)
+            //tmp auto-layout
+            for (y = 0; y < 6; y++)
             { 
                 for (int i = -10; i < 10; i++)
                 {
@@ -116,11 +134,11 @@ namespace Secret_Hipster.Util
 
                         jj += 0.5;
 
-                        //texture counter
-                        //
+                        //maybe
                         myTexCounter++;
                         if (myTexCounter >= myTextureIndex)
                             myTexCounter = 0;
+
                     }
                     //
                     jj = 0;
@@ -132,7 +150,15 @@ namespace Secret_Hipster.Util
             }//end for(s)
         }
 
-        public override void Draw(Spritebatch spritebatch)
+        public void Update(double time)
+        {
+            foreach (var textureQuad in TextureQuads)
+            {
+                textureQuad.Update(time);
+            }
+        }
+
+        public void Draw(Spritebatch spritebatch)
         {
             for (int i = 0; i < TextureQuads.Count; i++)
             {
