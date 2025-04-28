@@ -1,0 +1,1417 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading; // For pauses
+
+// ####################################################
+// ########         CORE GAME CLASSES          ########
+// ####################################################
+
+#region Core Game Classes
+
+/// <summary>
+/// Enum to represent the ability affected by a card modifier
+/// </summary>
+public enum AffectedAbility
+{
+	None, // Default or for cards with non-modifier effects
+	Investigation,
+	Detection,
+	Combat,
+	Movement // Represents modification to movement roll result
+}
+
+/// <summary>
+/// Base class for all cards in the game.
+/// </summary>
+public abstract class Card
+{
+	public string Name { get; protected set; }
+	public string Type { get; protected set; } // Clue, Hassle, Help, Suspect, Replicant
+
+	protected Card(string name, string type)
+	{
+		Name = name;
+		Type = type;
+	}
+
+	// Example placeholder for playing - specific cards should override
+	public virtual void Play(Player source, Player target, Game game)
+	{
+		Console.WriteLine($"{source?.Name ?? "Someone"} plays {Name}. (Base effect not implemented)");
+	}
+
+	public override string ToString()
+	{
+		// Provides a clean representation for console output
+		string details = $" ({Type})";
+		if (this is HelpCard hc && hc.AbilityAffected != AffectedAbility.None)
+			details = $" ({Type}: {hc.ModifierAmount:+0;-#}{hc.AbilityAffected} @ {hc.TargetLocation ?? "Anywhere"})";
+		else if (this is ClueCard cl && cl.AbilityAffected != AffectedAbility.None)
+			details = $" ({Type}: {cl.ModifierAmount:+0;-#}{cl.AbilityAffected} @ {cl.TargetLocation ?? "Anywhere"})";
+		else if (this is HassleCard hs && hs.AbilityAffected != AffectedAbility.None)
+			details = $" ({Type}: {hs.ModifierAmount:+0;-#}{hs.AbilityAffected} @ {hs.TargetLocation ?? "Anywhere"})";
+		else if (this is SuspectCard sc)
+			details = $" ({Type}: Evasion {sc.Evasion})";
+		else if (this is ReplicantCard rc)
+			details = $" ({Type}: Combat {rc.Combat})";
+
+		return $"{Name}{details}";
+	}
+}
+
+// --- Specific Card Types ---
+
+public class SuspectCard : Card
+{
+	public int Evasion { get; private set; }
+	public SuspectCard(string name, int evasion) : base(name, "Suspect") {
+		Evasion = evasion;
+	}
+}
+
+public class ReplicantCard : Card
+{
+	public int Combat { get; private set; }
+	public ReplicantCard(string name, int combat) : base(name, "Replicant") {
+		Combat = combat;
+	}
+}
+
+public class HelpCard : Card
+{
+	public AffectedAbility AbilityAffected { get; private set; }
+	public int ModifierAmount { get; private set; } // Positive for Help
+	public string TargetLocation { get; private set; } // null or empty if applies anywhere
+
+	// Constructor for Help cards that modify an ability
+	public HelpCard(string name, AffectedAbility ability, int amount, string location = null)
+		: base(name, "Help")
+	{
+		AbilityAffected = ability;
+		ModifierAmount = Math.Max(0, amount);
+		TargetLocation = location;
+	}
+	// Constructor for Help cards with other non-modifier effects
+	public HelpCard(string name) : base(name, "Help")
+	{
+		AbilityAffected = AffectedAbility.None;
+		ModifierAmount = 0;
+		TargetLocation = null;
+	}
+}
+
+public class ClueCard : Card
+{
+	public AffectedAbility AbilityAffected { get; private set; } // Likely Investigation
+	public int ModifierAmount { get; private set; } // Positive for Clue
+	public string TargetLocation { get; private set; } // Usually specific
+
+	// Constructor for Clue cards
+	public ClueCard(string name, int amount, string location = null) : base(name, "Clue")
+	{
+		AbilityAffected = AffectedAbility.Investigation; // Per rules [cite: 203]
+		ModifierAmount = Math.Max(1, amount);
+		TargetLocation = location ?? null;//throw new ArgumentNullException(nameof(location), "Clue card must specify a target location.");
+	}
+	// Constructor for Clue cards with non-standard effects?
+	public ClueCard(string name) : base(name, "Clue")
+	{
+		AbilityAffected = AffectedAbility.None;
+		ModifierAmount = 0;
+		TargetLocation = null;
+	}
+}
+
+public class HassleCard : Card
+{
+	public AffectedAbility AbilityAffected { get; private set; }
+	public int ModifierAmount { get; private set; } // Negative for Hassle
+	public string TargetLocation { get; private set; } // null or empty if applies anywhere
+
+	// Constructor for Hassle cards that modify an ability
+	public HassleCard(string name, AffectedAbility ability, int amount, string location = null)
+		: base(name, "Hassle")
+	{
+		AbilityAffected = ability;
+		ModifierAmount = Math.Min(0, amount);
+		TargetLocation = location;
+	}
+	// Constructor for Hassle cards with other non-modifier effects
+	public HassleCard(string name) : base(name, "Hassle")
+	{
+		AbilityAffected = AffectedAbility.None;
+		ModifierAmount = 0;
+		TargetLocation = null;
+	}
+}
+
+
+/// <summary>
+/// Represents a deck of cards (Draw, Discard, Replicant).
+/// </summary>
+public class Deck
+{
+	public List<Card> cards;
+	private Random rng = new Random();
+
+	public int Count => cards.Count;
+	public bool IsEmpty => cards.Count == 0;
+
+	public Deck(bool isEmpty = false)
+	{
+		cards = new List<Card>();
+		if (!isEmpty) InitializeDeck();
+	}
+
+	// Populate with sample cards - REPLACE with full card list from rules [cite: 188]
+	private void InitializeDeck()
+	{
+		// Based on rules: 9 Clues, 12 Hassles, 19 Helps, 15 Suspects = 55 cards
+		// Clues (Example names from rules/film)
+		cards.Add(new ClueCard("Not Fish... Snake Scale!", 1, "Snake Pit"));
+		cards.Add(new ClueCard("That's the Hotel", 1, "Yukon Hotel"));
+		cards.Add(new ClueCard("Precious Photos", 1)); // Special clue, applies anywhere? Treat as +1 Inv? [cite: 94]
+		cards.Add(new ClueCard("Esper Analysis", 1, "Police HQ")); // Assumption
+		cards.Add(new ClueCard("Genetic Identity", 1, "Tyrell Corp")); // Assumption
+		// Add 4 more unique Clues...
+		//cards.Add(new ClueCard("Clue 6", 1, "Animoid Row"));
+		//cards.Add(new ClueCard("Clue 7", 1, "White Dragon"));
+		//cards.Add(new ClueCard("Clue 8", 1, "Bradbury Building"));
+		//cards.Add(new ClueCard("Clue 9", 1, "Chinatown"));
+
+
+		// Hassles (Examples)
+		cards.Add(new HassleCard("Buzz Off", AffectedAbility.Investigation, -1, "Snake Pit"));
+		cards.Add(new HassleCard("Time to Die!", AffectedAbility.Combat, -1));
+		cards.Add(new HassleCard("And If the Machine Doesn't Work?", AffectedAbility.Detection, -1));
+		cards.Add(new HassleCard("You Not Come Here!", AffectedAbility.Investigation, -1, "Eyeworks"));
+		cards.Add(new HassleCard("Spinner Crash", AffectedAbility.Movement, -2)); // Example movement hassle
+		// Add 7 more unique Hassles...
+		//for(int i=0; i<7; i++) cards.Add(new HassleCard($"Hassle {i+5}", AffectedAbility.Investigation, -1));
+
+
+		// Helps (Examples)
+		cards.Add(new HelpCard("That's the Spirit!", AffectedAbility.Combat, 1));
+		cards.Add(new HelpCard("Desperate Leap")); // Special effect card, no modifier
+		cards.Add(new HelpCard("I Owe You One")); // Special effect card
+		cards.Add(new HelpCard("Street Smarts", AffectedAbility.Investigation, 1)); // Example
+		cards.Add(new HelpCard("Keen Eye", AffectedAbility.Detection, 1)); // Example
+		cards.Add(new HelpCard("Quick Reflexes", AffectedAbility.Combat, 1)); // Example
+		cards.Add(new HelpCard("Shortcut", AffectedAbility.Movement, 1)); // Example movement help
+		// Add 12 more unique Helps...
+		//for(int i=0; i<12; i++) cards.Add(new HelpCard($"Help {i+5}", AffectedAbility.Detection, 1));
+
+
+		// Suspects (Examples)
+		cards.Add(new SuspectCard("Abdul Ben Hassan", 5)); // Example names
+		cards.Add(new SuspectCard("Taffey Lewis", 6));
+		cards.Add(new SuspectCard("Hannibal Chew", 7));
+		cards.Add(new SuspectCard("Cambodian Lady", 5));
+		cards.Add(new SuspectCard("Bartender", 6));
+		// Add 10 more unique Suspects...
+		//for(int i=0; i<10; i++) cards.Add(new SuspectCard($"Suspect {i+6}", (i % 3) + 5)); // Evasion 5-7
+		//----
+		//
+		cards.Add(new HelpCard("I Owe You One..."));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new SuspectCard("Suspicious Character", 6));
+		cards.Add(new HassleCard("You Not Come Here!", AffectedAbility.Investigation, -1, "Eyeworks"));
+		cards.Add(new ClueCard("Not Fish... Snake Scale!", 1, "Snake Pit"));
+		cards.Add(new ClueCard("Look, My Friend...", 1, "Chinatown"));
+		cards.Add(new HelpCard("Street Bandits", AffectedAbility.Investigation, 1)); // Example
+		cards.Add(new ClueCard("The Prodigal Son Brings Death", 2, "Tyrell Corp"));
+		cards.Add(new ClueCard("Look, My Friend...", 1, "Chinatown"));
+		cards.Add(new HassleCard("Dense Crowd", AffectedAbility.Investigation, -1, "Chinatown"));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new HelpCard("Spinner Travel", AffectedAbility.Movement, 10)); // Example movement help
+		cards.Add(new SuspectCard("Suspicious Character", 5));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new ClueCard("Hang Up", 2, "Bradbury Building"));
+		cards.Add(new HelpCard("One More Question...", AffectedAbility.Detection, 1)); // Example
+		cards.Add(new HelpCard("Queen to Bishop Six"));
+		cards.Add(new HassleCard("Must Be Expensive", AffectedAbility.Investigation, -1, "Animoid Row"));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new HelpCard("Queen to Bishop Six"));
+		cards.Add(new ClueCard("That's the Hotel", 2, "Yukon Hotel"));
+		cards.Add(new ClueCard("Gimme Four", 1, "White Dragon"));
+		cards.Add(new SuspectCard("Suspicious Character", 5));
+		cards.Add(new HassleCard("Indulge Me", AffectedAbility.Investigation, -1, "Tyrell Corp"));
+		cards.Add(new SuspectCard("Suspicious Character", 6));
+		cards.Add(new HelpCard("Spinner Travel", AffectedAbility.Movement, 10)); // Example movement help
+		cards.Add(new HelpCard("Our Best and Only Friend"));
+		cards.Add(new HassleCard("Nobody Home", AffectedAbility.Investigation, -1, "Yukon Hotel"));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new HelpCard("Misdirection", AffectedAbility.Movement, -2)); // Example movement hassle
+		cards.Add(new ClueCard("Precious Photos", 1)); // Special clue, applies anywhere? Treat as +1 Inv? [cite: 94]
+		cards.Add(new HassleCard("Two is Plenty, Sir!", AffectedAbility.Investigation, -1, "White Dragon"));
+		cards.Add(new ClueCard("Replicants Don't Have Scales", 1, "Animoid Row"));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new HelpCard("Misdirection", AffectedAbility.Movement, -2)); // Example movement hassle
+		cards.Add(new HelpCard("Spinner Patrol"));
+		cards.Add(new HassleCard("And if the Machine Doesn't Work?", AffectedAbility.Detection, -1));
+		cards.Add(new HassleCard("Distracted", AffectedAbility.Investigation, -1));
+		cards.Add(new HelpCard("That's the Spirit!", AffectedAbility.Combat, 1));
+		cards.Add(new HassleCard("Buzz Off", AffectedAbility.Investigation, -1, "Snake Pit"));
+		cards.Add(new HassleCard("Time to Die!", AffectedAbility.Combat, -1));
+		cards.Add(new HelpCard("The Ol' Magic"));
+		cards.Add(new SuspectCard("Suspicious Character", 5));
+		cards.Add(new HelpCard("Light Ground Traffic", AffectedAbility.Movement, 1)); // Example movement help
+		cards.Add(new HelpCard("Desperate Leap"));
+		cards.Add(new HassleCard("Darkness", AffectedAbility.Investigation, -1, "Bradbury Building"));
+		cards.Add(new HelpCard("I Owe You One..."));
+		cards.Add(new SuspectCard("Suspicious Character", 5));
+		cards.Add(new HelpCard("Spinner Patrol"));
+		cards.Add(new HassleCard("And if the Machine Doesn't Work?", AffectedAbility.Detection, -1));
+		cards.Add(new SuspectCard("Suspicious Character", 7));
+		cards.Add(new SuspectCard("Suspicious Character", 6));
+		cards.Add(new HelpCard("Emergency Call", AffectedAbility.Detection, 2, "Eyeworks"));
+		cards.Add(new HassleCard("Heavy Ground Traffic", AffectedAbility.Movement, -2)); // Example movement hassle
+		cards.Add(new SuspectCard("Suspicious Character", 6));
+		cards.Add(new HelpCard("Desperate Leap"));
+
+		Console.WriteLine($"Initialized Draw Deck with {cards.Count} cards."); // Should be 55
+	}
+
+	public void InitializeReplicants() // 5 Replicants [cite: 188, 221]
+	{
+		cards.Add(new ReplicantCard("Roy Batty", 3));
+		cards.Add(new ReplicantCard("Leon", 2));
+		cards.Add(new ReplicantCard("Pris", 2));
+		cards.Add(new ReplicantCard("Zhora", 1));
+		cards.Add(new ReplicantCard("Rachael", 1));
+	}
+
+	public void Shuffle()
+	{
+		int n = cards.Count;
+		while (n > 1) {
+			n--;
+			int k = rng.Next(n + 1);
+			Card value = cards[k];
+			cards[k] = cards[n];
+			cards[n] = value;
+		}
+	}
+
+	public Card Draw() {
+		if (IsEmpty) return null;
+		Card card = cards[0];
+		cards.RemoveAt(0);
+		return card;
+	}
+	public void Add(Card card) {
+		if (card != null) cards.Add(card);    // For discard pile
+	}
+}
+
+/// <summary>
+/// Represents a player (human or AI) in the game.
+/// </summary>
+public class Player
+{
+	// Properties... (Name, Color, Skills, Hand, Location, Status flags, etc.)
+	public string Name { get; set; }
+	public string Color { get; set; }
+	public int Investigation { get; set; }
+	public int Detection { get; set; }
+	public int Combat { get; set; }
+	public List<Card> Hand { get; set; }
+	public string CurrentLocation { get; set; }
+	public string HomeLocation { get; set; }
+	public bool IsSympathizer { get; set; }
+	public List<ReplicantCard> RetiredReplicants { get; set; }
+	public List<ReplicantCard> RescuingReplicants { get; set; }
+	public bool IsInCombat { get; set; }
+	public Card CombatTarget { get; set; } // For Replicant combat
+	public Player PlayerCombatTarget { get; set; } // For Player combat
+	public bool IsAlive { get; set; }
+
+	private const int MaxHandSize = 5; // Rule [cite: 199]
+
+	public Player(string name, string color, string home)
+	{
+		Name = name;
+		Color = color;
+		HomeLocation = home;
+		CurrentLocation = home;
+		Hand = new List<Card>();
+		RetiredReplicants = new List<ReplicantCard>();
+		RescuingReplicants = new List<ReplicantCard>();
+		IsSympathizer = false;
+		IsInCombat = false;
+		IsAlive = true;
+	}
+
+	public void SetSkills(int inv, int det, int com)
+	{
+		if (inv + det + com != 6 || inv < 1 || det < 1 || com < 1 || inv > 4 || det > 4 || com > 4) // Rule [cite: 248]
+		{
+			Console.WriteLine($"Warning: Invalid skills for {Name} ({inv},{det},{com}). Rule [cite: 248]");
+		}
+		Investigation = inv;
+		Detection = det;
+		Combat = com;
+	}
+
+	public void DrawCards(Deck deck, int count)
+	{
+		int actualDraw = Math.Min(count, MaxHandSize - Hand.Count);
+		if (actualDraw <= 0) return;
+		Console.WriteLine($"{Name} draws {actualDraw} cards.");
+		for (int i = 0; i < actualDraw; i++) {
+			Card drawnCard = deck.Draw();
+			if (drawnCard != null) {
+				Hand.Add(drawnCard);
+				Console.WriteLine($" - Drew {drawnCard}");
+				if (drawnCard is ReplicantCard && !IsSympathizer) Console.WriteLine($"* {Name} drew Replicant {drawnCard.Name}! Decision pending... *");
+			} else {
+				Console.WriteLine("Deck empty.");
+				break;
+			}
+		}
+	}
+
+	public void DiscardCard(Card card, Deck discardPile)
+	{
+		if (card != null && Hand.Remove(card)) {
+			discardPile.Add(card);
+			Console.WriteLine($"{Name} discarded {card.Name}.");
+		}
+	}
+
+	public void BecomeSympathizer(ReplicantCard replicant)
+	{
+		if (!IsSympathizer) {
+			Console.WriteLine($"{Name} becomes a Sympathizer to rescue {replicant.Name}!");
+			IsSympathizer = true;
+			if(RetiredReplicants.Any()) {
+				Console.WriteLine($"{Name}'s retired Replicants Out-of-Play. [cite: 289]");
+				RetiredReplicants.Clear();
+			}
+			if (Hand.Remove(replicant)) RescuingReplicants.Add(replicant);
+			else Console.WriteLine($"Warning: Replicant {replicant.Name} not in hand?");
+			Console.WriteLine($"{Name} must reach {HomeLocation}. [cite: 290]");
+		}
+	}
+
+	// Die method includes recycling as requested, with rule deviation notes
+	public void Die(Game game)
+	{
+		Console.WriteLine($"{Name} has been killed!");
+		IsAlive = false;
+		IsInCombat = false;
+		CombatTarget = null;
+		PlayerCombatTarget = null; // Reset combat state
+
+		if (IsSympathizer) { // Rule [cite: 284]
+			Console.WriteLine($"{Name} was Sympathizer, OUT OF GAME. [cite: 284]");
+			Console.WriteLine($"Hand recycled to Discard Pile.");
+			foreach (var card in Hand) {
+				game.DiscardPile.Add(card);
+			}
+			Hand.Clear();
+			if(RescuingReplicants.Any()) {
+				Console.WriteLine($"Rescuing Replicants recycled to Discard (House Rule/Deviation from [cite: 284]).");
+				foreach (var rep in RescuingReplicants) {
+					game.DiscardPile.Add(rep);
+				}
+			}
+			RescuingReplicants.Clear();
+			// Player stays dead (IsAlive = false)
+		} else { // Blade Runner death [cite: 112]
+			Console.WriteLine($"Hand recycled to Discard Pile. [cite: 112]");
+			foreach (var card in Hand) {
+				game.DiscardPile.Add(card);
+			}
+			Hand.Clear();
+			//if(RetiredReplicants.Any()) {
+			//	Console.WriteLine($"Retired Replicants recycled to Discard (Rule Deviation: should be Out-of-Play [cite: 112]).");
+			//	foreach (var rep in RetiredReplicants) {
+			//		game.DiscardPile.Add(rep);
+			//	}
+			//	RetiredReplicants.Clear();
+			//}
+			Console.WriteLine($"{Name} respawns at {HomeLocation} next turn. [cite: 112]");
+			CurrentLocation = HomeLocation;
+			// IsAlive is false, GameLoop handles skipping turn and setting back to true
+			IsAlive = true;
+		}
+	}
+}
+
+#endregion Core Game Classes
+
+
+// ####################################################
+// ########            AI AGENT CLASSES        ########
+// ####################################################
+
+#region AI Agent Classes
+
+// --- Game State Representation ---
+public class GameState // Snapshot for Agent decision making
+{
+	public Player AgentPlayer { get; }
+	public List<Card> AgentHand { get; } // Copy
+	public List<PlayerInfo> OpponentInfos { get; }
+	public Dictionary<string, List<Card>> CardsAtLocations { get; } // Replicants in combat primarily
+	public int DrawDeckSize { get; }
+	public int ReplicantDeckSize { get; }
+	public GamePhase CurrentPhase { get; }
+
+	public GameState(Player agentPlayer, Game game, GamePhase phase) {
+		AgentPlayer = agentPlayer;
+		AgentHand = new List<Card>(agentPlayer.Hand);
+		OpponentInfos = game.Players.Where(p => p != agentPlayer).Select(p => new PlayerInfo(p)).ToList();
+		CardsAtLocations = new Dictionary<string, List<Card>>();
+		foreach (var p in game.Players.Where(p => p.IsAlive)) {
+			if (!CardsAtLocations.ContainsKey(p.CurrentLocation)) CardsAtLocations[p.CurrentLocation] = new List<Card>();
+			if (p.IsInCombat && p.CombatTarget is ReplicantCard rep && !CardsAtLocations[p.CurrentLocation].Contains(rep)) CardsAtLocations[p.CurrentLocation].Add(rep);
+		}
+		DrawDeckSize = game.DrawDeck.Count;
+		ReplicantDeckSize = game.ReplicantDeck.Count;
+		CurrentPhase = phase;
+	}
+}
+
+public class PlayerInfo // Safe info about other players
+{
+	public string Name { get; } public string Color { get; } public string CurrentLocation { get; }
+	public int HandSize { get; } public int Investigation { get; } public int Detection { get; } public int Combat { get; }
+	public bool IsSympathizer { get; } public int RetiredCount { get; } public bool IsInCombat { get; }
+	public PlayerInfo(Player player) {
+		Name = player.Name;
+		Color = player.Color;
+		CurrentLocation = player.CurrentLocation;
+		HandSize = player.Hand.Count;
+		Investigation = player.Investigation;
+		Detection = player.Detection;
+		Combat = player.Combat;
+		IsSympathizer = player.IsSympathizer;
+		RetiredCount = player.RetiredReplicants.Count;
+		IsInCombat = player.IsInCombat;
+	}
+}
+
+// Enum for context
+public enum GamePhase { Setup, Move, Investigation, Detection, CombatInitiation, CombatResolution, Discard, SympathizerDecision }
+
+// --- Agent Controller Interface ---
+public interface IAgentController
+{
+    Tuple<int, int, int> ChooseSkills(Player agentPlayer);
+    string ChooseMoveDestination(Player agentPlayer, int moveRoll, List<string> reachableLocations, GameState currentState, Func<string, string, int> getDistanceFunc);
+    SuspectCard ChooseSuspectToTest(Player agentPlayer, GameState currentState);
+    Player ChoosePlayerToAttack(Player agentPlayer, List<Player> potentialTargets, GameState currentState);
+    Card ChooseCardToPlay(Player agentPlayer, GamePhase currentPhase, List<Card> applicableCards, GameState currentState); // Pass applicable cards
+    List<Card> ChooseCardsToDiscard(Player agentPlayer, GameState currentState);
+    bool DecideToBecomeSympathizer(Player agentPlayer, ReplicantCard drawnReplicant, GameState currentState);
+}
+
+// --- Revised SimpleRuleBasedAgent Class ---
+
+public class SimpleRuleBasedAgent : IAgentController
+	{
+    private Random rng = new Random();
+
+    // --- ChooseSkills remains the same ---
+public Tuple<int, int, int> ChooseSkills(Player agentPlayer) {
+	Console.WriteLine($"[AI-{agentPlayer.Name}] Choosing skills (2,2,2).");
+	return Tuple.Create(2, 2, 2);
+}
+
+// --- ChooseMoveDestination remains the same ---
+public string ChooseMoveDestination(Player agentPlayer, int moveRoll, List<string> reachableLocations, GameState currentState, Func<string, string, int> getDistanceFunc) {
+	Console.WriteLine($"[AI-{agentPlayer.Name}] Choosing destination (Roll: {moveRoll})...");
+	if (!reachableLocations.Any()) {
+		Console.WriteLine($"[AI-{agentPlayer.Name}] No reachable locations.");
+		return null;
+	}
+	if (agentPlayer.IsSympathizer) {
+		/* ... Move towards home logic ... */ int currentDistToHome = getDistanceFunc(agentPlayer.CurrentLocation, agentPlayer.HomeLocation);
+		var closerToHome = reachableLocations.Select(loc => new {
+			Name = loc, Dist = getDistanceFunc(loc, agentPlayer.HomeLocation)
+		}).Where(m => m.Dist < currentDistToHome && m.Dist != int.MaxValue).OrderBy(m => m.Dist).FirstOrDefault();
+		if (closerToHome != null) {
+			Console.WriteLine($"[AI-{agentPlayer.Name}] Moving towards Home: {closerToHome.Name}");
+			return closerToHome.Name;
+		}
+	}
+	string randomDest = reachableLocations[rng.Next(reachableLocations.Count)];
+	Console.WriteLine($"[AI-{agentPlayer.Name}] Moving randomly to: {randomDest}");
+	return randomDest;
+}
+
+// --- ChooseSuspectToTest remains the same ---
+public SuspectCard ChooseSuspectToTest(Player agentPlayer, GameState currentState) {
+	var suspects = currentState.AgentHand.OfType<SuspectCard>().OrderBy(s => s.Evasion).ToList();
+	if (!suspects.Any()) return null;
+	if (3 + agentPlayer.Detection >= suspects.First().Evasion) {
+		Console.WriteLine($"[AI-{agentPlayer.Name}] Testing Suspect: {suspects.First().Name}");
+		return suspects.First();
+	}
+	return null;
+}
+
+// --- ChoosePlayerToAttack remains the same ---
+public Player ChoosePlayerToAttack(Player agentPlayer, List<Player> potentialTargets, GameState currentState) {
+	if (!potentialTargets.Any()) return null;
+	var sympathizers = potentialTargets.Where(p => p.IsSympathizer).ToList();
+	if (sympathizers.Any()) {
+		var target = sympathizers.First();
+		if (agentPlayer.Combat >= target.Combat) {
+			Console.WriteLine($"[AI-{agentPlayer.Name}] Attacking Sympathizer: {target.Name}");
+			return target;
+		}
+	}
+	return null;
+}
+
+// --- **** REVISED ChooseCardToPlay **** ---
+public Card ChooseCardToPlay(Player agentPlayer, GamePhase currentPhase, List<Card> applicableCards, GameState currentState)
+{
+	// AI logic to decide which card (if any) from the applicable list to play.
+	// Simple strategy: Play the first beneficial (Help/Clue) card found. Avoid playing Hassles on self.
+	Console.WriteLine($"[AI-{agentPlayer.Name}] Considering playing a card for {currentPhase}...");
+
+	if (!applicableCards.Any())
+	{
+		// Console.WriteLine($"[AI-{agentPlayer.Name}] No applicable cards to play."); // Can be noisy
+		return null;
+	}
+
+	// Prioritize beneficial cards (Help/Clue) over Hassles when playing for self
+	Card bestCardToPlay = applicableCards.FirstOrDefault(c => c is HelpCard || c is ClueCard);
+
+	if (bestCardToPlay != null)
+	{
+		Console.WriteLine($"[AI-{agentPlayer.Name}] Choosing to play: {bestCardToPlay.Name}");
+		return bestCardToPlay;
+	}
+
+	// If only Hassles are applicable (unlikely in the self-play scenario, but possible), don't play them.
+	// Add logic here if AI should play Hassles on opponents.
+	Console.WriteLine($"[AI-{agentPlayer.Name}] Found only applicable Hassles, choosing not to play on self.");
+	return null;
+}
+
+
+// --- **** REVISED ChooseCardsToDiscard **** ---
+public List<Card> ChooseCardsToDiscard(Player agentPlayer, GameState currentState)
+{
+	Console.WriteLine($"[AI-{agentPlayer.Name}] Choosing cards to discard (Hand: {currentState.AgentHand.Count})...");
+	List<Card> toDiscard = new List<Card>();
+	List<Card> simulatedHand = new List<Card>(currentState.AgentHand);
+	// Target hand size - make space to draw Investigation skill cards next turn
+	int desiredHandSize = Math.Max(0, 5 - agentPlayer.Investigation); // Leave space for Investigation draw
+
+	while (simulatedHand.Count > desiredHandSize)
+	{
+		Card cardToConsider = null;
+		int initialCount = simulatedHand.Count;
+
+		// --- Discard Priority Logic ---
+
+		// 1. Hassles IF at Police HQ (Rule)
+		if (agentPlayer.CurrentLocation == "Police HQ") {
+			cardToConsider = simulatedHand.OfType<HassleCard>().FirstOrDefault();
+			if (cardToConsider != null) goto CardFound_Discard;
+		}
+
+		// 2. Replicant IF NOT Sympathizing (Fix the "Leak")
+		if (!agentPlayer.IsSympathizer) {
+			cardToConsider = simulatedHand.OfType<ReplicantCard>().FirstOrDefault();
+			if (cardToConsider != null) {
+				Console.WriteLine($"[AI-{agentPlayer.Name}] Prioritizing discard of Replicant {cardToConsider.Name} (not Sympathizer).");
+				goto CardFound_Discard;
+			}
+		}
+
+		// 3. Clues (Simple: Discard any Clue - could be improved with distance heuristic)
+		cardToConsider = simulatedHand.OfType<ClueCard>().FirstOrDefault();
+		if (cardToConsider != null) goto CardFound_Discard;
+
+		// 4. Weakest Suspect (lowest Evasion)
+		cardToConsider = simulatedHand.OfType<SuspectCard>().OrderBy(s => s.Evasion).FirstOrDefault();
+		if (cardToConsider != null) goto CardFound_Discard;
+
+		// 5. Non-essential Help cards (Keep combat helps if Combat is decent?)
+		if (agentPlayer.Combat < 3) // If combat is low, maybe discard combat helps too
+			cardToConsider = simulatedHand.OfType<HelpCard>().FirstOrDefault();
+		else // Otherwise, keep combat helps, discard others
+			cardToConsider = simulatedHand.OfType<HelpCard>().FirstOrDefault(h => h.AbilityAffected != AffectedAbility.Combat); // Keep combat helps
+		if (cardToConsider != null) goto CardFound_Discard;
+
+		// 6. Hassles - ONLY IF AT POLICE HQ (This check is now redundant due to #1, but harmless)
+		// *** The problematic logic allowing discard anywhere else is REMOVED ***
+		// if (cardToConsider == null && agentPlayer.CurrentLocation != "Police HQ") {
+		//     // DO NOT DISCARD HASSLES HERE
+		// }
+
+		// 7. Last Resort: Discard anything left (except maybe the Replicant if Sympathizer)
+		if (agentPlayer.IsSympathizer) {
+			cardToConsider = simulatedHand.FirstOrDefault(c => !(c is ReplicantCard)); // Avoid discarding the rescued one
+		}
+		if (cardToConsider == null) { // If still nothing, or not sympathizer, grab first available
+			cardToConsider = simulatedHand.FirstOrDefault();
+		}
+
+CardFound_Discard: // Label for goto jump
+
+		if (cardToConsider != null) {
+			toDiscard.Add(currentState.AgentHand.First(c => c == cardToConsider)); // Use original ref
+			simulatedHand.Remove(cardToConsider); // Remove from temp list
+			Console.WriteLine($"[AI-{agentPlayer.Name}] Planning to discard: {cardToConsider.Name}");
+		} else {
+			Console.WriteLine($"[AI-{agentPlayer.Name}] Cannot find suitable card to discard further.");
+			break; // Exit loop
+		}
+		if (simulatedHand.Count == initialCount && simulatedHand.Count > desiredHandSize) {
+			Console.WriteLine($"[AI-{agentPlayer.Name}] Discard Warning: Loop stuck.");
+			break; // Safety break
+		}
+	}
+	return toDiscard;
+}
+
+// --- DecideToBecomeSympathizer remains the same ---
+public bool DecideToBecomeSympathizer(Player agentPlayer, ReplicantCard drawnReplicant, GameState currentState) {
+	int myRetiredCount = agentPlayer.RetiredReplicants.Count;
+	int maxOpponentRetired = currentState.OpponentInfos.Any() ? currentState.OpponentInfos.Max(o => o.RetiredCount) : 0;
+	if (maxOpponentRetired >= myRetiredCount + 2) {
+		Console.WriteLine($"[AI-{agentPlayer.Name}] Becoming Sympathizer with {drawnReplicant.Name}!");
+		return true;
+	}
+	return false;
+}
+}
+
+#endregion AI Agent Classes
+
+
+// ####################################################
+// ########             GAME CLASS             ########
+// ####################################################
+
+#region Game Class
+
+/// <summary>
+/// Manages the overall game state and flow for Blade Runner: Rep-Detect.
+/// </summary>
+public class Game
+{
+	// Properties
+	public List<Player> Players { get; set; }
+	public Deck DrawDeck { get; set; }
+	public Deck DiscardPile { get; set; }
+	public Deck ReplicantDeck { get; set; }
+	public List<string> Locations { get; set; }
+	private int currentPlayerIndex;
+	private Random rng = new Random();
+	public bool IsGameReallyOver { get; private set; }
+	private Dictionary<string, Dictionary<string, int>> locationDistances;
+	private Dictionary<string, IAgentController> playerControllers; // Map Player Name -> Controller (null for human)
+
+	// Constructor
+	public Game(List<Player> players, Dictionary<string, IAgentController> controllers)
+	{
+		Players = players;
+		playerControllers = controllers;
+		DrawDeck = new Deck();
+		DiscardPile = new Deck(true);
+		ReplicantDeck = new Deck(true);
+		ReplicantDeck.InitializeReplicants();
+		ReplicantDeck.Shuffle();
+		DrawDeck.Shuffle();
+		Locations = new List<string> { "Tyrell Corp", "Animoid Row", "Snake Pit", "Police HQ", "White Dragon", "Yukon Hotel", "Bradbury Building", "Chinatown", "Eyeworks" };
+		Locations.AddRange(players.Select(p => p.HomeLocation));
+		InitializeLocationDistances(players); // Uses placeholders - IMPORTANT TO REPLACE
+		currentPlayerIndex = 0;
+		IsGameReallyOver = false;
+	}
+
+	// --- Initialization ---
+	private void InitializeLocationDistances(List<Player> players) { /* ... Placeholder logic as before ... */
+		locationDistances = new Dictionary<string, Dictionary<string, int>>();
+		List<string> allLocations = new List<string>(Locations);
+		foreach (string loc1 in allLocations) {
+			locationDistances[loc1] = new Dictionary<string, int>();
+			foreach (string loc2 in allLocations) {
+				if (loc1 == loc2) locationDistances[loc1][loc2] = 0;
+				else {
+					int placeholderDistance;
+					int hash = Math.Abs(loc1.GetHashCode() ^ loc2.GetHashCode());
+					if (loc1.Contains(" Home") && loc2.Contains(" Home")) placeholderDistance = 15;
+					else if (loc1.Contains(" Home") || loc2.Contains(" Home")) placeholderDistance = (hash % 8) + 4;
+					else placeholderDistance = (hash % 6) + 1;
+					if (locationDistances.ContainsKey(loc2) && locationDistances[loc2].ContainsKey(loc1)) locationDistances[loc1][loc2] = locationDistances[loc2][loc1];
+					else locationDistances[loc1][loc2] = placeholderDistance;
+				}
+			}
+		}
+		Console.WriteLine("Location distance table initialized (PLACEHOLDERS - REPLACE WITH ACTUAL!).");
+	}
+	public int GetDistance(string start, string end) { /* ... Lookup logic as before ... */
+		if (locationDistances.TryGetValue(start, out var destinations) && destinations.TryGetValue(end, out int distance)) return distance;
+		Console.WriteLine($"Warning: Distance lookup failed: {start} -> {end}.");
+		return int.MaxValue;
+	}
+	private void SetupPlayers() { /* ... Assigns skills via Agent/Human prompt ... */
+		Console.WriteLine("\n--- Preparation Round ---");
+		foreach (var player in Players) {
+			Console.WriteLine($"\nSetting up {player.Name} ({player.Color})...");
+			Tuple<int, int, int> skills;
+			playerControllers.TryGetValue(player.Name, out var agentController); // Get controller if exists
+			if (agentController != null) skills = agentController.ChooseSkills(player);
+			else {
+				Console.WriteLine($"Human {player.Name}, enter skills (Inv Det Com, e.g. '3 2 1'):");    // Requires ParseSkillsInput helper
+				string input = Console.ReadLine();
+				skills = ParseSkillsInput(input);
+			}
+			player.SetSkills(skills.Item1, skills.Item2, skills.Item3);
+			Console.WriteLine($"{player.Name} Skills - Inv: {player.Investigation}, Det: {player.Detection}, Com: {player.Combat}");
+			player.DrawCards(DrawDeck, player.Investigation);
+		}
+		Console.WriteLine("\n--- Setup Complete ---");
+	}
+	// Helper to parse human skill input (add error handling)
+	private Tuple<int,int,int> ParseSkillsInput(string input) {
+		try {
+			var parts = input.Split(' ').Select(int.Parse).ToList();
+			if (parts.Count == 3) return Tuple.Create(parts[0], parts[1], parts[2]);
+		}
+		catch { }
+		Console.WriteLine("Invalid format. Using default 2,2,2.");
+		return Tuple.Create(2,2,2);
+	}
+
+
+	// --- Core Game Flow ---
+	public void StartGame() {
+		Console.WriteLine("--- Blade Runner: Rep-Detect ---");
+		SetupPlayers();
+		GameLoop();
+	}
+	private void GameLoop() { /* ... Main loop using IsGameReallyOver flag ... */
+		while (!this.IsGameReallyOver) {
+			Player currentPlayer = Players[currentPlayerIndex];
+			playerControllers.TryGetValue(currentPlayer.Name, out var currentAgent); // Get agent if exists
+			bool isAI = currentAgent != null;
+			GameState currentState = new GameState(currentPlayer, this, GamePhase.Setup); // Update phase in methods
+
+			if (!currentPlayer.IsAlive) {
+				Console.WriteLine($"\nSkipping turn for {currentPlayer.Name} (Respawning).");    // Respawn happens at start of *next* turn
+				currentPlayer.IsAlive = true;
+				currentPlayer.CurrentLocation = currentPlayer.HomeLocation;
+			}
+			else {
+				Console.WriteLine($"\n--- {currentPlayer.Name}'s Turn ({(isAI ? "AI" : "Human")}, {currentPlayer.Color}) ---");
+				Console.WriteLine($"Loc: {currentPlayer.CurrentLocation}, Hand: {currentPlayer.Hand.Count}, Ret: {currentPlayer.RetiredReplicants.Count}, Res: {currentPlayer.RescuingReplicants.Count}, Combat: {currentPlayer.IsInCombat}");
+				ExecuteMovePhase(currentPlayer, currentAgent);
+				if (this.IsGameReallyOver) break;
+				ExecuteInvestigationPhase(currentPlayer, currentAgent);
+				if (this.IsGameReallyOver) break;
+				ExecuteDetectionPhase(currentPlayer, currentAgent);
+				if (this.IsGameReallyOver) break;
+				ExecuteCombatPhase(currentPlayer, currentAgent);
+				if (this.IsGameReallyOver) break;
+				ExecuteDiscardPhase(currentPlayer, currentAgent);
+				if (this.IsGameReallyOver) break;
+				if (currentPlayer.IsSympathizer && currentPlayer.CurrentLocation == currentPlayer.HomeLocation && !currentPlayer.IsInCombat) {
+					Console.WriteLine($"\n{currentPlayer.Name} reached home as Sympathizer!");    // Sympathizer Win [cite: 228, 297]
+					DeclareWinner(currentPlayer);
+					break;
+				}
+			}
+			if (!this.IsGameReallyOver && CheckForGameOver()) break; // Last Man Standing Check [cite: 229]
+			if (!this.IsGameReallyOver) {
+				AdvancePlayerTurn();    // Advance turn if game continues
+			}
+			if (!isAI || Players.Any(p => !playerControllers.ContainsKey(p.Name))) {
+				Console.WriteLine("\nPress Enter...");    // Pause for humans or short AI delay
+				Console.ReadLine();
+			}
+			else {
+				Thread.Sleep(1500);
+			}
+			//Force garbage collection
+			//
+			GC.Collect();
+			GC.WaitForPendingFinalizers();
+		}
+		Console.WriteLine("--- Game Over ---");
+	}
+	private void AdvancePlayerTurn() { /* ... Skips dead players, as before ... */
+		int initialIndex = currentPlayerIndex;
+		int loopCheck = 0;
+		do {
+			currentPlayerIndex = (currentPlayerIndex + 1) % Players.Count;
+			loopCheck++;
+		}
+		while (Players.Count > 0 && !Players[currentPlayerIndex].IsAlive && loopCheck <= Players.Count && Players.Count(p => p.IsAlive) > 0);
+		if(loopCheck > Players.Count && Players.Count(p => p.IsAlive) == 0 && Players.Count > 1) {
+			Console.WriteLine("Error: No alive players found!");
+			this.IsGameReallyOver = true;
+		}
+	}
+
+
+	// --- Turn Phase Methods (with Agent/Human logic & Modifiers) ---
+
+	private void ExecuteMovePhase(Player player, IAgentController agentController) { /* ... Includes Must Move (Nearest) + Optional Move w/ Modifiers ... */
+		GameState currentState = new GameState(player, this, GamePhase.Move);
+		if (player.IsInCombat) {
+			Console.WriteLine($"{player.Name} in Combat, cannot move. [cite: 257]");
+			return;
+		}
+		if (player.IsSympathizer && player.CurrentLocation == player.HomeLocation) {
+			Console.WriteLine($"{player.Name} stays put at Home.");
+			return;
+		}
+
+		string chosenDestination = null;
+		bool mustMove = player.CurrentLocation == player.HomeLocation && !player.IsSympathizer; // Rule [cite: 256]
+
+		if (mustMove) { // Apply HOUSE RULE: Move to nearest non-home location, ignore roll
+			Console.WriteLine($"{player.Name} must move from Home (House Rule: Nearest).");
+			var potentialDestinations = Locations.Where(loc => !loc.EndsWith(" Home")).Select(loc => new {
+				Name = loc, Dist = GetDistance(player.HomeLocation, loc)
+			}).Where(m => m.Dist > 0 && m.Dist != int.MaxValue).OrderBy(m => m.Dist).ToList();
+			if (potentialDestinations.Any()) {
+				int nearestDistance = potentialDestinations.First().Dist;
+				List<string> nearestLocations = potentialDestinations.Where(m => m.Dist == nearestDistance).Select(m => m.Name).ToList();
+				if (nearestLocations.Count == 1) {
+					chosenDestination = nearestLocations.First();
+					Console.WriteLine($"{player.Name} moves to nearest: {chosenDestination} (Dist: {nearestDistance}).");
+				}
+				else {
+					Console.WriteLine($"Tie for nearest (Dist: {nearestDistance}): {string.Join(", ", nearestLocations)}");
+					if (agentController != null) {
+						chosenDestination = nearestLocations.First();    // AI picks first
+						Console.WriteLine($"[AI-{player.Name}] chooses {chosenDestination}.");
+					}
+					else {
+						Console.Write($"Choose destination #: ");    // Human chooses
+						if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= nearestLocations.Count) chosenDestination = nearestLocations[choice - 1];
+						else {
+							chosenDestination = nearestLocations.First();
+							Console.WriteLine("Invalid/No choice, defaulting.");
+						}
+					}
+				}
+			} else {
+				Console.WriteLine($"Error: No non-home locations found from {player.HomeLocation}!");
+			}
+			if (!string.IsNullOrEmpty(chosenDestination)) player.CurrentLocation = chosenDestination;
+			else Console.WriteLine($"{player.Name} could not move from Home.");
+			return; // End phase after must move
+		}
+		else { // Optional Move [cite: 259]
+			bool wantsToMove = false;
+			if (agentController != null) {
+				wantsToMove = true;
+				Console.WriteLine($"[AI-{player.Name}] decides to roll.");
+			}
+			else {
+				Console.Write("Roll die to move? (y/n): ");
+				wantsToMove = (Console.ReadLine()?.ToLower() ?? "n") == "y";
+			}
+			if (wantsToMove) {
+				int moveModifier = GetAndApplyModifiers(player, agentController, AffectedAbility.Movement, player.CurrentLocation, GamePhase.Move); // Apply mods BEFORE roll
+				int roll = RollDie();
+				int totalMovement = Math.Max(1, roll + moveModifier); // Clamp at 1? Or allow 0? Rule [cite: 260] implies must move if rolled. Let's use Math.Max(0, ...) allowing 0.
+				totalMovement = Math.Max(0, roll+moveModifier);
+				Console.WriteLine($"{player.Name} rolls {roll}. Modifier: {moveModifier:+0;-#}. Total movement: {totalMovement}");
+				if (totalMovement == 0) {
+					Console.WriteLine("Cannot move with 0 total movement.");    // Cannot move if result is 0
+					return;
+				}
+
+				var possibleMoves = locationDistances[player.CurrentLocation].Where(kvp => kvp.Value > 0 && kvp.Value <= totalMovement).OrderBy(kvp => kvp.Value).ToList();
+				List<string> reachable = possibleMoves.Select(kvp => kvp.Key).ToList();
+				if (!reachable.Any()) {
+					Console.WriteLine("No locations reachable.");
+					return;
+				}
+
+				if (agentController != null) {
+					chosenDestination = agentController.ChooseMoveDestination(player, totalMovement, reachable, currentState, GetDistance);    // AI chooses move
+				}
+				else {
+					Console.WriteLine("Reachable:");    // Human chooses move
+					foreach(var move in possibleMoves) Console.WriteLine($"- {move.Key} (Dist: {move.Value})");
+					Console.Write("Enter destination (or Enter to stay): ");
+					string inputDest = Console.ReadLine();
+					if (!string.IsNullOrWhiteSpace(inputDest) && reachable.Contains(inputDest)) chosenDestination = inputDest;
+				}
+
+				if (!string.IsNullOrEmpty(chosenDestination)) {
+					Console.WriteLine($"{player.Name} moves to {chosenDestination}.");
+					player.CurrentLocation = chosenDestination;
+				}
+				else {
+					Console.WriteLine($"{player.Name} stays put.");    // Chose not to move after rolling
+				}
+			} else {
+				Console.WriteLine($"{player.Name} chooses not to move.");    // Chose not to roll
+			}
+		}
+	}
+	private void ExecuteInvestigationPhase(Player player, IAgentController agentController) { /* ... Includes applying Investigation modifiers ... */
+		bool canInvestigate = Locations.Contains(player.CurrentLocation) && player.CurrentLocation != "Police HQ";
+		if (player.IsSympathizer && player.CurrentLocation == player.HomeLocation) canInvestigate = true; // Sympathizers can investigate home [cite: 290]
+		if (!canInvestigate) return; // Rule [cite: 262, 264]
+
+		Console.WriteLine($"Investigation Phase at {player.CurrentLocation}.");
+		int investigationModifier = GetAndApplyModifiers(player, agentController, AffectedAbility.Investigation, player.CurrentLocation, GamePhase.Investigation); // Apply mods BEFORE calculating draw [cite: 205, 209]
+		int effectiveInvestigation = Math.Max(0, player.Investigation + investigationModifier);
+		Console.WriteLine($"Base Inv: {player.Investigation}. Mod: {investigationModifier:+0;-#}. Effective: {effectiveInvestigation}");
+		int cardsToDraw = effectiveInvestigation;
+		int actualDraw = Math.Min(cardsToDraw, 5 - player.Hand.Count); // Hand limit [cite: 263]
+		if (actualDraw > 0) {
+			player.DrawCards(DrawDeck, actualDraw); /* ... Reshuffle logic ... */ if(DrawDeck.IsEmpty && actualDraw > 0 && player.Hand.Count < 5 && DiscardPile.cards.Count > 0) {
+				Console.WriteLine("Reshuffling discard...");
+				DrawDeck.cards.AddRange(DiscardPile.cards);
+				DiscardPile.cards.Clear();
+				DrawDeck.Shuffle();
+				player.DrawCards(DrawDeck, Math.Min(cardsToDraw, 5 - player.Hand.Count));
+			}
+		}
+		else if (cardsToDraw > 0) Console.WriteLine($"Hand limit reached or effective Inv too low.");
+	}
+	private void ExecuteDetectionPhase(Player player, IAgentController agentController) { /* ... Includes applying Detection modifiers & empty deck workaround ... */
+		GameState currentState = new GameState(player, this, GamePhase.Detection);
+		if (player.IsInCombat || !Locations.Contains(player.CurrentLocation) || (player.CurrentLocation.EndsWith(" Home") && !player.IsSympathizer)) return; // Rule [cite: 265]
+		var suspectsInHand = player.Hand.OfType<SuspectCard>().ToList();
+		if (!suspectsInHand.Any()) return;
+		SuspectCard suspectToTest = null;
+		if (agentController != null) suspectToTest = agentController.ChooseSuspectToTest(player, currentState);
+		else {
+			/* ... Human choice ... */ Console.WriteLine("Detection: Choose Suspect:");
+			for(int i=0; i<suspectsInHand.Count; i++) Console.WriteLine($"{i + 1}: {suspectsInHand[i]}");
+			Console.WriteLine("0: Skip");
+			Console.Write("Choice: ");
+			if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= suspectsInHand.Count) suspectToTest = suspectsInHand[choice - 1];
+		}
+		if (suspectToTest != null) {
+			player.Hand.Remove(suspectToTest);
+			Console.WriteLine($"{player.Name} tests {suspectToTest.Name} at {player.CurrentLocation}.");
+			DiscardPile.Add(suspectToTest); // Suspect always discarded [cite: 267, 268, 269]
+			int detectionModifier = GetAndApplyModifiers(player, agentController, AffectedAbility.Detection, player.CurrentLocation, GamePhase.Detection); // Apply mods BEFORE roll [cite: 209, 213]
+			int effectiveDetectionSkill = player.Detection + detectionModifier;
+			Console.WriteLine($"Base Det: {player.Detection}. Mod: {detectionModifier:+0;-#}. Effective: {effectiveDetectionSkill}");
+			int detectionRoll = RollDie();
+			int totalDetection = detectionRoll + effectiveDetectionSkill;
+			Console.WriteLine($"Roll: {detectionRoll} + Eff Skill: {effectiveDetectionSkill} = Total: {totalDetection}");
+			if (totalDetection >= suspectToTest.Evasion) {
+				Console.WriteLine($"Detection successful! Checking Human/Replicant...");
+				int replicantCheckRoll = RollDie();
+				Console.WriteLine($"Rep Check Roll: {replicantCheckRoll} (Need 4-6)"); // Rule
+				if (replicantCheckRoll >= 4) {
+					Console.WriteLine($"Result: REPLICANT!");
+					Card drawnReplicant = ReplicantDeck.Draw(); // Draw from Rep Deck [cite: 269]
+					//if (drawnReplicant == null) {
+					//	Console.WriteLine("Replicant Deck empty. Checking Discard (House Rule)...");    // Workaround
+					//	Card escapedReplicant = DiscardPile.cards.FirstOrDefault(c => c is ReplicantCard);
+					//	if (escapedReplicant != null) {
+					//		Console.WriteLine($"Found escaped {escapedReplicant.Name}!");
+					//		DiscardPile.cards.Remove(escapedReplicant);
+					//		drawnReplicant = escapedReplicant;
+					//	}
+					//	else Console.WriteLine("None found.");
+					//}
+					// --- WORKAROUND LOGIC ---
+					if (drawnReplicant == null) // If Replicant Deck is empty...
+					{
+						Console.WriteLine("Replicant Deck empty. Checking Discard Pile for escaped Replicants (House Rule)...");
+						// Find the first available Replicant card in the discard pile
+						Card escapedReplicant = DiscardPile.cards.FirstOrDefault(c => c is ReplicantCard);
+
+						if (escapedReplicant != null)
+						{
+							Console.WriteLine($"Found escaped Replicant {escapedReplicant.Name} in Discard Pile!");
+							DiscardPile.cards.Remove(escapedReplicant); // Remove it from discard
+							drawnReplicant = escapedReplicant; // Use this Replicant for combat
+						}
+						else
+						{
+							Console.WriteLine("No Replicants found in Discard Pile either.");
+							// No Replicant appears this turn despite successful detection
+						}
+					}
+					// --- END WORKAROUND LOGIC ---
+					if (drawnReplicant != null && drawnReplicant is ReplicantCard repCard) {
+						Console.WriteLine($"A wild {repCard.Name} appears!");    // Initiate combat
+						player.IsInCombat = true;
+						player.CombatTarget = repCard;
+						player.PlayerCombatTarget = null;
+						Console.WriteLine($"{player.Name} enters Combat with {repCard.Name}!");
+					}
+				} else {
+					Console.WriteLine("Result: Human.");    // Human
+				}
+			} else {
+				Console.WriteLine($"Detection failed! (< {suspectToTest.Evasion}).");    // Failed
+			}
+		}
+	}
+
+	private void InitiatePlayerCombat(Player attacker, IAgentController agentController) {
+		GameState currentState = new GameState(attacker, this, GamePhase.CombatInitiation);
+		if (attacker.IsSympathizer || attacker.IsInCombat) return;
+		List<Player> potentialTargets = Players.Where(p => p != attacker && p.IsAlive).ToList();
+		if (!potentialTargets.Any()) return;
+
+		Player defender = null;
+		if (agentController != null) { // AI Initiates Combat
+			defender = agentController.ChoosePlayerToAttack(attacker, potentialTargets, currentState);
+		} else { // Human Initiates Combat
+			Console.WriteLine($"\n{attacker.Name}, potential player combat targets:");
+			Dictionary<int, Player> targetMap = new Dictionary<int, Player>();
+			int targetIndex = 1;
+			foreach (var target in potentialTargets) {
+				string status = target.IsSympathizer ? "Declared Sympathizer" : "Blade Runner";
+				Console.WriteLine($"{targetIndex}: {target.Name} ({status}) at {target.CurrentLocation}");
+				targetMap.Add(targetIndex, target);
+				targetIndex++;
+			}
+			Console.WriteLine("0: Attack no one");
+			Console.Write("Choose target number to attack (or 0): ");
+			if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && targetMap.ContainsKey(choice)) {
+				defender = targetMap[choice];
+			}
+		}
+
+		if (defender != null) { // Initiate combat if a target was chosen
+			Console.WriteLine($"{attacker.Name} initiates combat with {defender.Name}!");
+			attacker.IsInCombat = true;
+			attacker.PlayerCombatTarget = defender;
+			attacker.CombatTarget = null;
+			defender.IsInCombat = true;
+			defender.PlayerCombatTarget = attacker;
+			defender.CombatTarget = null;
+			if (!defender.IsSympathizer) {
+				Console.WriteLine($"WARNING: Attacking non-Sympathizer {defender.Name}! Murder risk!");
+			}
+		}
+	}
+
+	private void ExecuteCombatPhase(Player player, IAgentController agentController) { /* ... Includes Combat modifiers & game end check ... */
+		if (!player.IsInCombat) InitiatePlayerCombat(player, agentController); // Offer initiation first
+		if (this.IsGameReallyOver || !player.IsInCombat) return;
+		GameState currentState = new GameState(player, this, GamePhase.CombatResolution);
+		int playerCombatModifier = 0;
+		int opponentCombatModifier = 0;
+		Console.WriteLine($"--- Pre-Combat Card opportunity for {player.Name} ---");
+		playerCombatModifier = GetAndApplyModifiers(player, agentController, AffectedAbility.Combat, player.CurrentLocation, GamePhase.CombatResolution); // Apply mods BEFORE roll [cite: 209, 213]
+		// Simplified: Opponent mods not implemented here, assumes opponentCombatModifier = 0
+		if (player.PlayerCombatTarget != null) {
+			Player opponentPlayer = player.PlayerCombatTarget;
+			Console.WriteLine($"Combat: {player.Name} vs Player {opponentPlayer.Name}");
+			int effPCom = player.Combat + playerCombatModifier;
+			int effOCom = opponentPlayer.Combat + opponentCombatModifier;
+			int pRoll = RollDie();
+			int pTotal = pRoll + effPCom;
+			int oRoll = RollDie();
+			int oTotal = oRoll + effOCom;
+			Console.WriteLine($"{player.Name} ({player.Combat}{playerCombatModifier:+0;-#}) roll {pRoll} -> {pTotal}");
+			Console.WriteLine($"{opponentPlayer.Name} ({opponentPlayer.Combat}{opponentCombatModifier:+0;-#}) roll {oRoll} -> {oTotal}");
+			if (pTotal > oTotal) {
+				/* ... Player wins P-vs-P, check murder ... */ Console.WriteLine($"{player.Name} WINS vs {opponentPlayer.Name}!");
+				bool murder = false;
+				if (!opponentPlayer.IsSympathizer) {
+					bool hadRep = opponentPlayer.Hand.OfType<ReplicantCard>().Any();
+					if (!hadRep) {
+						Console.WriteLine($"MURDER! {player.Name} OUT! [cite: 305]");
+						player.IsAlive = false;
+						murder = true;
+						opponentPlayer.IsAlive = true;
+						opponentPlayer.CurrentLocation = opponentPlayer.HomeLocation;
+						opponentPlayer.Hand.Clear();
+						Console.WriteLine($"{opponentPlayer.Name} restarts.");
+					}
+					else {
+						Console.WriteLine($"Kill justified.");
+						opponentPlayer.Die(this); /* Claim kill? [cite: 302] */
+					}
+				}
+				else {
+					opponentPlayer.Die(this); /* Claim kill? [cite: 284] */
+				}
+				if (!murder) {
+					player.IsInCombat = false;
+					player.PlayerCombatTarget = null;
+				}
+				opponentPlayer.IsInCombat = false;
+				opponentPlayer.PlayerCombatTarget = null;
+			}
+			else if (oTotal > pTotal) {
+				/* ... Player loses P-vs-P ... */ Console.WriteLine($"{player.Name} LOSES vs {opponentPlayer.Name}!");
+				player.Die(this);
+				opponentPlayer.IsInCombat = false;
+				opponentPlayer.PlayerCombatTarget = null;
+			}
+			else {
+				Console.WriteLine("Player Combat TIE! [cite: 304]");    // Tie
+			}
+		} else if (player.CombatTarget is ReplicantCard replicant) {
+			Console.WriteLine($"Combat: {player.Name} vs Replicant {replicant.Name}");
+			int effPCom = player.Combat + playerCombatModifier;
+			int effOCom = replicant.Combat + opponentCombatModifier;
+			int pRoll = RollDie();
+			int pTotal = pRoll + effPCom;
+			int oRoll = RollDie();
+			int oTotal = oRoll + effOCom;
+			Console.WriteLine($"{player.Name} ({player.Combat}{playerCombatModifier:+0;-#}) roll {pRoll} -> {pTotal}");
+			Console.WriteLine($"{replicant.Name} ({replicant.Combat}{opponentCombatModifier:+0;-#}) roll {oRoll} -> {oTotal}"); // Rule
+			if (pTotal > oTotal) {
+				/* ... Player wins P-vs-R, check game end[cite: 227, 272]... */ Console.WriteLine($"{player.Name} WINS! {replicant.Name} retired!");
+				bool wasBRRetire = false;
+				if (!player.IsSympathizer) {
+					player.RetiredReplicants.Add(replicant);
+					wasBRRetire = true;
+				}
+				else {
+					Console.WriteLine("Sympathizer retired Rep.");
+					player.RetiredReplicants.Add(replicant);
+				}
+				player.IsInCombat = false;
+				player.CombatTarget = null;
+				if (wasBRRetire) {
+					int totalBRRetires = Players.Where(p => p.IsAlive && !p.IsSympathizer).Sum(p => p.RetiredReplicants.Count);
+					Console.WriteLine($"Total BR retires: {totalBRRetires}");
+					if (totalBRRetires == 5 && !Players.Any(p => p.IsAlive && p.IsSympathizer)) {
+						Console.WriteLine("5th Replicant retired! Checking scores...");
+						DeclareWinnerByRetirement();
+					}
+					else if (totalBRRetires == 5) Console.WriteLine("5th Rep retired, but Sympathizers active.");
+				}
+			}
+			else if (oTotal > pTotal) {
+				/* ... Player loses P-vs-R ... */ Console.WriteLine($"{player.Name} LOSES!");
+				player.Die(this);
+				Console.WriteLine($"{replicant.Name} escapes!");
+				DiscardPile.Add(replicant);
+			}
+			else {
+				Console.WriteLine("Replicant Combat TIE! [cite: 273]");    // Tie
+			}
+		} else if (player.IsInCombat) {
+			Console.WriteLine($"Warning: InCombat but no target.");    // Cleanup
+			player.IsInCombat = false;
+			player.CombatTarget = null;
+			player.PlayerCombatTarget = null;
+		}
+	}
+	private void ExecuteDiscardPhase(Player player, IAgentController agentController) { /* ... Includes Sympathizer decision logic ... */
+		GameState currentState = new GameState(player, this, GamePhase.Discard);
+		Console.WriteLine("Discard Phase:");
+		List<Card> cardsToDiscard = new List<Card>();
+		if (agentController != null) cardsToDiscard = agentController.ChooseCardsToDiscard(player, currentState);
+		else {
+			bool stillDiscarding = true;    // Human Discard Loop
+			while (stillDiscarding && player.Hand.Count > 0) {
+				Console.WriteLine("Hand:");
+				for(int i=0; i<player.Hand.Count; i++) Console.WriteLine($"{i + 1}: {player.Hand[i]}");
+				Console.Write("Card # to discard (0=Done): ");
+				if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= player.Hand.Count) {
+					Card card = player.Hand[choice - 1];
+					if (card is HassleCard && player.CurrentLocation != "Police HQ") {
+						Console.WriteLine("Can only discard Hassles at Police HQ. [cite: 280]");
+						continue;
+					}
+					if (!player.IsSympathizer && card is ReplicantCard repCard) {
+						Console.Write($"Become Sympathizer with {repCard.Name} instead? (y/n): ");
+						if ((Console.ReadLine()?.ToLower() ?? "n") == "y") {
+							player.BecomeSympathizer(repCard);
+							continue;
+						}
+					}
+					cardsToDiscard.Add(card);
+					Console.WriteLine($"Marked {card.Name} for discard.");
+				}
+				else if (choice == 0) stillDiscarding = false;
+				else Console.WriteLine("Invalid.");
+			}
+		}
+		foreach (var card in cardsToDiscard) player.DiscardCard(card, DiscardPile);
+		Console.WriteLine($"{player.Name} finishes discard phase with {player.Hand.Count} cards.");
+		// Sympathizer decision point (if Replicant held)
+		var replicantsInHand = player.Hand.OfType<ReplicantCard>().ToList();
+		if (!player.IsSympathizer && replicantsInHand.Any()) {
+			GameState sympState = new GameState(player, this, GamePhase.SympathizerDecision);
+			ReplicantCard repToConsider = replicantsInHand.First();
+			bool becomeSymp = false;
+			if(agentController != null) becomeSymp = agentController.DecideToBecomeSympathizer(player, repToConsider, sympState);
+			else {
+				Console.Write($"You hold {repToConsider.Name}. Become Sympathizer now? (y/n): ");
+				becomeSymp = (Console.ReadLine()?.ToLower() ?? "n") == "y";
+			}
+			if (becomeSymp) player.BecomeSympathizer(repToConsider);
+		}
+	}
+
+	// Helper to apply modifiers (simplified: only active player plays)
+	private int GetAndApplyModifiers(Player activePlayer, IAgentController agentController, AffectedAbility ability, string currentLocation, GamePhase phase) { /* ... As before ... */
+		int totalModifier = 0;
+		bool continuePlaying = true;
+		while (continuePlaying) {
+			continuePlaying = false; // Only one card per opportunity for now
+			List<Card> applicableCards = activePlayer.Hand.Where(c => ((c is HelpCard hc && hc.AbilityAffected == ability && hc.ModifierAmount > 0) || (c is ClueCard cl && cl.AbilityAffected == ability && cl.ModifierAmount > 0) || (c is HassleCard hs && hs.AbilityAffected == ability && hs.ModifierAmount < 0))).Where(c => {
+				string targetLoc = null;
+				if (c is HelpCard hc) targetLoc = hc.TargetLocation;
+				else if (c is ClueCard cl) targetLoc = cl.TargetLocation;
+				else if (c is HassleCard hs) targetLoc = hs.TargetLocation;
+				return string.IsNullOrEmpty(targetLoc) || targetLoc.Equals(currentLocation, StringComparison.OrdinalIgnoreCase);
+			}).ToList();
+			if (!applicableCards.Any()) break;
+			GameState currentState = new GameState(activePlayer, this, phase);
+			Card cardToPlay = null;
+			if (agentController != null) {
+				cardToPlay = agentController.ChooseCardToPlay(activePlayer, phase, applicableCards, currentState);    // AI choice
+				if (cardToPlay != null && !applicableCards.Contains(cardToPlay)) {
+					Console.WriteLine($"AI chose invalid card {cardToPlay.Name}");
+					cardToPlay = null;
+				}
+			}
+			else {
+				Console.WriteLine($"-- Play Card for {ability} at {currentLocation}? --");    // Human choice
+				Console.WriteLine("Applicable:");
+				if (applicableCards.Any()) {
+					for (int i = 0; i < applicableCards.Count; i++) Console.WriteLine($"{i + 1}: {applicableCards[i]}");
+					Console.WriteLine("0: Play nothing");
+					Console.Write($"Choice: ");
+					if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= applicableCards.Count) cardToPlay = applicableCards[choice - 1];
+				}
+				else Console.WriteLine("(None)");
+			}
+			if (cardToPlay != null) {
+				int modifier = 0;
+				if (cardToPlay is HelpCard hc) modifier = hc.ModifierAmount;
+				else if (cardToPlay is ClueCard cl) modifier = cl.ModifierAmount;
+				else if (cardToPlay is HassleCard hs) modifier = hs.ModifierAmount;
+				Console.WriteLine($"{activePlayer.Name} plays {cardToPlay.Name} ({modifier:+0;-#} {ability})!");
+				totalModifier += modifier;
+				activePlayer.Hand.Remove(cardToPlay);
+				DiscardPile.Add(cardToPlay); /* Add logic for multiple card plays? */
+			}
+			else { /* Player chose not to play */ }
+		} return totalModifier;
+	}
+
+
+	// --- Game End Condition Checks and Declarations ---
+	private bool CheckForGameOver() {
+		/* ... Checks Last Man Standing[cite: 229]... */ if (Players.Count(p => p.IsAlive) <= 1 && Players.Count > 1) {
+			if (!this.IsGameReallyOver) {
+				Console.WriteLine("Last player standing wins!");
+				DeclareWinner(Players.FirstOrDefault(p => p.IsAlive));
+			}
+			return true;
+		}
+		return this.IsGameReallyOver;
+	}
+	private void DeclareWinnerByRetirement() {
+		/* ... Tallies scores, declares winner[cite: 227], sets flag ... */ Console.WriteLine("Scores (Retirement):");
+		Player winner = null;
+		int maxRetired = -1;
+		foreach (var p in Players.Where(p => p.IsAlive && !p.IsSympathizer)) {
+			int score = p.RetiredReplicants.Count; /* Add points for Sympathizer kills [cite: 310] */ Console.WriteLine($"{p.Name}: {score} Retires");
+			if (score > maxRetired) {
+				maxRetired = score;
+				winner = p;
+			}
+		}
+		if (winner != null && maxRetired > 0) Console.WriteLine($"!!! {winner.Name} WINS (Most Retires: {maxRetired}) !!!");
+		else Console.WriteLine("!!! Game Over: 5th Rep retired, but no winner by retirement (Score <= 0). !!!");
+		this.IsGameReallyOver = true;
+	}
+	private void DeclareWinner(Player winner) {
+		/* ... Declares Sympathizer [cite: 228] or Last Standing [cite: 229] winner, sets flag ... */ if (winner != null) {
+			Console.Write($"!!! {winner.Name} ({winner.Color}) WINS");
+			if(winner.IsSympathizer) Console.WriteLine($" (Sympathizer Escape)! !!!");
+			else Console.WriteLine($" (Last Standing)! !!!");
+		}
+		else Console.WriteLine("!!! GAME OVER - Winner unclear? !!!");
+		this.IsGameReallyOver = true;
+	}
+
+	// --- Utility Methods ---
+	private int RollDie() {
+		return rng.Next(1, 7);    // 6-sided die roll
+	}
+
+} // End of Game Class
+
+#endregion Game Class
+
+
+// ####################################################
+// ########         PROGRAM ENTRY POINT        ########
+// ####################################################
+
+#region Program Entry Point
+
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		Console.WriteLine("=== Blade Runner: Rep-Detect Console ===");
+		List<string> availableNames = new List<string> { "Deckard", "Gaff", "Bryant", "Holden" };
+		string[] colors = { "Red", "Blue", "Green", "Yellow" };
+		int totalPlayers = 0;
+		while (totalPlayers < 2 || totalPlayers > 4) {
+			Console.Write($"Total players (2-4): ");
+			if (int.TryParse(Console.ReadLine(), out int input) && input >= 2 && input <= 4) totalPlayers = input;
+			else Console.WriteLine("Invalid.");
+		}
+		int humanPlayers = -1;
+		while (humanPlayers < 0 || humanPlayers > totalPlayers) {
+			Console.Write($"Number of humans (0-{totalPlayers}): ");
+			if (int.TryParse(Console.ReadLine(), out int input) && input >= 0 && input <= totalPlayers) humanPlayers = input;
+			else Console.WriteLine("Invalid.");
+		}
+		int aiPlayers = totalPlayers - humanPlayers;
+		List<Player> players = new List<Player>();
+		Dictionary<string, IAgentController> controllers = new Dictionary<string, IAgentController>();
+
+		// Create Human Players
+		for (int i = 0; i < humanPlayers; i++) {
+			Console.WriteLine($"\n--- Human Player {i + 1} Character Choice ---");
+			Console.WriteLine("Available:");
+			for(int j = 0; j < availableNames.Count; j++) Console.WriteLine($"{j + 1}: {availableNames[j]}");
+			string chosenName = null;
+			while (chosenName == null) {
+				Console.Write($"Choose #: ");
+				if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= availableNames.Count) {
+					chosenName = availableNames[choice - 1];
+					availableNames.RemoveAt(choice - 1);
+				}
+				else Console.WriteLine("Invalid.");
+			}
+			string color = colors[i];
+			players.Add(new Player(chosenName, color, $"{color} Home"));
+			Console.WriteLine($"Human Player {i + 1} is {chosenName} ({color})");
+		}
+		// Create AI Players
+		for (int i = 0; i < aiPlayers; i++) {
+			int playerIndex = humanPlayers + i;
+			string name = availableNames[0];
+			availableNames.RemoveAt(0);
+			string color = colors[playerIndex];
+			Player aiPlayer = new Player(name, color, $"{color} Home");
+			players.Add(aiPlayer);
+			controllers.Add(name, new SimpleRuleBasedAgent());
+			Console.WriteLine($"AI Player {i + 1} is {name} ({color})");
+		}
+
+		Console.WriteLine("\nStarting game...");
+		Game repDetectGame = new Game(players, controllers);
+		repDetectGame.StartGame();
+		Console.WriteLine("\nEnd of Simulation. Press Enter to exit.");
+		Console.ReadLine();
+	}
+}
+
+#endregion Program Entry Point
