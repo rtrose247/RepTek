@@ -364,7 +364,7 @@ public class Player
 			if (drawnCard != null) {
 				Hand.Add(drawnCard);
 				Console.WriteLine($" - Drew {drawnCard}");
-				if (drawnCard is ReplicantCard && !IsSympathizer) Console.WriteLine($"* {Name} drew Replicant {drawnCard.Name}! Decision pending... * [cite: 116]");
+				if (drawnCard is ReplicantCard && !IsSympathizer) Console.WriteLine($"* {Name} drew Replicant {drawnCard.Name}! Decision pending... *");
 			} else {
 				Console.WriteLine("Deck empty.");
 				break;
@@ -798,8 +798,7 @@ public class Game
 			Player currentPlayer = Players[currentPlayerIndex];
 			playerControllers.TryGetValue(currentPlayer.Name, out var currentAgent); // Get agent if exists
 			bool isAI = currentAgent != null;
-			//GameState currentState = new GameState(currentPlayer, this, GamePhase.Setup
-			// Update phase in methods
+			//GameState currentState = new GameState(currentPlayer, this, GamePhase.Setup); // Update phase in methods
 
 			if (!currentPlayer.IsAlive) {
 				Console.WriteLine($"\nSkipping turn for {currentPlayer.Name} (Respawning).");    // Respawn happens at start of *next* turn
