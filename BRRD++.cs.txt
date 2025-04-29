@@ -364,7 +364,7 @@ public class Player
 			if (drawnCard != null) {
 				Hand.Add(drawnCard);
 				Console.WriteLine($" - Drew {drawnCard}");
-				if (drawnCard is ReplicantCard && !IsSympathizer) Console.WriteLine($"* {Name} drew Replicant {drawnCard.Name}! Decision pending... *");
+				if (drawnCard is ReplicantCard && !IsSympathizer) Console.WriteLine($"* {Name} drew Replicant {drawnCard.Name}! Decision pending... * [cite: 116]");
 			} else {
 				Console.WriteLine("Deck empty.");
 				break;
@@ -798,7 +798,8 @@ public class Game
 			Player currentPlayer = Players[currentPlayerIndex];
 			playerControllers.TryGetValue(currentPlayer.Name, out var currentAgent); // Get agent if exists
 			bool isAI = currentAgent != null;
-			GameState currentState = new GameState(currentPlayer, this, GamePhase.Setup); // Update phase in methods
+			//GameState currentState = new GameState(currentPlayer, this, GamePhase.Setup
+			// Update phase in methods
 
 			if (!currentPlayer.IsAlive) {
 				Console.WriteLine($"\nSkipping turn for {currentPlayer.Name} (Respawning).");    // Respawn happens at start of *next* turn
@@ -843,7 +844,7 @@ public class Game
 		Console.WriteLine("--- Game Over ---");
 	}
 	private void AdvancePlayerTurn() { /* ... Skips dead players, as before ... */
-		int initialIndex = currentPlayerIndex;
+		//int initialIndex = currentPlayerIndex;
 		int loopCheck = 0;
 		do {
 			currentPlayerIndex = (currentPlayerIndex + 1) % Players.Count;
@@ -1100,7 +1101,7 @@ public class Game
 	private void ExecuteCombatPhase(Player player, IAgentController agentController) { /* ... Includes Combat modifiers & game end check ... */
 		if (!player.IsInCombat) InitiatePlayerCombat(player, agentController); // Offer initiation first
 		if (this.IsGameReallyOver || !player.IsInCombat) return;
-		GameState currentState = new GameState(player, this, GamePhase.CombatResolution);
+		//GameState currentState = new GameState(player, this, GamePhase.CombatResolution);
 		int playerCombatModifier = 0;
 		int opponentCombatModifier = 0;
 		Console.WriteLine($"--- Pre-Combat Card opportunity for {player.Name} ---");
