@@ -1312,55 +1312,73 @@ public class Game
 		}
 		return this.IsGameReallyOver;
 	}
+
 // --- Revised DeclareWinnerByRetirement in Game Class ---
 
-	private void DeclareWinnerByRetirement()
-	{
-		Console.WriteLine("\n--- Final Scores (Retirement Victory) ---");
-		int maxRetired = -1; // Start below 0 to correctly handle zero scores
+    private void DeclareWinnerByRetirement()
+    {
+         Console.WriteLine("\n--- Final Scores (Retirement Victory Triggered) ---");
+         int maxRetired = -1;
 
-		// First pass: Find the maximum score among eligible players
-		foreach (var player in Players.Where(p => p.IsAlive && !p.IsSympathizer))
-		{
-			int score = player.RetiredReplicants.Count;
-			// TODO: Add points for Sympathizer kills if implementing that scoring
-			if (score > maxRetired)
-			{
-				maxRetired = score;
-			}
-		}
+         // --- NEW: Loop to output all player scores ---
+         Console.WriteLine("Final Retirement Counts:");
+         foreach (var player in Players)
+         {
+             // Display score even if player is dead or a sympathizer for informational purposes
+             string status = "";
+             if (!player.IsAlive) status = "(Deceased)";
+             else if (player.IsSympathizer) status = "(Sympathizer)";
 
-		// Check if anyone actually retired replicants
-		if (maxRetired <= 0)
-		{
-			Console.WriteLine("\n!!! Game Over: 5th Replicant retired, but highest score was 0. No winner by retirement. !!!");
-		}
-		else
-		{
-			// Second pass: Find all players who achieved the maximum score
-			List<Player> winners = Players
-			                       .Where(p => p.IsAlive && !p.IsSympathizer && p.RetiredReplicants.Count == maxRetired)
-			                       .ToList();
+             Console.WriteLine($"  - {player.Name} {status}: {player.RetiredReplicants.Count} retired");
+             // TODO: Add points for Sympathizer kills if implementing that scoring aspect [cite: 140]
+         }
+         Console.WriteLine("-------------------------------------------");
+         // --- END NEW ---
 
-			if (winners.Count == 1)
-			{
-				// Single winner
-				Player winner = winners.First();
-				Console.WriteLine($"\n!!! {winner.Name} WINS THE GAME by retiring the most Replicants ({maxRetired})! !!!");
-			}
-			else // Multiple winners (tie)
-			{
-				Console.WriteLine($"\n!!! TIE! The following players tied for the most Replicants retired ({maxRetired}):");
-				foreach (var winner in winners)
-				{
-					Console.WriteLine($"   - {winner.Name}");
-				}
-				Console.WriteLine("They share the victory! !!!");
-			}
-		}
 
-		this.IsGameReallyOver = true; // Set the game over flag regardless of winner outcome
-	}
+         // First pass: Find the maximum score among eligible players (alive Blade Runners)
+         foreach (var player in Players.Where(p => p.IsAlive && !p.IsSympathizer))
+         {
+             int score = player.RetiredReplicants.Count;
+             // Add points for Sympathizer kills here if needed
+             if (score > maxRetired)
+             {
+                 maxRetired = score;
+             }
+         }
+
+         // Check if anyone eligible actually retired replicants
+         if (maxRetired <= 0)
+         {
+             // Handles the case where the max score among eligible winners is 0 or less
+             Console.WriteLine("\n!!! Game Over: 5th Replicant retired, but highest eligible score was 0. No winner by retirement. !!!");
+         }
+         else
+         {
+             // Second pass: Find all eligible players who achieved the maximum score
+             List<Player> winners = Players
+                 .Where(p => p.IsAlive && !p.IsSympathizer && p.RetiredReplicants.Count == maxRetired)
+                 .ToList();
+
+             if (winners.Count == 1)
+             {
+                 // Single winner
+                 Player winner = winners.First();
+                 Console.WriteLine($"\n!!! {winner.Name} WINS THE GAME by retiring the most Replicants ({maxRetired})! !!!");
+             }
+             else // Multiple winners (tie)
+             {
+                 Console.WriteLine($"\n!!! TIE! The following players tied for the most Replicants retired ({maxRetired}):");
+                 foreach (var winner in winners)
+                 {
+                     Console.WriteLine($"   - {winner.Name}");
+                 }
+                 Console.WriteLine("They share the victory! !!!");
+             }
+         }
+
+         this.IsGameReallyOver = true; // Set the game over flag regardless of winner outcome
+    }
 
 	private void DeclareWinner(Player winner) {
 		/* ... Declares Sympathizer [cite: 228] or Last Standing [cite: 229] winner, sets flag ... */ if (winner != null) {
