@@ -1059,64 +1059,120 @@ public class Game
 		else if (cardsToDraw > 0) Console.WriteLine($"Hand limit reached or effective Inv is 0.");
 	}
 
-	private void ExecuteDetectionPhase(Player player, IAgentController agentController) {
-		GameState currentState = new GameState(player, this, GamePhase.Detection);
-		if (player.IsInCombat || !Locations.Contains(player.CurrentLocation) || (player.CurrentLocation.EndsWith(" Home") && !player.IsSympathizer)) return; // Rule [cite: 96]
-		var suspectsInHand = player.Hand.OfType<SuspectCard>().ToList();
-		if (!suspectsInHand.Any()) return;
-		SuspectCard suspectToTest = null;
-		if (agentController != null) suspectToTest = agentController.ChooseSuspectToTest(player, currentState);
-		else {
-			/* Human choice */ Console.WriteLine("Detection: Choose Suspect:");
-			for(int i=0; i<suspectsInHand.Count; i++) Console.WriteLine($"{i + 1}: {suspectsInHand[i]}");
-			Console.WriteLine("0: Skip");
-			Console.Write("Choice: ");
-			if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= suspectsInHand.Count) suspectToTest = suspectsInHand[choice - 1];
-		}
-		if (suspectToTest != null) {
-			player.Hand.Remove(suspectToTest);
-			Console.WriteLine($"{player.Name} tests {suspectToTest.Name} at {player.CurrentLocation}.");
-			DiscardPile.Add(suspectToTest); // Rule [cite: 97, 98, 99] suspect discarded
-			int selfModifier = GetAndApplyModifiers(player, agentController, AffectedAbility.Detection, player.CurrentLocation, GamePhase.Detection); // Rule [cite: 96] allows mods
-			int hassleModifier = ApplyOpponentHassles(player, AffectedAbility.Detection, player.CurrentLocation, GamePhase.Detection);
-			int totalModifier = selfModifier + hassleModifier;
-			int effectiveDetectionSkill = player.Detection + totalModifier;
-			Console.WriteLine($"Base Det: {player.Detection}. Total Mod: {totalModifier:+0;-#}. Effective: {effectiveDetectionSkill}");
-			int detectionRoll = RollDie();
-			int totalDetection = detectionRoll + effectiveDetectionSkill;
-			Console.WriteLine($"Roll: {detectionRoll} + Eff Skill: {effectiveDetectionSkill} = Total: {totalDetection}");
-			if (totalDetection >= suspectToTest.Evasion) {
-				Console.WriteLine($"Detection successful! Checking Human/Replicant...");
-				int replicantCheckRoll = RollDie();
-				Console.WriteLine($"Rep Check Roll: {replicantCheckRoll} (Need 4-6)"); // Rule
-				if (replicantCheckRoll >= 4) {
-					Console.WriteLine($"Result: REPLICANT!");
-					Card drawnReplicant = ReplicantDeck.Draw(); // Draw from Rep Deck [cite: 99]
-					if (drawnReplicant == null) {
-						Console.WriteLine("Replicant Deck empty. Checking Discard (House Rule)...");    // Workaround
-						Card escapedReplicant = DiscardPile.cards.FirstOrDefault(c => c is ReplicantCard);
-						if (escapedReplicant != null) {
-							Console.WriteLine($"Found escaped {escapedReplicant.Name}!");
-							DiscardPile.cards.Remove(escapedReplicant);
-							drawnReplicant = escapedReplicant;
-						}
-						else Console.WriteLine("None found.");
-					}
-					if (drawnReplicant is ReplicantCard repCard) {
-						Console.WriteLine($"A wild {repCard.Name} appears!");
-						player.IsInCombat = true;
-						player.CombatTarget = repCard;
-						player.PlayerCombatTarget = null;
-						Console.WriteLine($"{player.Name} enters Combat with {repCard.Name}!");
-					}
-				} else {
-					Console.WriteLine("Result: Human.");    // Rule [cite: 98]
-				}
-			} else {
-				Console.WriteLine($"Detection failed! (< {suspectToTest.Evasion}).");    // Rule [cite: 97]
-			}
-		}
-	}
+// --- ExecuteDetectionPhase in Game Class with Extended Workaround ---
+
+    private void ExecuteDetectionPhase(Player player, IAgentController agentController)
+    {
+        GameState currentState = new GameState(player, this, GamePhase.Detection);
+        // Basic checks: cannot detect if in combat, must be at a location [cite: 96]
+        if (player.IsInCombat || !Locations.Contains(player.CurrentLocation) || (player.CurrentLocation.EndsWith(" Home") && !player.IsSympathizer)) return;
+
+        var suspectsInHand = player.Hand.OfType<SuspectCard>().ToList();
+        if (!suspectsInHand.Any()) return; // No suspects to test
+
+        SuspectCard suspectToTest = null;
+        // --- Logic for AI/Human choosing suspect (as established before) ---
+        if (agentController != null)
+        {
+            suspectToTest = agentController.ChooseSuspectToTest(player, currentState);
+        }
+        else
+        { // Human Chooses Suspect
+            Console.WriteLine("Detection Phase: Choose Suspect to test:");
+            for (int i = 0; i < suspectsInHand.Count; i++) Console.WriteLine($"{i + 1}: {suspectsInHand[i]}"); // Uses ToString override
+            Console.WriteLine("0: Skip Detection");
+            Console.Write("Enter choice: ");
+            if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= suspectsInHand.Count)
+            {
+                suspectToTest = suspectsInHand[choice - 1];
+            }
+        }
+        // --- End Suspect Choice ---
+
+        if (suspectToTest != null)
+        {
+            player.Hand.Remove(suspectToTest); // Play the suspect
+            Console.WriteLine($"{player.Name} tests {suspectToTest.Name} at {player.CurrentLocation}.");
+            DiscardPile.Add(suspectToTest); // Suspect is always discarded after test [cite: 97, 99]
+
+            // Apply card effects on Detection (as established before)
+            int selfModifier = GetAndApplyModifiers(player, agentController, AffectedAbility.Detection, player.CurrentLocation, GamePhase.Detection);
+            int hassleModifier = ApplyOpponentHassles(player, AffectedAbility.Detection, player.CurrentLocation, GamePhase.Detection);
+            int totalModifier = selfModifier + hassleModifier;
+            int effectiveDetectionSkill = player.Detection + totalModifier;
+
+            Console.WriteLine($"{player.Name}'s base Detection: {player.Detection}. Total Mod: {totalModifier:+0;-#}. Effective: {effectiveDetectionSkill}");
+            int detectionRoll = RollDie();
+            int totalDetection = detectionRoll + effectiveDetectionSkill;
+            Console.WriteLine($"Roll: {detectionRoll} + Effective Skill: {effectiveDetectionSkill} = Total: {totalDetection}");
+
+            if (totalDetection >= suspectToTest.Evasion) // Test Successful [cite: 98]
+            {
+                Console.WriteLine($"Detection successful! (>= {suspectToTest.Evasion}). Checking Human/Replicant...");
+                int replicantCheckRoll = RollDie();
+                Console.WriteLine($"Replicant Check Roll: {replicantCheckRoll} (Need 4-6 for Replicant)"); // [cite: 99]
+
+                if (replicantCheckRoll >= 4) // REPLICANT Indicated!
+                {
+                    Console.WriteLine($"Result: REPLICANT indicated!");
+                    Card drawnReplicantCard = ReplicantDeck.Draw(); // Try drawing from the dedicated deck FIRST
+
+                    // --- EXTENDED WORKAROUND LOGIC ---
+                    if (drawnReplicantCard == null) // If Replicant Deck is empty...
+                    {
+                        Console.WriteLine("Replicant Deck empty. Checking Discard Pile for escaped Replicants (House Rule)...");
+                        drawnReplicantCard = DiscardPile.cards.FirstOrDefault(c => c is ReplicantCard);
+
+                        if (drawnReplicantCard != null)
+                        {
+                            Console.WriteLine($"Found escaped Replicant {drawnReplicantCard.Name} in Discard Pile! Removing it.");
+                            DiscardPile.cards.Remove(drawnReplicantCard); // Remove it from discard
+                        }
+                        else
+                        {
+                            Console.WriteLine("No Replicants found in Discard Pile. Checking main Draw Deck (Further House Rule)...");
+                            drawnReplicantCard = DrawDeck.cards.FirstOrDefault(c => c is ReplicantCard);
+
+                            if (drawnReplicantCard != null)
+                            {
+                                Console.WriteLine($"Found Replicant {drawnReplicantCard.Name} in Draw Deck! Removing it.");
+                                DrawDeck.cards.Remove(drawnReplicantCard); // Remove it from Draw Deck
+                            }
+                            else
+                            {
+                                Console.WriteLine("No Replicants found in Discard Pile or Draw Deck.");
+                                // No Replicant appears this turn despite successful detection
+                            }
+                        }
+                    }
+                    // --- END EXTENDED WORKAROUND LOGIC ---
+
+
+                    // --- Initiate Combat (if a Replicant was found/drawn) ---
+                    if (drawnReplicantCard != null && drawnReplicantCard is ReplicantCard replicantForCombat)
+                    {
+                        Console.WriteLine($"A wild {replicantForCombat.Name} appears!");
+                        player.IsInCombat = true;
+                        player.CombatTarget = replicantForCombat; // Assign the found/drawn replicant
+                        player.PlayerCombatTarget = null; // Ensure player target clear
+                        Console.WriteLine($"{player.Name} enters Combat with {replicantForCombat.Name}!");
+                    }
+                    // If drawnReplicantCard is still null here, nothing happens.
+
+                }
+                else // HUMAN indicated [cite: 98]
+                {
+                    Console.WriteLine("Result: Human.");
+                    // Suspect already discarded earlier
+                }
+            }
+            else // Test Failed [cite: 97]
+            {
+                Console.WriteLine($"Detection failed! (< {suspectToTest.Evasion}).");
+                // Suspect already discarded earlier
+            }
+        }
+    } // End ExecuteDetectionPhase
 
 	private void InitiatePlayerCombat(Player attacker, IAgentController agentController) {
 		//Allows attacking suspected sympathizer
